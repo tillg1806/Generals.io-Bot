@@ -9,7 +9,6 @@ from pathlib import Path
 import socketio
 from socketio import SimpleClient
 
-from account_pool import TrainingAccountPool
 from config import (
     BOT_ENDPOINT,
     BOT_EVENT_IDLE_TIMEOUT_SECONDS,
@@ -703,6 +702,11 @@ def merge_finished_stats_files(target_data, stats_paths, result_paths):
 
 
 def run_training(instance_count, write_log_files=False):
+    raise RuntimeError(
+        "Legacy-Training mit TrainingAccountPool wurde entfernt. "
+        "Nutze tillbot_pybot.py und pybot_map_analysis.json."
+    )
+
     if instance_count < 2:
         raise ValueError("-t braucht mindestens 2 Instanzen")
     if instance_count % 2 != 0:
@@ -1231,6 +1235,11 @@ def finish_training_run(run_dir, stats_paths, result_paths, accounts_by_username
 
 
 def run_continuous_training(instance_count, write_log_files=False):
+    raise RuntimeError(
+        "Legacy-Training mit TrainingAccountPool wurde entfernt. "
+        "Nutze tillbot_pybot.py und pybot_map_analysis.json."
+    )
+
     if instance_count < 2:
         raise ValueError("-t braucht mindestens 2 Instanzen")
     if instance_count % 2 != 0:

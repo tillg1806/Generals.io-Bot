@@ -29,10 +29,14 @@ from config import (
     OWN_CITY_ARMY_RESERVE,
     OWN_CITY_PUSH_ARMY,
     RESCOUT_AFTER_VISIBLE_TURNS,
+    ROUTE_DISTANCE_PENALTY,
+    ROUTE_GATEWAY_BONUS,
+    ROUTE_PROGRESS_BONUS,
     SPAWN_TARGET_AFTER_TURN,
     TARGET_COMMITMENT_MAX_VISIBLE_TURNS,
     TARGET_COMMITMENT_REACHED_DISTANCE,
     TILE_CATCHUP_FACTOR,
+    FALLBACK_ROUTE_PROGRESS_BONUS,
 )
 from pathfinding import (
     build_distance_map,
@@ -681,6 +685,27 @@ class Strategy:
                     and fallback_target_distance is not None
                     and fallback_target_distance < fallback_source_distance
                 )
+                route_progress = 0
+                if planned_source_distance is not None and planned_target_distance is not None:
+                    route_progress = planned_source_distance - planned_target_distance
+
+                fallback_route_progress = 0
+                if fallback_source_distance is not None and fallback_target_distance is not None:
+                    fallback_route_progress = fallback_source_distance - fallback_target_distance
+
+                opens_route_gateway = (
+                    target_is_new_tile
+                    and (
+                        (
+                            planned_source_distance is None
+                            and planned_target_distance is not None
+                        )
+                        or (
+                            fallback_source_distance is None
+                            and fallback_target_distance is not None
+                        )
+                    )
+                )
                 is_closer = distance_to_target(self.state, target, strategy_target) < source_distance
                 target_city_distance = self.nearest_unowned_city_distance(target, terrain)
                 defends_general = defense_target is not None and target_distance < source_distance
@@ -794,6 +819,9 @@ class Strategy:
                     "can_take_city": can_take_city,
                     "follows_city_free_route": follows_city_free_route,
                     "follows_fallback_route": follows_fallback_route,
+                    "route_progress": route_progress,
+                    "fallback_route_progress": fallback_route_progress,
+                    "opens_route_gateway": opens_route_gateway,
                     "broad_expansion": broad_expansion_mode and target_is_new_tile,
                     "frontier_score": self.frontier_score(target, terrain) if target_is_new_tile else 0,
                     "search_frontier_score": search_frontier_score,
@@ -895,6 +923,12 @@ class Strategy:
             score += 4500
         if move["follows_fallback_route"]:
             score += 2500
+        if move["route_progress"] > 0:
+            score += move["route_progress"] * ROUTE_PROGRESS_BONUS
+        if move["fallback_route_progress"] > 0:
+            score += move["fallback_route_progress"] * FALLBACK_ROUTE_PROGRESS_BONUS
+        if move["opens_route_gateway"]:
+            score += ROUTE_GATEWAY_BONUS
 
         if move["pushes_from_owned_city"]:
             score += 3000
@@ -918,7 +952,7 @@ class Strategy:
         score += move["frontier_score"] * 300
         search_multiplier = 700 if move["army_dominance"] else 250
         score += move["search_frontier_score"] * search_multiplier
-        score -= move["target_distance"] * 40
+        score -= move["target_distance"] * ROUTE_DISTANCE_PENALTY
 
         if move["reverses_recent_move"]:
             score -= 20000
