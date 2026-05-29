@@ -1,0 +1,53 @@
+{
+  "city_focus_after_turn": 165,
+  "failure_reason": null,
+  "general_attack_after_turn": 168,
+  "general_guess": {
+    "actual_enemy_general_index": 260,
+    "guess_correct": false,
+    "guess_turn": 1,
+    "guessed_enemy_general_index": 206,
+    "height": 18,
+    "map_metrics": {
+      "actual_general_distance": {
+        "manhattan": 17,
+        "path": 17,
+        "target_index": 260
+      },
+      "city_count": 9,
+      "city_density": 0.02631578947368421,
+      "fog_count": 0,
+      "fog_obstacle_count": 0,
+      "guess_distance": {
+        "manhattan": 17,
+        "path": 21,
+        "target_index": 206
+      },
+      "height": 18,
+      "known_passable_tile_count": 268,
+      "mountain_count": 74,
+      "mountain_density": 0.21637426900584794,
+      "tile_count": 342,
+      "visible_tile_count": 342,
+      "width": 19
+    },
+    "my_general_index": 135,
+    "replay_id": "bh4_nusjw",
+    "replay_url": "https://bot.generals.io/replays/bh4_nusjw",
+    "room_id": "TillBotSpectatorTraining",
+    "status": "finished",
+    "timestamp": "2026-05-29T10:25:36",
+    "width": 19,
+    "won": true
+  },
+  "label": "train-0-1-g0001",
+  "log_path": null,
+  "replay_id": "bh4_nusjw",
+  "replay_url": "https://bot.generals.io/replays/bh4_nusjw",
+  "reserve_after_turn": 454,
+  "room_id": "TillBotSpectatorTraining",
+  "status": "finished",
+  "user_id": "till_bot_123_account_000008",
+  "username": "G2000008",
+  "won": true
+}

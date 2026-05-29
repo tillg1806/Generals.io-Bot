@@ -1,0 +1,14 @@
+{
+  "city_focus_after_turn": 65,
+  "failure_reason": null,
+  "general_attack_after_turn": 146,
+  "label": "train-1-0",
+  "replay_id": "IB3yULJdtu",
+  "replay_url": "https://bot.generals.io/replays/IB3yULJdtu",
+  "reserve_after_turn": 138,
+  "room_id": "TillTestRoom123_train_20260529_064840_1",
+  "status": "finished",
+  "user_id": "till_bot_123_account_000009",
+  "username": "G2000009",
+  "won": true
+}

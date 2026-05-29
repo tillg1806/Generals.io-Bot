@@ -1,0 +1,501 @@
+{
+  "records": [
+    {
+      "actual_enemy_general_index": null,
+      "guess_correct": false,
+      "guess_turn": 1,
+      "guessed_enemy_general_index": 27,
+      "height": 21,
+      "map_metrics": {
+        "actual_general_distance": null,
+        "city_count": 2,
+        "city_density": 0.0045351473922902496,
+        "fog_count": 321,
+        "fog_obstacle_count": 93,
+        "guess_distance": {
+          "manhattan": 26,
+          "path": 26,
+          "target_index": 27
+        },
+        "height": 21,
+        "known_passable_tile_count": 340,
+        "mountain_count": 8,
+        "mountain_density": 0.018140589569160998,
+        "tile_count": 441,
+        "visible_tile_count": 27,
+        "width": 21
+      },
+      "my_general_index": 413,
+      "replay_id": "ux-cKnSBz",
+      "replay_url": "https://bot.generals.io/replays/ux-cKnSBz",
+      "room_id": "TillBotSpectatorTraining",
+      "timestamp": "2026-05-29T10:14:32",
+      "width": 21,
+      "won": null
+    },
+    {
+      "actual_enemy_general_index": 413,
+      "guess_correct": false,
+      "guess_turn": 1,
+      "guessed_enemy_general_index": 400,
+      "height": 21,
+      "map_metrics": {
+        "actual_general_distance": {
+          "manhattan": 23,
+          "path": 23,
+          "target_index": 413
+        },
+        "city_count": 11,
+        "city_density": 0.024943310657596373,
+        "fog_count": 0,
+        "fog_obstacle_count": 0,
+        "guess_distance": {
+          "manhattan": 36,
+          "path": 36,
+          "target_index": 400
+        },
+        "height": 21,
+        "known_passable_tile_count": 349,
+        "mountain_count": 92,
+        "mountain_density": 0.20861678004535147,
+        "tile_count": 441,
+        "visible_tile_count": 441,
+        "width": 21
+      },
+      "my_general_index": 40,
+      "replay_id": "ux-cKnSBz",
+      "replay_url": "https://bot.generals.io/replays/ux-cKnSBz",
+      "room_id": "TillBotSpectatorTraining",
+      "timestamp": "2026-05-29T10:04:31",
+      "width": 21,
+      "won": true
+    },
+    {
+      "actual_enemy_general_index": null,
+      "guess_correct": false,
+      "guess_turn": 1,
+      "guessed_enemy_general_index": 196,
+      "height": 18,
+      "map_metrics": {
+        "actual_general_distance": null,
+        "city_count": 3,
+        "city_density": 0.009259259259259259,
+        "fog_count": 234,
+        "fog_obstacle_count": 60,
+        "guess_distance": {
+          "manhattan": 18,
+          "path": 18,
+          "target_index": 196
+        },
+        "height": 18,
+        "known_passable_tile_count": 257,
+        "mountain_count": 7,
+        "mountain_density": 0.021604938271604937,
+        "tile_count": 324,
+        "visible_tile_count": 30,
+        "width": 18
+      },
+      "my_general_index": 127,
+      "replay_id": "5ZsN6r_GkG",
+      "replay_url": "https://bot.generals.io/replays/5ZsN6r_GkG",
+      "room_id": "TillTestRoom123_train_1",
+      "timestamp": "2026-05-29T10:17:51",
+      "width": 18,
+      "won": null
+    },
+    {
+      "actual_enemy_general_index": 127,
+      "guess_correct": false,
+      "guess_turn": 1,
+      "guessed_enemy_general_index": 22,
+      "height": 18,
+      "map_metrics": {
+        "actual_general_distance": {
+          "manhattan": 21,
+          "path": 21,
+          "target_index": 127
+        },
+        "city_count": 10,
+        "city_density": 0.030864197530864196,
+        "fog_count": 0,
+        "fog_obstacle_count": 0,
+        "guess_distance": {
+          "manhattan": 24,
+          "path": 24,
+          "target_index": 22
+        },
+        "height": 18,
+        "known_passable_tile_count": 266,
+        "mountain_count": 58,
+        "mountain_density": 0.17901234567901234,
+        "tile_count": 324,
+        "visible_tile_count": 324,
+        "width": 18
+      },
+      "my_general_index": 301,
+      "replay_id": "5ZsN6r_GkG",
+      "replay_url": "https://bot.generals.io/replays/5ZsN6r_GkG",
+      "room_id": "TillTestRoom123_train_1",
+      "timestamp": "2026-05-29T10:07:51",
+      "width": 18,
+      "won": true
+    },
+    {
+      "actual_enemy_general_index": 153,
+      "guess_correct": false,
+      "guess_turn": 1,
+      "guessed_enemy_general_index": 8,
+      "height": 19,
+      "map_metrics": {
+        "actual_general_distance": {
+          "manhattan": 19,
+          "path": 19,
+          "target_index": 153
+        },
+        "city_count": 11,
+        "city_density": 0.030470914127423823,
+        "fog_count": 0,
+        "fog_obstacle_count": 0,
+        "guess_distance": {
+          "manhattan": 20,
+          "path": 22,
+          "target_index": 8
+        },
+        "height": 19,
+        "known_passable_tile_count": 281,
+        "mountain_count": 80,
+        "mountain_density": 0.22160664819944598,
+        "tile_count": 361,
+        "visible_tile_count": 361,
+        "width": 19
+      },
+      "my_general_index": 352,
+      "replay_id": "gGIs_-bTqt",
+      "replay_url": "https://bot.generals.io/replays/gGIs_-bTqt",
+      "room_id": "TillTestRoom123_train_2",
+      "timestamp": "2026-05-29T10:05:41",
+      "width": 19,
+      "won": true
+    },
+    {
+      "actual_enemy_general_index": null,
+      "guess_correct": false,
+      "guess_turn": 1,
+      "guessed_enemy_general_index": 207,
+      "height": 19,
+      "map_metrics": {
+        "actual_general_distance": null,
+        "city_count": 2,
+        "city_density": 0.00554016620498615,
+        "fog_count": 222,
+        "fog_obstacle_count": 69,
+        "guess_distance": {
+          "manhattan": 18,
+          "path": 20,
+          "target_index": 207
+        },
+        "height": 19,
+        "known_passable_tile_count": 272,
+        "mountain_count": 20,
+        "mountain_density": 0.055401662049861494,
+        "tile_count": 361,
+        "visible_tile_count": 70,
+        "width": 19
+      },
+      "my_general_index": 153,
+      "replay_id": "gGIs_-bTqt",
+      "replay_url": "https://bot.generals.io/replays/gGIs_-bTqt",
+      "room_id": "TillTestRoom123_train_2",
+      "timestamp": "2026-05-29T10:15:41",
+      "width": 19,
+      "won": null
+    },
+    {
+      "actual_enemy_general_index": 159,
+      "guess_correct": false,
+      "guess_turn": 1,
+      "guessed_enemy_general_index": 70,
+      "height": 18,
+      "map_metrics": {
+        "actual_general_distance": {
+          "manhattan": 20,
+          "path": 20,
+          "target_index": 159
+        },
+        "city_count": 11,
+        "city_density": 0.033950617283950615,
+        "fog_count": 0,
+        "fog_obstacle_count": 0,
+        "guess_distance": {
+          "manhattan": 26,
+          "path": 32,
+          "target_index": 70
+        },
+        "height": 18,
+        "known_passable_tile_count": 266,
+        "mountain_count": 58,
+        "mountain_density": 0.17901234567901234,
+        "tile_count": 324,
+        "visible_tile_count": 324,
+        "width": 18
+      },
+      "my_general_index": 253,
+      "replay_id": "n4i_tOlZBt",
+      "replay_url": "https://bot.generals.io/replays/n4i_tOlZBt",
+      "room_id": "TillTestRoom123_train_3",
+      "timestamp": "2026-05-29T10:09:46",
+      "width": 18,
+      "won": true
+    },
+    {
+      "actual_enemy_general_index": null,
+      "guess_correct": false,
+      "guess_turn": 1,
+      "guessed_enemy_general_index": 164,
+      "height": 18,
+      "map_metrics": {
+        "actual_general_distance": null,
+        "city_count": 5,
+        "city_density": 0.015432098765432098,
+        "fog_count": 140,
+        "fog_obstacle_count": 29,
+        "guess_distance": {
+          "manhattan": 14,
+          "path": 18,
+          "target_index": 164
+        },
+        "height": 18,
+        "known_passable_tile_count": 261,
+        "mountain_count": 34,
+        "mountain_density": 0.10493827160493827,
+        "tile_count": 324,
+        "visible_tile_count": 155,
+        "width": 18
+      },
+      "my_general_index": 159,
+      "replay_id": "n4i_tOlZBt",
+      "replay_url": "https://bot.generals.io/replays/n4i_tOlZBt",
+      "room_id": "TillTestRoom123_train_3",
+      "timestamp": "2026-05-29T10:09:46",
+      "width": 18,
+      "won": false
+    },
+    {
+      "actual_enemy_general_index": 38,
+      "guess_correct": false,
+      "guess_turn": 1,
+      "guessed_enemy_general_index": 130,
+      "height": 18,
+      "map_metrics": {
+        "actual_general_distance": {
+          "manhattan": 19,
+          "path": 19,
+          "target_index": 38
+        },
+        "city_count": 12,
+        "city_density": 0.037037037037037035,
+        "fog_count": 0,
+        "fog_obstacle_count": 0,
+        "guess_distance": {
+          "manhattan": 12,
+          "path": 12,
+          "target_index": 130
+        },
+        "height": 18,
+        "known_passable_tile_count": 257,
+        "mountain_count": 67,
+        "mountain_density": 0.20679012345679013,
+        "tile_count": 324,
+        "visible_tile_count": 324,
+        "width": 18
+      },
+      "my_general_index": 193,
+      "replay_id": "s-DG0qi9u",
+      "replay_url": "https://bot.generals.io/replays/s-DG0qi9u",
+      "room_id": "TillTestRoom123_train_3",
+      "timestamp": "2026-05-29T10:10:39",
+      "width": 18,
+      "won": true
+    },
+    {
+      "actual_enemy_general_index": null,
+      "guess_correct": false,
+      "guess_turn": 1,
+      "guessed_enemy_general_index": 285,
+      "height": 18,
+      "map_metrics": {
+        "actual_general_distance": null,
+        "city_count": 5,
+        "city_density": 0.015432098765432098,
+        "fog_count": 185,
+        "fog_obstacle_count": 59,
+        "guess_distance": {
+          "manhattan": 26,
+          "path": 26,
+          "target_index": 285
+        },
+        "height": 18,
+        "known_passable_tile_count": 250,
+        "mountain_count": 15,
+        "mountain_density": 0.046296296296296294,
+        "tile_count": 324,
+        "visible_tile_count": 80,
+        "width": 18
+      },
+      "my_general_index": 38,
+      "replay_id": "s-DG0qi9u",
+      "replay_url": "https://bot.generals.io/replays/s-DG0qi9u",
+      "room_id": "TillTestRoom123_train_3",
+      "timestamp": "2026-05-29T10:20:39",
+      "width": 18,
+      "won": null
+    }
+  ],
+  "summary": {
+    "by_map_size": {
+      "18x18": {
+        "actual_path_distance_total": 60,
+        "actual_path_distance_with_value": 3,
+        "avg_actual_path_distance": 20.0,
+        "avg_city_count": 7.666666666666667,
+        "avg_guess_path_distance": 21.666666666666668,
+        "avg_mountain_count": 39.833333333333336,
+        "city_count_total": 46,
+        "games": 6,
+        "guess_path_distance_total": 130,
+        "guess_path_distance_with_value": 6,
+        "height": 18,
+        "mountain_count_total": 239,
+        "tile_count": 324,
+        "width": 18
+      },
+      "19x19": {
+        "actual_path_distance_total": 19,
+        "actual_path_distance_with_value": 1,
+        "avg_actual_path_distance": 19.0,
+        "avg_city_count": 6.5,
+        "avg_guess_path_distance": 21.0,
+        "avg_mountain_count": 50.0,
+        "city_count_total": 13,
+        "games": 2,
+        "guess_path_distance_total": 42,
+        "guess_path_distance_with_value": 2,
+        "height": 19,
+        "mountain_count_total": 100,
+        "tile_count": 361,
+        "width": 19
+      },
+      "21x21": {
+        "actual_path_distance_total": 23,
+        "actual_path_distance_with_value": 1,
+        "avg_actual_path_distance": 23.0,
+        "avg_city_count": 6.5,
+        "avg_guess_path_distance": 31.0,
+        "avg_mountain_count": 50.0,
+        "city_count_total": 13,
+        "games": 2,
+        "guess_path_distance_total": 62,
+        "guess_path_distance_with_value": 2,
+        "height": 21,
+        "mountain_count_total": 100,
+        "tile_count": 441,
+        "width": 21
+      }
+    },
+    "by_setup": {
+      "18|18|127|196|None": {
+        "actual_enemy_general_index": null,
+        "games": 1,
+        "guessed_enemy_general_index": 196,
+        "height": 18,
+        "my_general_index": 127,
+        "width": 18,
+        "wins": 0
+      },
+      "18|18|159|164|None": {
+        "actual_enemy_general_index": null,
+        "games": 1,
+        "guessed_enemy_general_index": 164,
+        "height": 18,
+        "my_general_index": 159,
+        "width": 18,
+        "wins": 0
+      },
+      "18|18|193|130|38": {
+        "actual_enemy_general_index": 38,
+        "games": 1,
+        "guessed_enemy_general_index": 130,
+        "height": 18,
+        "my_general_index": 193,
+        "width": 18,
+        "wins": 1
+      },
+      "18|18|253|70|159": {
+        "actual_enemy_general_index": 159,
+        "games": 1,
+        "guessed_enemy_general_index": 70,
+        "height": 18,
+        "my_general_index": 253,
+        "width": 18,
+        "wins": 1
+      },
+      "18|18|301|22|127": {
+        "actual_enemy_general_index": 127,
+        "games": 1,
+        "guessed_enemy_general_index": 22,
+        "height": 18,
+        "my_general_index": 301,
+        "width": 18,
+        "wins": 1
+      },
+      "18|18|38|285|None": {
+        "actual_enemy_general_index": null,
+        "games": 1,
+        "guessed_enemy_general_index": 285,
+        "height": 18,
+        "my_general_index": 38,
+        "width": 18,
+        "wins": 0
+      },
+      "19|19|153|207|None": {
+        "actual_enemy_general_index": null,
+        "games": 1,
+        "guessed_enemy_general_index": 207,
+        "height": 19,
+        "my_general_index": 153,
+        "width": 19,
+        "wins": 0
+      },
+      "19|19|352|8|153": {
+        "actual_enemy_general_index": 153,
+        "games": 1,
+        "guessed_enemy_general_index": 8,
+        "height": 19,
+        "my_general_index": 352,
+        "width": 19,
+        "wins": 1
+      },
+      "21|21|40|400|413": {
+        "actual_enemy_general_index": 413,
+        "games": 1,
+        "guessed_enemy_general_index": 400,
+        "height": 21,
+        "my_general_index": 40,
+        "width": 21,
+        "wins": 1
+      },
+      "21|21|413|27|None": {
+        "actual_enemy_general_index": null,
+        "games": 1,
+        "guessed_enemy_general_index": 27,
+        "height": 21,
+        "my_general_index": 413,
+        "width": 21,
+        "wins": 0
+      }
+    },
+    "correct_guesses": 0,
+    "records": 10,
+    "with_actual": 5
+  }
+}

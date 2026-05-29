@@ -1,0 +1,45 @@
+{
+  "accounts": [
+    {
+      "usable": true,
+      "user_id": "till_bot_123_account_000007",
+      "username": "G2000007"
+    },
+    {
+      "usable": true,
+      "user_id": "till_bot_123_account_000008",
+      "username": "G2000008"
+    },
+    {
+      "usable": true,
+      "user_id": "till_bot_123_account_000009",
+      "username": "G2000009"
+    },
+    {
+      "usable": true,
+      "user_id": "till_bot_123_account_000010",
+      "username": "G2000010"
+    },
+    {
+      "usable": true,
+      "user_id": "till_bot_123_account_000011",
+      "username": "G2000011"
+    },
+    {
+      "usable": true,
+      "user_id": "till_bot_123_account_000012",
+      "username": "G2000012"
+    },
+    {
+      "usable": true,
+      "user_id": "till_bot_123_account_000013",
+      "username": "G2000013"
+    },
+    {
+      "usable": true,
+      "user_id": "till_bot_123_account_000014",
+      "username": "G2000014"
+    }
+  ],
+  "next": 15
+}

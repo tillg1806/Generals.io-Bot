@@ -1,0 +1,53 @@
+{
+  "city_focus_after_turn": 127,
+  "failure_reason": null,
+  "general_attack_after_turn": 109,
+  "general_guess": {
+    "actual_enemy_general_index": 285,
+    "guess_correct": false,
+    "guess_turn": 1,
+    "guessed_enemy_general_index": 141,
+    "height": 18,
+    "map_metrics": {
+      "actual_general_distance": {
+        "manhattan": 18,
+        "path": 18,
+        "target_index": 285
+      },
+      "city_count": 12,
+      "city_density": 0.037037037037037035,
+      "fog_count": 0,
+      "fog_obstacle_count": 0,
+      "guess_distance": {
+        "manhattan": 16,
+        "path": 18,
+        "target_index": 141
+      },
+      "height": 18,
+      "known_passable_tile_count": 258,
+      "mountain_count": 66,
+      "mountain_density": 0.2037037037037037,
+      "tile_count": 324,
+      "visible_tile_count": 324,
+      "width": 18
+    },
+    "my_general_index": 182,
+    "replay_id": "trtjvd21L",
+    "replay_url": "https://bot.generals.io/replays/trtjvd21L",
+    "room_id": "TillTestRoom123_train_1",
+    "status": "finished",
+    "timestamp": "2026-05-29T10:32:12",
+    "width": 18,
+    "won": true
+  },
+  "label": "train-1-0-g0002",
+  "log_path": null,
+  "replay_id": "trtjvd21L",
+  "replay_url": "https://bot.generals.io/replays/trtjvd21L",
+  "reserve_after_turn": 106,
+  "room_id": "TillTestRoom123_train_1",
+  "status": "finished",
+  "user_id": "till_bot_123_account_000009",
+  "username": "G2000009",
+  "won": true
+}

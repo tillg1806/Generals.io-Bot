@@ -1,0 +1,258 @@
+{
+  "bots": [
+    {
+      "city_focus_after_turn": 65,
+      "failure_reason": null,
+      "general_attack_after_turn": 153,
+      "label": "train-0-0",
+      "replay_id": "kILf-STTml",
+      "replay_url": "https://bot.generals.io/replays/kILf-STTml",
+      "reserve_after_turn": 461,
+      "room_id": "TillBotSpectatorTraining",
+      "status": "finished",
+      "user_id": "till_bot_123_account_000007",
+      "username": "G2000007",
+      "won": false
+    },
+    {
+      "city_focus_after_turn": 88,
+      "failure_reason": null,
+      "general_attack_after_turn": 110,
+      "label": "train-0-1",
+      "replay_id": "kILf-STTml",
+      "replay_url": "https://bot.generals.io/replays/kILf-STTml",
+      "reserve_after_turn": 218,
+      "room_id": "TillBotSpectatorTraining",
+      "status": "finished",
+      "user_id": "till_bot_123_account_000008",
+      "username": "G2000008",
+      "won": true
+    },
+    {
+      "city_focus_after_turn": 117,
+      "failure_reason": null,
+      "general_attack_after_turn": 131,
+      "label": "train-1-0",
+      "replay_id": "ylLy3cuNl",
+      "replay_url": "https://bot.generals.io/replays/ylLy3cuNl",
+      "reserve_after_turn": 405,
+      "room_id": "TillTestRoom123_train_20260529_061148_1",
+      "status": "finished",
+      "user_id": "till_bot_123_account_000009",
+      "username": "G2000009",
+      "won": true
+    },
+    {
+      "city_focus_after_turn": 152,
+      "failure_reason": null,
+      "general_attack_after_turn": 129,
+      "label": "train-1-1",
+      "replay_id": "ylLy3cuNl",
+      "replay_url": "https://bot.generals.io/replays/ylLy3cuNl",
+      "reserve_after_turn": 83,
+      "room_id": "TillTestRoom123_train_20260529_061148_1",
+      "status": "finished",
+      "user_id": "till_bot_123_account_000010",
+      "username": "G2000010",
+      "won": false
+    },
+    {
+      "city_focus_after_turn": 178,
+      "failure_reason": null,
+      "general_attack_after_turn": 173,
+      "label": "train-2-0",
+      "replay_id": "8LUVhZXHr7",
+      "replay_url": "https://bot.generals.io/replays/8LUVhZXHr7",
+      "reserve_after_turn": 372,
+      "room_id": "TillTestRoom123_train_20260529_061148_2",
+      "status": "finished",
+      "user_id": "till_bot_123_account_000011",
+      "username": "G2000011",
+      "won": true
+    },
+    {
+      "city_focus_after_turn": 149,
+      "failure_reason": null,
+      "general_attack_after_turn": 158,
+      "label": "train-2-1",
+      "replay_id": "8LUVhZXHr7",
+      "replay_url": "https://bot.generals.io/replays/8LUVhZXHr7",
+      "reserve_after_turn": 143,
+      "room_id": "TillTestRoom123_train_20260529_061148_2",
+      "status": "finished",
+      "user_id": "till_bot_123_account_000012",
+      "username": "G2000012",
+      "won": false
+    },
+    {
+      "city_focus_after_turn": 125,
+      "failure_reason": null,
+      "general_attack_after_turn": 100,
+      "label": "train-3-0",
+      "replay_id": "UDtX48tCS-",
+      "replay_url": "https://bot.generals.io/replays/UDtX48tCS-",
+      "reserve_after_turn": 318,
+      "room_id": "TillTestRoom123_train_20260529_061148_3",
+      "status": "finished",
+      "user_id": "till_bot_123_account_000013",
+      "username": "G2000013",
+      "won": true
+    },
+    {
+      "city_focus_after_turn": 99,
+      "failure_reason": null,
+      "general_attack_after_turn": 205,
+      "label": "train-3-1",
+      "replay_id": "UDtX48tCS-",
+      "replay_url": "https://bot.generals.io/replays/UDtX48tCS-",
+      "reserve_after_turn": 281,
+      "room_id": "TillTestRoom123_train_20260529_061148_3",
+      "status": "finished",
+      "user_id": "till_bot_123_account_000014",
+      "username": "G2000014",
+      "won": false
+    }
+  ],
+  "matches": [
+    {
+      "bots": [
+        {
+          "city_focus_after_turn": 65,
+          "failure_reason": null,
+          "general_attack_after_turn": 153,
+          "label": "train-0-0",
+          "replay_id": "kILf-STTml",
+          "replay_url": "https://bot.generals.io/replays/kILf-STTml",
+          "reserve_after_turn": 461,
+          "room_id": "TillBotSpectatorTraining",
+          "status": "finished",
+          "user_id": "till_bot_123_account_000007",
+          "username": "G2000007",
+          "won": false
+        },
+        {
+          "city_focus_after_turn": 88,
+          "failure_reason": null,
+          "general_attack_after_turn": 110,
+          "label": "train-0-1",
+          "replay_id": "kILf-STTml",
+          "replay_url": "https://bot.generals.io/replays/kILf-STTml",
+          "reserve_after_turn": 218,
+          "room_id": "TillBotSpectatorTraining",
+          "status": "finished",
+          "user_id": "till_bot_123_account_000008",
+          "username": "G2000008",
+          "won": true
+        }
+      ],
+      "replay_id": "kILf-STTml",
+      "replay_url": "https://bot.generals.io/replays/kILf-STTml",
+      "room_id": "TillBotSpectatorTraining"
+    },
+    {
+      "bots": [
+        {
+          "city_focus_after_turn": 117,
+          "failure_reason": null,
+          "general_attack_after_turn": 131,
+          "label": "train-1-0",
+          "replay_id": "ylLy3cuNl",
+          "replay_url": "https://bot.generals.io/replays/ylLy3cuNl",
+          "reserve_after_turn": 405,
+          "room_id": "TillTestRoom123_train_20260529_061148_1",
+          "status": "finished",
+          "user_id": "till_bot_123_account_000009",
+          "username": "G2000009",
+          "won": true
+        },
+        {
+          "city_focus_after_turn": 152,
+          "failure_reason": null,
+          "general_attack_after_turn": 129,
+          "label": "train-1-1",
+          "replay_id": "ylLy3cuNl",
+          "replay_url": "https://bot.generals.io/replays/ylLy3cuNl",
+          "reserve_after_turn": 83,
+          "room_id": "TillTestRoom123_train_20260529_061148_1",
+          "status": "finished",
+          "user_id": "till_bot_123_account_000010",
+          "username": "G2000010",
+          "won": false
+        }
+      ],
+      "replay_id": "ylLy3cuNl",
+      "replay_url": "https://bot.generals.io/replays/ylLy3cuNl",
+      "room_id": "TillTestRoom123_train_20260529_061148_1"
+    },
+    {
+      "bots": [
+        {
+          "city_focus_after_turn": 178,
+          "failure_reason": null,
+          "general_attack_after_turn": 173,
+          "label": "train-2-0",
+          "replay_id": "8LUVhZXHr7",
+          "replay_url": "https://bot.generals.io/replays/8LUVhZXHr7",
+          "reserve_after_turn": 372,
+          "room_id": "TillTestRoom123_train_20260529_061148_2",
+          "status": "finished",
+          "user_id": "till_bot_123_account_000011",
+          "username": "G2000011",
+          "won": true
+        },
+        {
+          "city_focus_after_turn": 149,
+          "failure_reason": null,
+          "general_attack_after_turn": 158,
+          "label": "train-2-1",
+          "replay_id": "8LUVhZXHr7",
+          "replay_url": "https://bot.generals.io/replays/8LUVhZXHr7",
+          "reserve_after_turn": 143,
+          "room_id": "TillTestRoom123_train_20260529_061148_2",
+          "status": "finished",
+          "user_id": "till_bot_123_account_000012",
+          "username": "G2000012",
+          "won": false
+        }
+      ],
+      "replay_id": "8LUVhZXHr7",
+      "replay_url": "https://bot.generals.io/replays/8LUVhZXHr7",
+      "room_id": "TillTestRoom123_train_20260529_061148_2"
+    },
+    {
+      "bots": [
+        {
+          "city_focus_after_turn": 125,
+          "failure_reason": null,
+          "general_attack_after_turn": 100,
+          "label": "train-3-0",
+          "replay_id": "UDtX48tCS-",
+          "replay_url": "https://bot.generals.io/replays/UDtX48tCS-",
+          "reserve_after_turn": 318,
+          "room_id": "TillTestRoom123_train_20260529_061148_3",
+          "status": "finished",
+          "user_id": "till_bot_123_account_000013",
+          "username": "G2000013",
+          "won": true
+        },
+        {
+          "city_focus_after_turn": 99,
+          "failure_reason": null,
+          "general_attack_after_turn": 205,
+          "label": "train-3-1",
+          "replay_id": "UDtX48tCS-",
+          "replay_url": "https://bot.generals.io/replays/UDtX48tCS-",
+          "reserve_after_turn": 281,
+          "room_id": "TillTestRoom123_train_20260529_061148_3",
+          "status": "finished",
+          "user_id": "till_bot_123_account_000014",
+          "username": "G2000014",
+          "won": false
+        }
+      ],
+      "replay_id": "UDtX48tCS-",
+      "replay_url": "https://bot.generals.io/replays/UDtX48tCS-",
+      "room_id": "TillTestRoom123_train_20260529_061148_3"
+    }
+  ]
+}

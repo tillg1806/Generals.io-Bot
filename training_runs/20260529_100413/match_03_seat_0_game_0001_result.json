@@ -1,0 +1,52 @@
+{
+  "city_focus_after_turn": 92,
+  "failure_reason": null,
+  "general_attack_after_turn": 140,
+  "general_guess": {
+    "actual_enemy_general_index": 159,
+    "guess_correct": false,
+    "guess_turn": 1,
+    "guessed_enemy_general_index": 70,
+    "height": 18,
+    "map_metrics": {
+      "actual_general_distance": {
+        "manhattan": 20,
+        "path": 20,
+        "target_index": 159
+      },
+      "city_count": 11,
+      "city_density": 0.033950617283950615,
+      "fog_count": 0,
+      "fog_obstacle_count": 0,
+      "guess_distance": {
+        "manhattan": 26,
+        "path": 32,
+        "target_index": 70
+      },
+      "height": 18,
+      "known_passable_tile_count": 266,
+      "mountain_count": 58,
+      "mountain_density": 0.17901234567901234,
+      "tile_count": 324,
+      "visible_tile_count": 324,
+      "width": 18
+    },
+    "my_general_index": 253,
+    "replay_id": "n4i_tOlZBt",
+    "replay_url": "https://bot.generals.io/replays/n4i_tOlZBt",
+    "room_id": "TillTestRoom123_train_3",
+    "timestamp": "2026-05-29T10:09:46",
+    "width": 18,
+    "won": true
+  },
+  "label": "train-3-0-g0001",
+  "log_path": null,
+  "replay_id": "n4i_tOlZBt",
+  "replay_url": "https://bot.generals.io/replays/n4i_tOlZBt",
+  "reserve_after_turn": 307,
+  "room_id": "TillTestRoom123_train_3",
+  "status": "finished",
+  "user_id": "till_bot_123_account_000013",
+  "username": "G2000013",
+  "won": true
+}

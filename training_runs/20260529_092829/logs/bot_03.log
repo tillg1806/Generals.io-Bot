@@ -1,0 +1,2638 @@
+2026-05-29 09:28:32 [train-1-1] Connected
+2026-05-29 09:28:33 [train-1-1] Room: https://bot.generals.io/games/TillTestRoom123_train_1
+2026-05-29 09:28:33 [train-1-1] Reserve ab sichtbarem Turn: 221
+2026-05-29 09:28:33 [train-1-1] City-Fokus ab sichtbarem Turn: 124
+2026-05-29 09:28:33 [train-1-1] General-Angriff ab sichtbarem Turn: 190
+2026-05-29 09:28:33 [train-1-1] SET_USERNAME: ['error_set_username', 'You already have a username! Only Supporters can change usernames.']
+2026-05-29 09:28:33 [train-1-1] JOIN_PRIVATE: ['chat_message', 'chat_custom_queue_TillTestRoom123_train_1', {'text': 'G2000010 joined the custom lobby.'}]
+2026-05-29 09:28:33 [train-1-1] EVENT: ['queue_update', {'playerIndices': [-100, 0, 1], 'playerColors': [-100, 0, 1], 'lobbyIndex': 2, 'isForcing': False, 'numPlayers': 2, 'numForce': [], 'playerCap': 16, 'teamSize': 1, 'teams': [17, 1, 2], 'usernames': ['XXXXXXX', 'G2000009', 'G2000010'], 'options': {'map': None, 'modifiers': []}, 'owner': 0, 'bans': [], 'kicks': []}]
+2026-05-29 09:28:33 [train-1-1] EVENT: ['queue_update', {'playerIndices': [-100, 0, 1], 'playerColors': [-100, 0, 1], 'lobbyIndex': 2, 'isForcing': False, 'numPlayers': 2, 'numForce': [1], 'playerCap': 16, 'teamSize': 1, 'teams': [17, 1, 2], 'usernames': ['XXXXXXX', 'G2000009', 'G2000010'], 'options': {'map': None, 'modifiers': []}, 'owner': 0, 'bans': [], 'kicks': []}]
+2026-05-29 09:28:33 [train-1-1] EVENT: ['pre_game_start']
+2026-05-29 09:28:36 [train-1-1] EVENT: ['game_start', {'playerIndex': 1, 'playerColors': [0, 1], 'replay_id': 'EjgqXu0qun', 'chat_room': 'game_1780039714852-u_VG-EN_WZxYLdIAI-2', 'usernames': ['G2000009', 'G2000010'], 'teams': [1, 2], 'game_type': 'custom', 'swamps': [], 'lights': [], 'options': {'map': None, 'width': None, 'height': None, 'game_speed': None, 'modifiers': [], 'mountain_density': None, 'city_density': None, 'lookout_density': None, 'observatory_density': None, 'swamp_density': None, 'desert_density': None, 'max_players': None, 'city_fairness': None, 'spawn_fairness': None, 'defeat_spectate': None, 'spectate_chat': None, 'public': None, 'chatRecordingDisabled': None, 'eventId': None}, 'queue_chat': None}, None]
+2026-05-29 09:28:36 [train-1-1] GAME START!
+2026-05-29 09:28:36 [train-1-1] Mein Player Index: 1
+2026-05-29 09:28:36 [train-1-1] Replay: https://bot.generals.io/replays/EjgqXu0qun
+2026-05-29 09:28:36 [train-1-1] EVENT: ['chat_message', 'game_1780039714852-u_VG-EN_WZxYLdIAI-2', {'text': ' Chat is being recorded.'}]
+2026-05-29 09:28:36 [train-1-1] Mein General Index: 277
+2026-05-29 09:28:36 [train-1-1] Gegner General Index: None
+2026-05-29 09:28:36 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:28:36 [train-1-1] Tiles: 1 / 1
+2026-05-29 09:28:36 [train-1-1] Map: 18 x 18 Turn: 1
+2026-05-29 09:28:36 [train-1-1] Route geplant: Ziel = 241 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:28:36 [train-1-1] Warte bis Turn 10: Turn 1, General hat 1 Einheiten
+2026-05-29 09:28:36 [train-1-1] Mein General Index: 277
+2026-05-29 09:28:36 [train-1-1] Gegner General Index: None
+2026-05-29 09:28:36 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:28:36 [train-1-1] Tiles: 1 / 1
+2026-05-29 09:28:36 [train-1-1] Map: 18 x 18 Turn: 2
+2026-05-29 09:28:36 [train-1-1] Route geplant: Ziel = 241 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:28:36 [train-1-1] Warte bis Turn 10: Turn 1, General hat 2 Einheiten
+2026-05-29 09:28:37 [train-1-1] Mein General Index: 277
+2026-05-29 09:28:37 [train-1-1] Gegner General Index: None
+2026-05-29 09:28:37 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:28:37 [train-1-1] Tiles: 1 / 1
+2026-05-29 09:28:37 [train-1-1] Map: 18 x 18 Turn: 3
+2026-05-29 09:28:37 [train-1-1] Route geplant: Ziel = 241 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:28:37 [train-1-1] Warte bis Turn 10: Turn 2, General hat 2 Einheiten
+2026-05-29 09:28:37 [train-1-1] Mein General Index: 277
+2026-05-29 09:28:37 [train-1-1] Gegner General Index: None
+2026-05-29 09:28:37 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:28:37 [train-1-1] Tiles: 1 / 1
+2026-05-29 09:28:37 [train-1-1] Map: 18 x 18 Turn: 4
+2026-05-29 09:28:37 [train-1-1] Route geplant: Ziel = 241 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:28:37 [train-1-1] Warte bis Turn 10: Turn 2, General hat 3 Einheiten
+2026-05-29 09:28:38 [train-1-1] Mein General Index: 277
+2026-05-29 09:28:38 [train-1-1] Gegner General Index: None
+2026-05-29 09:28:38 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:28:38 [train-1-1] Tiles: 1 / 1
+2026-05-29 09:28:38 [train-1-1] Map: 18 x 18 Turn: 5
+2026-05-29 09:28:38 [train-1-1] Route geplant: Ziel = 241 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:28:38 [train-1-1] Warte bis Turn 10: Turn 3, General hat 3 Einheiten
+2026-05-29 09:28:38 [train-1-1] Mein General Index: 277
+2026-05-29 09:28:38 [train-1-1] Gegner General Index: None
+2026-05-29 09:28:38 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:28:38 [train-1-1] Tiles: 1 / 1
+2026-05-29 09:28:38 [train-1-1] Map: 18 x 18 Turn: 6
+2026-05-29 09:28:38 [train-1-1] Route geplant: Ziel = 241 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:28:38 [train-1-1] Warte bis Turn 10: Turn 3, General hat 4 Einheiten
+2026-05-29 09:28:39 [train-1-1] Mein General Index: 277
+2026-05-29 09:28:39 [train-1-1] Gegner General Index: None
+2026-05-29 09:28:39 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:28:39 [train-1-1] Tiles: 1 / 1
+2026-05-29 09:28:39 [train-1-1] Map: 18 x 18 Turn: 7
+2026-05-29 09:28:39 [train-1-1] Route geplant: Ziel = 241 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:28:39 [train-1-1] Warte bis Turn 10: Turn 4, General hat 4 Einheiten
+2026-05-29 09:28:39 [train-1-1] Mein General Index: 277
+2026-05-29 09:28:39 [train-1-1] Gegner General Index: None
+2026-05-29 09:28:39 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:28:39 [train-1-1] Tiles: 1 / 1
+2026-05-29 09:28:39 [train-1-1] Map: 18 x 18 Turn: 8
+2026-05-29 09:28:39 [train-1-1] Route geplant: Ziel = 241 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:28:39 [train-1-1] Warte bis Turn 10: Turn 4, General hat 5 Einheiten
+2026-05-29 09:28:40 [train-1-1] Mein General Index: 277
+2026-05-29 09:28:40 [train-1-1] Gegner General Index: None
+2026-05-29 09:28:40 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:28:40 [train-1-1] Tiles: 1 / 1
+2026-05-29 09:28:40 [train-1-1] Map: 18 x 18 Turn: 9
+2026-05-29 09:28:40 [train-1-1] Route geplant: Ziel = 241 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:28:40 [train-1-1] Warte bis Turn 10: Turn 5, General hat 5 Einheiten
+2026-05-29 09:28:40 [train-1-1] Mein General Index: 277
+2026-05-29 09:28:40 [train-1-1] Gegner General Index: None
+2026-05-29 09:28:40 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:28:40 [train-1-1] Tiles: 1 / 1
+2026-05-29 09:28:40 [train-1-1] Map: 18 x 18 Turn: 10
+2026-05-29 09:28:40 [train-1-1] Route geplant: Ziel = 241 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:28:40 [train-1-1] Warte bis Turn 10: Turn 5, General hat 6 Einheiten
+2026-05-29 09:28:41 [train-1-1] Mein General Index: 277
+2026-05-29 09:28:41 [train-1-1] Gegner General Index: None
+2026-05-29 09:28:41 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:28:41 [train-1-1] Tiles: 1 / 1
+2026-05-29 09:28:41 [train-1-1] Map: 18 x 18 Turn: 11
+2026-05-29 09:28:41 [train-1-1] Route geplant: Ziel = 241 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:28:41 [train-1-1] Warte bis Turn 10: Turn 6, General hat 6 Einheiten
+2026-05-29 09:28:41 [train-1-1] Mein General Index: 277
+2026-05-29 09:28:41 [train-1-1] Gegner General Index: None
+2026-05-29 09:28:41 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:28:41 [train-1-1] Tiles: 1 / 1
+2026-05-29 09:28:41 [train-1-1] Map: 18 x 18 Turn: 12
+2026-05-29 09:28:41 [train-1-1] Route geplant: Ziel = 241 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:28:41 [train-1-1] Warte bis Turn 10: Turn 6, General hat 7 Einheiten
+2026-05-29 09:28:42 [train-1-1] Mein General Index: 277
+2026-05-29 09:28:42 [train-1-1] Gegner General Index: None
+2026-05-29 09:28:42 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:28:42 [train-1-1] Tiles: 1 / 1
+2026-05-29 09:28:42 [train-1-1] Map: 18 x 18 Turn: 13
+2026-05-29 09:28:42 [train-1-1] Route geplant: Ziel = 241 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:28:42 [train-1-1] Warte bis Turn 10: Turn 7, General hat 7 Einheiten
+2026-05-29 09:28:42 [train-1-1] Mein General Index: 277
+2026-05-29 09:28:42 [train-1-1] Gegner General Index: None
+2026-05-29 09:28:42 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:28:42 [train-1-1] Tiles: 1 / 1
+2026-05-29 09:28:42 [train-1-1] Map: 18 x 18 Turn: 14
+2026-05-29 09:28:42 [train-1-1] Route geplant: Ziel = 241 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:28:42 [train-1-1] Warte bis Turn 10: Turn 7, General hat 8 Einheiten
+2026-05-29 09:28:43 [train-1-1] Mein General Index: 277
+2026-05-29 09:28:43 [train-1-1] Gegner General Index: None
+2026-05-29 09:28:43 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:28:43 [train-1-1] Tiles: 1 / 1
+2026-05-29 09:28:43 [train-1-1] Map: 18 x 18 Turn: 15
+2026-05-29 09:28:43 [train-1-1] Route geplant: Ziel = 241 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:28:43 [train-1-1] Warte bis Turn 10: Turn 8, General hat 8 Einheiten
+2026-05-29 09:28:43 [train-1-1] Mein General Index: 277
+2026-05-29 09:28:43 [train-1-1] Gegner General Index: None
+2026-05-29 09:28:43 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:28:43 [train-1-1] Tiles: 1 / 1
+2026-05-29 09:28:43 [train-1-1] Map: 18 x 18 Turn: 16
+2026-05-29 09:28:43 [train-1-1] Route geplant: Ziel = 241 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:28:43 [train-1-1] Warte bis Turn 10: Turn 8, General hat 9 Einheiten
+2026-05-29 09:28:44 [train-1-1] Mein General Index: 277
+2026-05-29 09:28:44 [train-1-1] Gegner General Index: None
+2026-05-29 09:28:44 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:28:44 [train-1-1] Tiles: 1 / 1
+2026-05-29 09:28:44 [train-1-1] Map: 18 x 18 Turn: 17
+2026-05-29 09:28:44 [train-1-1] Route geplant: Ziel = 241 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:28:44 [train-1-1] Warte bis Turn 10: Turn 9, General hat 9 Einheiten
+2026-05-29 09:28:44 [train-1-1] Mein General Index: 277
+2026-05-29 09:28:44 [train-1-1] Gegner General Index: None
+2026-05-29 09:28:44 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:28:44 [train-1-1] Tiles: 1 / 1
+2026-05-29 09:28:44 [train-1-1] Map: 18 x 18 Turn: 18
+2026-05-29 09:28:44 [train-1-1] Route geplant: Ziel = 241 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:28:44 [train-1-1] Warte bis Turn 10: Turn 9, General hat 10 Einheiten
+2026-05-29 09:28:45 [train-1-1] Mein General Index: 277
+2026-05-29 09:28:45 [train-1-1] Gegner General Index: None
+2026-05-29 09:28:45 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:28:45 [train-1-1] Tiles: 1 / 1
+2026-05-29 09:28:45 [train-1-1] Map: 18 x 18 Turn: 19
+2026-05-29 09:28:45 [train-1-1] Route geplant: Ziel = 241 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:28:45 [train-1-1] Move: 277 -> 259 | Armee: 10 | Target-Terrain: -1 | Ziel: 241 | Half: False
+2026-05-29 09:28:45 [train-1-1] Mein General Index: 277
+2026-05-29 09:28:45 [train-1-1] Gegner General Index: None
+2026-05-29 09:28:45 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:28:45 [train-1-1] Tiles: 2 / 2
+2026-05-29 09:28:45 [train-1-1] Map: 18 x 18 Turn: 20
+2026-05-29 09:28:45 [train-1-1] Route geplant: Ziel = 261 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:28:45 [train-1-1] Move: 259 -> 260 | Armee: 9 | Target-Terrain: -1 | Ziel: 261 | Half: False
+2026-05-29 09:28:46 [train-1-1] Mein General Index: 277
+2026-05-29 09:28:46 [train-1-1] Gegner General Index: None
+2026-05-29 09:28:46 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:28:46 [train-1-1] Tiles: 3 / 3
+2026-05-29 09:28:46 [train-1-1] Map: 18 x 18 Turn: 21
+2026-05-29 09:28:46 [train-1-1] Route geplant: Ziel = 224 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:28:46 [train-1-1] Move: 260 -> 261 | Armee: 8 | Target-Terrain: -1 | Ziel: 224 | Half: False
+2026-05-29 09:28:46 [train-1-1] Mein General Index: 277
+2026-05-29 09:28:46 [train-1-1] Gegner General Index: None
+2026-05-29 09:28:46 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:28:46 [train-1-1] Tiles: 4 / 4
+2026-05-29 09:28:46 [train-1-1] Map: 18 x 18 Turn: 22
+2026-05-29 09:28:46 [train-1-1] Route geplant: Ziel = 224 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:28:46 [train-1-1] Move: 261 -> 243 | Armee: 7 | Target-Terrain: -1 | Ziel: 224 | Half: False
+2026-05-29 09:28:47 [train-1-1] Mein General Index: 277
+2026-05-29 09:28:47 [train-1-1] Gegner General Index: None
+2026-05-29 09:28:47 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:28:47 [train-1-1] Tiles: 5 / 5
+2026-05-29 09:28:47 [train-1-1] Map: 18 x 18 Turn: 23
+2026-05-29 09:28:47 [train-1-1] Route geplant: Ziel = 224 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:28:47 [train-1-1] Move: 243 -> 225 | Armee: 6 | Target-Terrain: -1 | Ziel: 224 | Half: False
+2026-05-29 09:28:47 [train-1-1] Mein General Index: 277
+2026-05-29 09:28:47 [train-1-1] Gegner General Index: None
+2026-05-29 09:28:47 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:28:47 [train-1-1] Tiles: 6 / 6
+2026-05-29 09:28:47 [train-1-1] Map: 18 x 18 Turn: 24
+2026-05-29 09:28:47 [train-1-1] Route geplant: Ziel = 228 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:28:47 [train-1-1] Move: 277 -> 278 | Armee: 4 | Target-Terrain: -1 | Ziel: 228 | Half: False
+2026-05-29 09:28:48 [train-1-1] Mein General Index: 277
+2026-05-29 09:28:48 [train-1-1] Gegner General Index: None
+2026-05-29 09:28:48 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:28:48 [train-1-1] Tiles: 7 / 7
+2026-05-29 09:28:48 [train-1-1] Map: 18 x 18 Turn: 25
+2026-05-29 09:28:48 [train-1-1] Route geplant: Ziel = 228 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:28:48 [train-1-1] Move: 278 -> 279 | Armee: 3 | Target-Terrain: -1 | Ziel: 228 | Half: False
+2026-05-29 09:28:48 [train-1-1] Mein General Index: 277
+2026-05-29 09:28:48 [train-1-1] Gegner General Index: None
+2026-05-29 09:28:48 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:28:48 [train-1-1] Tiles: 8 / 8
+2026-05-29 09:28:48 [train-1-1] Map: 18 x 18 Turn: 26
+2026-05-29 09:28:48 [train-1-1] Route geplant: Ziel = 228 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:28:48 [train-1-1] Move: 279 -> 280 | Armee: 2 | Target-Terrain: -1 | Ziel: 228 | Half: False
+2026-05-29 09:28:49 [train-1-1] Mein General Index: 277
+2026-05-29 09:28:49 [train-1-1] Gegner General Index: None
+2026-05-29 09:28:49 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:28:49 [train-1-1] Tiles: 9 / 9
+2026-05-29 09:28:49 [train-1-1] Map: 18 x 18 Turn: 27
+2026-05-29 09:28:49 [train-1-1] Route geplant: Ziel = 228 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:28:49 [train-1-1] Move: 225 -> 226 | Armee: 5 | Target-Terrain: -1 | Ziel: 228 | Half: False
+2026-05-29 09:28:49 [train-1-1] Mein General Index: 277
+2026-05-29 09:28:49 [train-1-1] Gegner General Index: None
+2026-05-29 09:28:49 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:28:49 [train-1-1] Tiles: 10 / 10
+2026-05-29 09:28:49 [train-1-1] Map: 18 x 18 Turn: 28
+2026-05-29 09:28:49 [train-1-1] Route geplant: Ziel = 228 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:28:49 [train-1-1] Move: 226 -> 244 | Armee: 4 | Target-Terrain: -1 | Ziel: 228 | Half: False
+2026-05-29 09:28:50 [train-1-1] Mein General Index: 277
+2026-05-29 09:28:50 [train-1-1] Gegner General Index: None
+2026-05-29 09:28:50 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:28:50 [train-1-1] Tiles: 11 / 11
+2026-05-29 09:28:50 [train-1-1] Map: 18 x 18 Turn: 29
+2026-05-29 09:28:50 [train-1-1] Route geplant: Ziel = 228 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:28:50 [train-1-1] Move: 277 -> 295 | Armee: 3 | Target-Terrain: -1 | Ziel: 228 | Half: False
+2026-05-29 09:28:50 [train-1-1] Mein General Index: 277
+2026-05-29 09:28:50 [train-1-1] Gegner General Index: None
+2026-05-29 09:28:50 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:28:50 [train-1-1] Tiles: 12 / 12
+2026-05-29 09:28:50 [train-1-1] Map: 18 x 18 Turn: 30
+2026-05-29 09:28:50 [train-1-1] Route geplant: Ziel = 228 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:28:50 [train-1-1] Move: 295 -> 296 | Armee: 2 | Target-Terrain: -1 | Ziel: 228 | Half: False
+2026-05-29 09:28:51 [train-1-1] Mein General Index: 277
+2026-05-29 09:28:51 [train-1-1] Gegner General Index: None
+2026-05-29 09:28:51 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:28:51 [train-1-1] Tiles: 13 / 13
+2026-05-29 09:28:51 [train-1-1] Map: 18 x 18 Turn: 31
+2026-05-29 09:28:51 [train-1-1] Route geplant: Ziel = 228 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:28:51 [train-1-1] Move: 277 -> 276 | Armee: 2 | Target-Terrain: -1 | Ziel: 228 | Half: False
+2026-05-29 09:28:51 [train-1-1] Mein General Index: 277
+2026-05-29 09:28:51 [train-1-1] Gegner General Index: None
+2026-05-29 09:28:51 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:28:51 [train-1-1] Tiles: 14 / 14
+2026-05-29 09:28:51 [train-1-1] Map: 18 x 18 Turn: 32
+2026-05-29 09:28:51 [train-1-1] Route geplant: Ziel = 228 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:28:51 [train-1-1] Move: 277 -> 278 | Armee: 2 | Target-Terrain: 1 | Ziel: 228 | Half: False
+2026-05-29 09:28:52 [train-1-1] Mein General Index: 277
+2026-05-29 09:28:52 [train-1-1] Gegner General Index: None
+2026-05-29 09:28:52 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:28:52 [train-1-1] Tiles: 14 / 15
+2026-05-29 09:28:52 [train-1-1] Map: 18 x 18 Turn: 33
+2026-05-29 09:28:52 [train-1-1] Route geplant: Ziel = 228 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:28:52 [train-1-1] Move: 278 -> 279 | Armee: 2 | Target-Terrain: 1 | Ziel: 228 | Half: False
+2026-05-29 09:28:52 [train-1-1] Mein General Index: 277
+2026-05-29 09:28:52 [train-1-1] Gegner General Index: None
+2026-05-29 09:28:52 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:28:52 [train-1-1] Tiles: 14 / 16
+2026-05-29 09:28:52 [train-1-1] Map: 18 x 18 Turn: 34
+2026-05-29 09:28:52 [train-1-1] Route geplant: Ziel = 228 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:28:52 [train-1-1] Move: 279 -> 297 | Armee: 2 | Target-Terrain: -1 | Ziel: 228 | Half: False
+2026-05-29 09:28:53 [train-1-1] Mein General Index: 277
+2026-05-29 09:28:53 [train-1-1] Gegner General Index: None
+2026-05-29 09:28:53 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:28:53 [train-1-1] Tiles: 15 / 17
+2026-05-29 09:28:53 [train-1-1] Map: 18 x 18 Turn: 35
+2026-05-29 09:28:53 [train-1-1] Route geplant: Ziel = 228 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:28:53 [train-1-1] Move: 244 -> 243 | Armee: 3 | Target-Terrain: 1 | Ziel: 228 | Half: False
+2026-05-29 09:28:53 [train-1-1] Mein General Index: 277
+2026-05-29 09:28:53 [train-1-1] Gegner General Index: None
+2026-05-29 09:28:53 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:28:53 [train-1-1] Tiles: 15 / 18
+2026-05-29 09:28:53 [train-1-1] Map: 18 x 18 Turn: 36
+2026-05-29 09:28:53 [train-1-1] Route geplant: Ziel = 228 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:28:53 [train-1-1] Move: 243 -> 261 | Armee: 3 | Target-Terrain: 1 | Ziel: 228 | Half: False
+2026-05-29 09:28:54 [train-1-1] Mein General Index: 277
+2026-05-29 09:28:54 [train-1-1] Gegner General Index: None
+2026-05-29 09:28:54 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:28:54 [train-1-1] Tiles: 15 / 18
+2026-05-29 09:28:54 [train-1-1] Map: 18 x 18 Turn: 37
+2026-05-29 09:28:54 [train-1-1] Route geplant: Ziel = 228 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:28:54 [train-1-1] Move: 261 -> 260 | Armee: 3 | Target-Terrain: 1 | Ziel: 228 | Half: False
+2026-05-29 09:28:54 [train-1-1] Mein General Index: 277
+2026-05-29 09:28:54 [train-1-1] Gegner General Index: None
+2026-05-29 09:28:54 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:28:54 [train-1-1] Tiles: 15 / 19
+2026-05-29 09:28:54 [train-1-1] Map: 18 x 18 Turn: 38
+2026-05-29 09:28:54 [train-1-1] Route geplant: Ziel = 228 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:28:54 [train-1-1] Move: 277 -> 259 | Armee: 4 | Target-Terrain: 1 | Ziel: 228 | Half: False
+2026-05-29 09:28:55 [train-1-1] Mein General Index: 277
+2026-05-29 09:28:55 [train-1-1] Gegner General Index: None
+2026-05-29 09:28:55 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:28:55 [train-1-1] Tiles: 15 / 19
+2026-05-29 09:28:55 [train-1-1] Map: 18 x 18 Turn: 39
+2026-05-29 09:28:55 [train-1-1] Route geplant: Ziel = 228 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:28:55 [train-1-1] Move: 259 -> 241 | Armee: 4 | Target-Terrain: -1 | Ziel: 228 | Half: False
+2026-05-29 09:28:55 [train-1-1] Mein General Index: 277
+2026-05-29 09:28:55 [train-1-1] Gegner General Index: None
+2026-05-29 09:28:55 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:28:55 [train-1-1] Tiles: 16 / 19
+2026-05-29 09:28:55 [train-1-1] Map: 18 x 18 Turn: 40
+2026-05-29 09:28:55 [train-1-1] Route geplant: Ziel = 228 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:28:55 [train-1-1] Move: 241 -> 223 | Armee: 3 | Target-Terrain: -1 | Ziel: 228 | Half: False
+2026-05-29 09:28:56 [train-1-1] Mein General Index: 277
+2026-05-29 09:28:56 [train-1-1] Gegner General Index: None
+2026-05-29 09:28:56 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:28:56 [train-1-1] Tiles: 17 / 19
+2026-05-29 09:28:56 [train-1-1] Map: 18 x 18 Turn: 41
+2026-05-29 09:28:56 [train-1-1] Route geplant: Ziel = 228 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:28:56 [train-1-1] Move: 223 -> 224 | Armee: 2 | Target-Terrain: -1 | Ziel: 228 | Half: False
+2026-05-29 09:28:56 [train-1-1] Mein General Index: 277
+2026-05-29 09:28:56 [train-1-1] Gegner General Index: None
+2026-05-29 09:28:56 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:28:56 [train-1-1] Tiles: 18 / 19
+2026-05-29 09:28:56 [train-1-1] Map: 18 x 18 Turn: 42
+2026-05-29 09:28:56 [train-1-1] Route geplant: Ziel = 228 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:28:56 [train-1-1] Move: 260 -> 278 | Armee: 3 | Target-Terrain: 1 | Ziel: 228 | Half: False
+2026-05-29 09:28:57 [train-1-1] Mein General Index: 277
+2026-05-29 09:28:57 [train-1-1] Gegner General Index: None
+2026-05-29 09:28:57 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:28:57 [train-1-1] Tiles: 18 / 20
+2026-05-29 09:28:57 [train-1-1] Map: 18 x 18 Turn: 43
+2026-05-29 09:28:57 [train-1-1] Route geplant: Ziel = 228 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:28:57 [train-1-1] Move: 278 -> 279 | Armee: 3 | Target-Terrain: 1 | Ziel: 228 | Half: False
+2026-05-29 09:28:57 [train-1-1] Mein General Index: 277
+2026-05-29 09:28:57 [train-1-1] Gegner General Index: None
+2026-05-29 09:28:57 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:28:57 [train-1-1] Tiles: 18 / 20
+2026-05-29 09:28:57 [train-1-1] Map: 18 x 18 Turn: 44
+2026-05-29 09:28:57 [train-1-1] Route geplant: Ziel = 228 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:28:57 [train-1-1] Move: 279 -> 280 | Armee: 3 | Target-Terrain: 1 | Ziel: 228 | Half: False
+2026-05-29 09:28:58 [train-1-1] Mein General Index: 277
+2026-05-29 09:28:58 [train-1-1] Gegner General Index: None
+2026-05-29 09:28:58 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:28:58 [train-1-1] Tiles: 18 / 21
+2026-05-29 09:28:58 [train-1-1] Map: 18 x 18 Turn: 45
+2026-05-29 09:28:58 [train-1-1] Route geplant: Ziel = 228 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:28:58 [train-1-1] Move: 280 -> 281 | Armee: 3 | Target-Terrain: -1 | Ziel: 228 | Half: False
+2026-05-29 09:28:58 [train-1-1] Mein General Index: 277
+2026-05-29 09:28:58 [train-1-1] Gegner General Index: None
+2026-05-29 09:28:58 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:28:58 [train-1-1] Tiles: 19 / 22
+2026-05-29 09:28:58 [train-1-1] Map: 18 x 18 Turn: 46
+2026-05-29 09:28:58 [train-1-1] Route geplant: Ziel = 228 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:28:58 [train-1-1] Move: 281 -> 282 | Armee: 2 | Target-Terrain: -1 | Ziel: 228 | Half: False
+2026-05-29 09:28:59 [train-1-1] Mein General Index: 277
+2026-05-29 09:28:59 [train-1-1] Gegner General Index: None
+2026-05-29 09:28:59 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:28:59 [train-1-1] Tiles: 20 / 22
+2026-05-29 09:28:59 [train-1-1] Map: 18 x 18 Turn: 47
+2026-05-29 09:28:59 [train-1-1] Route geplant: Ziel = 228 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:28:59 [train-1-1] Move: 277 -> 278 | Armee: 5 | Target-Terrain: 1 | Ziel: 228 | Half: False
+2026-05-29 09:28:59 [train-1-1] Mein General Index: 277
+2026-05-29 09:28:59 [train-1-1] Gegner General Index: None
+2026-05-29 09:28:59 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:28:59 [train-1-1] Tiles: 20 / 22
+2026-05-29 09:28:59 [train-1-1] Map: 18 x 18 Turn: 48
+2026-05-29 09:28:59 [train-1-1] Route geplant: Ziel = 228 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:28:59 [train-1-1] Move: 278 -> 279 | Armee: 5 | Target-Terrain: 1 | Ziel: 228 | Half: False
+2026-05-29 09:29:00 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:00 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:00 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:29:00 [train-1-1] Tiles: 20 / 22
+2026-05-29 09:29:00 [train-1-1] Map: 18 x 18 Turn: 49
+2026-05-29 09:29:00 [train-1-1] Route geplant: Ziel = 228 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:29:00 [train-1-1] Move: 279 -> 280 | Armee: 5 | Target-Terrain: 1 | Ziel: 228 | Half: False
+2026-05-29 09:29:00 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:00 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:00 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:29:00 [train-1-1] Tiles: 20 / 22
+2026-05-29 09:29:00 [train-1-1] Map: 18 x 18 Turn: 50
+2026-05-29 09:29:00 [train-1-1] Route geplant: Ziel = 228 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:29:00 [train-1-1] Move: 282 -> 264 | Armee: 2 | Target-Terrain: -1 | Ziel: 228 | Half: False
+2026-05-29 09:29:01 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:01 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:01 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:29:01 [train-1-1] Tiles: 21 / 23
+2026-05-29 09:29:01 [train-1-1] Map: 18 x 18 Turn: 51
+2026-05-29 09:29:01 [train-1-1] Route geplant: Ziel = 228 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:29:01 [train-1-1] Move: 281 -> 263 | Armee: 2 | Target-Terrain: -1 | Ziel: 228 | Half: False
+2026-05-29 09:29:01 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:01 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:01 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:29:01 [train-1-1] Tiles: 22 / 24
+2026-05-29 09:29:01 [train-1-1] Map: 18 x 18 Turn: 52
+2026-05-29 09:29:01 [train-1-1] Route geplant: Ziel = 228 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:29:01 [train-1-1] Move: 297 -> 298 | Armee: 2 | Target-Terrain: -1 | Ziel: 228 | Half: False
+2026-05-29 09:29:02 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:02 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:02 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:29:02 [train-1-1] Tiles: 23 / 25
+2026-05-29 09:29:02 [train-1-1] Map: 18 x 18 Turn: 53
+2026-05-29 09:29:02 [train-1-1] Route geplant: Ziel = 228 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:29:02 [train-1-1] Move: 225 -> 207 | Armee: 2 | Target-Terrain: -1 | Ziel: 228 | Half: False
+2026-05-29 09:29:02 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:02 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:02 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:29:02 [train-1-1] Tiles: 24 / 26
+2026-05-29 09:29:02 [train-1-1] Map: 18 x 18 Turn: 54
+2026-05-29 09:29:02 [train-1-1] Route geplant: Ziel = 228 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 241
+2026-05-29 09:29:02 [train-1-1] Move: 223 -> 222 | Armee: 2 | Target-Terrain: -1 | Ziel: 228 | Half: False
+2026-05-29 09:29:03 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:03 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:03 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:29:03 [train-1-1] Tiles: 25 / 27
+2026-05-29 09:29:03 [train-1-1] Map: 18 x 18 Turn: 55
+2026-05-29 09:29:03 [train-1-1] Route geplant: Ziel = 228 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 242
+2026-05-29 09:29:03 [train-1-1] Move: 226 -> 208 | Armee: 2 | Target-Terrain: -1 | Ziel: 228 | Half: False
+2026-05-29 09:29:03 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:03 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:03 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:29:03 [train-1-1] Tiles: 26 / 28
+2026-05-29 09:29:03 [train-1-1] Map: 18 x 18 Turn: 56
+2026-05-29 09:29:03 [train-1-1] Route geplant: Ziel = 228 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 242
+2026-05-29 09:29:03 [train-1-1] Move: 241 -> 240 | Armee: 2 | Target-Terrain: -1 | Ziel: 228 | Half: False
+2026-05-29 09:29:04 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:04 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:04 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:29:04 [train-1-1] Tiles: 27 / 29
+2026-05-29 09:29:04 [train-1-1] Map: 18 x 18 Turn: 57
+2026-05-29 09:29:04 [train-1-1] Route geplant: Ziel = 228 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 242
+2026-05-29 09:29:04 [train-1-1] Move: 296 -> 314 | Armee: 2 | Target-Terrain: -1 | Ziel: 228 | Half: False
+2026-05-29 09:29:04 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:04 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:04 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:29:04 [train-1-1] Tiles: 28 / 30
+2026-05-29 09:29:04 [train-1-1] Map: 18 x 18 Turn: 58
+2026-05-29 09:29:04 [train-1-1] Route geplant: Ziel = 228 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 242
+2026-05-29 09:29:04 [train-1-1] Move: 276 -> 294 | Armee: 2 | Target-Terrain: -1 | Ziel: 228 | Half: False
+2026-05-29 09:29:05 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:05 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:05 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:29:05 [train-1-1] Tiles: 29 / 31
+2026-05-29 09:29:05 [train-1-1] Map: 18 x 18 Turn: 59
+2026-05-29 09:29:05 [train-1-1] Route geplant: Ziel = 228 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 242
+2026-05-29 09:29:05 [train-1-1] Move: 295 -> 313 | Armee: 2 | Target-Terrain: -1 | Ziel: 228 | Half: False
+2026-05-29 09:29:05 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:05 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:05 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:29:05 [train-1-1] Tiles: 30 / 32
+2026-05-29 09:29:05 [train-1-1] Map: 18 x 18 Turn: 60
+2026-05-29 09:29:05 [train-1-1] Route geplant: Ziel = 228 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 242
+2026-05-29 09:29:05 [train-1-1] Move: 259 -> 258 | Armee: 2 | Target-Terrain: -1 | Ziel: 228 | Half: False
+2026-05-29 09:29:06 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:06 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:06 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:29:06 [train-1-1] Tiles: 31 / 33
+2026-05-29 09:29:06 [train-1-1] Map: 18 x 18 Turn: 61
+2026-05-29 09:29:06 [train-1-1] Route geplant: Ziel = 228 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 242
+2026-05-29 09:29:06 [train-1-1] Move: 280 -> 281 | Armee: 6 | Target-Terrain: 1 | Ziel: 228 | Half: False
+2026-05-29 09:29:06 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:06 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:06 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:29:06 [train-1-1] Tiles: 31 / 33
+2026-05-29 09:29:06 [train-1-1] Map: 18 x 18 Turn: 62
+2026-05-29 09:29:06 [train-1-1] Route geplant: Ziel = 228 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 242
+2026-05-29 09:29:06 [train-1-1] Move: 281 -> 299 | Armee: 6 | Target-Terrain: -1 | Ziel: 228 | Half: False
+2026-05-29 09:29:07 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:07 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:07 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:29:07 [train-1-1] Tiles: 32 / 33
+2026-05-29 09:29:07 [train-1-1] Map: 18 x 18 Turn: 63
+2026-05-29 09:29:07 [train-1-1] Route geplant: Ziel = 228 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 242
+2026-05-29 09:29:07 [train-1-1] Move: 299 -> 300 | Armee: 5 | Target-Terrain: -1 | Ziel: 228 | Half: False
+2026-05-29 09:29:07 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:07 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:07 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:29:07 [train-1-1] Tiles: 33 / 33
+2026-05-29 09:29:07 [train-1-1] Map: 18 x 18 Turn: 64
+2026-05-29 09:29:07 [train-1-1] Route geplant: Ziel = 228 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 242
+2026-05-29 09:29:07 [train-1-1] Move: 300 -> 318 | Armee: 4 | Target-Terrain: -1 | Ziel: 228 | Half: False
+2026-05-29 09:29:08 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:08 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:08 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:29:08 [train-1-1] Tiles: 34 / 33
+2026-05-29 09:29:08 [train-1-1] Map: 18 x 18 Turn: 65
+2026-05-29 09:29:08 [train-1-1] Route geplant: Ziel = 228 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 242
+2026-05-29 09:29:08 [train-1-1] Move: 318 -> 319 | Armee: 3 | Target-Terrain: -1 | Ziel: 228 | Half: False
+2026-05-29 09:29:08 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:08 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:08 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:29:08 [train-1-1] Tiles: 35 / 33
+2026-05-29 09:29:08 [train-1-1] Map: 18 x 18 Turn: 66
+2026-05-29 09:29:08 [train-1-1] Route geplant: Ziel = 228 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 242
+2026-05-29 09:29:08 [train-1-1] Move: 319 -> 320 | Armee: 2 | Target-Terrain: -1 | Ziel: 228 | Half: False
+2026-05-29 09:29:09 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:09 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:09 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:29:09 [train-1-1] Tiles: 36 / 33
+2026-05-29 09:29:09 [train-1-1] Map: 18 x 18 Turn: 67
+2026-05-29 09:29:09 [train-1-1] Route geplant: Ziel = 228 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 242
+2026-05-29 09:29:09 [train-1-1] Move: 279 -> 280 | Armee: 2 | Target-Terrain: 1 | Ziel: 228 | Half: False
+2026-05-29 09:29:09 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:09 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:09 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:29:09 [train-1-1] Tiles: 36 / 33
+2026-05-29 09:29:09 [train-1-1] Map: 18 x 18 Turn: 68
+2026-05-29 09:29:09 [train-1-1] Route geplant: Ziel = 228 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 242
+2026-05-29 09:29:09 [train-1-1] Move: 280 -> 281 | Armee: 2 | Target-Terrain: 1 | Ziel: 228 | Half: False
+2026-05-29 09:29:10 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:10 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:10 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:29:10 [train-1-1] Tiles: 36 / 33
+2026-05-29 09:29:10 [train-1-1] Map: 18 x 18 Turn: 69
+2026-05-29 09:29:10 [train-1-1] Route geplant: Ziel = 228 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 242
+2026-05-29 09:29:10 [train-1-1] Move: 281 -> 263 | Armee: 2 | Target-Terrain: 1 | Ziel: 228 | Half: False
+2026-05-29 09:29:10 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:10 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:10 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:29:10 [train-1-1] Tiles: 36 / 33
+2026-05-29 09:29:10 [train-1-1] Map: 18 x 18 Turn: 70
+2026-05-29 09:29:10 [train-1-1] Route geplant: Ziel = 228 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 242
+2026-05-29 09:29:10 [train-1-1] Move: 263 -> 264 | Armee: 2 | Target-Terrain: 1 | Ziel: 228 | Half: False
+2026-05-29 09:29:11 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:11 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:11 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:29:11 [train-1-1] Tiles: 36 / 33
+2026-05-29 09:29:11 [train-1-1] Map: 18 x 18 Turn: 71
+2026-05-29 09:29:11 [train-1-1] Route geplant: Ziel = 228 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 242
+2026-05-29 09:29:11 [train-1-1] Move: 264 -> 246 | Armee: 2 | Target-Terrain: -1 | Ziel: 228 | Half: False
+2026-05-29 09:29:11 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:11 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:11 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:29:11 [train-1-1] Tiles: 37 / 33
+2026-05-29 09:29:11 [train-1-1] Map: 18 x 18 Turn: 72
+2026-05-29 09:29:11 [train-1-1] Route geplant: Ziel = 117 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 242
+2026-05-29 09:29:11 [train-1-1] Move: 277 -> 259 | Armee: 15 | Target-Terrain: 1 | Ziel: 117 | Half: False
+2026-05-29 09:29:12 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:12 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:12 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:29:12 [train-1-1] Tiles: 37 / 33
+2026-05-29 09:29:12 [train-1-1] Map: 18 x 18 Turn: 73
+2026-05-29 09:29:12 [train-1-1] Route geplant: Ziel = 117 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 242
+2026-05-29 09:29:12 [train-1-1] Move: 259 -> 241 | Armee: 15 | Target-Terrain: 1 | Ziel: 117 | Half: False
+2026-05-29 09:29:12 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:12 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:12 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:29:12 [train-1-1] Tiles: 37 / 33
+2026-05-29 09:29:12 [train-1-1] Map: 18 x 18 Turn: 74
+2026-05-29 09:29:12 [train-1-1] Route geplant: Ziel = 117 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 242
+2026-05-29 09:29:12 [train-1-1] Move: 241 -> 223 | Armee: 15 | Target-Terrain: 1 | Ziel: 117 | Half: False
+2026-05-29 09:29:13 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:13 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:13 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:29:13 [train-1-1] Tiles: 37 / 33
+2026-05-29 09:29:13 [train-1-1] Map: 18 x 18 Turn: 75
+2026-05-29 09:29:13 [train-1-1] Route geplant: Ziel = 117 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 242
+2026-05-29 09:29:13 [train-1-1] Move: 223 -> 205 | Armee: 15 | Target-Terrain: -1 | Ziel: 117 | Half: False
+2026-05-29 09:29:13 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:13 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:13 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:29:13 [train-1-1] Tiles: 38 / 33
+2026-05-29 09:29:13 [train-1-1] Map: 18 x 18 Turn: 76
+2026-05-29 09:29:13 [train-1-1] Route geplant: Ziel = 117 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 242
+2026-05-29 09:29:13 [train-1-1] Move: 205 -> 187 | Armee: 14 | Target-Terrain: -1 | Ziel: 117 | Half: False
+2026-05-29 09:29:14 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:14 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:14 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:29:14 [train-1-1] Tiles: 39 / 33
+2026-05-29 09:29:14 [train-1-1] Map: 18 x 18 Turn: 77
+2026-05-29 09:29:14 [train-1-1] Route geplant: Ziel = 117 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:29:14 [train-1-1] Move: 187 -> 169 | Armee: 13 | Target-Terrain: -1 | Ziel: 117 | Half: False
+2026-05-29 09:29:14 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:14 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:14 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:29:14 [train-1-1] Tiles: 40 / 33
+2026-05-29 09:29:14 [train-1-1] Map: 18 x 18 Turn: 78
+2026-05-29 09:29:14 [train-1-1] Route geplant: Ziel = 117 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:29:14 [train-1-1] Move: 169 -> 151 | Armee: 12 | Target-Terrain: -1 | Ziel: 117 | Half: False
+2026-05-29 09:29:15 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:15 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:15 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:29:15 [train-1-1] Tiles: 41 / 33
+2026-05-29 09:29:15 [train-1-1] Map: 18 x 18 Turn: 79
+2026-05-29 09:29:15 [train-1-1] Route geplant: Ziel = 117 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:29:15 [train-1-1] Move: 151 -> 133 | Armee: 11 | Target-Terrain: -1 | Ziel: 117 | Half: False
+2026-05-29 09:29:15 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:15 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:15 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:29:15 [train-1-1] Tiles: 42 / 33
+2026-05-29 09:29:15 [train-1-1] Map: 18 x 18 Turn: 80
+2026-05-29 09:29:15 [train-1-1] Route geplant: Ziel = 117 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:29:15 [train-1-1] Move: 133 -> 115 | Armee: 10 | Target-Terrain: -1 | Ziel: 117 | Half: False
+2026-05-29 09:29:16 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:16 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:16 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:29:16 [train-1-1] Tiles: 43 / 33
+2026-05-29 09:29:16 [train-1-1] Map: 18 x 18 Turn: 81
+2026-05-29 09:29:16 [train-1-1] Route geplant: Ziel = 117 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:29:16 [train-1-1] Move: 115 -> 116 | Armee: 9 | Target-Terrain: -1 | Ziel: 117 | Half: False
+2026-05-29 09:29:16 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:16 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:16 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:29:16 [train-1-1] Tiles: 44 / 33
+2026-05-29 09:29:16 [train-1-1] Map: 18 x 18 Turn: 82
+2026-05-29 09:29:16 [train-1-1] Route geplant: Ziel = 136 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:29:16 [train-1-1] Move: 116 -> 117 | Armee: 8 | Target-Terrain: -1 | Ziel: 136 | Half: False
+2026-05-29 09:29:17 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:17 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:17 [train-1-1] Sichtbare Gegner-Tiles: 1
+2026-05-29 09:29:17 [train-1-1] Tiles: 45 / 33
+2026-05-29 09:29:17 [train-1-1] Map: 18 x 18 Turn: 83
+2026-05-29 09:29:17 [train-1-1] Route geplant: Ziel = 136 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:29:17 [train-1-1] Move: 117 -> 118 | Armee: 7 | Target-Terrain: 0 | Ziel: 136 | Half: False
+2026-05-29 09:29:17 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:17 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:17 [train-1-1] Sichtbare Gegner-Tiles: 2
+2026-05-29 09:29:17 [train-1-1] Tiles: 46 / 32
+2026-05-29 09:29:17 [train-1-1] Map: 18 x 18 Turn: 84
+2026-05-29 09:29:17 [train-1-1] Route geplant: Ziel = 119 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:29:17 [train-1-1] Move: 118 -> 119 | Armee: 5 | Target-Terrain: 0 | Ziel: 119 | Half: False
+2026-05-29 09:29:18 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:18 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:18 [train-1-1] Sichtbare Gegner-Tiles: 4
+2026-05-29 09:29:18 [train-1-1] Tiles: 47 / 31
+2026-05-29 09:29:18 [train-1-1] Map: 18 x 18 Turn: 85
+2026-05-29 09:29:18 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:29:18 [train-1-1] Move: 119 -> 101 | Armee: 3 | Target-Terrain: 0 | Ziel: 138 | Half: False
+2026-05-29 09:29:18 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:18 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:18 [train-1-1] Sichtbare Gegner-Tiles: 5
+2026-05-29 09:29:18 [train-1-1] Tiles: 48 / 30
+2026-05-29 09:29:18 [train-1-1] Map: 18 x 18 Turn: 86
+2026-05-29 09:29:18 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:29:18 [train-1-1] Move: 224 -> 223 | Armee: 2 | Target-Terrain: 1 | Ziel: 138 | Half: False
+2026-05-29 09:29:19 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:19 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:19 [train-1-1] Sichtbare Gegner-Tiles: 5
+2026-05-29 09:29:19 [train-1-1] Tiles: 48 / 30
+2026-05-29 09:29:19 [train-1-1] Map: 18 x 18 Turn: 87
+2026-05-29 09:29:19 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:29:19 [train-1-1] Move: 223 -> 205 | Armee: 2 | Target-Terrain: 1 | Ziel: 138 | Half: False
+2026-05-29 09:29:19 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:19 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:19 [train-1-1] Sichtbare Gegner-Tiles: 5
+2026-05-29 09:29:19 [train-1-1] Tiles: 48 / 30
+2026-05-29 09:29:19 [train-1-1] Map: 18 x 18 Turn: 88
+2026-05-29 09:29:19 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:29:19 [train-1-1] Move: 205 -> 204 | Armee: 2 | Target-Terrain: -1 | Ziel: 138 | Half: False
+2026-05-29 09:29:20 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:20 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:20 [train-1-1] Sichtbare Gegner-Tiles: 5
+2026-05-29 09:29:20 [train-1-1] Tiles: 49 / 30
+2026-05-29 09:29:20 [train-1-1] Map: 18 x 18 Turn: 89
+2026-05-29 09:29:20 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:29:20 [train-1-1] Move: 261 -> 279 | Armee: 2 | Target-Terrain: 1 | Ziel: 138 | Half: False
+2026-05-29 09:29:20 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:20 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:20 [train-1-1] Sichtbare Gegner-Tiles: 5
+2026-05-29 09:29:20 [train-1-1] Tiles: 49 / 30
+2026-05-29 09:29:20 [train-1-1] Map: 18 x 18 Turn: 90
+2026-05-29 09:29:20 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:29:20 [train-1-1] Move: 279 -> 280 | Armee: 2 | Target-Terrain: 1 | Ziel: 138 | Half: False
+2026-05-29 09:29:21 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:21 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:21 [train-1-1] Sichtbare Gegner-Tiles: 5
+2026-05-29 09:29:21 [train-1-1] Tiles: 49 / 30
+2026-05-29 09:29:21 [train-1-1] Map: 18 x 18 Turn: 91
+2026-05-29 09:29:21 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:29:21 [train-1-1] Move: 280 -> 281 | Armee: 2 | Target-Terrain: 1 | Ziel: 138 | Half: False
+2026-05-29 09:29:21 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:21 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:21 [train-1-1] Sichtbare Gegner-Tiles: 5
+2026-05-29 09:29:21 [train-1-1] Tiles: 49 / 30
+2026-05-29 09:29:21 [train-1-1] Map: 18 x 18 Turn: 92
+2026-05-29 09:29:21 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:29:21 [train-1-1] Move: 281 -> 263 | Armee: 2 | Target-Terrain: 1 | Ziel: 138 | Half: False
+2026-05-29 09:29:22 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:22 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:22 [train-1-1] Sichtbare Gegner-Tiles: 5
+2026-05-29 09:29:22 [train-1-1] Tiles: 49 / 30
+2026-05-29 09:29:22 [train-1-1] Map: 18 x 18 Turn: 93
+2026-05-29 09:29:22 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:29:22 [train-1-1] Move: 263 -> 264 | Armee: 2 | Target-Terrain: 1 | Ziel: 138 | Half: False
+2026-05-29 09:29:22 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:22 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:22 [train-1-1] Sichtbare Gegner-Tiles: 5
+2026-05-29 09:29:22 [train-1-1] Tiles: 49 / 30
+2026-05-29 09:29:22 [train-1-1] Map: 18 x 18 Turn: 94
+2026-05-29 09:29:22 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:29:22 [train-1-1] Move: 264 -> 265 | Armee: 2 | Target-Terrain: -1 | Ziel: 138 | Half: False
+2026-05-29 09:29:23 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:23 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:23 [train-1-1] Sichtbare Gegner-Tiles: 5
+2026-05-29 09:29:23 [train-1-1] Tiles: 50 / 30
+2026-05-29 09:29:23 [train-1-1] Map: 18 x 18 Turn: 95
+2026-05-29 09:29:23 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:29:23 [train-1-1] Move: 277 -> 259 | Armee: 12 | Target-Terrain: 1 | Ziel: 138 | Half: False
+2026-05-29 09:29:23 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:23 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:23 [train-1-1] Sichtbare Gegner-Tiles: 5
+2026-05-29 09:29:23 [train-1-1] Tiles: 50 / 30
+2026-05-29 09:29:23 [train-1-1] Map: 18 x 18 Turn: 96
+2026-05-29 09:29:23 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:29:23 [train-1-1] Move: 259 -> 241 | Armee: 12 | Target-Terrain: 1 | Ziel: 138 | Half: False
+2026-05-29 09:29:24 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:24 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:24 [train-1-1] Sichtbare Gegner-Tiles: 5
+2026-05-29 09:29:24 [train-1-1] Tiles: 50 / 30
+2026-05-29 09:29:24 [train-1-1] Map: 18 x 18 Turn: 97
+2026-05-29 09:29:24 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:29:24 [train-1-1] Move: 241 -> 223 | Armee: 12 | Target-Terrain: 1 | Ziel: 138 | Half: False
+2026-05-29 09:29:24 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:24 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:24 [train-1-1] Sichtbare Gegner-Tiles: 5
+2026-05-29 09:29:24 [train-1-1] Tiles: 50 / 30
+2026-05-29 09:29:24 [train-1-1] Map: 18 x 18 Turn: 98
+2026-05-29 09:29:24 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:29:24 [train-1-1] Move: 223 -> 205 | Armee: 12 | Target-Terrain: 1 | Ziel: 138 | Half: False
+2026-05-29 09:29:25 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:25 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:25 [train-1-1] Sichtbare Gegner-Tiles: 5
+2026-05-29 09:29:25 [train-1-1] Tiles: 50 / 30
+2026-05-29 09:29:25 [train-1-1] Map: 18 x 18 Turn: 99
+2026-05-29 09:29:25 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:29:25 [train-1-1] Move: 205 -> 187 | Armee: 12 | Target-Terrain: 1 | Ziel: 138 | Half: False
+2026-05-29 09:29:25 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:25 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:25 [train-1-1] Sichtbare Gegner-Tiles: 5
+2026-05-29 09:29:25 [train-1-1] Tiles: 50 / 30
+2026-05-29 09:29:25 [train-1-1] Map: 18 x 18 Turn: 100
+2026-05-29 09:29:25 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:29:25 [train-1-1] Move: 133 -> 134 | Armee: 2 | Target-Terrain: -1 | Ziel: 138 | Half: False
+2026-05-29 09:29:26 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:26 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:26 [train-1-1] Sichtbare Gegner-Tiles: 5
+2026-05-29 09:29:26 [train-1-1] Tiles: 51 / 30
+2026-05-29 09:29:26 [train-1-1] Map: 18 x 18 Turn: 101
+2026-05-29 09:29:26 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:29:26 [train-1-1] Move: 151 -> 152 | Armee: 2 | Target-Terrain: -1 | Ziel: 138 | Half: False
+2026-05-29 09:29:26 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:26 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:26 [train-1-1] Sichtbare Gegner-Tiles: 5
+2026-05-29 09:29:26 [train-1-1] Tiles: 52 / 30
+2026-05-29 09:29:26 [train-1-1] Map: 18 x 18 Turn: 102
+2026-05-29 09:29:26 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:29:26 [train-1-1] Move: 246 -> 228 | Armee: 2 | Target-Terrain: -1 | Ziel: 138 | Half: False
+2026-05-29 09:29:27 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:27 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:27 [train-1-1] Sichtbare Gegner-Tiles: 6
+2026-05-29 09:29:27 [train-1-1] Tiles: 53 / 30
+2026-05-29 09:29:27 [train-1-1] Map: 18 x 18 Turn: 103
+2026-05-29 09:29:27 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:27 [train-1-1] Move: 207 -> 189 | Armee: 2 | Target-Terrain: -1 | Ziel: 138 | Half: False
+2026-05-29 09:29:27 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:27 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:27 [train-1-1] Sichtbare Gegner-Tiles: 6
+2026-05-29 09:29:27 [train-1-1] Tiles: 54 / 30
+2026-05-29 09:29:27 [train-1-1] Map: 18 x 18 Turn: 104
+2026-05-29 09:29:27 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:27 [train-1-1] Move: 265 -> 247 | Armee: 2 | Target-Terrain: -1 | Ziel: 138 | Half: False
+2026-05-29 09:29:28 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:28 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:28 [train-1-1] Sichtbare Gegner-Tiles: 6
+2026-05-29 09:29:28 [train-1-1] Tiles: 55 / 30
+2026-05-29 09:29:28 [train-1-1] Map: 18 x 18 Turn: 105
+2026-05-29 09:29:28 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:28 [train-1-1] Move: 204 -> 186 | Armee: 2 | Target-Terrain: -1 | Ziel: 138 | Half: False
+2026-05-29 09:29:28 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:28 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:28 [train-1-1] Sichtbare Gegner-Tiles: 6
+2026-05-29 09:29:28 [train-1-1] Tiles: 56 / 30
+2026-05-29 09:29:28 [train-1-1] Map: 18 x 18 Turn: 106
+2026-05-29 09:29:28 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:28 [train-1-1] Move: 314 -> 315 | Armee: 2 | Target-Terrain: -1 | Ziel: 138 | Half: False
+2026-05-29 09:29:29 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:29 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:29 [train-1-1] Sichtbare Gegner-Tiles: 6
+2026-05-29 09:29:29 [train-1-1] Tiles: 57 / 30
+2026-05-29 09:29:29 [train-1-1] Map: 18 x 18 Turn: 107
+2026-05-29 09:29:29 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:29 [train-1-1] Move: 320 -> 321 | Armee: 2 | Target-Terrain: -1 | Ziel: 138 | Half: False
+2026-05-29 09:29:29 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:29 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:29 [train-1-1] Sichtbare Gegner-Tiles: 6
+2026-05-29 09:29:29 [train-1-1] Tiles: 58 / 30
+2026-05-29 09:29:29 [train-1-1] Map: 18 x 18 Turn: 108
+2026-05-29 09:29:29 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:29 [train-1-1] Move: 282 -> 283 | Armee: 2 | Target-Terrain: -1 | Ziel: 138 | Half: False
+2026-05-29 09:29:30 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:30 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:30 [train-1-1] Sichtbare Gegner-Tiles: 6
+2026-05-29 09:29:30 [train-1-1] Tiles: 59 / 30
+2026-05-29 09:29:30 [train-1-1] Map: 18 x 18 Turn: 109
+2026-05-29 09:29:30 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:30 [train-1-1] Move: 187 -> 188 | Armee: 13 | Target-Terrain: -1 | Ziel: 138 | Half: False
+2026-05-29 09:29:30 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:30 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:30 [train-1-1] Sichtbare Gegner-Tiles: 6
+2026-05-29 09:29:30 [train-1-1] Tiles: 60 / 30
+2026-05-29 09:29:30 [train-1-1] Map: 18 x 18 Turn: 110
+2026-05-29 09:29:30 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:30 [train-1-1] Move: 118 -> 136 | Armee: 2 | Target-Terrain: -1 | Ziel: 138 | Half: False
+2026-05-29 09:29:31 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:31 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:31 [train-1-1] Sichtbare Gegner-Tiles: 8
+2026-05-29 09:29:31 [train-1-1] Tiles: 61 / 30
+2026-05-29 09:29:31 [train-1-1] Map: 18 x 18 Turn: 111
+2026-05-29 09:29:31 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:31 [train-1-1] Move: 116 -> 98 | Armee: 2 | Target-Terrain: -1 | Ziel: 138 | Half: False
+2026-05-29 09:29:31 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:31 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:31 [train-1-1] Sichtbare Gegner-Tiles: 8
+2026-05-29 09:29:31 [train-1-1] Tiles: 62 / 30
+2026-05-29 09:29:31 [train-1-1] Map: 18 x 18 Turn: 112
+2026-05-29 09:29:31 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:31 [train-1-1] Move: 117 -> 135 | Armee: 2 | Target-Terrain: -1 | Ziel: 138 | Half: False
+2026-05-29 09:29:32 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:32 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:32 [train-1-1] Sichtbare Gegner-Tiles: 8
+2026-05-29 09:29:32 [train-1-1] Tiles: 63 / 30
+2026-05-29 09:29:32 [train-1-1] Map: 18 x 18 Turn: 113
+2026-05-29 09:29:32 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:32 [train-1-1] Move: 115 -> 114 | Armee: 2 | Target-Terrain: -1 | Ziel: 138 | Half: False
+2026-05-29 09:29:32 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:32 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:32 [train-1-1] Sichtbare Gegner-Tiles: 8
+2026-05-29 09:29:32 [train-1-1] Tiles: 64 / 30
+2026-05-29 09:29:32 [train-1-1] Map: 18 x 18 Turn: 114
+2026-05-29 09:29:32 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:32 [train-1-1] Move: 169 -> 168 | Armee: 2 | Target-Terrain: -1 | Ziel: 138 | Half: False
+2026-05-29 09:29:33 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:33 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:33 [train-1-1] Sichtbare Gegner-Tiles: 8
+2026-05-29 09:29:33 [train-1-1] Tiles: 65 / 30
+2026-05-29 09:29:33 [train-1-1] Map: 18 x 18 Turn: 115
+2026-05-29 09:29:33 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:33 [train-1-1] Move: 222 -> 221 | Armee: 2 | Target-Terrain: -1 | Ziel: 138 | Half: False
+2026-05-29 09:29:33 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:33 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:33 [train-1-1] Sichtbare Gegner-Tiles: 8
+2026-05-29 09:29:33 [train-1-1] Tiles: 66 / 30
+2026-05-29 09:29:33 [train-1-1] Map: 18 x 18 Turn: 116
+2026-05-29 09:29:33 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:33 [train-1-1] Move: 294 -> 293 | Armee: 2 | Target-Terrain: -1 | Ziel: 138 | Half: False
+2026-05-29 09:29:34 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:34 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:34 [train-1-1] Sichtbare Gegner-Tiles: 8
+2026-05-29 09:29:34 [train-1-1] Tiles: 67 / 30
+2026-05-29 09:29:34 [train-1-1] Map: 18 x 18 Turn: 117
+2026-05-29 09:29:34 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:34 [train-1-1] Move: 313 -> 312 | Armee: 2 | Target-Terrain: -1 | Ziel: 138 | Half: False
+2026-05-29 09:29:34 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:34 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:34 [train-1-1] Sichtbare Gegner-Tiles: 8
+2026-05-29 09:29:34 [train-1-1] Tiles: 68 / 30
+2026-05-29 09:29:34 [train-1-1] Map: 18 x 18 Turn: 118
+2026-05-29 09:29:34 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:34 [train-1-1] Move: 299 -> 317 | Armee: 2 | Target-Terrain: -1 | Ziel: 138 | Half: False
+2026-05-29 09:29:35 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:35 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:35 [train-1-1] Sichtbare Gegner-Tiles: 8
+2026-05-29 09:29:35 [train-1-1] Tiles: 69 / 30
+2026-05-29 09:29:35 [train-1-1] Map: 18 x 18 Turn: 119
+2026-05-29 09:29:35 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:35 [train-1-1] Move: 277 -> 278 | Armee: 14 | Target-Terrain: 1 | Ziel: 138 | Half: False
+2026-05-29 09:29:35 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:35 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:35 [train-1-1] Sichtbare Gegner-Tiles: 8
+2026-05-29 09:29:35 [train-1-1] Tiles: 69 / 30
+2026-05-29 09:29:35 [train-1-1] Map: 18 x 18 Turn: 120
+2026-05-29 09:29:35 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:35 [train-1-1] Move: 278 -> 279 | Armee: 16 | Target-Terrain: 1 | Ziel: 138 | Half: False
+2026-05-29 09:29:36 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:36 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:36 [train-1-1] Sichtbare Gegner-Tiles: 8
+2026-05-29 09:29:36 [train-1-1] Tiles: 69 / 30
+2026-05-29 09:29:36 [train-1-1] Map: 18 x 18 Turn: 121
+2026-05-29 09:29:36 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:36 [train-1-1] Move: 279 -> 280 | Armee: 17 | Target-Terrain: 1 | Ziel: 138 | Half: False
+2026-05-29 09:29:36 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:36 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:36 [train-1-1] Sichtbare Gegner-Tiles: 8
+2026-05-29 09:29:36 [train-1-1] Tiles: 69 / 30
+2026-05-29 09:29:36 [train-1-1] Map: 18 x 18 Turn: 122
+2026-05-29 09:29:36 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:36 [train-1-1] Move: 280 -> 281 | Armee: 18 | Target-Terrain: 1 | Ziel: 138 | Half: False
+2026-05-29 09:29:37 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:37 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:37 [train-1-1] Sichtbare Gegner-Tiles: 8
+2026-05-29 09:29:37 [train-1-1] Tiles: 69 / 30
+2026-05-29 09:29:37 [train-1-1] Map: 18 x 18 Turn: 123
+2026-05-29 09:29:37 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:37 [train-1-1] Move: 281 -> 263 | Armee: 19 | Target-Terrain: 1 | Ziel: 138 | Half: False
+2026-05-29 09:29:37 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:37 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:37 [train-1-1] Sichtbare Gegner-Tiles: 8
+2026-05-29 09:29:37 [train-1-1] Tiles: 69 / 30
+2026-05-29 09:29:37 [train-1-1] Map: 18 x 18 Turn: 124
+2026-05-29 09:29:37 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:37 [train-1-1] Move: 263 -> 264 | Armee: 20 | Target-Terrain: 1 | Ziel: 138 | Half: False
+2026-05-29 09:29:38 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:38 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:38 [train-1-1] Sichtbare Gegner-Tiles: 8
+2026-05-29 09:29:38 [train-1-1] Tiles: 69 / 30
+2026-05-29 09:29:38 [train-1-1] Map: 18 x 18 Turn: 125
+2026-05-29 09:29:38 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:38 [train-1-1] Move: 264 -> 246 | Armee: 21 | Target-Terrain: 1 | Ziel: 138 | Half: False
+2026-05-29 09:29:38 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:38 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:38 [train-1-1] Sichtbare Gegner-Tiles: 8
+2026-05-29 09:29:38 [train-1-1] Tiles: 69 / 30
+2026-05-29 09:29:38 [train-1-1] Map: 18 x 18 Turn: 126
+2026-05-29 09:29:38 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:38 [train-1-1] Move: 246 -> 228 | Armee: 21 | Target-Terrain: 1 | Ziel: 138 | Half: False
+2026-05-29 09:29:39 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:39 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:39 [train-1-1] Sichtbare Gegner-Tiles: 8
+2026-05-29 09:29:39 [train-1-1] Tiles: 69 / 30
+2026-05-29 09:29:39 [train-1-1] Map: 18 x 18 Turn: 127
+2026-05-29 09:29:39 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:39 [train-1-1] Move: 228 -> 229 | Armee: 21 | Target-Terrain: -1 | Ziel: 138 | Half: False
+2026-05-29 09:29:39 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:39 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:39 [train-1-1] Sichtbare Gegner-Tiles: 8
+2026-05-29 09:29:39 [train-1-1] Tiles: 70 / 30
+2026-05-29 09:29:39 [train-1-1] Map: 18 x 18 Turn: 128
+2026-05-29 09:29:39 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:39 [train-1-1] Move: 229 -> 211 | Armee: 20 | Target-Terrain: 0 | Ziel: 138 | Half: False
+2026-05-29 09:29:40 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:40 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:40 [train-1-1] Sichtbare Gegner-Tiles: 10
+2026-05-29 09:29:40 [train-1-1] Tiles: 71 / 29
+2026-05-29 09:29:40 [train-1-1] Map: 18 x 18 Turn: 129
+2026-05-29 09:29:40 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:40 [train-1-1] Move: 211 -> 193 | Armee: 10 | Target-Terrain: 0 | Ziel: 138 | Half: False
+2026-05-29 09:29:40 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:40 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:40 [train-1-1] Sichtbare Gegner-Tiles: 11
+2026-05-29 09:29:40 [train-1-1] Tiles: 72 / 28
+2026-05-29 09:29:40 [train-1-1] Map: 18 x 18 Turn: 130
+2026-05-29 09:29:40 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:40 [train-1-1] Move: 193 -> 192 | Armee: 7 | Target-Terrain: 0 | Ziel: 138 | Half: False
+2026-05-29 09:29:41 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:41 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:41 [train-1-1] Sichtbare Gegner-Tiles: 10
+2026-05-29 09:29:41 [train-1-1] Tiles: 73 / 27
+2026-05-29 09:29:41 [train-1-1] Map: 18 x 18 Turn: 131
+2026-05-29 09:29:41 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:41 [train-1-1] Move: 192 -> 174 | Armee: 4 | Target-Terrain: 0 | Ziel: 138 | Half: False
+2026-05-29 09:29:41 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:41 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:41 [train-1-1] Sichtbare Gegner-Tiles: 10
+2026-05-29 09:29:41 [train-1-1] Tiles: 74 / 26
+2026-05-29 09:29:41 [train-1-1] Map: 18 x 18 Turn: 132
+2026-05-29 09:29:41 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:41 [train-1-1] Move: 277 -> 278 | Armee: 8 | Target-Terrain: 1 | Ziel: 138 | Half: False
+2026-05-29 09:29:42 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:42 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:42 [train-1-1] Sichtbare Gegner-Tiles: 10
+2026-05-29 09:29:42 [train-1-1] Tiles: 74 / 26
+2026-05-29 09:29:42 [train-1-1] Map: 18 x 18 Turn: 133
+2026-05-29 09:29:42 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:42 [train-1-1] Move: 278 -> 279 | Armee: 8 | Target-Terrain: 1 | Ziel: 138 | Half: False
+2026-05-29 09:29:42 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:42 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:42 [train-1-1] Sichtbare Gegner-Tiles: 10
+2026-05-29 09:29:42 [train-1-1] Tiles: 74 / 26
+2026-05-29 09:29:42 [train-1-1] Map: 18 x 18 Turn: 134
+2026-05-29 09:29:42 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:42 [train-1-1] Move: 279 -> 280 | Armee: 8 | Target-Terrain: 1 | Ziel: 138 | Half: False
+2026-05-29 09:29:43 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:43 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:43 [train-1-1] Sichtbare Gegner-Tiles: 10
+2026-05-29 09:29:43 [train-1-1] Tiles: 74 / 26
+2026-05-29 09:29:43 [train-1-1] Map: 18 x 18 Turn: 135
+2026-05-29 09:29:43 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:43 [train-1-1] Move: 280 -> 281 | Armee: 8 | Target-Terrain: 1 | Ziel: 138 | Half: False
+2026-05-29 09:29:43 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:43 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:43 [train-1-1] Sichtbare Gegner-Tiles: 10
+2026-05-29 09:29:43 [train-1-1] Tiles: 74 / 26
+2026-05-29 09:29:43 [train-1-1] Map: 18 x 18 Turn: 136
+2026-05-29 09:29:43 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:43 [train-1-1] Move: 281 -> 263 | Armee: 8 | Target-Terrain: 1 | Ziel: 138 | Half: False
+2026-05-29 09:29:44 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:44 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:44 [train-1-1] Sichtbare Gegner-Tiles: 10
+2026-05-29 09:29:44 [train-1-1] Tiles: 74 / 26
+2026-05-29 09:29:44 [train-1-1] Map: 18 x 18 Turn: 137
+2026-05-29 09:29:44 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:44 [train-1-1] Move: 263 -> 264 | Armee: 8 | Target-Terrain: 1 | Ziel: 138 | Half: False
+2026-05-29 09:29:44 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:44 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:44 [train-1-1] Sichtbare Gegner-Tiles: 10
+2026-05-29 09:29:44 [train-1-1] Tiles: 74 / 26
+2026-05-29 09:29:44 [train-1-1] Map: 18 x 18 Turn: 138
+2026-05-29 09:29:44 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:44 [train-1-1] Move: 264 -> 246 | Armee: 8 | Target-Terrain: 1 | Ziel: 138 | Half: False
+2026-05-29 09:29:45 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:45 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:45 [train-1-1] Sichtbare Gegner-Tiles: 10
+2026-05-29 09:29:45 [train-1-1] Tiles: 74 / 26
+2026-05-29 09:29:45 [train-1-1] Map: 18 x 18 Turn: 139
+2026-05-29 09:29:45 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:45 [train-1-1] Move: 246 -> 228 | Armee: 8 | Target-Terrain: 1 | Ziel: 138 | Half: False
+2026-05-29 09:29:45 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:45 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:45 [train-1-1] Sichtbare Gegner-Tiles: 10
+2026-05-29 09:29:45 [train-1-1] Tiles: 74 / 26
+2026-05-29 09:29:45 [train-1-1] Map: 18 x 18 Turn: 140
+2026-05-29 09:29:45 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:45 [train-1-1] Move: 101 -> 119 | Armee: 2 | Target-Terrain: 1 | Ziel: 138 | Half: False
+2026-05-29 09:29:46 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:46 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:46 [train-1-1] Sichtbare Gegner-Tiles: 10
+2026-05-29 09:29:46 [train-1-1] Tiles: 74 / 26
+2026-05-29 09:29:46 [train-1-1] Map: 18 x 18 Turn: 141
+2026-05-29 09:29:46 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:46 [train-1-1] Move: 205 -> 187 | Armee: 2 | Target-Terrain: 1 | Ziel: 138 | Half: False
+2026-05-29 09:29:46 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:46 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:46 [train-1-1] Sichtbare Gegner-Tiles: 10
+2026-05-29 09:29:46 [train-1-1] Tiles: 74 / 26
+2026-05-29 09:29:46 [train-1-1] Map: 18 x 18 Turn: 142
+2026-05-29 09:29:46 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:46 [train-1-1] Move: 187 -> 169 | Armee: 2 | Target-Terrain: 1 | Ziel: 138 | Half: False
+2026-05-29 09:29:47 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:47 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:47 [train-1-1] Sichtbare Gegner-Tiles: 10
+2026-05-29 09:29:47 [train-1-1] Tiles: 74 / 26
+2026-05-29 09:29:47 [train-1-1] Map: 18 x 18 Turn: 143
+2026-05-29 09:29:47 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:47 [train-1-1] Move: 188 -> 187 | Armee: 12 | Target-Terrain: 1 | Ziel: 138 | Half: False
+2026-05-29 09:29:47 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:47 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:47 [train-1-1] Sichtbare Gegner-Tiles: 10
+2026-05-29 09:29:47 [train-1-1] Tiles: 74 / 26
+2026-05-29 09:29:47 [train-1-1] Map: 18 x 18 Turn: 144
+2026-05-29 09:29:47 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:47 [train-1-1] Move: 119 -> 120 | Armee: 3 | Target-Terrain: 0 | Ziel: 138 | Half: False
+2026-05-29 09:29:48 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:48 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:48 [train-1-1] Sichtbare Gegner-Tiles: 10
+2026-05-29 09:29:48 [train-1-1] Tiles: 74 / 26
+2026-05-29 09:29:48 [train-1-1] Map: 18 x 18 Turn: 145
+2026-05-29 09:29:48 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:48 [train-1-1] Move: 187 -> 169 | Armee: 12 | Target-Terrain: 1 | Ziel: 138 | Half: False
+2026-05-29 09:29:48 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:48 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:48 [train-1-1] Sichtbare Gegner-Tiles: 10
+2026-05-29 09:29:48 [train-1-1] Tiles: 74 / 26
+2026-05-29 09:29:48 [train-1-1] Map: 18 x 18 Turn: 146
+2026-05-29 09:29:48 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:48 [train-1-1] Move: 169 -> 151 | Armee: 13 | Target-Terrain: 1 | Ziel: 138 | Half: False
+2026-05-29 09:29:49 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:49 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:49 [train-1-1] Sichtbare Gegner-Tiles: 10
+2026-05-29 09:29:49 [train-1-1] Tiles: 73 / 27
+2026-05-29 09:29:49 [train-1-1] Map: 18 x 18 Turn: 147
+2026-05-29 09:29:49 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:49 [train-1-1] Move: 151 -> 150 | Armee: 13 | Target-Terrain: -1 | Ziel: 138 | Half: False
+2026-05-29 09:29:49 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:49 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:49 [train-1-1] Sichtbare Gegner-Tiles: 11
+2026-05-29 09:29:49 [train-1-1] Tiles: 73 / 28
+2026-05-29 09:29:49 [train-1-1] Map: 18 x 18 Turn: 148
+2026-05-29 09:29:49 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:49 [train-1-1] Move: 150 -> 132 | Armee: 12 | Target-Terrain: -1 | Ziel: 138 | Half: False
+2026-05-29 09:29:50 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:50 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:50 [train-1-1] Sichtbare Gegner-Tiles: 12
+2026-05-29 09:29:50 [train-1-1] Tiles: 73 / 29
+2026-05-29 09:29:50 [train-1-1] Map: 18 x 18 Turn: 149
+2026-05-29 09:29:50 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:50 [train-1-1] Move: 132 -> 131 | Armee: 11 | Target-Terrain: -1 | Ziel: 138 | Half: False
+2026-05-29 09:29:50 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:50 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:50 [train-1-1] Sichtbare Gegner-Tiles: 13
+2026-05-29 09:29:50 [train-1-1] Tiles: 73 / 30
+2026-05-29 09:29:50 [train-1-1] Map: 18 x 18 Turn: 150
+2026-05-29 09:29:50 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:50 [train-1-1] Move: 98 -> 99 | Armee: 2 | Target-Terrain: -1 | Ziel: 138 | Half: False
+2026-05-29 09:29:51 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:51 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:51 [train-1-1] Sichtbare Gegner-Tiles: 14
+2026-05-29 09:29:51 [train-1-1] Tiles: 73 / 31
+2026-05-29 09:29:51 [train-1-1] Map: 18 x 18 Turn: 151
+2026-05-29 09:29:51 [train-1-1] Route geplant: Ziel = 138 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:51 [train-1-1] Move: 321 -> 303 | Armee: 2 | Target-Terrain: -1 | Ziel: 138 | Half: False
+2026-05-29 09:29:51 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:51 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:51 [train-1-1] Sichtbare Gegner-Tiles: 15
+2026-05-29 09:29:51 [train-1-1] Tiles: 73 / 32
+2026-05-29 09:29:51 [train-1-1] Map: 18 x 18 Turn: 152
+2026-05-29 09:29:51 [train-1-1] Route geplant: Ziel = 188 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:51 [train-1-1] Move: 187 -> 188 | Armee: 2 | Target-Terrain: 1 | Ziel: 188 | Half: False
+2026-05-29 09:29:52 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:52 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:52 [train-1-1] Sichtbare Gegner-Tiles: 16
+2026-05-29 09:29:52 [train-1-1] Tiles: 72 / 33
+2026-05-29 09:29:52 [train-1-1] Map: 18 x 18 Turn: 153
+2026-05-29 09:29:52 [train-1-1] Route geplant: Ziel = 188 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:52 [train-1-1] Move: 189 -> 188 | Armee: 2 | Target-Terrain: 1 | Ziel: 188 | Half: False
+2026-05-29 09:29:52 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:52 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:52 [train-1-1] Sichtbare Gegner-Tiles: 17
+2026-05-29 09:29:52 [train-1-1] Tiles: 71 / 34
+2026-05-29 09:29:52 [train-1-1] Map: 18 x 18 Turn: 154
+2026-05-29 09:29:52 [train-1-1] Route geplant: Ziel = 188 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:52 [train-1-1] Move: 131 -> 149 | Armee: 11 | Target-Terrain: -1 | Ziel: 188 | Half: False
+2026-05-29 09:29:53 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:53 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:53 [train-1-1] Sichtbare Gegner-Tiles: 18
+2026-05-29 09:29:53 [train-1-1] Tiles: 71 / 35
+2026-05-29 09:29:53 [train-1-1] Map: 18 x 18 Turn: 155
+2026-05-29 09:29:53 [train-1-1] Route geplant: Ziel = 188 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:53 [train-1-1] Move: 114 -> 115 | Armee: 2 | Target-Terrain: 1 | Ziel: 188 | Half: False
+2026-05-29 09:29:53 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:53 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:53 [train-1-1] Sichtbare Gegner-Tiles: 19
+2026-05-29 09:29:53 [train-1-1] Tiles: 70 / 36
+2026-05-29 09:29:53 [train-1-1] Map: 18 x 18 Turn: 156
+2026-05-29 09:29:53 [train-1-1] Route geplant: Ziel = 188 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:53 [train-1-1] Move: 115 -> 133 | Armee: 3 | Target-Terrain: 0 | Ziel: 188 | Half: False
+2026-05-29 09:29:54 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:54 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:54 [train-1-1] Sichtbare Gegner-Tiles: 19
+2026-05-29 09:29:54 [train-1-1] Tiles: 70 / 36
+2026-05-29 09:29:54 [train-1-1] Map: 18 x 18 Turn: 157
+2026-05-29 09:29:54 [train-1-1] Route geplant: Ziel = 204 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:54 [train-1-1] Move: 186 -> 204 | Armee: 2 | Target-Terrain: 1 | Ziel: 204 | Half: False
+2026-05-29 09:29:54 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:54 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:54 [train-1-1] Sichtbare Gegner-Tiles: 20
+2026-05-29 09:29:54 [train-1-1] Tiles: 69 / 37
+2026-05-29 09:29:54 [train-1-1] Map: 18 x 18 Turn: 158
+2026-05-29 09:29:54 [train-1-1] Route geplant: Ziel = 204 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:54 [train-1-1] Move: 205 -> 204 | Armee: 2 | Target-Terrain: 1 | Ziel: 204 | Half: False
+2026-05-29 09:29:55 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:55 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:55 [train-1-1] Sichtbare Gegner-Tiles: 21
+2026-05-29 09:29:55 [train-1-1] Tiles: 68 / 38
+2026-05-29 09:29:55 [train-1-1] Map: 18 x 18 Turn: 159
+2026-05-29 09:29:55 [train-1-1] Route geplant: Ziel = 223 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:55 [train-1-1] Move: 224 -> 223 | Armee: 3 | Target-Terrain: 1 | Ziel: 223 | Half: False
+2026-05-29 09:29:55 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:55 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:55 [train-1-1] Sichtbare Gegner-Tiles: 22
+2026-05-29 09:29:55 [train-1-1] Tiles: 67 / 39
+2026-05-29 09:29:55 [train-1-1] Map: 18 x 18 Turn: 160
+2026-05-29 09:29:55 [train-1-1] Route geplant: Ziel = 223 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:55 [train-1-1] Move: 241 -> 223 | Armee: 3 | Target-Terrain: 1 | Ziel: 223 | Half: False
+2026-05-29 09:29:56 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:56 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:56 [train-1-1] Sichtbare Gegner-Tiles: 23
+2026-05-29 09:29:56 [train-1-1] Tiles: 66 / 40
+2026-05-29 09:29:56 [train-1-1] Map: 18 x 18 Turn: 161
+2026-05-29 09:29:56 [train-1-1] Route geplant: Ziel = 223 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:29:56 [train-1-1] Move: 222 -> 223 | Armee: 2 | Target-Terrain: 1 | Ziel: 223 | Half: False
+2026-05-29 09:29:56 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:56 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:56 [train-1-1] Sichtbare Gegner-Tiles: 24
+2026-05-29 09:29:56 [train-1-1] Tiles: 65 / 41
+2026-05-29 09:29:56 [train-1-1] Map: 18 x 18 Turn: 162
+2026-05-29 09:29:56 [train-1-1] Route geplant: Ziel = 223 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:29:56 [train-1-1] Move: 149 -> 150 | Armee: 10 | Target-Terrain: 0 | Ziel: 223 | Half: False
+2026-05-29 09:29:57 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:57 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:57 [train-1-1] Sichtbare Gegner-Tiles: 24
+2026-05-29 09:29:57 [train-1-1] Tiles: 65 / 41
+2026-05-29 09:29:57 [train-1-1] Map: 18 x 18 Turn: 163
+2026-05-29 09:29:57 [train-1-1] Route geplant: Ziel = 261 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:29:57 [train-1-1] Move: 243 -> 261 | Armee: 4 | Target-Terrain: 1 | Ziel: 261 | Half: False
+2026-05-29 09:29:57 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:57 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:57 [train-1-1] Sichtbare Gegner-Tiles: 25
+2026-05-29 09:29:57 [train-1-1] Tiles: 64 / 42
+2026-05-29 09:29:57 [train-1-1] Map: 18 x 18 Turn: 164
+2026-05-29 09:29:57 [train-1-1] Route geplant: Ziel = 223 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:29:57 [train-1-1] Move: 226 -> 225 | Armee: 3 | Target-Terrain: 0 | Ziel: 223 | Half: False
+2026-05-29 09:29:58 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:58 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:58 [train-1-1] Sichtbare Gegner-Tiles: 25
+2026-05-29 09:29:58 [train-1-1] Tiles: 64 / 42
+2026-05-29 09:29:58 [train-1-1] Map: 18 x 18 Turn: 165
+2026-05-29 09:29:58 [train-1-1] Route geplant: Ziel = 223 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:29:58 [train-1-1] Move: 150 -> 168 | Armee: 8 | Target-Terrain: 0 | Ziel: 223 | Half: False
+2026-05-29 09:29:58 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:58 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:58 [train-1-1] Sichtbare Gegner-Tiles: 24
+2026-05-29 09:29:58 [train-1-1] Tiles: 65 / 42
+2026-05-29 09:29:58 [train-1-1] Map: 18 x 18 Turn: 166
+2026-05-29 09:29:58 [train-1-1] Route geplant: Ziel = 223 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:29:58 [train-1-1] Move: 168 -> 169 | Armee: 6 | Target-Terrain: 0 | Ziel: 223 | Half: False
+2026-05-29 09:29:59 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:59 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:59 [train-1-1] Sichtbare Gegner-Tiles: 23
+2026-05-29 09:29:59 [train-1-1] Tiles: 66 / 42
+2026-05-29 09:29:59 [train-1-1] Map: 18 x 18 Turn: 167
+2026-05-29 09:29:59 [train-1-1] Route geplant: Ziel = 223 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:59 [train-1-1] Move: 169 -> 187 | Armee: 4 | Target-Terrain: 0 | Ziel: 223 | Half: False
+2026-05-29 09:29:59 [train-1-1] Mein General Index: 277
+2026-05-29 09:29:59 [train-1-1] Gegner General Index: None
+2026-05-29 09:29:59 [train-1-1] Sichtbare Gegner-Tiles: 23
+2026-05-29 09:29:59 [train-1-1] Tiles: 67 / 42
+2026-05-29 09:29:59 [train-1-1] Map: 18 x 18 Turn: 168
+2026-05-29 09:29:59 [train-1-1] Route geplant: Ziel = 223 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:29:59 [train-1-1] Move: 208 -> 207 | Armee: 3 | Target-Terrain: 0 | Ziel: 223 | Half: False
+2026-05-29 09:30:00 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:00 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:00 [train-1-1] Sichtbare Gegner-Tiles: 22
+2026-05-29 09:30:00 [train-1-1] Tiles: 68 / 42
+2026-05-29 09:30:00 [train-1-1] Map: 18 x 18 Turn: 169
+2026-05-29 09:30:00 [train-1-1] Route geplant: Ziel = 223 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:00 [train-1-1] Move: 244 -> 243 | Armee: 4 | Target-Terrain: 1 | Ziel: 223 | Half: False
+2026-05-29 09:30:00 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:00 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:00 [train-1-1] Sichtbare Gegner-Tiles: 22
+2026-05-29 09:30:00 [train-1-1] Tiles: 68 / 43
+2026-05-29 09:30:00 [train-1-1] Map: 18 x 18 Turn: 170
+2026-05-29 09:30:00 [train-1-1] Route geplant: Ziel = 223 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:00 [train-1-1] Move: 243 -> 225 | Armee: 4 | Target-Terrain: 1 | Ziel: 223 | Half: False
+2026-05-29 09:30:01 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:01 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:01 [train-1-1] Sichtbare Gegner-Tiles: 22
+2026-05-29 09:30:01 [train-1-1] Tiles: 68 / 44
+2026-05-29 09:30:01 [train-1-1] Map: 18 x 18 Turn: 171
+2026-05-29 09:30:01 [train-1-1] Route geplant: Ziel = 223 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:01 [train-1-1] Move: 225 -> 224 | Armee: 4 | Target-Terrain: 0 | Ziel: 223 | Half: False
+2026-05-29 09:30:01 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:01 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:01 [train-1-1] Sichtbare Gegner-Tiles: 21
+2026-05-29 09:30:01 [train-1-1] Tiles: 69 / 44
+2026-05-29 09:30:01 [train-1-1] Map: 18 x 18 Turn: 172
+2026-05-29 09:30:01 [train-1-1] Route geplant: Ziel = 223 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:01 [train-1-1] Move: 261 -> 243 | Armee: 6 | Target-Terrain: 1 | Ziel: 223 | Half: False
+2026-05-29 09:30:02 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:02 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:02 [train-1-1] Sichtbare Gegner-Tiles: 21
+2026-05-29 09:30:02 [train-1-1] Tiles: 69 / 45
+2026-05-29 09:30:02 [train-1-1] Map: 18 x 18 Turn: 173
+2026-05-29 09:30:02 [train-1-1] Route geplant: Ziel = 223 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:02 [train-1-1] Move: 204 -> 205 | Armee: 4 | Target-Terrain: 1 | Ziel: 223 | Half: False
+2026-05-29 09:30:02 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:02 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:02 [train-1-1] Sichtbare Gegner-Tiles: 21
+2026-05-29 09:30:02 [train-1-1] Tiles: 69 / 46
+2026-05-29 09:30:02 [train-1-1] Map: 18 x 18 Turn: 174
+2026-05-29 09:30:02 [train-1-1] Route geplant: Ziel = 223 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:02 [train-1-1] Move: 205 -> 223 | Armee: 4 | Target-Terrain: 0 | Ziel: 223 | Half: False
+2026-05-29 09:30:03 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:03 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:03 [train-1-1] Sichtbare Gegner-Tiles: 20
+2026-05-29 09:30:03 [train-1-1] Tiles: 70 / 46
+2026-05-29 09:30:03 [train-1-1] Map: 18 x 18 Turn: 175
+2026-05-29 09:30:03 [train-1-1] Route geplant: Ziel = 223 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:03 [train-1-1] Move: 224 -> 223 | Armee: 2 | Target-Terrain: 1 | Ziel: 223 | Half: False
+2026-05-29 09:30:03 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:03 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:03 [train-1-1] Sichtbare Gegner-Tiles: 20
+2026-05-29 09:30:03 [train-1-1] Tiles: 70 / 47
+2026-05-29 09:30:03 [train-1-1] Map: 18 x 18 Turn: 176
+2026-05-29 09:30:03 [train-1-1] Route geplant: Ziel = 223 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:03 [train-1-1] Move: 240 -> 222 | Armee: 3 | Target-Terrain: 1 | Ziel: 223 | Half: False
+2026-05-29 09:30:04 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:04 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:04 [train-1-1] Sichtbare Gegner-Tiles: 20
+2026-05-29 09:30:04 [train-1-1] Tiles: 70 / 48
+2026-05-29 09:30:04 [train-1-1] Map: 18 x 18 Turn: 177
+2026-05-29 09:30:04 [train-1-1] Route geplant: Ziel = 223 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:04 [train-1-1] Move: 222 -> 223 | Armee: 3 | Target-Terrain: 1 | Ziel: 223 | Half: False
+2026-05-29 09:30:04 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:04 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:04 [train-1-1] Sichtbare Gegner-Tiles: 20
+2026-05-29 09:30:04 [train-1-1] Tiles: 70 / 49
+2026-05-29 09:30:04 [train-1-1] Map: 18 x 18 Turn: 178
+2026-05-29 09:30:04 [train-1-1] Route geplant: Ziel = 223 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:04 [train-1-1] Move: 187 -> 205 | Armee: 2 | Target-Terrain: 1 | Ziel: 223 | Half: False
+2026-05-29 09:30:05 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:05 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:05 [train-1-1] Sichtbare Gegner-Tiles: 20
+2026-05-29 09:30:05 [train-1-1] Tiles: 70 / 50
+2026-05-29 09:30:05 [train-1-1] Map: 18 x 18 Turn: 179
+2026-05-29 09:30:05 [train-1-1] Route geplant: Ziel = 223 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:05 [train-1-1] Move: 205 -> 223 | Armee: 2 | Target-Terrain: 1 | Ziel: 223 | Half: False
+2026-05-29 09:30:05 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:05 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:05 [train-1-1] Sichtbare Gegner-Tiles: 20
+2026-05-29 09:30:05 [train-1-1] Tiles: 70 / 51
+2026-05-29 09:30:05 [train-1-1] Map: 18 x 18 Turn: 180
+2026-05-29 09:30:05 [train-1-1] Route geplant: Ziel = 223 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:05 [train-1-1] Move: 221 -> 222 | Armee: 2 | Target-Terrain: 1 | Ziel: 223 | Half: False
+2026-05-29 09:30:06 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:06 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:06 [train-1-1] Sichtbare Gegner-Tiles: 20
+2026-05-29 09:30:06 [train-1-1] Tiles: 70 / 52
+2026-05-29 09:30:06 [train-1-1] Map: 18 x 18 Turn: 181
+2026-05-29 09:30:06 [train-1-1] Route geplant: Ziel = 223 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:06 [train-1-1] Move: 222 -> 223 | Armee: 2 | Target-Terrain: 1 | Ziel: 223 | Half: False
+2026-05-29 09:30:06 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:06 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:06 [train-1-1] Sichtbare Gegner-Tiles: 20
+2026-05-29 09:30:06 [train-1-1] Tiles: 70 / 53
+2026-05-29 09:30:06 [train-1-1] Map: 18 x 18 Turn: 182
+2026-05-29 09:30:06 [train-1-1] Route geplant: Ziel = 223 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:06 [train-1-1] Move: 243 -> 225 | Armee: 6 | Target-Terrain: 1 | Ziel: 223 | Half: False
+2026-05-29 09:30:07 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:07 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:07 [train-1-1] Sichtbare Gegner-Tiles: 20
+2026-05-29 09:30:07 [train-1-1] Tiles: 70 / 54
+2026-05-29 09:30:07 [train-1-1] Map: 18 x 18 Turn: 183
+2026-05-29 09:30:07 [train-1-1] Route geplant: Ziel = 223 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:07 [train-1-1] Move: 279 -> 261 | Armee: 2 | Target-Terrain: 1 | Ziel: 223 | Half: False
+2026-05-29 09:30:07 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:07 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:07 [train-1-1] Sichtbare Gegner-Tiles: 20
+2026-05-29 09:30:07 [train-1-1] Tiles: 70 / 55
+2026-05-29 09:30:07 [train-1-1] Map: 18 x 18 Turn: 184
+2026-05-29 09:30:07 [train-1-1] Route geplant: Ziel = 223 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:07 [train-1-1] Move: 261 -> 243 | Armee: 2 | Target-Terrain: 1 | Ziel: 223 | Half: False
+2026-05-29 09:30:08 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:08 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:08 [train-1-1] Sichtbare Gegner-Tiles: 20
+2026-05-29 09:30:08 [train-1-1] Tiles: 70 / 55
+2026-05-29 09:30:08 [train-1-1] Map: 18 x 18 Turn: 185
+2026-05-29 09:30:08 [train-1-1] Route geplant: Ziel = 223 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:08 [train-1-1] Move: 243 -> 225 | Armee: 2 | Target-Terrain: 1 | Ziel: 223 | Half: False
+2026-05-29 09:30:08 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:08 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:08 [train-1-1] Sichtbare Gegner-Tiles: 21
+2026-05-29 09:30:08 [train-1-1] Tiles: 69 / 56
+2026-05-29 09:30:08 [train-1-1] Map: 18 x 18 Turn: 186
+2026-05-29 09:30:08 [train-1-1] Route geplant: Ziel = 223 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:08 [train-1-1] Move: 225 -> 224 | Armee: 7 | Target-Terrain: 1 | Ziel: 223 | Half: False
+2026-05-29 09:30:09 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:09 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:09 [train-1-1] Sichtbare Gegner-Tiles: 21
+2026-05-29 09:30:09 [train-1-1] Tiles: 69 / 56
+2026-05-29 09:30:09 [train-1-1] Map: 18 x 18 Turn: 187
+2026-05-29 09:30:09 [train-1-1] Route geplant: Ziel = 223 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:09 [train-1-1] Move: 224 -> 223 | Armee: 7 | Target-Terrain: 1 | Ziel: 223 | Half: False
+2026-05-29 09:30:09 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:09 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:09 [train-1-1] Sichtbare Gegner-Tiles: 21
+2026-05-29 09:30:09 [train-1-1] Tiles: 69 / 56
+2026-05-29 09:30:09 [train-1-1] Map: 18 x 18 Turn: 188
+2026-05-29 09:30:09 [train-1-1] Route geplant: Ziel = 223 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:09 [train-1-1] Move: 259 -> 241 | Armee: 3 | Target-Terrain: 1 | Ziel: 223 | Half: False
+2026-05-29 09:30:10 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:10 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:10 [train-1-1] Sichtbare Gegner-Tiles: 21
+2026-05-29 09:30:10 [train-1-1] Tiles: 69 / 56
+2026-05-29 09:30:10 [train-1-1] Map: 18 x 18 Turn: 189
+2026-05-29 09:30:10 [train-1-1] Route geplant: Ziel = 223 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:10 [train-1-1] Move: 241 -> 223 | Armee: 3 | Target-Terrain: 1 | Ziel: 223 | Half: False
+2026-05-29 09:30:10 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:10 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:10 [train-1-1] Sichtbare Gegner-Tiles: 21
+2026-05-29 09:30:10 [train-1-1] Tiles: 69 / 56
+2026-05-29 09:30:10 [train-1-1] Map: 18 x 18 Turn: 190
+2026-05-29 09:30:10 [train-1-1] Route geplant: Ziel = 223 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:10 [train-1-1] Move: 297 -> 279 | Armee: 3 | Target-Terrain: 1 | Ziel: 223 | Half: False
+2026-05-29 09:30:11 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:11 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:11 [train-1-1] Sichtbare Gegner-Tiles: 22
+2026-05-29 09:30:11 [train-1-1] Tiles: 68 / 57
+2026-05-29 09:30:11 [train-1-1] Map: 18 x 18 Turn: 191
+2026-05-29 09:30:11 [train-1-1] Route geplant: Ziel = 223 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:11 [train-1-1] Move: 279 -> 261 | Armee: 3 | Target-Terrain: 1 | Ziel: 223 | Half: False
+2026-05-29 09:30:11 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:11 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:11 [train-1-1] Sichtbare Gegner-Tiles: 22
+2026-05-29 09:30:11 [train-1-1] Tiles: 68 / 57
+2026-05-29 09:30:11 [train-1-1] Map: 18 x 18 Turn: 192
+2026-05-29 09:30:11 [train-1-1] Route geplant: Ziel = 223 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:11 [train-1-1] Move: 261 -> 243 | Armee: 3 | Target-Terrain: 1 | Ziel: 223 | Half: False
+2026-05-29 09:30:12 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:12 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:12 [train-1-1] Sichtbare Gegner-Tiles: 22
+2026-05-29 09:30:12 [train-1-1] Tiles: 68 / 57
+2026-05-29 09:30:12 [train-1-1] Map: 18 x 18 Turn: 193
+2026-05-29 09:30:12 [train-1-1] Route geplant: Ziel = 223 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:12 [train-1-1] Move: 280 -> 279 | Armee: 2 | Target-Terrain: 1 | Ziel: 223 | Half: False
+2026-05-29 09:30:12 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:12 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:12 [train-1-1] Sichtbare Gegner-Tiles: 22
+2026-05-29 09:30:12 [train-1-1] Tiles: 68 / 57
+2026-05-29 09:30:12 [train-1-1] Map: 18 x 18 Turn: 194
+2026-05-29 09:30:12 [train-1-1] Route geplant: Ziel = 223 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:12 [train-1-1] Move: 277 -> 259 | Armee: 33 | Target-Terrain: 1 | Ziel: 223 | Half: False
+2026-05-29 09:30:13 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:13 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:13 [train-1-1] Sichtbare Gegner-Tiles: 16
+2026-05-29 09:30:13 [train-1-1] Tiles: 67 / 58
+2026-05-29 09:30:13 [train-1-1] Map: 18 x 18 Turn: 195
+2026-05-29 09:30:13 [train-1-1] Route geplant: Ziel = 223 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:13 [train-1-1] Move: 259 -> 241 | Armee: 33 | Target-Terrain: 1 | Ziel: 223 | Half: False
+2026-05-29 09:30:13 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:13 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:13 [train-1-1] Sichtbare Gegner-Tiles: 16
+2026-05-29 09:30:13 [train-1-1] Tiles: 67 / 58
+2026-05-29 09:30:13 [train-1-1] Map: 18 x 18 Turn: 196
+2026-05-29 09:30:13 [train-1-1] Route geplant: Ziel = 223 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:13 [train-1-1] Move: 241 -> 223 | Armee: 33 | Target-Terrain: 1 | Ziel: 223 | Half: False
+2026-05-29 09:30:14 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:14 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:14 [train-1-1] Sichtbare Gegner-Tiles: 16
+2026-05-29 09:30:14 [train-1-1] Tiles: 67 / 58
+2026-05-29 09:30:14 [train-1-1] Map: 18 x 18 Turn: 197
+2026-05-29 09:30:14 [train-1-1] Route geplant: Ziel = 261 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:14 [train-1-1] Move: 260 -> 261 | Armee: 4 | Target-Terrain: 1 | Ziel: 261 | Half: False
+2026-05-29 09:30:14 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:14 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:14 [train-1-1] Sichtbare Gegner-Tiles: 16
+2026-05-29 09:30:14 [train-1-1] Tiles: 67 / 58
+2026-05-29 09:30:14 [train-1-1] Map: 18 x 18 Turn: 198
+2026-05-29 09:30:14 [train-1-1] Route geplant: Ziel = 261 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:14 [train-1-1] Move: 279 -> 261 | Armee: 2 | Target-Terrain: 1 | Ziel: 261 | Half: False
+2026-05-29 09:30:15 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:15 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:15 [train-1-1] Sichtbare Gegner-Tiles: 16
+2026-05-29 09:30:15 [train-1-1] Tiles: 67 / 58
+2026-05-29 09:30:15 [train-1-1] Map: 18 x 18 Turn: 199
+2026-05-29 09:30:15 [train-1-1] Route geplant: Ziel = 261 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:15 [train-1-1] Move: 243 -> 261 | Armee: 3 | Target-Terrain: 1 | Ziel: 261 | Half: False
+2026-05-29 09:30:15 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:15 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:15 [train-1-1] Sichtbare Gegner-Tiles: 16
+2026-05-29 09:30:15 [train-1-1] Tiles: 67 / 58
+2026-05-29 09:30:15 [train-1-1] Map: 18 x 18 Turn: 200
+2026-05-29 09:30:15 [train-1-1] Route geplant: Ziel = 261 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:15 [train-1-1] Move: 260 -> 261 | Armee: 2 | Target-Terrain: 1 | Ziel: 261 | Half: False
+2026-05-29 09:30:16 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:16 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:16 [train-1-1] Sichtbare Gegner-Tiles: 16
+2026-05-29 09:30:16 [train-1-1] Tiles: 67 / 59
+2026-05-29 09:30:16 [train-1-1] Map: 18 x 18 Turn: 201
+2026-05-29 09:30:16 [train-1-1] Route geplant: Ziel = 261 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:16 [train-1-1] Move: 243 -> 261 | Armee: 2 | Target-Terrain: 1 | Ziel: 261 | Half: False
+2026-05-29 09:30:16 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:16 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:16 [train-1-1] Sichtbare Gegner-Tiles: 16
+2026-05-29 09:30:16 [train-1-1] Tiles: 67 / 60
+2026-05-29 09:30:16 [train-1-1] Map: 18 x 18 Turn: 202
+2026-05-29 09:30:16 [train-1-1] Route geplant: Ziel = 261 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:16 [train-1-1] Move: 279 -> 261 | Armee: 2 | Target-Terrain: 1 | Ziel: 261 | Half: False
+2026-05-29 09:30:17 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:17 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:17 [train-1-1] Sichtbare Gegner-Tiles: 16
+2026-05-29 09:30:17 [train-1-1] Tiles: 67 / 61
+2026-05-29 09:30:17 [train-1-1] Map: 18 x 18 Turn: 203
+2026-05-29 09:30:17 [train-1-1] Route geplant: Ziel = 261 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:17 [train-1-1] Move: 303 -> 285 | Armee: 2 | Target-Terrain: -1 | Ziel: 261 | Half: False
+2026-05-29 09:30:17 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:17 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:17 [train-1-1] Sichtbare Gegner-Tiles: 16
+2026-05-29 09:30:17 [train-1-1] Tiles: 68 / 62
+2026-05-29 09:30:17 [train-1-1] Map: 18 x 18 Turn: 204
+2026-05-29 09:30:17 [train-1-1] Route geplant: Ziel = 261 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:17 [train-1-1] Move: 114 -> 115 | Armee: 2 | Target-Terrain: 1 | Ziel: 261 | Half: False
+2026-05-29 09:30:18 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:18 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:18 [train-1-1] Sichtbare Gegner-Tiles: 16
+2026-05-29 09:30:18 [train-1-1] Tiles: 68 / 63
+2026-05-29 09:30:18 [train-1-1] Map: 18 x 18 Turn: 205
+2026-05-29 09:30:18 [train-1-1] Route geplant: Ziel = 261 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:18 [train-1-1] Move: 225 -> 243 | Armee: 2 | Target-Terrain: 1 | Ziel: 261 | Half: False
+2026-05-29 09:30:18 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:18 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:18 [train-1-1] Sichtbare Gegner-Tiles: 16
+2026-05-29 09:30:18 [train-1-1] Tiles: 68 / 64
+2026-05-29 09:30:18 [train-1-1] Map: 18 x 18 Turn: 206
+2026-05-29 09:30:18 [train-1-1] Route geplant: Ziel = 261 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:18 [train-1-1] Move: 243 -> 261 | Armee: 2 | Target-Terrain: 1 | Ziel: 261 | Half: False
+2026-05-29 09:30:19 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:19 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:19 [train-1-1] Sichtbare Gegner-Tiles: 16
+2026-05-29 09:30:19 [train-1-1] Tiles: 68 / 65
+2026-05-29 09:30:19 [train-1-1] Map: 18 x 18 Turn: 207
+2026-05-29 09:30:19 [train-1-1] Route geplant: Ziel = 261 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:19 [train-1-1] Move: 244 -> 243 | Armee: 2 | Target-Terrain: 1 | Ziel: 261 | Half: False
+2026-05-29 09:30:19 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:19 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:19 [train-1-1] Sichtbare Gegner-Tiles: 16
+2026-05-29 09:30:19 [train-1-1] Tiles: 68 / 66
+2026-05-29 09:30:19 [train-1-1] Map: 18 x 18 Turn: 208
+2026-05-29 09:30:19 [train-1-1] Route geplant: Ziel = 261 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:19 [train-1-1] Move: 243 -> 261 | Armee: 2 | Target-Terrain: 1 | Ziel: 261 | Half: False
+2026-05-29 09:30:20 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:20 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:20 [train-1-1] Sichtbare Gegner-Tiles: 16
+2026-05-29 09:30:20 [train-1-1] Tiles: 68 / 67
+2026-05-29 09:30:20 [train-1-1] Map: 18 x 18 Turn: 209
+2026-05-29 09:30:20 [train-1-1] Route geplant: Ziel = 261 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:20 [train-1-1] Move: 205 -> 223 | Armee: 2 | Target-Terrain: 1 | Ziel: 261 | Half: False
+2026-05-29 09:30:20 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:20 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:20 [train-1-1] Sichtbare Gegner-Tiles: 16
+2026-05-29 09:30:20 [train-1-1] Tiles: 68 / 68
+2026-05-29 09:30:20 [train-1-1] Map: 18 x 18 Turn: 210
+2026-05-29 09:30:20 [train-1-1] Route geplant: Ziel = 261 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:20 [train-1-1] Move: 168 -> 186 | Armee: 2 | Target-Terrain: 1 | Ziel: 261 | Half: False
+2026-05-29 09:30:21 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:21 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:21 [train-1-1] Sichtbare Gegner-Tiles: 16
+2026-05-29 09:30:21 [train-1-1] Tiles: 68 / 69
+2026-05-29 09:30:21 [train-1-1] Map: 18 x 18 Turn: 211
+2026-05-29 09:30:21 [train-1-1] Route geplant: Ziel = 261 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:21 [train-1-1] Move: 222 -> 223 | Armee: 2 | Target-Terrain: 1 | Ziel: 261 | Half: False
+2026-05-29 09:30:21 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:21 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:21 [train-1-1] Sichtbare Gegner-Tiles: 16
+2026-05-29 09:30:21 [train-1-1] Tiles: 68 / 70
+2026-05-29 09:30:21 [train-1-1] Map: 18 x 18 Turn: 212
+2026-05-29 09:30:21 [train-1-1] Route geplant: Ziel = 261 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:21 [train-1-1] Move: 223 -> 241 | Armee: 49 | Target-Terrain: 1 | Ziel: 261 | Half: False
+2026-05-29 09:30:22 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:22 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:22 [train-1-1] Sichtbare Gegner-Tiles: 16
+2026-05-29 09:30:22 [train-1-1] Tiles: 68 / 70
+2026-05-29 09:30:22 [train-1-1] Map: 18 x 18 Turn: 213
+2026-05-29 09:30:22 [train-1-1] Route geplant: Ziel = 223 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:22 [train-1-1] Move: 224 -> 223 | Armee: 2 | Target-Terrain: 1 | Ziel: 223 | Half: False
+2026-05-29 09:30:22 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:22 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:22 [train-1-1] Sichtbare Gegner-Tiles: 16
+2026-05-29 09:30:22 [train-1-1] Tiles: 68 / 70
+2026-05-29 09:30:22 [train-1-1] Map: 18 x 18 Turn: 214
+2026-05-29 09:30:22 [train-1-1] Route geplant: Ziel = 223 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:22 [train-1-1] Move: 241 -> 223 | Armee: 50 | Target-Terrain: 1 | Ziel: 223 | Half: False
+2026-05-29 09:30:23 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:23 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:23 [train-1-1] Sichtbare Gegner-Tiles: 16
+2026-05-29 09:30:23 [train-1-1] Tiles: 68 / 70
+2026-05-29 09:30:23 [train-1-1] Map: 18 x 18 Turn: 215
+2026-05-29 09:30:23 [train-1-1] Route geplant: Ziel = 261 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:23 [train-1-1] Move: 207 -> 225 | Armee: 2 | Target-Terrain: 1 | Ziel: 261 | Half: False
+2026-05-29 09:30:23 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:23 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:23 [train-1-1] Sichtbare Gegner-Tiles: 13
+2026-05-29 09:30:23 [train-1-1] Tiles: 67 / 71
+2026-05-29 09:30:23 [train-1-1] Map: 18 x 18 Turn: 216
+2026-05-29 09:30:23 [train-1-1] Route geplant: Ziel = 261 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:23 [train-1-1] Move: 226 -> 225 | Armee: 2 | Target-Terrain: 1 | Ziel: 261 | Half: False
+2026-05-29 09:30:24 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:24 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:24 [train-1-1] Sichtbare Gegner-Tiles: 13
+2026-05-29 09:30:24 [train-1-1] Tiles: 67 / 71
+2026-05-29 09:30:24 [train-1-1] Map: 18 x 18 Turn: 217
+2026-05-29 09:30:24 [train-1-1] Route geplant: Ziel = 261 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:24 [train-1-1] Move: 187 -> 205 | Armee: 2 | Target-Terrain: 1 | Ziel: 261 | Half: False
+2026-05-29 09:30:24 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:24 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:24 [train-1-1] Sichtbare Gegner-Tiles: 14
+2026-05-29 09:30:24 [train-1-1] Tiles: 66 / 72
+2026-05-29 09:30:24 [train-1-1] Map: 18 x 18 Turn: 218
+2026-05-29 09:30:24 [train-1-1] Route geplant: Ziel = 261 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:24 [train-1-1] Move: 204 -> 205 | Armee: 2 | Target-Terrain: 1 | Ziel: 261 | Half: False
+2026-05-29 09:30:25 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:25 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:25 [train-1-1] Sichtbare Gegner-Tiles: 14
+2026-05-29 09:30:25 [train-1-1] Tiles: 65 / 73
+2026-05-29 09:30:25 [train-1-1] Map: 18 x 18 Turn: 219
+2026-05-29 09:30:25 [train-1-1] Route geplant: Ziel = 261 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:25 [train-1-1] Move: 221 -> 222 | Armee: 2 | Target-Terrain: 1 | Ziel: 261 | Half: False
+2026-05-29 09:30:25 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:25 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:25 [train-1-1] Sichtbare Gegner-Tiles: 15
+2026-05-29 09:30:25 [train-1-1] Tiles: 64 / 74
+2026-05-29 09:30:25 [train-1-1] Map: 18 x 18 Turn: 220
+2026-05-29 09:30:25 [train-1-1] Route geplant: Ziel = 261 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:25 [train-1-1] Move: 225 -> 243 | Armee: 3 | Target-Terrain: 1 | Ziel: 261 | Half: False
+2026-05-29 09:30:26 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:26 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:26 [train-1-1] Sichtbare Gegner-Tiles: 15
+2026-05-29 09:30:26 [train-1-1] Tiles: 64 / 74
+2026-05-29 09:30:26 [train-1-1] Map: 18 x 18 Turn: 221
+2026-05-29 09:30:26 [train-1-1] Route geplant: Ziel = 261 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:26 [train-1-1] Move: 243 -> 261 | Armee: 3 | Target-Terrain: 1 | Ziel: 261 | Half: False
+2026-05-29 09:30:26 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:26 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:26 [train-1-1] Sichtbare Gegner-Tiles: 15
+2026-05-29 09:30:26 [train-1-1] Tiles: 63 / 75
+2026-05-29 09:30:26 [train-1-1] Map: 18 x 18 Turn: 222
+2026-05-29 09:30:26 [train-1-1] Route geplant: Ziel = 261 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:26 [train-1-1] Move: 278 -> 279 | Armee: 3 | Target-Terrain: 1 | Ziel: 261 | Half: False
+2026-05-29 09:30:27 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:27 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:27 [train-1-1] Sichtbare Gegner-Tiles: 16
+2026-05-29 09:30:27 [train-1-1] Tiles: 62 / 76
+2026-05-29 09:30:27 [train-1-1] Map: 18 x 18 Turn: 223
+2026-05-29 09:30:27 [train-1-1] Route geplant: Ziel = 261 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:27 [train-1-1] Move: 279 -> 261 | Armee: 3 | Target-Terrain: 1 | Ziel: 261 | Half: False
+2026-05-29 09:30:27 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:27 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:27 [train-1-1] Sichtbare Gegner-Tiles: 15
+2026-05-29 09:30:27 [train-1-1] Tiles: 61 / 77
+2026-05-29 09:30:27 [train-1-1] Map: 18 x 18 Turn: 224
+2026-05-29 09:30:27 [train-1-1] Route geplant: Ziel = 222 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:27 [train-1-1] Move: 223 -> 222 | Armee: 51 | Target-Terrain: 1 | Ziel: 222 | Half: False
+2026-05-29 09:30:28 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:28 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:28 [train-1-1] Sichtbare Gegner-Tiles: 16
+2026-05-29 09:30:28 [train-1-1] Tiles: 60 / 78
+2026-05-29 09:30:28 [train-1-1] Map: 18 x 18 Turn: 225
+2026-05-29 09:30:28 [train-1-1] Route geplant: Ziel = 223 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:28 [train-1-1] Move: 205 -> 223 | Armee: 3 | Target-Terrain: 1 | Ziel: 223 | Half: False
+2026-05-29 09:30:28 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:28 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:28 [train-1-1] Sichtbare Gegner-Tiles: 17
+2026-05-29 09:30:28 [train-1-1] Tiles: 59 / 79
+2026-05-29 09:30:28 [train-1-1] Map: 18 x 18 Turn: 226
+2026-05-29 09:30:28 [train-1-1] Route geplant: Ziel = 241 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:28 [train-1-1] Move: 240 -> 241 | Armee: 2 | Target-Terrain: 1 | Ziel: 241 | Half: False
+2026-05-29 09:30:29 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:29 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:29 [train-1-1] Sichtbare Gegner-Tiles: 18
+2026-05-29 09:30:29 [train-1-1] Tiles: 58 / 80
+2026-05-29 09:30:29 [train-1-1] Map: 18 x 18 Turn: 227
+2026-05-29 09:30:29 [train-1-1] Route geplant: Ziel = 259 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:29 [train-1-1] Move: 277 -> 259 | Armee: 18 | Target-Terrain: 1 | Ziel: 259 | Half: False
+2026-05-29 09:30:29 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:29 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:29 [train-1-1] Sichtbare Gegner-Tiles: 19
+2026-05-29 09:30:29 [train-1-1] Tiles: 57 / 81
+2026-05-29 09:30:29 [train-1-1] Map: 18 x 18 Turn: 228
+2026-05-29 09:30:29 [train-1-1] Route geplant: Ziel = 259 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:29 [train-1-1] Move: 258 -> 259 | Armee: 4 | Target-Terrain: 1 | Ziel: 259 | Half: False
+2026-05-29 09:30:30 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:30 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:30 [train-1-1] Sichtbare Gegner-Tiles: 19
+2026-05-29 09:30:30 [train-1-1] Tiles: 57 / 81
+2026-05-29 09:30:30 [train-1-1] Map: 18 x 18 Turn: 229
+2026-05-29 09:30:30 [train-1-1] Route geplant: Ziel = 259 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:30 [train-1-1] Move: 241 -> 259 | Armee: 2 | Target-Terrain: 1 | Ziel: 259 | Half: False
+2026-05-29 09:30:30 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:30 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:30 [train-1-1] Sichtbare Gegner-Tiles: 19
+2026-05-29 09:30:30 [train-1-1] Tiles: 57 / 81
+2026-05-29 09:30:30 [train-1-1] Map: 18 x 18 Turn: 230
+2026-05-29 09:30:30 [train-1-1] Route geplant: Ziel = 259 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:30 [train-1-1] Move: 277 -> 259 | Armee: 3 | Target-Terrain: 1 | Ziel: 259 | Half: False
+2026-05-29 09:30:31 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:31 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:31 [train-1-1] Sichtbare Gegner-Tiles: 19
+2026-05-29 09:30:31 [train-1-1] Tiles: 57 / 81
+2026-05-29 09:30:31 [train-1-1] Map: 18 x 18 Turn: 231
+2026-05-29 09:30:31 [train-1-1] Route geplant: Ziel = 259 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:31 [train-1-1] Move: 186 -> 187 | Armee: 3 | Target-Terrain: 0 | Ziel: 259 | Half: False
+2026-05-29 09:30:31 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:31 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:31 [train-1-1] Sichtbare Gegner-Tiles: 18
+2026-05-29 09:30:31 [train-1-1] Tiles: 58 / 80
+2026-05-29 09:30:31 [train-1-1] Map: 18 x 18 Turn: 232
+2026-05-29 09:30:31 [train-1-1] Route geplant: Ziel = 259 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:31 [train-1-1] Move: 277 -> 259 | Armee: 2 | Target-Terrain: 1 | Ziel: 259 | Half: False
+2026-05-29 09:30:32 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:32 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:32 [train-1-1] Sichtbare Gegner-Tiles: 18
+2026-05-29 09:30:32 [train-1-1] Tiles: 58 / 80
+2026-05-29 09:30:32 [train-1-1] Map: 18 x 18 Turn: 233
+2026-05-29 09:30:32 [train-1-1] Route geplant: Ziel = 259 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:32 [train-1-1] Move: 222 -> 223 | Armee: 52 | Target-Terrain: 0 | Ziel: 259 | Half: False
+2026-05-29 09:30:32 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:32 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:32 [train-1-1] Sichtbare Gegner-Tiles: 17
+2026-05-29 09:30:32 [train-1-1] Tiles: 59 / 79
+2026-05-29 09:30:32 [train-1-1] Map: 18 x 18 Turn: 234
+2026-05-29 09:30:32 [train-1-1] Route geplant: Ziel = 259 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:32 [train-1-1] Move: 277 -> 259 | Armee: 2 | Target-Terrain: 1 | Ziel: 259 | Half: False
+2026-05-29 09:30:33 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:33 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:33 [train-1-1] Sichtbare Gegner-Tiles: 17
+2026-05-29 09:30:33 [train-1-1] Tiles: 59 / 79
+2026-05-29 09:30:33 [train-1-1] Map: 18 x 18 Turn: 235
+2026-05-29 09:30:33 [train-1-1] Route geplant: Ziel = 259 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:33 [train-1-1] Move: 98 -> 97 | Armee: 2 | Target-Terrain: -1 | Ziel: 259 | Half: False
+2026-05-29 09:30:33 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:33 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:33 [train-1-1] Sichtbare Gegner-Tiles: 17
+2026-05-29 09:30:33 [train-1-1] Tiles: 60 / 79
+2026-05-29 09:30:33 [train-1-1] Map: 18 x 18 Turn: 236
+2026-05-29 09:30:33 [train-1-1] Route geplant: Ziel = 259 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:33 [train-1-1] Move: 277 -> 259 | Armee: 2 | Target-Terrain: 1 | Ziel: 259 | Half: False
+2026-05-29 09:30:34 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:34 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:34 [train-1-1] Sichtbare Gegner-Tiles: 17
+2026-05-29 09:30:34 [train-1-1] Tiles: 60 / 79
+2026-05-29 09:30:34 [train-1-1] Map: 18 x 18 Turn: 237
+2026-05-29 09:30:34 [train-1-1] Route geplant: Ziel = 259 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:34 [train-1-1] Move: 223 -> 241 | Armee: 50 | Target-Terrain: 1 | Ziel: 259 | Half: False
+2026-05-29 09:30:34 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:34 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:34 [train-1-1] Sichtbare Gegner-Tiles: 17
+2026-05-29 09:30:34 [train-1-1] Tiles: 60 / 79
+2026-05-29 09:30:34 [train-1-1] Map: 18 x 18 Turn: 238
+2026-05-29 09:30:34 [train-1-1] Route geplant: Ziel = 259 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:30:34 [train-1-1] Move: 241 -> 259 | Armee: 50 | Target-Terrain: 1 | Ziel: 259 | Half: False
+2026-05-29 09:30:35 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:35 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:35 [train-1-1] Sichtbare Gegner-Tiles: 18
+2026-05-29 09:30:35 [train-1-1] Tiles: 59 / 80
+2026-05-29 09:30:35 [train-1-1] Map: 18 x 18 Turn: 239
+2026-05-29 09:30:35 [train-1-1] Route geplant: Ziel = 241 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:35 [train-1-1] Move: 259 -> 241 | Armee: 77 | Target-Terrain: 1 | Ziel: 241 | Half: False
+2026-05-29 09:30:35 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:35 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:35 [train-1-1] Sichtbare Gegner-Tiles: 18
+2026-05-29 09:30:35 [train-1-1] Tiles: 58 / 81
+2026-05-29 09:30:35 [train-1-1] Map: 18 x 18 Turn: 240
+2026-05-29 09:30:35 [train-1-1] Route geplant: Ziel = 259 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:35 [train-1-1] Move: 277 -> 259 | Armee: 3 | Target-Terrain: 1 | Ziel: 259 | Half: False
+2026-05-29 09:30:36 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:36 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:36 [train-1-1] Sichtbare Gegner-Tiles: 17
+2026-05-29 09:30:36 [train-1-1] Tiles: 57 / 82
+2026-05-29 09:30:36 [train-1-1] Map: 18 x 18 Turn: 241
+2026-05-29 09:30:36 [train-1-1] Route geplant: Ziel = 259 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:36 [train-1-1] Move: 241 -> 259 | Armee: 77 | Target-Terrain: 1 | Ziel: 259 | Half: False
+2026-05-29 09:30:36 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:36 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:36 [train-1-1] Sichtbare Gegner-Tiles: 18
+2026-05-29 09:30:36 [train-1-1] Tiles: 56 / 83
+2026-05-29 09:30:36 [train-1-1] Map: 18 x 18 Turn: 242
+2026-05-29 09:30:36 [train-1-1] Route geplant: Ziel = 241 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:36 [train-1-1] Move: 259 -> 241 | Armee: 79 | Target-Terrain: 1 | Ziel: 241 | Half: False
+2026-05-29 09:30:37 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:37 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:37 [train-1-1] Sichtbare Gegner-Tiles: 18
+2026-05-29 09:30:37 [train-1-1] Tiles: 55 / 84
+2026-05-29 09:30:37 [train-1-1] Map: 18 x 18 Turn: 243
+2026-05-29 09:30:37 [train-1-1] Route geplant: Ziel = 259 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:37 [train-1-1] Move: 277 -> 259 | Armee: 2 | Target-Terrain: 1 | Ziel: 259 | Half: False
+2026-05-29 09:30:37 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:37 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:37 [train-1-1] Sichtbare Gegner-Tiles: 18
+2026-05-29 09:30:37 [train-1-1] Tiles: 55 / 84
+2026-05-29 09:30:37 [train-1-1] Map: 18 x 18 Turn: 244
+2026-05-29 09:30:37 [train-1-1] Route geplant: Ziel = 259 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:37 [train-1-1] Move: 277 -> 259 | Armee: 2 | Target-Terrain: 1 | Ziel: 259 | Half: False
+2026-05-29 09:30:38 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:38 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:38 [train-1-1] Sichtbare Gegner-Tiles: 19
+2026-05-29 09:30:38 [train-1-1] Tiles: 54 / 85
+2026-05-29 09:30:38 [train-1-1] Map: 18 x 18 Turn: 245
+2026-05-29 09:30:38 [train-1-1] Route geplant: Ziel = 259 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:38 [train-1-1] Move: 241 -> 259 | Armee: 79 | Target-Terrain: 1 | Ziel: 259 | Half: False
+2026-05-29 09:30:38 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:38 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:38 [train-1-1] Sichtbare Gegner-Tiles: 19
+2026-05-29 09:30:38 [train-1-1] Tiles: 53 / 86
+2026-05-29 09:30:38 [train-1-1] Map: 18 x 18 Turn: 246
+2026-05-29 09:30:38 [train-1-1] Route geplant: Ziel = 241 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:38 [train-1-1] Move: 259 -> 241 | Armee: 81 | Target-Terrain: 1 | Ziel: 241 | Half: False
+2026-05-29 09:30:39 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:39 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:39 [train-1-1] Sichtbare Gegner-Tiles: 19
+2026-05-29 09:30:39 [train-1-1] Tiles: 52 / 87
+2026-05-29 09:30:39 [train-1-1] Map: 18 x 18 Turn: 247
+2026-05-29 09:30:39 [train-1-1] Route geplant: Ziel = 259 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:39 [train-1-1] Move: 277 -> 259 | Armee: 2 | Target-Terrain: 1 | Ziel: 259 | Half: False
+2026-05-29 09:30:39 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:39 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:39 [train-1-1] Sichtbare Gegner-Tiles: 18
+2026-05-29 09:30:39 [train-1-1] Tiles: 51 / 88
+2026-05-29 09:30:39 [train-1-1] Map: 18 x 18 Turn: 248
+2026-05-29 09:30:39 [train-1-1] Route geplant: Ziel = 259 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:39 [train-1-1] Move: 277 -> 259 | Armee: 2 | Target-Terrain: 1 | Ziel: 259 | Half: False
+2026-05-29 09:30:40 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:40 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:40 [train-1-1] Sichtbare Gegner-Tiles: 19
+2026-05-29 09:30:40 [train-1-1] Tiles: 50 / 89
+2026-05-29 09:30:40 [train-1-1] Map: 18 x 18 Turn: 249
+2026-05-29 09:30:40 [train-1-1] Route geplant: Ziel = 259 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:40 [train-1-1] Move: 241 -> 259 | Armee: 81 | Target-Terrain: 1 | Ziel: 259 | Half: False
+2026-05-29 09:30:40 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:40 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:40 [train-1-1] Sichtbare Gegner-Tiles: 18
+2026-05-29 09:30:40 [train-1-1] Tiles: 49 / 90
+2026-05-29 09:30:40 [train-1-1] Map: 18 x 18 Turn: 250
+2026-05-29 09:30:40 [train-1-1] Route geplant: Ziel = 241 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:40 [train-1-1] Move: 240 -> 241 | Armee: 2 | Target-Terrain: 1 | Ziel: 241 | Half: False
+2026-05-29 09:30:41 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:41 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:41 [train-1-1] Sichtbare Gegner-Tiles: 18
+2026-05-29 09:30:41 [train-1-1] Tiles: 49 / 91
+2026-05-29 09:30:41 [train-1-1] Map: 18 x 18 Turn: 251
+2026-05-29 09:30:41 [train-1-1] Route geplant: Ziel = 241 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:41 [train-1-1] Move: 259 -> 241 | Armee: 84 | Target-Terrain: 1 | Ziel: 241 | Half: False
+2026-05-29 09:30:41 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:41 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:41 [train-1-1] Sichtbare Gegner-Tiles: 18
+2026-05-29 09:30:41 [train-1-1] Tiles: 49 / 92
+2026-05-29 09:30:41 [train-1-1] Map: 18 x 18 Turn: 252
+2026-05-29 09:30:41 [train-1-1] Route geplant: Ziel = 259 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:41 [train-1-1] Move: 260 -> 259 | Armee: 2 | Target-Terrain: 1 | Ziel: 259 | Half: False
+2026-05-29 09:30:42 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:42 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:42 [train-1-1] Sichtbare Gegner-Tiles: 19
+2026-05-29 09:30:42 [train-1-1] Tiles: 49 / 93
+2026-05-29 09:30:42 [train-1-1] Map: 18 x 18 Turn: 253
+2026-05-29 09:30:42 [train-1-1] Route geplant: Ziel = 259 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:42 [train-1-1] Move: 258 -> 259 | Armee: 2 | Target-Terrain: 1 | Ziel: 259 | Half: False
+2026-05-29 09:30:42 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:42 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:42 [train-1-1] Sichtbare Gegner-Tiles: 19
+2026-05-29 09:30:42 [train-1-1] Tiles: 49 / 94
+2026-05-29 09:30:42 [train-1-1] Map: 18 x 18 Turn: 254
+2026-05-29 09:30:42 [train-1-1] Route geplant: Ziel = 259 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:42 [train-1-1] Move: 277 -> 259 | Armee: 5 | Target-Terrain: 1 | Ziel: 259 | Half: False
+2026-05-29 09:30:43 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:43 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:43 [train-1-1] Sichtbare Gegner-Tiles: 19
+2026-05-29 09:30:43 [train-1-1] Tiles: 49 / 95
+2026-05-29 09:30:43 [train-1-1] Map: 18 x 18 Turn: 255
+2026-05-29 09:30:43 [train-1-1] Route geplant: Ziel = 259 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:43 [train-1-1] Move: 241 -> 259 | Armee: 86 | Target-Terrain: 1 | Ziel: 259 | Half: False
+2026-05-29 09:30:43 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:43 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:43 [train-1-1] Sichtbare Gegner-Tiles: 19
+2026-05-29 09:30:43 [train-1-1] Tiles: 49 / 96
+2026-05-29 09:30:43 [train-1-1] Map: 18 x 18 Turn: 256
+2026-05-29 09:30:43 [train-1-1] Route geplant: Ziel = 241 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:43 [train-1-1] Move: 259 -> 241 | Armee: 92 | Target-Terrain: 1 | Ziel: 241 | Half: False
+2026-05-29 09:30:44 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:44 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:44 [train-1-1] Sichtbare Gegner-Tiles: 19
+2026-05-29 09:30:44 [train-1-1] Tiles: 49 / 97
+2026-05-29 09:30:44 [train-1-1] Map: 18 x 18 Turn: 257
+2026-05-29 09:30:44 [train-1-1] Route geplant: Ziel = 259 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:44 [train-1-1] Move: 277 -> 259 | Armee: 2 | Target-Terrain: 1 | Ziel: 259 | Half: False
+2026-05-29 09:30:44 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:44 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:44 [train-1-1] Sichtbare Gegner-Tiles: 19
+2026-05-29 09:30:44 [train-1-1] Tiles: 49 / 98
+2026-05-29 09:30:44 [train-1-1] Map: 18 x 18 Turn: 258
+2026-05-29 09:30:44 [train-1-1] Route geplant: Ziel = 259 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:44 [train-1-1] Move: 277 -> 259 | Armee: 2 | Target-Terrain: 1 | Ziel: 259 | Half: False
+2026-05-29 09:30:45 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:45 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:45 [train-1-1] Sichtbare Gegner-Tiles: 19
+2026-05-29 09:30:45 [train-1-1] Tiles: 49 / 99
+2026-05-29 09:30:45 [train-1-1] Map: 18 x 18 Turn: 259
+2026-05-29 09:30:45 [train-1-1] Route geplant: Ziel = 259 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:45 [train-1-1] Move: 241 -> 259 | Armee: 92 | Target-Terrain: 1 | Ziel: 259 | Half: False
+2026-05-29 09:30:45 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:45 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:45 [train-1-1] Sichtbare Gegner-Tiles: 19
+2026-05-29 09:30:45 [train-1-1] Tiles: 49 / 100
+2026-05-29 09:30:45 [train-1-1] Map: 18 x 18 Turn: 260
+2026-05-29 09:30:45 [train-1-1] Route geplant: Ziel = 241 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:45 [train-1-1] Move: 259 -> 241 | Armee: 94 | Target-Terrain: 1 | Ziel: 241 | Half: False
+2026-05-29 09:30:46 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:46 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:46 [train-1-1] Sichtbare Gegner-Tiles: 19
+2026-05-29 09:30:46 [train-1-1] Tiles: 49 / 101
+2026-05-29 09:30:46 [train-1-1] Map: 18 x 18 Turn: 261
+2026-05-29 09:30:46 [train-1-1] Route geplant: Ziel = 259 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:46 [train-1-1] Move: 277 -> 259 | Armee: 2 | Target-Terrain: 1 | Ziel: 259 | Half: False
+2026-05-29 09:30:46 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:46 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:46 [train-1-1] Sichtbare Gegner-Tiles: 19
+2026-05-29 09:30:46 [train-1-1] Tiles: 49 / 102
+2026-05-29 09:30:46 [train-1-1] Map: 18 x 18 Turn: 262
+2026-05-29 09:30:46 [train-1-1] Route geplant: Ziel = 259 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:46 [train-1-1] Move: 277 -> 259 | Armee: 2 | Target-Terrain: 1 | Ziel: 259 | Half: False
+2026-05-29 09:30:47 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:47 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:47 [train-1-1] Sichtbare Gegner-Tiles: 19
+2026-05-29 09:30:47 [train-1-1] Tiles: 49 / 102
+2026-05-29 09:30:47 [train-1-1] Map: 18 x 18 Turn: 263
+2026-05-29 09:30:47 [train-1-1] Route geplant: Ziel = 259 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:47 [train-1-1] Move: 241 -> 259 | Armee: 94 | Target-Terrain: 1 | Ziel: 259 | Half: False
+2026-05-29 09:30:47 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:47 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:47 [train-1-1] Sichtbare Gegner-Tiles: 18
+2026-05-29 09:30:47 [train-1-1] Tiles: 48 / 103
+2026-05-29 09:30:47 [train-1-1] Map: 18 x 18 Turn: 264
+2026-05-29 09:30:47 [train-1-1] Route geplant: Ziel = 241 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:47 [train-1-1] Move: 259 -> 241 | Armee: 96 | Target-Terrain: 1 | Ziel: 241 | Half: False
+2026-05-29 09:30:48 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:48 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:48 [train-1-1] Sichtbare Gegner-Tiles: 19
+2026-05-29 09:30:48 [train-1-1] Tiles: 48 / 104
+2026-05-29 09:30:48 [train-1-1] Map: 18 x 18 Turn: 265
+2026-05-29 09:30:48 [train-1-1] Route geplant: Ziel = 259 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:48 [train-1-1] Move: 277 -> 259 | Armee: 2 | Target-Terrain: 1 | Ziel: 259 | Half: False
+2026-05-29 09:30:48 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:48 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:48 [train-1-1] Sichtbare Gegner-Tiles: 19
+2026-05-29 09:30:48 [train-1-1] Tiles: 48 / 104
+2026-05-29 09:30:48 [train-1-1] Map: 18 x 18 Turn: 266
+2026-05-29 09:30:48 [train-1-1] Route geplant: Ziel = 259 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:48 [train-1-1] Move: 277 -> 259 | Armee: 2 | Target-Terrain: 1 | Ziel: 259 | Half: False
+2026-05-29 09:30:49 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:49 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:49 [train-1-1] Sichtbare Gegner-Tiles: 19
+2026-05-29 09:30:49 [train-1-1] Tiles: 48 / 104
+2026-05-29 09:30:49 [train-1-1] Map: 18 x 18 Turn: 267
+2026-05-29 09:30:49 [train-1-1] Route geplant: Ziel = 259 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:49 [train-1-1] Move: 241 -> 259 | Armee: 96 | Target-Terrain: 1 | Ziel: 259 | Half: False
+2026-05-29 09:30:49 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:49 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:49 [train-1-1] Sichtbare Gegner-Tiles: 19
+2026-05-29 09:30:49 [train-1-1] Tiles: 48 / 104
+2026-05-29 09:30:49 [train-1-1] Map: 18 x 18 Turn: 268
+2026-05-29 09:30:49 [train-1-1] Route geplant: Ziel = 241 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:49 [train-1-1] Move: 259 -> 241 | Armee: 98 | Target-Terrain: 1 | Ziel: 241 | Half: False
+2026-05-29 09:30:50 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:50 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:50 [train-1-1] Sichtbare Gegner-Tiles: 19
+2026-05-29 09:30:50 [train-1-1] Tiles: 48 / 104
+2026-05-29 09:30:50 [train-1-1] Map: 18 x 18 Turn: 269
+2026-05-29 09:30:50 [train-1-1] Route geplant: Ziel = 259 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:50 [train-1-1] Move: 277 -> 259 | Armee: 2 | Target-Terrain: 1 | Ziel: 259 | Half: False
+2026-05-29 09:30:50 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:50 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:50 [train-1-1] Sichtbare Gegner-Tiles: 19
+2026-05-29 09:30:50 [train-1-1] Tiles: 48 / 104
+2026-05-29 09:30:50 [train-1-1] Map: 18 x 18 Turn: 270
+2026-05-29 09:30:50 [train-1-1] Route geplant: Ziel = 259 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:50 [train-1-1] Move: 277 -> 259 | Armee: 2 | Target-Terrain: 1 | Ziel: 259 | Half: False
+2026-05-29 09:30:51 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:51 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:51 [train-1-1] Sichtbare Gegner-Tiles: 19
+2026-05-29 09:30:51 [train-1-1] Tiles: 48 / 104
+2026-05-29 09:30:51 [train-1-1] Map: 18 x 18 Turn: 271
+2026-05-29 09:30:51 [train-1-1] Route geplant: Ziel = 259 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:51 [train-1-1] Move: 241 -> 259 | Armee: 98 | Target-Terrain: 1 | Ziel: 259 | Half: False
+2026-05-29 09:30:51 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:51 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:51 [train-1-1] Sichtbare Gegner-Tiles: 19
+2026-05-29 09:30:51 [train-1-1] Tiles: 48 / 104
+2026-05-29 09:30:51 [train-1-1] Map: 18 x 18 Turn: 272
+2026-05-29 09:30:51 [train-1-1] Route geplant: Ziel = 241 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:51 [train-1-1] Move: 259 -> 241 | Armee: 100 | Target-Terrain: 1 | Ziel: 241 | Half: False
+2026-05-29 09:30:52 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:52 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:52 [train-1-1] Sichtbare Gegner-Tiles: 19
+2026-05-29 09:30:52 [train-1-1] Tiles: 48 / 104
+2026-05-29 09:30:52 [train-1-1] Map: 18 x 18 Turn: 273
+2026-05-29 09:30:52 [train-1-1] Route geplant: Ziel = 259 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:52 [train-1-1] Move: 277 -> 259 | Armee: 2 | Target-Terrain: 1 | Ziel: 259 | Half: False
+2026-05-29 09:30:52 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:52 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:52 [train-1-1] Sichtbare Gegner-Tiles: 19
+2026-05-29 09:30:52 [train-1-1] Tiles: 48 / 104
+2026-05-29 09:30:52 [train-1-1] Map: 18 x 18 Turn: 274
+2026-05-29 09:30:52 [train-1-1] Route geplant: Ziel = 259 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:52 [train-1-1] Move: 277 -> 259 | Armee: 2 | Target-Terrain: 1 | Ziel: 259 | Half: False
+2026-05-29 09:30:53 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:53 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:53 [train-1-1] Sichtbare Gegner-Tiles: 19
+2026-05-29 09:30:53 [train-1-1] Tiles: 48 / 104
+2026-05-29 09:30:53 [train-1-1] Map: 18 x 18 Turn: 275
+2026-05-29 09:30:53 [train-1-1] Route geplant: Ziel = 259 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:53 [train-1-1] Move: 241 -> 259 | Armee: 100 | Target-Terrain: 1 | Ziel: 259 | Half: False
+2026-05-29 09:30:53 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:53 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:53 [train-1-1] Sichtbare Gegner-Tiles: 19
+2026-05-29 09:30:53 [train-1-1] Tiles: 48 / 104
+2026-05-29 09:30:53 [train-1-1] Map: 18 x 18 Turn: 276
+2026-05-29 09:30:53 [train-1-1] Route geplant: Ziel = 241 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:53 [train-1-1] Move: 259 -> 241 | Armee: 102 | Target-Terrain: 1 | Ziel: 241 | Half: False
+2026-05-29 09:30:54 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:54 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:54 [train-1-1] Sichtbare Gegner-Tiles: 19
+2026-05-29 09:30:54 [train-1-1] Tiles: 48 / 104
+2026-05-29 09:30:54 [train-1-1] Map: 18 x 18 Turn: 277
+2026-05-29 09:30:54 [train-1-1] Route geplant: Ziel = 259 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:54 [train-1-1] Move: 277 -> 259 | Armee: 2 | Target-Terrain: 1 | Ziel: 259 | Half: False
+2026-05-29 09:30:54 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:54 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:54 [train-1-1] Sichtbare Gegner-Tiles: 19
+2026-05-29 09:30:54 [train-1-1] Tiles: 48 / 104
+2026-05-29 09:30:54 [train-1-1] Map: 18 x 18 Turn: 278
+2026-05-29 09:30:54 [train-1-1] Route geplant: Ziel = 259 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:54 [train-1-1] Move: 277 -> 259 | Armee: 2 | Target-Terrain: 1 | Ziel: 259 | Half: False
+2026-05-29 09:30:55 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:55 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:55 [train-1-1] Sichtbare Gegner-Tiles: 19
+2026-05-29 09:30:55 [train-1-1] Tiles: 48 / 104
+2026-05-29 09:30:55 [train-1-1] Map: 18 x 18 Turn: 279
+2026-05-29 09:30:55 [train-1-1] Route geplant: Ziel = 259 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:55 [train-1-1] Move: 241 -> 259 | Armee: 102 | Target-Terrain: 1 | Ziel: 259 | Half: False
+2026-05-29 09:30:55 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:55 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:55 [train-1-1] Sichtbare Gegner-Tiles: 19
+2026-05-29 09:30:55 [train-1-1] Tiles: 48 / 104
+2026-05-29 09:30:55 [train-1-1] Map: 18 x 18 Turn: 280
+2026-05-29 09:30:55 [train-1-1] Route geplant: Ziel = 241 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:55 [train-1-1] Move: 259 -> 241 | Armee: 104 | Target-Terrain: 1 | Ziel: 241 | Half: False
+2026-05-29 09:30:56 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:56 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:56 [train-1-1] Sichtbare Gegner-Tiles: 19
+2026-05-29 09:30:56 [train-1-1] Tiles: 48 / 104
+2026-05-29 09:30:56 [train-1-1] Map: 18 x 18 Turn: 281
+2026-05-29 09:30:56 [train-1-1] Route geplant: Ziel = 259 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:56 [train-1-1] Move: 277 -> 259 | Armee: 2 | Target-Terrain: 1 | Ziel: 259 | Half: False
+2026-05-29 09:30:56 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:56 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:56 [train-1-1] Sichtbare Gegner-Tiles: 19
+2026-05-29 09:30:56 [train-1-1] Tiles: 48 / 104
+2026-05-29 09:30:56 [train-1-1] Map: 18 x 18 Turn: 282
+2026-05-29 09:30:56 [train-1-1] Route geplant: Ziel = 259 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:56 [train-1-1] Move: 277 -> 259 | Armee: 2 | Target-Terrain: 1 | Ziel: 259 | Half: False
+2026-05-29 09:30:57 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:57 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:57 [train-1-1] Sichtbare Gegner-Tiles: 19
+2026-05-29 09:30:57 [train-1-1] Tiles: 48 / 104
+2026-05-29 09:30:57 [train-1-1] Map: 18 x 18 Turn: 283
+2026-05-29 09:30:57 [train-1-1] Route geplant: Ziel = 259 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:57 [train-1-1] Move: 241 -> 259 | Armee: 104 | Target-Terrain: 1 | Ziel: 259 | Half: False
+2026-05-29 09:30:57 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:57 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:57 [train-1-1] Sichtbare Gegner-Tiles: 19
+2026-05-29 09:30:57 [train-1-1] Tiles: 48 / 104
+2026-05-29 09:30:57 [train-1-1] Map: 18 x 18 Turn: 284
+2026-05-29 09:30:57 [train-1-1] Route geplant: Ziel = 241 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:57 [train-1-1] Move: 259 -> 241 | Armee: 106 | Target-Terrain: 1 | Ziel: 241 | Half: False
+2026-05-29 09:30:58 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:58 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:58 [train-1-1] Sichtbare Gegner-Tiles: 19
+2026-05-29 09:30:58 [train-1-1] Tiles: 48 / 104
+2026-05-29 09:30:58 [train-1-1] Map: 18 x 18 Turn: 285
+2026-05-29 09:30:58 [train-1-1] Route geplant: Ziel = 259 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:58 [train-1-1] Move: 277 -> 259 | Armee: 2 | Target-Terrain: 1 | Ziel: 259 | Half: False
+2026-05-29 09:30:58 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:58 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:58 [train-1-1] Sichtbare Gegner-Tiles: 19
+2026-05-29 09:30:58 [train-1-1] Tiles: 47 / 105
+2026-05-29 09:30:58 [train-1-1] Map: 18 x 18 Turn: 286
+2026-05-29 09:30:58 [train-1-1] Route geplant: Ziel = 259 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:58 [train-1-1] Move: 277 -> 259 | Armee: 2 | Target-Terrain: 1 | Ziel: 259 | Half: False
+2026-05-29 09:30:59 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:59 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:59 [train-1-1] Sichtbare Gegner-Tiles: 16
+2026-05-29 09:30:59 [train-1-1] Tiles: 46 / 106
+2026-05-29 09:30:59 [train-1-1] Map: 18 x 18 Turn: 287
+2026-05-29 09:30:59 [train-1-1] Route geplant: Ziel = 259 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:59 [train-1-1] Move: 241 -> 259 | Armee: 106 | Target-Terrain: 1 | Ziel: 259 | Half: False
+2026-05-29 09:30:59 [train-1-1] Mein General Index: 277
+2026-05-29 09:30:59 [train-1-1] Gegner General Index: None
+2026-05-29 09:30:59 [train-1-1] Sichtbare Gegner-Tiles: 16
+2026-05-29 09:30:59 [train-1-1] Tiles: 46 / 107
+2026-05-29 09:30:59 [train-1-1] Map: 18 x 18 Turn: 288
+2026-05-29 09:30:59 [train-1-1] Route geplant: Ziel = 241 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:30:59 [train-1-1] Move: 259 -> 241 | Armee: 108 | Target-Terrain: 1 | Ziel: 241 | Half: False
+2026-05-29 09:31:00 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:00 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:00 [train-1-1] Sichtbare Gegner-Tiles: 16
+2026-05-29 09:31:00 [train-1-1] Tiles: 46 / 108
+2026-05-29 09:31:00 [train-1-1] Map: 18 x 18 Turn: 289
+2026-05-29 09:31:00 [train-1-1] Route geplant: Ziel = 258 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:31:00 [train-1-1] Move: 276 -> 258 | Armee: 5 | Target-Terrain: 1 | Ziel: 258 | Half: False
+2026-05-29 09:31:00 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:00 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:00 [train-1-1] Sichtbare Gegner-Tiles: 16
+2026-05-29 09:31:00 [train-1-1] Tiles: 46 / 109
+2026-05-29 09:31:00 [train-1-1] Map: 18 x 18 Turn: 290
+2026-05-29 09:31:00 [train-1-1] Route geplant: Ziel = 258 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:31:00 [train-1-1] Move: 285 -> 284 | Armee: 2 | Target-Terrain: -1 | Ziel: 258 | Half: False
+2026-05-29 09:31:01 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:01 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:01 [train-1-1] Sichtbare Gegner-Tiles: 16
+2026-05-29 09:31:01 [train-1-1] Tiles: 47 / 110
+2026-05-29 09:31:01 [train-1-1] Map: 18 x 18 Turn: 291
+2026-05-29 09:31:01 [train-1-1] Route geplant: Ziel = 258 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:31:01 [train-1-1] Move: 241 -> 240 | Armee: 108 | Target-Terrain: 1 | Ziel: 258 | Half: False
+2026-05-29 09:31:01 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:01 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:01 [train-1-1] Sichtbare Gegner-Tiles: 16
+2026-05-29 09:31:01 [train-1-1] Tiles: 47 / 111
+2026-05-29 09:31:01 [train-1-1] Map: 18 x 18 Turn: 292
+2026-05-29 09:31:01 [train-1-1] Route geplant: Ziel = 241 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:31:01 [train-1-1] Move: 240 -> 241 | Armee: 108 | Target-Terrain: 1 | Ziel: 241 | Half: False
+2026-05-29 09:31:02 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:02 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:02 [train-1-1] Sichtbare Gegner-Tiles: 16
+2026-05-29 09:31:02 [train-1-1] Tiles: 47 / 112
+2026-05-29 09:31:02 [train-1-1] Map: 18 x 18 Turn: 293
+2026-05-29 09:31:02 [train-1-1] Route geplant: Ziel = 258 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:31:02 [train-1-1] Move: 277 -> 276 | Armee: 4 | Target-Terrain: 1 | Ziel: 258 | Half: False
+2026-05-29 09:31:02 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:02 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:02 [train-1-1] Sichtbare Gegner-Tiles: 16
+2026-05-29 09:31:02 [train-1-1] Tiles: 47 / 113
+2026-05-29 09:31:02 [train-1-1] Map: 18 x 18 Turn: 294
+2026-05-29 09:31:02 [train-1-1] Route geplant: Ziel = 258 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:31:02 [train-1-1] Move: 276 -> 258 | Armee: 4 | Target-Terrain: 1 | Ziel: 258 | Half: False
+2026-05-29 09:31:03 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:03 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:03 [train-1-1] Sichtbare Gegner-Tiles: 16
+2026-05-29 09:31:03 [train-1-1] Tiles: 47 / 114
+2026-05-29 09:31:03 [train-1-1] Map: 18 x 18 Turn: 295
+2026-05-29 09:31:03 [train-1-1] Route geplant: Ziel = 258 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:31:03 [train-1-1] Move: 294 -> 276 | Armee: 4 | Target-Terrain: 1 | Ziel: 258 | Half: False
+2026-05-29 09:31:03 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:03 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:03 [train-1-1] Sichtbare Gegner-Tiles: 16
+2026-05-29 09:31:03 [train-1-1] Tiles: 47 / 115
+2026-05-29 09:31:03 [train-1-1] Map: 18 x 18 Turn: 296
+2026-05-29 09:31:03 [train-1-1] Route geplant: Ziel = 258 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:31:03 [train-1-1] Move: 276 -> 258 | Armee: 4 | Target-Terrain: 1 | Ziel: 258 | Half: False
+2026-05-29 09:31:04 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:04 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:04 [train-1-1] Sichtbare Gegner-Tiles: 16
+2026-05-29 09:31:04 [train-1-1] Tiles: 47 / 115
+2026-05-29 09:31:04 [train-1-1] Map: 18 x 18 Turn: 297
+2026-05-29 09:31:04 [train-1-1] Route geplant: Ziel = 258 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:31:04 [train-1-1] Move: 261 -> 260 | Armee: 18 | Target-Terrain: 1 | Ziel: 258 | Half: False
+2026-05-29 09:31:04 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:04 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:04 [train-1-1] Sichtbare Gegner-Tiles: 16
+2026-05-29 09:31:04 [train-1-1] Tiles: 47 / 116
+2026-05-29 09:31:04 [train-1-1] Map: 18 x 18 Turn: 298
+2026-05-29 09:31:04 [train-1-1] Route geplant: Ziel = 258 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:31:04 [train-1-1] Move: 295 -> 277 | Armee: 5 | Target-Terrain: 1 | Ziel: 258 | Half: False
+2026-05-29 09:31:05 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:05 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:05 [train-1-1] Sichtbare Gegner-Tiles: 17
+2026-05-29 09:31:05 [train-1-1] Tiles: 46 / 117
+2026-05-29 09:31:05 [train-1-1] Map: 18 x 18 Turn: 299
+2026-05-29 09:31:05 [train-1-1] Route geplant: Ziel = 258 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:31:05 [train-1-1] Move: 312 -> 294 | Armee: 4 | Target-Terrain: 1 | Ziel: 258 | Half: False
+2026-05-29 09:31:05 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:05 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:05 [train-1-1] Sichtbare Gegner-Tiles: 17
+2026-05-29 09:31:05 [train-1-1] Tiles: 46 / 118
+2026-05-29 09:31:05 [train-1-1] Map: 18 x 18 Turn: 300
+2026-05-29 09:31:05 [train-1-1] Route geplant: Ziel = 258 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:31:05 [train-1-1] Move: 259 -> 258 | Armee: 2 | Target-Terrain: 1 | Ziel: 258 | Half: False
+2026-05-29 09:31:06 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:06 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:06 [train-1-1] Sichtbare Gegner-Tiles: 17
+2026-05-29 09:31:06 [train-1-1] Tiles: 46 / 119
+2026-05-29 09:31:06 [train-1-1] Map: 18 x 18 Turn: 301
+2026-05-29 09:31:06 [train-1-1] Route geplant: Ziel = 258 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:31:06 [train-1-1] Move: 240 -> 258 | Armee: 2 | Target-Terrain: 1 | Ziel: 258 | Half: False
+2026-05-29 09:31:06 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:06 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:06 [train-1-1] Sichtbare Gegner-Tiles: 17
+2026-05-29 09:31:06 [train-1-1] Tiles: 46 / 120
+2026-05-29 09:31:06 [train-1-1] Map: 18 x 18 Turn: 302
+2026-05-29 09:31:06 [train-1-1] Route geplant: Ziel = 258 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:31:06 [train-1-1] Move: 276 -> 258 | Armee: 2 | Target-Terrain: 1 | Ziel: 258 | Half: False
+2026-05-29 09:31:07 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:07 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:07 [train-1-1] Sichtbare Gegner-Tiles: 18
+2026-05-29 09:31:07 [train-1-1] Tiles: 45 / 121
+2026-05-29 09:31:07 [train-1-1] Map: 18 x 18 Turn: 303
+2026-05-29 09:31:07 [train-1-1] Route geplant: Ziel = 224 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:31:07 [train-1-1] Move: 241 -> 223 | Armee: 109 | Target-Terrain: 0 | Ziel: 224 | Half: False
+2026-05-29 09:31:07 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:07 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:07 [train-1-1] Sichtbare Gegner-Tiles: 18
+2026-05-29 09:31:07 [train-1-1] Tiles: 46 / 121
+2026-05-29 09:31:07 [train-1-1] Map: 18 x 18 Turn: 304
+2026-05-29 09:31:07 [train-1-1] Route geplant: Ziel = 225 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:31:07 [train-1-1] Move: 223 -> 224 | Armee: 105 | Target-Terrain: 0 | Ziel: 225 | Half: False
+2026-05-29 09:31:08 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:08 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:08 [train-1-1] Sichtbare Gegner-Tiles: 19
+2026-05-29 09:31:08 [train-1-1] Tiles: 47 / 120
+2026-05-29 09:31:08 [train-1-1] Map: 18 x 18 Turn: 305
+2026-05-29 09:31:08 [train-1-1] Route geplant: Ziel = 226 Modus = defense cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:31:08 [train-1-1] Move: 224 -> 225 | Armee: 101 | Target-Terrain: 0 | Ziel: 226 | Half: False
+2026-05-29 09:31:08 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:08 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:08 [train-1-1] Sichtbare Gegner-Tiles: 21
+2026-05-29 09:31:08 [train-1-1] Tiles: 47 / 120
+2026-05-29 09:31:08 [train-1-1] Map: 18 x 18 Turn: 306
+2026-05-29 09:31:08 [train-1-1] Route geplant: Ziel = 116 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:31:08 [train-1-1] Move: 225 -> 207 | Armee: 97 | Target-Terrain: 0 | Ziel: 116 | Half: False
+2026-05-29 09:31:09 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:09 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:09 [train-1-1] Sichtbare Gegner-Tiles: 22
+2026-05-29 09:31:09 [train-1-1] Tiles: 48 / 120
+2026-05-29 09:31:09 [train-1-1] Map: 18 x 18 Turn: 307
+2026-05-29 09:31:09 [train-1-1] Route geplant: Ziel = 116 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 243
+2026-05-29 09:31:09 [train-1-1] Move: 207 -> 189 | Armee: 93 | Target-Terrain: 0 | Ziel: 116 | Half: False
+2026-05-29 09:31:09 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:09 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:09 [train-1-1] Sichtbare Gegner-Tiles: 23
+2026-05-29 09:31:09 [train-1-1] Tiles: 48 / 120
+2026-05-29 09:31:09 [train-1-1] Map: 18 x 18 Turn: 308
+2026-05-29 09:31:09 [train-1-1] Route geplant: Ziel = 116 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:09 [train-1-1] Move: 189 -> 188 | Armee: 88 | Target-Terrain: 0 | Ziel: 116 | Half: False
+2026-05-29 09:31:10 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:10 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:10 [train-1-1] Sichtbare Gegner-Tiles: 24
+2026-05-29 09:31:10 [train-1-1] Tiles: 48 / 120
+2026-05-29 09:31:10 [train-1-1] Map: 18 x 18 Turn: 309
+2026-05-29 09:31:10 [train-1-1] Route geplant: Ziel = 116 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:10 [train-1-1] Move: 188 -> 170 | Armee: 83 | Target-Terrain: -1 | Ziel: 116 | Half: False
+2026-05-29 09:31:10 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:10 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:10 [train-1-1] Sichtbare Gegner-Tiles: 26
+2026-05-29 09:31:10 [train-1-1] Tiles: 49 / 121
+2026-05-29 09:31:10 [train-1-1] Map: 18 x 18 Turn: 310
+2026-05-29 09:31:10 [train-1-1] Route geplant: Ziel = 116 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:10 [train-1-1] Move: 170 -> 152 | Armee: 41 | Target-Terrain: 0 | Ziel: 116 | Half: False
+2026-05-29 09:31:11 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:11 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:11 [train-1-1] Sichtbare Gegner-Tiles: 28
+2026-05-29 09:31:11 [train-1-1] Tiles: 50 / 121
+2026-05-29 09:31:11 [train-1-1] Map: 18 x 18 Turn: 311
+2026-05-29 09:31:11 [train-1-1] Route geplant: Ziel = 116 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:11 [train-1-1] Move: 152 -> 134 | Armee: 38 | Target-Terrain: 0 | Ziel: 116 | Half: False
+2026-05-29 09:31:11 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:11 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:11 [train-1-1] Sichtbare Gegner-Tiles: 28
+2026-05-29 09:31:11 [train-1-1] Tiles: 51 / 120
+2026-05-29 09:31:11 [train-1-1] Map: 18 x 18 Turn: 312
+2026-05-29 09:31:11 [train-1-1] Route geplant: Ziel = 135 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:11 [train-1-1] Move: 134 -> 135 | Armee: 35 | Target-Terrain: 0 | Ziel: 135 | Half: False
+2026-05-29 09:31:12 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:12 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:12 [train-1-1] Sichtbare Gegner-Tiles: 30
+2026-05-29 09:31:12 [train-1-1] Tiles: 52 / 119
+2026-05-29 09:31:12 [train-1-1] Map: 18 x 18 Turn: 313
+2026-05-29 09:31:12 [train-1-1] Route geplant: Ziel = 151 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:12 [train-1-1] Move: 258 -> 240 | Armee: 15 | Target-Terrain: 0 | Ziel: 151 | Half: False
+2026-05-29 09:31:12 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:12 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:12 [train-1-1] Sichtbare Gegner-Tiles: 29
+2026-05-29 09:31:12 [train-1-1] Tiles: 53 / 118
+2026-05-29 09:31:12 [train-1-1] Map: 18 x 18 Turn: 314
+2026-05-29 09:31:12 [train-1-1] Route geplant: Ziel = 151 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:12 [train-1-1] Move: 240 -> 222 | Armee: 13 | Target-Terrain: 0 | Ziel: 151 | Half: False
+2026-05-29 09:31:13 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:13 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:13 [train-1-1] Sichtbare Gegner-Tiles: 28
+2026-05-29 09:31:13 [train-1-1] Tiles: 54 / 117
+2026-05-29 09:31:13 [train-1-1] Map: 18 x 18 Turn: 315
+2026-05-29 09:31:13 [train-1-1] Route geplant: Ziel = 151 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:13 [train-1-1] Move: 222 -> 204 | Armee: 11 | Target-Terrain: 0 | Ziel: 151 | Half: False
+2026-05-29 09:31:13 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:13 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:13 [train-1-1] Sichtbare Gegner-Tiles: 29
+2026-05-29 09:31:13 [train-1-1] Tiles: 55 / 116
+2026-05-29 09:31:13 [train-1-1] Map: 18 x 18 Turn: 316
+2026-05-29 09:31:13 [train-1-1] Route geplant: Ziel = 151 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:13 [train-1-1] Move: 204 -> 186 | Armee: 7 | Target-Terrain: 0 | Ziel: 151 | Half: False
+2026-05-29 09:31:14 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:14 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:14 [train-1-1] Sichtbare Gegner-Tiles: 29
+2026-05-29 09:31:14 [train-1-1] Tiles: 56 / 115
+2026-05-29 09:31:14 [train-1-1] Map: 18 x 18 Turn: 317
+2026-05-29 09:31:14 [train-1-1] Route geplant: Ziel = 151 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:14 [train-1-1] Move: 186 -> 187 | Armee: 4 | Target-Terrain: 0 | Ziel: 151 | Half: False
+2026-05-29 09:31:14 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:14 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:14 [train-1-1] Sichtbare Gegner-Tiles: 28
+2026-05-29 09:31:14 [train-1-1] Tiles: 57 / 114
+2026-05-29 09:31:14 [train-1-1] Map: 18 x 18 Turn: 318
+2026-05-29 09:31:14 [train-1-1] Route geplant: Ziel = 151 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:14 [train-1-1] Move: 97 -> 115 | Armee: 3 | Target-Terrain: 0 | Ziel: 151 | Half: False
+2026-05-29 09:31:15 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:15 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:15 [train-1-1] Sichtbare Gegner-Tiles: 28
+2026-05-29 09:31:15 [train-1-1] Tiles: 58 / 113
+2026-05-29 09:31:15 [train-1-1] Map: 18 x 18 Turn: 319
+2026-05-29 09:31:15 [train-1-1] Route geplant: Ziel = 151 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:15 [train-1-1] Move: 170 -> 169 | Armee: 5 | Target-Terrain: 0 | Ziel: 151 | Half: False
+2026-05-29 09:31:15 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:15 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:15 [train-1-1] Sichtbare Gegner-Tiles: 29
+2026-05-29 09:31:15 [train-1-1] Tiles: 58 / 113
+2026-05-29 09:31:15 [train-1-1] Map: 18 x 18 Turn: 320
+2026-05-29 09:31:15 [train-1-1] Route geplant: Ziel = 152 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:15 [train-1-1] Move: 135 -> 136 | Armee: 32 | Target-Terrain: 0 | Ziel: 152 | Half: False
+2026-05-29 09:31:16 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:16 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:16 [train-1-1] Sichtbare Gegner-Tiles: 29
+2026-05-29 09:31:16 [train-1-1] Tiles: 58 / 113
+2026-05-29 09:31:16 [train-1-1] Map: 18 x 18 Turn: 321
+2026-05-29 09:31:16 [train-1-1] Route geplant: Ziel = 152 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:16 [train-1-1] Move: 136 -> 154 | Armee: 29 | Target-Terrain: 0 | Ziel: 152 | Half: False
+2026-05-29 09:31:16 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:16 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:16 [train-1-1] Sichtbare Gegner-Tiles: 28
+2026-05-29 09:31:16 [train-1-1] Tiles: 59 / 112
+2026-05-29 09:31:16 [train-1-1] Map: 18 x 18 Turn: 322
+2026-05-29 09:31:16 [train-1-1] Route geplant: Ziel = 152 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:16 [train-1-1] Move: 154 -> 155 | Armee: 19 | Target-Terrain: 0 | Ziel: 152 | Half: False
+2026-05-29 09:31:17 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:17 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:17 [train-1-1] Sichtbare Gegner-Tiles: 28
+2026-05-29 09:31:17 [train-1-1] Tiles: 60 / 111
+2026-05-29 09:31:17 [train-1-1] Map: 18 x 18 Turn: 323
+2026-05-29 09:31:17 [train-1-1] Route geplant: Ziel = 152 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:17 [train-1-1] Move: 155 -> 156 | Armee: 17 | Target-Terrain: 0 | Ziel: 152 | Half: False
+2026-05-29 09:31:17 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:17 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:17 [train-1-1] Sichtbare Gegner-Tiles: 28
+2026-05-29 09:31:17 [train-1-1] Tiles: 61 / 110
+2026-05-29 09:31:17 [train-1-1] Map: 18 x 18 Turn: 324
+2026-05-29 09:31:17 [train-1-1] Route geplant: Ziel = 152 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:17 [train-1-1] Move: 170 -> 152 | Armee: 4 | Target-Terrain: 0 | Ziel: 152 | Half: False
+2026-05-29 09:31:18 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:18 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:18 [train-1-1] Sichtbare Gegner-Tiles: 28
+2026-05-29 09:31:18 [train-1-1] Tiles: 61 / 110
+2026-05-29 09:31:18 [train-1-1] Map: 18 x 18 Turn: 325
+2026-05-29 09:31:18 [train-1-1] Route geplant: Ziel = 151 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:18 [train-1-1] Move: 260 -> 261 | Armee: 19 | Target-Terrain: 0 | Ziel: 151 | Half: False
+2026-05-29 09:31:18 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:18 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:18 [train-1-1] Sichtbare Gegner-Tiles: 27
+2026-05-29 09:31:18 [train-1-1] Tiles: 62 / 109
+2026-05-29 09:31:18 [train-1-1] Map: 18 x 18 Turn: 326
+2026-05-29 09:31:18 [train-1-1] Route geplant: Ziel = 151 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:18 [train-1-1] Move: 261 -> 243 | Armee: 16 | Target-Terrain: 0 | Ziel: 151 | Half: False
+2026-05-29 09:31:19 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:19 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:19 [train-1-1] Sichtbare Gegner-Tiles: 27
+2026-05-29 09:31:19 [train-1-1] Tiles: 63 / 108
+2026-05-29 09:31:19 [train-1-1] Map: 18 x 18 Turn: 327
+2026-05-29 09:31:19 [train-1-1] Route geplant: Ziel = 151 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:19 [train-1-1] Move: 243 -> 225 | Armee: 13 | Target-Terrain: 0 | Ziel: 151 | Half: False
+2026-05-29 09:31:19 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:19 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:19 [train-1-1] Sichtbare Gegner-Tiles: 26
+2026-05-29 09:31:19 [train-1-1] Tiles: 64 / 107
+2026-05-29 09:31:19 [train-1-1] Map: 18 x 18 Turn: 328
+2026-05-29 09:31:19 [train-1-1] Route geplant: Ziel = 151 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:19 [train-1-1] Move: 225 -> 207 | Armee: 11 | Target-Terrain: 0 | Ziel: 151 | Half: False
+2026-05-29 09:31:20 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:20 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:20 [train-1-1] Sichtbare Gegner-Tiles: 25
+2026-05-29 09:31:20 [train-1-1] Tiles: 65 / 106
+2026-05-29 09:31:20 [train-1-1] Map: 18 x 18 Turn: 329
+2026-05-29 09:31:20 [train-1-1] Route geplant: Ziel = 151 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:20 [train-1-1] Move: 207 -> 208 | Armee: 9 | Target-Terrain: 0 | Ziel: 151 | Half: False
+2026-05-29 09:31:20 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:20 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:20 [train-1-1] Sichtbare Gegner-Tiles: 24
+2026-05-29 09:31:20 [train-1-1] Tiles: 66 / 105
+2026-05-29 09:31:20 [train-1-1] Map: 18 x 18 Turn: 330
+2026-05-29 09:31:20 [train-1-1] Route geplant: Ziel = 151 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:20 [train-1-1] Move: 170 -> 169 | Armee: 4 | Target-Terrain: 0 | Ziel: 151 | Half: False
+2026-05-29 09:31:21 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:21 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:21 [train-1-1] Sichtbare Gegner-Tiles: 25
+2026-05-29 09:31:21 [train-1-1] Tiles: 66 / 105
+2026-05-29 09:31:21 [train-1-1] Map: 18 x 18 Turn: 331
+2026-05-29 09:31:21 [train-1-1] Route geplant: Ziel = 134 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:21 [train-1-1] Move: 156 -> 138 | Armee: 8 | Target-Terrain: 0 | Ziel: 134 | Half: False
+2026-05-29 09:31:21 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:21 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:21 [train-1-1] Sichtbare Gegner-Tiles: 27
+2026-05-29 09:31:21 [train-1-1] Tiles: 66 / 105
+2026-05-29 09:31:21 [train-1-1] Map: 18 x 18 Turn: 332
+2026-05-29 09:31:21 [train-1-1] Route geplant: Ziel = 134 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:21 [train-1-1] Move: 208 -> 226 | Armee: 7 | Target-Terrain: 0 | Ziel: 134 | Half: False
+2026-05-29 09:31:22 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:22 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:22 [train-1-1] Sichtbare Gegner-Tiles: 25
+2026-05-29 09:31:22 [train-1-1] Tiles: 66 / 105
+2026-05-29 09:31:22 [train-1-1] Map: 18 x 18 Turn: 333
+2026-05-29 09:31:22 [train-1-1] Route geplant: Ziel = 134 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:22 [train-1-1] Move: 226 -> 244 | Armee: 5 | Target-Terrain: 0 | Ziel: 134 | Half: False
+2026-05-29 09:31:22 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:22 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:22 [train-1-1] Sichtbare Gegner-Tiles: 22
+2026-05-29 09:31:22 [train-1-1] Tiles: 66 / 105
+2026-05-29 09:31:22 [train-1-1] Map: 18 x 18 Turn: 334
+2026-05-29 09:31:22 [train-1-1] Route geplant: Ziel = 134 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:22 [train-1-1] Move: 229 -> 230 | Armee: 5 | Target-Terrain: 0 | Ziel: 134 | Half: False
+2026-05-29 09:31:23 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:23 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:23 [train-1-1] Sichtbare Gegner-Tiles: 23
+2026-05-29 09:31:23 [train-1-1] Tiles: 67 / 104
+2026-05-29 09:31:23 [train-1-1] Map: 18 x 18 Turn: 335
+2026-05-29 09:31:23 [train-1-1] Route geplant: Ziel = 134 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:23 [train-1-1] Move: 284 -> 266 | Armee: 2 | Target-Terrain: -1 | Ziel: 134 | Half: False
+2026-05-29 09:31:23 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:23 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:23 [train-1-1] Sichtbare Gegner-Tiles: 23
+2026-05-29 09:31:23 [train-1-1] Tiles: 68 / 104
+2026-05-29 09:31:23 [train-1-1] Map: 18 x 18 Turn: 336
+2026-05-29 09:31:23 [train-1-1] Route geplant: Ziel = 134 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:23 [train-1-1] Move: 285 -> 267 | Armee: 2 | Target-Terrain: -1 | Ziel: 134 | Half: False
+2026-05-29 09:31:24 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:24 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:24 [train-1-1] Sichtbare Gegner-Tiles: 24
+2026-05-29 09:31:24 [train-1-1] Tiles: 69 / 104
+2026-05-29 09:31:24 [train-1-1] Map: 18 x 18 Turn: 337
+2026-05-29 09:31:24 [train-1-1] Route geplant: Ziel = 134 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:24 [train-1-1] Move: 312 -> 311 | Armee: 2 | Target-Terrain: -1 | Ziel: 134 | Half: False
+2026-05-29 09:31:24 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:24 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:24 [train-1-1] Sichtbare Gegner-Tiles: 23
+2026-05-29 09:31:24 [train-1-1] Tiles: 69 / 105
+2026-05-29 09:31:24 [train-1-1] Map: 18 x 18 Turn: 338
+2026-05-29 09:31:24 [train-1-1] Route geplant: Ziel = 134 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:24 [train-1-1] Move: 221 -> 220 | Armee: 3 | Target-Terrain: -1 | Ziel: 134 | Half: False
+2026-05-29 09:31:25 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:25 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:25 [train-1-1] Sichtbare Gegner-Tiles: 22
+2026-05-29 09:31:25 [train-1-1] Tiles: 69 / 106
+2026-05-29 09:31:25 [train-1-1] Map: 18 x 18 Turn: 339
+2026-05-29 09:31:25 [train-1-1] Route geplant: Ziel = 134 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:25 [train-1-1] Move: 174 -> 156 | Armee: 5 | Target-Terrain: 0 | Ziel: 134 | Half: False
+2026-05-29 09:31:25 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:25 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:25 [train-1-1] Sichtbare Gegner-Tiles: 23
+2026-05-29 09:31:25 [train-1-1] Tiles: 70 / 105
+2026-05-29 09:31:25 [train-1-1] Map: 18 x 18 Turn: 340
+2026-05-29 09:31:25 [train-1-1] Route geplant: Ziel = 134 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:25 [train-1-1] Move: 220 -> 238 | Armee: 2 | Target-Terrain: -1 | Ziel: 134 | Half: False
+2026-05-29 09:31:26 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:26 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:26 [train-1-1] Sichtbare Gegner-Tiles: 23
+2026-05-29 09:31:26 [train-1-1] Tiles: 71 / 105
+2026-05-29 09:31:26 [train-1-1] Map: 18 x 18 Turn: 341
+2026-05-29 09:31:26 [train-1-1] Route geplant: Ziel = 134 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:26 [train-1-1] Move: 321 -> 322 | Armee: 4 | Target-Terrain: -1 | Ziel: 134 | Half: False
+2026-05-29 09:31:26 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:26 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:26 [train-1-1] Sichtbare Gegner-Tiles: 23
+2026-05-29 09:31:26 [train-1-1] Tiles: 72 / 105
+2026-05-29 09:31:26 [train-1-1] Map: 18 x 18 Turn: 342
+2026-05-29 09:31:26 [train-1-1] Route geplant: Ziel = 134 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:26 [train-1-1] Move: 322 -> 323 | Armee: 3 | Target-Terrain: -1 | Ziel: 134 | Half: False
+2026-05-29 09:31:27 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:27 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:27 [train-1-1] Sichtbare Gegner-Tiles: 23
+2026-05-29 09:31:27 [train-1-1] Tiles: 73 / 105
+2026-05-29 09:31:27 [train-1-1] Map: 18 x 18 Turn: 343
+2026-05-29 09:31:27 [train-1-1] Route geplant: Ziel = 134 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:27 [train-1-1] Move: 293 -> 292 | Armee: 5 | Target-Terrain: -1 | Ziel: 134 | Half: False
+2026-05-29 09:31:27 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:27 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:27 [train-1-1] Sichtbare Gegner-Tiles: 23
+2026-05-29 09:31:27 [train-1-1] Tiles: 74 / 105
+2026-05-29 09:31:27 [train-1-1] Map: 18 x 18 Turn: 344
+2026-05-29 09:31:27 [train-1-1] Route geplant: Ziel = 134 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:27 [train-1-1] Move: 193 -> 192 | Armee: 5 | Target-Terrain: 1 | Ziel: 134 | Half: False
+2026-05-29 09:31:28 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:28 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:28 [train-1-1] Sichtbare Gegner-Tiles: 23
+2026-05-29 09:31:28 [train-1-1] Tiles: 74 / 105
+2026-05-29 09:31:28 [train-1-1] Map: 18 x 18 Turn: 345
+2026-05-29 09:31:28 [train-1-1] Route geplant: Ziel = 134 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:28 [train-1-1] Move: 192 -> 174 | Armee: 9 | Target-Terrain: 1 | Ziel: 134 | Half: False
+2026-05-29 09:31:28 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:28 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:28 [train-1-1] Sichtbare Gegner-Tiles: 23
+2026-05-29 09:31:28 [train-1-1] Tiles: 74 / 105
+2026-05-29 09:31:28 [train-1-1] Map: 18 x 18 Turn: 346
+2026-05-29 09:31:28 [train-1-1] Route geplant: Ziel = 134 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:28 [train-1-1] Move: 174 -> 156 | Armee: 9 | Target-Terrain: 1 | Ziel: 134 | Half: False
+2026-05-29 09:31:29 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:29 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:29 [train-1-1] Sichtbare Gegner-Tiles: 23
+2026-05-29 09:31:29 [train-1-1] Tiles: 73 / 106
+2026-05-29 09:31:29 [train-1-1] Map: 18 x 18 Turn: 347
+2026-05-29 09:31:29 [train-1-1] Route geplant: Ziel = 134 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:29 [train-1-1] Move: 156 -> 155 | Armee: 10 | Target-Terrain: 0 | Ziel: 134 | Half: False
+2026-05-29 09:31:29 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:29 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:29 [train-1-1] Sichtbare Gegner-Tiles: 24
+2026-05-29 09:31:29 [train-1-1] Tiles: 74 / 105
+2026-05-29 09:31:29 [train-1-1] Map: 18 x 18 Turn: 348
+2026-05-29 09:31:29 [train-1-1] Route geplant: Ziel = 134 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:29 [train-1-1] Move: 155 -> 154 | Armee: 8 | Target-Terrain: 0 | Ziel: 134 | Half: False
+2026-05-29 09:31:30 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:30 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:30 [train-1-1] Sichtbare Gegner-Tiles: 23
+2026-05-29 09:31:30 [train-1-1] Tiles: 75 / 104
+2026-05-29 09:31:30 [train-1-1] Map: 18 x 18 Turn: 349
+2026-05-29 09:31:30 [train-1-1] Route geplant: Ziel = 134 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:30 [train-1-1] Move: 154 -> 136 | Armee: 6 | Target-Terrain: 0 | Ziel: 134 | Half: False
+2026-05-29 09:31:30 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:30 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:30 [train-1-1] Sichtbare Gegner-Tiles: 25
+2026-05-29 09:31:30 [train-1-1] Tiles: 76 / 103
+2026-05-29 09:31:30 [train-1-1] Map: 18 x 18 Turn: 350
+2026-05-29 09:31:30 [train-1-1] Route geplant: Ziel = 134 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:30 [train-1-1] Move: 136 -> 135 | Armee: 5 | Target-Terrain: 0 | Ziel: 134 | Half: False
+2026-05-29 09:31:31 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:31 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:31 [train-1-1] Sichtbare Gegner-Tiles: 24
+2026-05-29 09:31:31 [train-1-1] Tiles: 77 / 102
+2026-05-29 09:31:31 [train-1-1] Map: 18 x 18 Turn: 351
+2026-05-29 09:31:31 [train-1-1] Route geplant: Ziel = 134 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:31 [train-1-1] Move: 220 -> 219 | Armee: 2 | Target-Terrain: -1 | Ziel: 134 | Half: False
+2026-05-29 09:31:31 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:31 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:31 [train-1-1] Sichtbare Gegner-Tiles: 24
+2026-05-29 09:31:31 [train-1-1] Tiles: 78 / 102
+2026-05-29 09:31:31 [train-1-1] Map: 18 x 18 Turn: 352
+2026-05-29 09:31:31 [train-1-1] Route geplant: Ziel = 134 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:31 [train-1-1] Move: 238 -> 237 | Armee: 2 | Target-Terrain: -1 | Ziel: 134 | Half: False
+2026-05-29 09:31:32 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:32 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:32 [train-1-1] Sichtbare Gegner-Tiles: 24
+2026-05-29 09:31:32 [train-1-1] Tiles: 79 / 102
+2026-05-29 09:31:32 [train-1-1] Map: 18 x 18 Turn: 353
+2026-05-29 09:31:32 [train-1-1] Route geplant: Ziel = 134 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:32 [train-1-1] Move: 97 -> 115 | Armee: 2 | Target-Terrain: 1 | Ziel: 134 | Half: False
+2026-05-29 09:31:32 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:32 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:32 [train-1-1] Sichtbare Gegner-Tiles: 24
+2026-05-29 09:31:32 [train-1-1] Tiles: 79 / 102
+2026-05-29 09:31:32 [train-1-1] Map: 18 x 18 Turn: 354
+2026-05-29 09:31:32 [train-1-1] Route geplant: Ziel = 134 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:32 [train-1-1] Move: 225 -> 207 | Armee: 2 | Target-Terrain: 1 | Ziel: 134 | Half: False
+2026-05-29 09:31:33 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:33 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:33 [train-1-1] Sichtbare Gegner-Tiles: 24
+2026-05-29 09:31:33 [train-1-1] Tiles: 79 / 102
+2026-05-29 09:31:33 [train-1-1] Map: 18 x 18 Turn: 355
+2026-05-29 09:31:33 [train-1-1] Route geplant: Ziel = 134 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:33 [train-1-1] Move: 207 -> 189 | Armee: 3 | Target-Terrain: 1 | Ziel: 134 | Half: False
+2026-05-29 09:31:33 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:33 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:33 [train-1-1] Sichtbare Gegner-Tiles: 24
+2026-05-29 09:31:33 [train-1-1] Tiles: 79 / 102
+2026-05-29 09:31:33 [train-1-1] Map: 18 x 18 Turn: 356
+2026-05-29 09:31:33 [train-1-1] Route geplant: Ziel = 134 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:33 [train-1-1] Move: 189 -> 188 | Armee: 4 | Target-Terrain: 1 | Ziel: 134 | Half: False
+2026-05-29 09:31:34 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:34 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:34 [train-1-1] Sichtbare Gegner-Tiles: 24
+2026-05-29 09:31:34 [train-1-1] Tiles: 79 / 102
+2026-05-29 09:31:34 [train-1-1] Map: 18 x 18 Turn: 357
+2026-05-29 09:31:34 [train-1-1] Route geplant: Ziel = 134 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:34 [train-1-1] Move: 259 -> 241 | Armee: 2 | Target-Terrain: 1 | Ziel: 134 | Half: False
+2026-05-29 09:31:34 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:34 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:34 [train-1-1] Sichtbare Gegner-Tiles: 24
+2026-05-29 09:31:34 [train-1-1] Tiles: 79 / 102
+2026-05-29 09:31:34 [train-1-1] Map: 18 x 18 Turn: 358
+2026-05-29 09:31:34 [train-1-1] Route geplant: Ziel = 134 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:34 [train-1-1] Move: 277 -> 259 | Armee: 40 | Target-Terrain: 1 | Ziel: 134 | Half: False
+2026-05-29 09:31:35 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:35 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:35 [train-1-1] Sichtbare Gegner-Tiles: 24
+2026-05-29 09:31:35 [train-1-1] Tiles: 79 / 102
+2026-05-29 09:31:35 [train-1-1] Map: 18 x 18 Turn: 359
+2026-05-29 09:31:35 [train-1-1] Route geplant: Ziel = 134 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:35 [train-1-1] Move: 259 -> 241 | Armee: 40 | Target-Terrain: 1 | Ziel: 134 | Half: False
+2026-05-29 09:31:35 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:35 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:35 [train-1-1] Sichtbare Gegner-Tiles: 24
+2026-05-29 09:31:35 [train-1-1] Tiles: 79 / 102
+2026-05-29 09:31:35 [train-1-1] Map: 18 x 18 Turn: 360
+2026-05-29 09:31:35 [train-1-1] Route geplant: Ziel = 134 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:35 [train-1-1] Move: 241 -> 223 | Armee: 42 | Target-Terrain: 0 | Ziel: 134 | Half: False
+2026-05-29 09:31:36 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:36 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:36 [train-1-1] Sichtbare Gegner-Tiles: 23
+2026-05-29 09:31:36 [train-1-1] Tiles: 80 / 101
+2026-05-29 09:31:36 [train-1-1] Map: 18 x 18 Turn: 361
+2026-05-29 09:31:36 [train-1-1] Route geplant: Ziel = 134 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:36 [train-1-1] Move: 223 -> 205 | Armee: 39 | Target-Terrain: 0 | Ziel: 134 | Half: False
+2026-05-29 09:31:36 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:36 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:36 [train-1-1] Sichtbare Gegner-Tiles: 22
+2026-05-29 09:31:36 [train-1-1] Tiles: 81 / 100
+2026-05-29 09:31:36 [train-1-1] Map: 18 x 18 Turn: 362
+2026-05-29 09:31:36 [train-1-1] Route geplant: Ziel = 134 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:36 [train-1-1] Move: 205 -> 187 | Armee: 36 | Target-Terrain: 1 | Ziel: 134 | Half: False
+2026-05-29 09:31:37 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:37 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:37 [train-1-1] Sichtbare Gegner-Tiles: 22
+2026-05-29 09:31:37 [train-1-1] Tiles: 81 / 100
+2026-05-29 09:31:37 [train-1-1] Map: 18 x 18 Turn: 363
+2026-05-29 09:31:37 [train-1-1] Route geplant: Ziel = 134 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:37 [train-1-1] Move: 187 -> 169 | Armee: 37 | Target-Terrain: 1 | Ziel: 134 | Half: False
+2026-05-29 09:31:37 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:37 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:37 [train-1-1] Sichtbare Gegner-Tiles: 22
+2026-05-29 09:31:37 [train-1-1] Tiles: 81 / 100
+2026-05-29 09:31:37 [train-1-1] Map: 18 x 18 Turn: 364
+2026-05-29 09:31:37 [train-1-1] Route geplant: Ziel = 134 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:37 [train-1-1] Move: 169 -> 151 | Armee: 38 | Target-Terrain: 0 | Ziel: 134 | Half: False
+2026-05-29 09:31:38 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:38 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:38 [train-1-1] Sichtbare Gegner-Tiles: 21
+2026-05-29 09:31:38 [train-1-1] Tiles: 82 / 99
+2026-05-29 09:31:38 [train-1-1] Map: 18 x 18 Turn: 365
+2026-05-29 09:31:38 [train-1-1] Route geplant: Ziel = 134 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:38 [train-1-1] Move: 151 -> 133 | Armee: 35 | Target-Terrain: 0 | Ziel: 134 | Half: False
+2026-05-29 09:31:38 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:38 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:38 [train-1-1] Sichtbare Gegner-Tiles: 20
+2026-05-29 09:31:38 [train-1-1] Tiles: 83 / 98
+2026-05-29 09:31:38 [train-1-1] Map: 18 x 18 Turn: 366
+2026-05-29 09:31:38 [train-1-1] Route geplant: Ziel = 134 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:38 [train-1-1] Move: 133 -> 134 | Armee: 32 | Target-Terrain: 0 | Ziel: 134 | Half: False
+2026-05-29 09:31:39 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:39 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:39 [train-1-1] Sichtbare Gegner-Tiles: 19
+2026-05-29 09:31:39 [train-1-1] Tiles: 84 / 97
+2026-05-29 09:31:39 [train-1-1] Map: 18 x 18 Turn: 367
+2026-05-29 09:31:39 [train-1-1] Route geplant: Ziel = 172 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:39 [train-1-1] Move: 134 -> 116 | Armee: 29 | Target-Terrain: 0 | Ziel: 172 | Half: False
+2026-05-29 09:31:39 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:39 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:39 [train-1-1] Sichtbare Gegner-Tiles: 19
+2026-05-29 09:31:39 [train-1-1] Tiles: 85 / 96
+2026-05-29 09:31:39 [train-1-1] Map: 18 x 18 Turn: 368
+2026-05-29 09:31:39 [train-1-1] Route geplant: Ziel = 172 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:39 [train-1-1] Move: 116 -> 117 | Armee: 25 | Target-Terrain: 0 | Ziel: 172 | Half: False
+2026-05-29 09:31:40 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:40 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:40 [train-1-1] Sichtbare Gegner-Tiles: 18
+2026-05-29 09:31:40 [train-1-1] Tiles: 86 / 95
+2026-05-29 09:31:40 [train-1-1] Map: 18 x 18 Turn: 369
+2026-05-29 09:31:40 [train-1-1] Route geplant: Ziel = 172 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:40 [train-1-1] Move: 117 -> 118 | Armee: 21 | Target-Terrain: 0 | Ziel: 172 | Half: False
+2026-05-29 09:31:40 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:40 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:40 [train-1-1] Sichtbare Gegner-Tiles: 18
+2026-05-29 09:31:40 [train-1-1] Tiles: 87 / 94
+2026-05-29 09:31:40 [train-1-1] Map: 18 x 18 Turn: 370
+2026-05-29 09:31:40 [train-1-1] Route geplant: Ziel = 172 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:40 [train-1-1] Move: 118 -> 119 | Armee: 18 | Target-Terrain: 0 | Ziel: 172 | Half: False
+2026-05-29 09:31:41 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:41 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:41 [train-1-1] Sichtbare Gegner-Tiles: 19
+2026-05-29 09:31:41 [train-1-1] Tiles: 88 / 93
+2026-05-29 09:31:41 [train-1-1] Map: 18 x 18 Turn: 371
+2026-05-29 09:31:41 [train-1-1] Route geplant: Ziel = 172 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:41 [train-1-1] Move: 119 -> 101 | Armee: 16 | Target-Terrain: 0 | Ziel: 172 | Half: False
+2026-05-29 09:31:41 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:41 [train-1-1] Gegner General Index: None
+2026-05-29 09:31:41 [train-1-1] Sichtbare Gegner-Tiles: 21
+2026-05-29 09:31:41 [train-1-1] Tiles: 89 / 92
+2026-05-29 09:31:41 [train-1-1] Map: 18 x 18 Turn: 372
+2026-05-29 09:31:41 [train-1-1] Route geplant: Ziel = 172 Modus = strategy cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:41 [train-1-1] Move: 101 -> 102 | Armee: 14 | Target-Terrain: 0 | Ziel: 172 | Half: False
+2026-05-29 09:31:42 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:42 [train-1-1] Gegner General Index: 103
+2026-05-29 09:31:42 [train-1-1] Sichtbare Gegner-Tiles: 23
+2026-05-29 09:31:42 [train-1-1] Tiles: 90 / 91
+2026-05-29 09:31:42 [train-1-1] Map: 18 x 18 Turn: 373
+2026-05-29 09:31:42 [train-1-1] Route geplant: Ziel = 103 Modus = enemy_general cityfrei erreichbare Tiles = 241 Fallback-Tiles = 244
+2026-05-29 09:31:42 [train-1-1] Move: 102 -> 103 | Armee: 9 | Target-Terrain: 0 | Ziel: 103 | Half: False
+2026-05-29 09:31:42 [train-1-1] EVENT: ['chat_message', 'game_1780039714852-u_VG-EN_WZxYLdIAI-2', {'text': 'G2000010 captured G2000009.', 'multiText': ['G2000010', ' captured ', 'G2000009', '.'], 'multiColors': [1, None, 0, None], 'turn': 373}]
+2026-05-29 09:31:42 [train-1-1] Mein General Index: 277
+2026-05-29 09:31:42 [train-1-1] Gegner General Index: 103
+2026-05-29 09:31:42 [train-1-1] Sichtbare Gegner-Tiles: 0
+2026-05-29 09:31:42 [train-1-1] Tiles: 181 / 0
+2026-05-29 09:31:42 [train-1-1] Map: 18 x 18 Turn: 374
+2026-05-29 09:31:42 [train-1-1] Route geplant: Ziel = 102 Modus = enemy_general cityfrei erreichbare Tiles = 240 Fallback-Tiles = 251
+2026-05-29 09:31:42 [train-1-1] Move: 94 -> 76 | Armee: 8 | Target-Terrain: -1 | Ziel: 102 | Half: False
+2026-05-29 09:31:42 [train-1-1] EVENT: ['game_won', None, None]
+2026-05-29 09:31:42 [train-1-1] GAME ENDE: game_won
+2026-05-29 09:31:42 [train-1-1] Statistik gespeichert fuer Reserve-Turn: 221
+2026-05-29 09:31:42 [train-1-1] Disconnected

@@ -1,0 +1,168 @@
+{
+  "city_focus_turns": {
+    "089": {
+      "losses": 0,
+      "wins": 1
+    },
+    "092": {
+      "losses": 0,
+      "wins": 2
+    },
+    "111": {
+      "losses": 1,
+      "wins": 0
+    },
+    "120": {
+      "losses": 0,
+      "wins": 1
+    },
+    "121": {
+      "losses": 1,
+      "wins": 0
+    },
+    "124": {
+      "losses": 0,
+      "wins": 1
+    },
+    "138": {
+      "losses": 1,
+      "wins": 0
+    },
+    "149": {
+      "losses": 0,
+      "wins": 1
+    },
+    "155": {
+      "losses": 1,
+      "wins": 0
+    },
+    "157": {
+      "losses": 0,
+      "wins": 1
+    },
+    "160": {
+      "losses": 0,
+      "wins": 1
+    },
+    "170": {
+      "losses": 0,
+      "wins": 1
+    },
+    "174": {
+      "losses": 1,
+      "wins": 0
+    }
+  },
+  "general_attack_turns": {
+    "114": {
+      "losses": 0,
+      "wins": 1
+    },
+    "124": {
+      "losses": 1,
+      "wins": 0
+    },
+    "140": {
+      "losses": 0,
+      "wins": 1
+    },
+    "143": {
+      "losses": 1,
+      "wins": 0
+    },
+    "144": {
+      "losses": 0,
+      "wins": 1
+    },
+    "146": {
+      "losses": 1,
+      "wins": 1
+    },
+    "175": {
+      "losses": 0,
+      "wins": 1
+    },
+    "176": {
+      "losses": 0,
+      "wins": 1
+    },
+    "181": {
+      "losses": 0,
+      "wins": 1
+    },
+    "190": {
+      "losses": 0,
+      "wins": 1
+    },
+    "201": {
+      "losses": 1,
+      "wins": 0
+    },
+    "211": {
+      "losses": 0,
+      "wins": 1
+    },
+    "218": {
+      "losses": 1,
+      "wins": 0
+    }
+  },
+  "reserve_turns": {
+    "073": {
+      "losses": 0,
+      "wins": 1
+    },
+    "111": {
+      "losses": 0,
+      "wins": 1
+    },
+    "184": {
+      "losses": 1,
+      "wins": 0
+    },
+    "204": {
+      "losses": 1,
+      "wins": 0
+    },
+    "208": {
+      "losses": 0,
+      "wins": 1
+    },
+    "221": {
+      "losses": 0,
+      "wins": 1
+    },
+    "236": {
+      "losses": 1,
+      "wins": 0
+    },
+    "257": {
+      "losses": 0,
+      "wins": 1
+    },
+    "307": {
+      "losses": 0,
+      "wins": 1
+    },
+    "360": {
+      "losses": 0,
+      "wins": 1
+    },
+    "362": {
+      "losses": 1,
+      "wins": 0
+    },
+    "387": {
+      "losses": 0,
+      "wins": 1
+    },
+    "423": {
+      "losses": 1,
+      "wins": 0
+    },
+    "425": {
+      "losses": 0,
+      "wins": 1
+    }
+  }
+}

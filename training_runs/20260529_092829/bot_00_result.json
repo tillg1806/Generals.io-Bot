@@ -1,0 +1,15 @@
+{
+  "city_focus_after_turn": 138,
+  "failure_reason": null,
+  "general_attack_after_turn": 201,
+  "label": "train-0-0",
+  "log_path": "training_runs\\20260529_092829\\logs\\bot_00.log",
+  "replay_id": "9EM4W1kKl",
+  "replay_url": "https://bot.generals.io/replays/9EM4W1kKl",
+  "reserve_after_turn": 204,
+  "room_id": "TillBotSpectatorTraining",
+  "status": "finished",
+  "user_id": "till_bot_123_account_000007",
+  "username": "G2000007",
+  "won": false
+}

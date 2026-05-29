@@ -1,0 +1,48 @@
+{
+  "city_focus_after_turn": 140,
+  "failure_reason": "event_idle_timeout",
+  "general_attack_after_turn": 186,
+  "general_guess": {
+    "actual_enemy_general_index": null,
+    "guess_correct": false,
+    "guess_turn": 1,
+    "guessed_enemy_general_index": 27,
+    "height": 21,
+    "map_metrics": {
+      "actual_general_distance": null,
+      "city_count": 2,
+      "city_density": 0.0045351473922902496,
+      "fog_count": 321,
+      "fog_obstacle_count": 93,
+      "guess_distance": {
+        "manhattan": 26,
+        "path": 26,
+        "target_index": 27
+      },
+      "height": 21,
+      "known_passable_tile_count": 340,
+      "mountain_count": 8,
+      "mountain_density": 0.018140589569160998,
+      "tile_count": 441,
+      "visible_tile_count": 27,
+      "width": 21
+    },
+    "my_general_index": 413,
+    "replay_id": "ux-cKnSBz",
+    "replay_url": "https://bot.generals.io/replays/ux-cKnSBz",
+    "room_id": "TillBotSpectatorTraining",
+    "timestamp": "2026-05-29T10:14:32",
+    "width": 21,
+    "won": null
+  },
+  "label": "train-0-0-g0001",
+  "log_path": null,
+  "replay_id": "ux-cKnSBz",
+  "replay_url": "https://bot.generals.io/replays/ux-cKnSBz",
+  "reserve_after_turn": 332,
+  "room_id": "TillBotSpectatorTraining",
+  "status": "failed",
+  "user_id": "till_bot_123_account_000007",
+  "username": "G2000007",
+  "won": null
+}

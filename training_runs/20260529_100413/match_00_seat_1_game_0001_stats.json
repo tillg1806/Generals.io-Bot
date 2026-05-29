@@ -1,0 +1,20 @@
+{
+  "city_focus_turns": {
+    "149": {
+      "losses": 0,
+      "wins": 1
+    }
+  },
+  "general_attack_turns": {
+    "181": {
+      "losses": 0,
+      "wins": 1
+    }
+  },
+  "reserve_turns": {
+    "208": {
+      "losses": 0,
+      "wins": 1
+    }
+  }
+}
