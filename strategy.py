@@ -29,6 +29,14 @@ from config import (
     OWN_CITY_ARMY_RESERVE,
     OWN_CITY_PUSH_ARMY,
     RESCOUT_AFTER_VISIBLE_TURNS,
+    REINFORCEMENT_ATTACK_BONUS,
+    REINFORCEMENT_ATTACK_LEAD_TURNS,
+    REINFORCEMENT_EXPAND_WINDOW,
+    REINFORCEMENT_FRONTIER_BONUS,
+    REINFORCEMENT_INTERVAL,
+    REINFORCEMENT_ROUTE_BONUS,
+    REINFORCEMENT_STAGING_WINDOW,
+    REINFORCEMENT_WAYPOINT_LOOKAHEAD,
     ROUTE_DISTANCE_PENALTY,
     ROUTE_GATEWAY_BONUS,
     ROUTE_PROGRESS_BONUS,
@@ -47,6 +55,7 @@ from pathfinding import (
     reachable_tiles_from,
     xy_to_index,
 )
+from priority_agent import StrategyPriorityAgent
 
 
 @dataclass
@@ -55,6 +64,16 @@ class Move:
     target: int
     half: bool
     strategy_target: int | None
+
+
+@dataclass
+class ReinforcementContext:
+    turns_until: int
+    turns_since: int
+    staging: bool
+    attack_window: bool
+    expand_window: bool
+    waypoint: int | None = None
 
 
 class Strategy:
@@ -80,6 +99,7 @@ class Strategy:
         self.initial_enemy_general_guess = None
         self.recent_moves = []
         self.flow_chain = []
+        self.priority_agent = StrategyPriorityAgent()
 
     def log(self, *parts):
         if self.logger:
@@ -542,6 +562,104 @@ class Strategy:
 
         return source_army > GENERAL_MIN_ARMY_RESERVE * 2
 
+    def reinforcement_context(self, turn, strategy_target, terrain, armies):
+        if turn < 0 or REINFORCEMENT_INTERVAL <= 0:
+            return ReinforcementContext(0, 0, False, False, False)
+
+        phase = turn % REINFORCEMENT_INTERVAL
+        turns_until = (REINFORCEMENT_INTERVAL - phase) % REINFORCEMENT_INTERVAL
+        turns_since = phase
+        staging = 0 < turns_until <= REINFORCEMENT_STAGING_WINDOW
+        attack_window = 0 < turns_until <= REINFORCEMENT_ATTACK_LEAD_TURNS
+        expand_window = turns_since <= REINFORCEMENT_EXPAND_WINDOW
+        waypoint = None
+
+        if staging and strategy_target is not None:
+            waypoint = self.choose_reinforcement_waypoint(
+                strategy_target,
+                terrain,
+                armies,
+                turns_until,
+            )
+
+        return ReinforcementContext(
+            turns_until=turns_until,
+            turns_since=turns_since,
+            staging=staging,
+            attack_window=attack_window,
+            expand_window=expand_window,
+            waypoint=waypoint,
+        )
+
+    def choose_reinforcement_waypoint(self, strategy_target, terrain, armies, turns_until):
+        if self.state.my_general_index is None or strategy_target is None:
+            return None
+        if strategy_target >= len(terrain) or not is_passable(terrain[strategy_target]):
+            return None
+
+        owned_tiles = [
+            index
+            for index, owner in enumerate(terrain)
+            if owner == self.state.player_index and armies[index] > 1
+        ]
+        if not owned_tiles:
+            return None
+
+        staging_source = min(
+            owned_tiles,
+            key=lambda index: (
+                distance_to_target(self.state, index, strategy_target),
+                -armies[index],
+            ),
+        )
+        if staging_source == strategy_target:
+            return None
+
+        route_distances = build_distance_map(
+            self.state,
+            strategy_target,
+            terrain,
+            avoid_cities=True,
+        )
+        if staging_source not in route_distances:
+            route_distances = build_distance_map(
+                self.state,
+                strategy_target,
+                terrain,
+                avoid_cities=False,
+            )
+        if staging_source not in route_distances:
+            return None
+
+        steps = max(
+            1,
+            min(
+                REINFORCEMENT_WAYPOINT_LOOKAHEAD,
+                max(1, turns_until - REINFORCEMENT_ATTACK_LEAD_TURNS),
+                route_distances[staging_source],
+            ),
+        )
+        current = staging_source
+        for _ in range(steps):
+            next_steps = [
+                neighbor
+                for neighbor in neighbors(self.state, current)
+                if neighbor in route_distances
+                and route_distances[neighbor] < route_distances[current]
+                and is_passable(terrain[neighbor])
+            ]
+            if not next_steps:
+                break
+            current = min(
+                next_steps,
+                key=lambda index: (
+                    route_distances[index],
+                    terrain[index] == self.state.player_index,
+                ),
+            )
+
+        return current if current != staging_source else None
+
     def update_planned_routes(self, strategy_target, terrain):
         self.planned_target = strategy_target
         self.planned_distances = build_distance_map(
@@ -586,7 +704,25 @@ class Strategy:
         else:
             strategy_target = self.choose_committed_strategy_target(terrain, turn, army_dominance)
 
-        self.update_planned_routes(strategy_target, terrain)
+        reinforcement = self.reinforcement_context(turn, strategy_target, terrain, armies)
+        route_target = strategy_target
+        if (
+            defense_target is None
+            and self.state.enemy_general_index is None
+            and reinforcement.waypoint is not None
+        ):
+            route_target = reinforcement.waypoint
+            self.committed_reason = "reinforcement_waypoint"
+            self.log(
+                "Reinforcement-Wegpunkt:",
+                route_target,
+                "finales Ziel =",
+                strategy_target,
+                "Turns bis Reinforcement =",
+                reinforcement.turns_until,
+            )
+
+        self.update_planned_routes(route_target, terrain)
 
         if (
             not self.state.expansion_started
@@ -600,9 +736,16 @@ class Strategy:
             return None
 
         self.state.expansion_started = True
-        return self._choose_ranked_move(turn, terrain, armies, defense_target, strategy_target)
+        return self._choose_ranked_move(
+            turn,
+            terrain,
+            armies,
+            defense_target,
+            route_target,
+            reinforcement,
+        )
 
-    def _choose_ranked_move(self, turn, terrain, armies, defense_target, strategy_target):
+    def _choose_ranked_move(self, turn, terrain, armies, defense_target, strategy_target, reinforcement):
         army_dominance = self.has_army_dominance()
         catch_up_tiles = self.should_catch_up_tiles()
         visible_turn = self.state.visible_turn(turn)
@@ -617,7 +760,10 @@ class Strategy:
         aggression_pulse = (
             defense_target is None
             and visible_turn >= EXPAND_AFTER_TURN
-            and visible_turn % AGGRESSION_PULSE_INTERVAL == 0
+            and (
+                visible_turn % AGGRESSION_PULSE_INTERVAL == 0
+                or reinforcement.expand_window
+            )
         )
         broad_expansion_mode = (
             defense_target is None
@@ -783,6 +929,31 @@ class Strategy:
                     )
                 )
                 drains_overstacked_along_flow = drains_overstacked_tile and extends_flow_chain
+                reinforcement_route_push = (
+                    reinforcement.staging
+                    and defense_target is None
+                    and (
+                        follows_city_free_route
+                        or follows_fallback_route
+                        or route_progress > 0
+                        or fallback_route_progress > 0
+                    )
+                )
+                reinforcement_frontier_push = (
+                    reinforcement.expand_window
+                    and defense_target is None
+                    and target_is_new_tile
+                    and not target_is_enemy_tile
+                )
+                reinforcement_attack_push = (
+                    reinforcement.attack_window
+                    and defense_target is None
+                    and (
+                        target_is_enemy_tile
+                        or can_take_city
+                        or attacks_known_general_route
+                    )
+                )
                 reverses_recent_move = self.reverses_recent_move(source, target)
                 repeats_recent_edge = self.repeats_recent_edge(source, target)
                 repeats_recent_target = self.repeats_recent_target(target)
@@ -836,6 +1007,9 @@ class Strategy:
                     "extends_flow_chain": extends_flow_chain,
                     "drains_overstacked_tile": drains_overstacked_tile,
                     "drains_overstacked_along_flow": drains_overstacked_along_flow,
+                    "reinforcement_route_push": reinforcement_route_push,
+                    "reinforcement_frontier_push": reinforcement_frontier_push,
+                    "reinforcement_attack_push": reinforcement_attack_push,
                     "prediction_heat": self.state.enemy_prediction_heat.get(target, 0),
                     "reverses_recent_move": reverses_recent_move,
                     "repeats_recent_edge": repeats_recent_edge,
@@ -850,8 +1024,16 @@ class Strategy:
                 }
 
                 score = self.score_move(candidate, armies)
-                if score is not None:
-                    candidate["score"] = score
+                prioritized = self.priority_agent.prioritize(
+                    candidate,
+                    score,
+                    self.recent_moves,
+                    self.flow_chain,
+                )
+                if prioritized is not None:
+                    candidate["base_score"] = score
+                    candidate["score"] = prioritized.score
+                    candidate["priority_reason"] = prioritized.reason
                     moves.append(candidate)
 
         if not moves:
@@ -876,6 +1058,15 @@ class Strategy:
         half = best_move["half"]
         self.remember_move(source, target)
         self.remember_flow(source, target)
+        if best_move.get("priority_reason"):
+            self.log(
+                "Prioritaets-Agent:",
+                best_move["priority_reason"],
+                "base =",
+                best_move.get("base_score"),
+                "final =",
+                best_move["score"],
+            )
         return Move(source, target, half, strategy_target)
 
     def score_move(self, move, armies):
@@ -946,6 +1137,12 @@ class Strategy:
             score += 1800
         elif move["drains_overstacked_tile"]:
             score += 900
+        if move["reinforcement_route_push"]:
+            score += REINFORCEMENT_ROUTE_BONUS
+        if move["reinforcement_frontier_push"]:
+            score += REINFORCEMENT_FRONTIER_BONUS
+        if move["reinforcement_attack_push"]:
+            score += REINFORCEMENT_ATTACK_BONUS
         if move["defends_general"] and move["prediction_heat"]:
             score += move["prediction_heat"] * 1200
 

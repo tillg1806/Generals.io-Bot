@@ -7,10 +7,14 @@ PYBOT_DIR = Path(__file__).resolve().parents[1] / "Generals" / "PyBot"
 if PYBOT_DIR.exists():
     sys.path.insert(0, str(PYBOT_DIR))
 
+REPO_DIR = Path(__file__).resolve().parent
+
 from ggbot.core import PythonBot
 import ggbot.utils
 
 from game_state import GameState
+from general_guesser import GeneralGuesser
+from map_analyzer import analyze_state_map
 from stats import ReserveTurnStats
 from strategy import Strategy
 
@@ -19,6 +23,7 @@ class TillBot(PythonBot):
     def __init__(self):
         super().__init__()
         self.state = GameState()
+        self.general_guesser = GeneralGuesser()
         self.stats = ReserveTurnStats()
         self.reserve_after_turn = self.stats.choose_value()
         self.city_focus_after_turn = self.stats.choose_city_focus_value()
@@ -32,11 +37,15 @@ class TillBot(PythonBot):
         )
         self.started_replay_id = None
         self.enemy_general_guess_index = None
-        self.analysis_path = Path("pybot_map_analysis.json")
+        self.enemy_general_guess_confidence = None
+        self.enemy_general_guess_reason = None
+        self.enemy_general_guess_candidates = []
+        self.analysis_path = REPO_DIR / "pybot_map_analysis.json"
         self.move_count = 0
         self.skipped_invalid_moves = 0
         self.latest_map_data = None
         self.map_snapshots = []
+        self.final_map_analysis = None
 
     def log(self, *parts):
         if getattr(self, "__DEBUG__", False):
@@ -93,10 +102,14 @@ class TillBot(PythonBot):
             self.started_replay_id = self.game.replay_id
             self.state.start({"playerIndex": self.game.player_index})
             self.enemy_general_guess_index = None
+            self.enemy_general_guess_confidence = None
+            self.enemy_general_guess_reason = None
+            self.enemy_general_guess_candidates = []
             self.move_count = 0
             self.skipped_invalid_moves = 0
             self.latest_map_data = None
             self.map_snapshots = []
+            self.final_map_analysis = None
 
         armies = list(self.game.armies)
         terrain = list(self.game.terrain)
@@ -154,26 +167,51 @@ class TillBot(PythonBot):
 
     def update_enemy_general_guess(self):
         if self.enemy_general_guess_index is not None:
-            return
+            terrain, _ = self.state.split_map()
+            if self.general_guesser.can_be_general(
+                self.state,
+                terrain,
+                self.enemy_general_guess_index,
+            ):
+                return
+            self.enemy_general_guess_index = None
+            self.enemy_general_guess_confidence = None
+            self.enemy_general_guess_reason = None
+            self.enemy_general_guess_candidates = []
+            self.strategy.initial_enemy_general_guess = None
         if self.state.width <= 0 or self.state.height <= 0:
             return
         if self.state.my_general_index is None:
             return
 
-        my_x = self.state.my_general_index % self.state.width
-        my_y = self.state.my_general_index // self.state.width
-        guessed_x = self.state.width - 1 - my_x
-        guessed_y = self.state.height - 1 - my_y
-        self.enemy_general_guess_index = guessed_y * self.state.width + guessed_x
+        terrain, _ = self.state.split_map()
+        guess = self.general_guesser.choose(self.state, terrain, self.game.tick)
+        if guess is None:
+            return
+
+        self.enemy_general_guess_index = guess.index
+        self.enemy_general_guess_confidence = guess.confidence
+        self.enemy_general_guess_reason = guess.reason
+        self.enemy_general_guess_candidates = guess.candidates
         self.strategy.initial_enemy_general_guess = self.enemy_general_guess_index
 
     def on_state_message(self, data):
         if "game_won" in data:
+            self.sync_final_game_state()
+            self.update_final_map_analysis("won")
             self.write_analysis(status="won")
         elif "game_lost" in data:
+            self.sync_final_game_state()
+            self.update_final_map_analysis("lost")
             self.write_analysis(status="lost")
         elif "game_start" in data:
             self.write_analysis(status="started")
+
+    def sync_final_game_state(self):
+        try:
+            self.sync_game_state()
+        except Exception as exc:
+            self.log("Final sync failed:", repr(exc))
 
     def remember_map_snapshot(self):
         if self.latest_map_data is None:
@@ -210,13 +248,23 @@ class TillBot(PythonBot):
                 edge_tiles.append(index)
         return edge_tiles
 
+    def update_final_map_analysis(self, status):
+        self.final_map_analysis = analyze_state_map(
+            self.state,
+            self.latest_map_data,
+            status=status,
+        )
+
     def write_analysis(self, status="running"):
         if self.latest_map_data is None:
             return
 
+        if status in ("won", "lost") and self.final_map_analysis is None:
+            self.update_final_map_analysis(status)
+
         records = self.read_analysis_records()
         records[self.started_replay_id or "unknown"] = {
-            "analysis_version": 1,
+            "analysis_version": 2,
             "status": status,
             "updated_at": datetime.now().isoformat(timespec="seconds"),
             "replay_id": self.started_replay_id,
@@ -230,8 +278,12 @@ class TillBot(PythonBot):
             "my_general_index": self.state.my_general_index,
             "enemy_general_index": self.state.enemy_general_index,
             "enemy_general_guess_index": self.enemy_general_guess_index,
+            "enemy_general_guess_confidence": self.enemy_general_guess_confidence,
+            "enemy_general_guess_reason": self.enemy_general_guess_reason,
+            "enemy_general_guess_candidates": self.enemy_general_guess_candidates,
             "width": self.state.width,
             "height": self.state.height,
+            "final_map_analysis": self.final_map_analysis,
             "move_count": self.move_count,
             "skipped_invalid_moves": self.skipped_invalid_moves,
             "latest_map_data": self.latest_map_data,

@@ -25,6 +25,8 @@ from config import (
     USERNAME,
 )
 from game_state import GameState
+from general_guesser import GeneralGuesser
+from map_analyzer import analyze_state_map
 from pathfinding import build_distance_map, distance_to_target
 from stats import ReserveTurnStats
 from strategy import Strategy
@@ -58,11 +60,16 @@ class BotRunner:
         self.last_event_time = time.time()
         self.enemy_general_guess_index = None
         self.enemy_general_guess_turn = None
+        self.enemy_general_guess_confidence = None
+        self.enemy_general_guess_reason = None
+        self.enemy_general_guess_candidates = []
         self.enemy_general_actual_index = None
         self.guess_result_recorded = False
         self.map_metrics = None
+        self.final_map_analysis = None
 
         self.state = GameState()
+        self.general_guesser = GeneralGuesser()
         self.stats = ReserveTurnStats(stats_path) if stats_path else ReserveTurnStats()
         self.reserve_after_turn = self.stats.choose_value()
         self.city_focus_after_turn = self.stats.choose_city_focus_value()
@@ -196,8 +203,13 @@ class BotRunner:
 
                     elif event[0] in ("game_won", "game_lost"):
                         won = event[0] == "game_won"
+                        if len(event) > 1 and isinstance(event[1], dict):
+                            if "map" in event[1] or "map_diff" in event[1]:
+                                self.state.update(event[1])
+                                self.update_map_metrics()
                         self.update_enemy_general_actual_from_event(event)
                         self.update_enemy_general_actual()
+                        self.update_final_map_analysis(event[0])
                         self.stats.record_result(self.reserve_after_turn, won)
                         self.stats.record_city_focus_result(self.city_focus_after_turn, won)
                         self.stats.record_general_attack_result(self.general_attack_after_turn, won)
@@ -229,22 +241,41 @@ class BotRunner:
 
     def update_enemy_general_guess(self, turn):
         if self.enemy_general_guess_index is not None:
-            return
+            terrain, _ = self.state.split_map()
+            if self.general_guesser.can_be_general(
+                self.state,
+                terrain,
+                self.enemy_general_guess_index,
+            ):
+                return
+            self.enemy_general_guess_index = None
+            self.enemy_general_guess_confidence = None
+            self.enemy_general_guess_reason = None
+            self.enemy_general_guess_candidates = []
+            self.strategy.initial_enemy_general_guess = None
         if self.state.width <= 0 or self.state.height <= 0:
             return
         if self.state.my_general_index is None:
             return
 
-        my_x = self.state.my_general_index % self.state.width
-        my_y = self.state.my_general_index // self.state.width
-        guessed_x = self.state.width - 1 - my_x
-        guessed_y = self.state.height - 1 - my_y
-        self.enemy_general_guess_index = guessed_y * self.state.width + guessed_x
+        terrain, _ = self.state.split_map()
+        guess = self.general_guesser.choose(self.state, terrain, turn)
+        if guess is None:
+            return
+
+        self.enemy_general_guess_index = guess.index
         self.enemy_general_guess_turn = turn
+        self.enemy_general_guess_confidence = guess.confidence
+        self.enemy_general_guess_reason = guess.reason
+        self.enemy_general_guess_candidates = guess.candidates
         self.strategy.initial_enemy_general_guess = self.enemy_general_guess_index
         self.log(
-            "Initialer Gegner-General-Guess:",
+            "Gegner-General-Guess:",
             self.enemy_general_guess_index,
+            "Confidence:",
+            self.enemy_general_guess_confidence,
+            "Grund:",
+            self.enemy_general_guess_reason,
             "bei eigener Position",
             self.state.my_general_index,
             "Map:",
@@ -283,9 +314,13 @@ class BotRunner:
                 and self.enemy_general_actual_index is not None
                 and self.enemy_general_guess_index == self.enemy_general_actual_index
             ),
+            "guess_confidence": self.enemy_general_guess_confidence,
+            "guess_reason": self.enemy_general_guess_reason,
+            "guess_candidates": self.enemy_general_guess_candidates,
             "guessed_enemy_general_index": self.enemy_general_guess_index,
             "guess_turn": self.enemy_general_guess_turn,
             "height": self.state.height,
+            "final_map_analysis": self.final_map_analysis,
             "map_metrics": self.map_metrics,
             "my_general_index": self.state.my_general_index,
             "replay_id": self.replay_id,
@@ -370,6 +405,24 @@ class BotRunner:
             "target_index": target,
         }
 
+    def update_final_map_analysis(self, status):
+        self.final_map_analysis = analyze_state_map(
+            self.state,
+            self.state.map_data,
+            status=status,
+        )
+        if self.final_map_analysis:
+            visibility = self.final_map_analysis.get("visibility") or {}
+            self.log(
+                "Finale Map-Analyse:",
+                "sichtbar =",
+                visibility.get("visible_ratio"),
+                "vollstaendig =",
+                visibility.get("is_full_map_visible"),
+                "Symmetrie =",
+                self.final_map_analysis.get("symmetry"),
+            )
+
     def can_continue_after_set_username(self, response):
         if not response:
             return True
@@ -414,6 +467,7 @@ def write_bot_result(result_path, runner, won):
                 "label": runner.label,
                 "log_path": str(runner.log_path) if runner.log_path else None,
                 "general_guess": runner.general_guess_record(won),
+                "final_map_analysis": runner.final_map_analysis,
                 "won": won,
                 "reserve_after_turn": runner.reserve_after_turn,
                 "city_focus_after_turn": runner.city_focus_after_turn,
@@ -456,6 +510,7 @@ def write_pending_bot_result(result_path, room_id, user_id, username, label, log
                 "label": label,
                 "log_path": str(log_path) if log_path else None,
                 "general_guess": None,
+                "final_map_analysis": None,
                 "won": None,
                 "reserve_after_turn": None,
                 "city_focus_after_turn": None,
