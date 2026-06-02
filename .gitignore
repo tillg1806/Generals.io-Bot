@@ -1,9 +1,28 @@
-docs/ 
-.venv/ 
-__pycache__/ 
-*.pyc 
-.env 
-.venv/ 
-__pycache__/ 
-*.pyc 
-.env 
+# Local environment
+.env
+.venv/
+
+# Python generated files
+__pycache__/
+*.py[cod]
+
+# Runtime logs and generated runs
+logs/
+runs/
+archives/
+docs/
+
+# Learned/generated artifacts
+models/
+data/analysis/*.json
+data/legacy/
+data/opponents/*.json
+data/predictions/*.json
+data/profiles/*.json
+data/replays/*.json
+data/stats/*.json
+data/training/*.jsonl
+
+# Keep downloaded/imported raw replay files out of commits by default.
+data/replays/raw/*
+!data/replays/raw/.gitkeep
