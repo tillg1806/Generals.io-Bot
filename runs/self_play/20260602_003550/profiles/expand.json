@@ -1,0 +1,152 @@
+{
+  "games": 1,
+  "learned": {
+    "attack_bias": 0.0,
+    "city_bias": 0.1,
+    "city_focus_delta": -10,
+    "defense_bias": 0.12,
+    "expansion_bias": 0.88,
+    "general_attack_delta": 10,
+    "reserve_delta": 15,
+    "route_bias": 0.3
+  },
+  "losses": 1,
+  "recent_games": [
+    {
+      "army_ratio": 0.28,
+      "events": [
+        {
+          "enemy_army": 1,
+          "enemy_tiles": 1,
+          "mode": "balanced",
+          "my_army": 1,
+          "my_tiles": 1,
+          "suspected_enemy_city_advantage": false,
+          "turn": 1,
+          "visible_enemy_cities": 0,
+          "visible_my_cities": 0,
+          "visible_turn": 1
+        },
+        {
+          "enemy_army": 80,
+          "enemy_tiles": 31,
+          "mode": "catch_up_expand",
+          "my_army": 77,
+          "my_tiles": 23,
+          "suspected_enemy_city_advantage": false,
+          "turn": 102,
+          "visible_enemy_cities": 0,
+          "visible_my_cities": 0,
+          "visible_turn": 51
+        },
+        {
+          "enemy_army": 82,
+          "enemy_tiles": 30,
+          "mode": "balanced",
+          "my_army": 79,
+          "my_tiles": 24,
+          "suspected_enemy_city_advantage": false,
+          "turn": 111,
+          "visible_enemy_cities": 0,
+          "visible_my_cities": 0,
+          "visible_turn": 56
+        },
+        {
+          "enemy_army": 83,
+          "enemy_tiles": 31,
+          "mode": "catch_up_expand",
+          "my_army": 80,
+          "my_tiles": 23,
+          "suspected_enemy_city_advantage": false,
+          "turn": 121,
+          "visible_enemy_cities": 0,
+          "visible_my_cities": 0,
+          "visible_turn": 61
+        },
+        {
+          "enemy_army": 83,
+          "enemy_tiles": 30,
+          "mode": "balanced",
+          "my_army": 80,
+          "my_tiles": 24,
+          "suspected_enemy_city_advantage": false,
+          "turn": 122,
+          "visible_enemy_cities": 0,
+          "visible_my_cities": 0,
+          "visible_turn": 61
+        },
+        {
+          "enemy_army": 81,
+          "enemy_tiles": 31,
+          "mode": "catch_up_expand",
+          "my_army": 78,
+          "my_tiles": 23,
+          "suspected_enemy_city_advantage": false,
+          "turn": 132,
+          "visible_enemy_cities": 0,
+          "visible_my_cities": 0,
+          "visible_turn": 66
+        },
+        {
+          "enemy_army": 121,
+          "enemy_tiles": 34,
+          "mode": "contest_cities",
+          "my_army": 104,
+          "my_tiles": 20,
+          "suspected_enemy_city_advantage": true,
+          "turn": 150,
+          "visible_enemy_cities": 0,
+          "visible_my_cities": 0,
+          "visible_turn": 75
+        },
+        {
+          "enemy_army": 121,
+          "enemy_tiles": 34,
+          "mode": "catch_up_expand",
+          "my_army": 104,
+          "my_tiles": 20,
+          "suspected_enemy_city_advantage": false,
+          "turn": 151,
+          "visible_enemy_cities": 0,
+          "visible_my_cities": 0,
+          "visible_turn": 76
+        },
+        {
+          "enemy_army": 152,
+          "enemy_tiles": 39,
+          "mode": "contest_cities",
+          "my_army": 111,
+          "my_tiles": 15,
+          "suspected_enemy_city_advantage": true,
+          "turn": 200,
+          "visible_enemy_cities": 0,
+          "visible_my_cities": 0,
+          "visible_turn": 100
+        },
+        {
+          "enemy_army": 152,
+          "enemy_tiles": 39,
+          "mode": "stabilize",
+          "my_army": 111,
+          "my_tiles": 15,
+          "suspected_enemy_city_advantage": false,
+          "turn": 201,
+          "visible_enemy_cities": 0,
+          "visible_my_cities": 0,
+          "visible_turn": 101
+        }
+      ],
+      "final_mode": "stabilize",
+      "move_count": 337,
+      "replay_id": "jermbPfNT",
+      "suspected_enemy_city_advantage": false,
+      "tile_ratio": 0.304,
+      "visible_enemy_cities": 0,
+      "visible_my_cities": 0,
+      "won": false
+    }
+  ],
+  "variant": "expand",
+  "version": 1,
+  "wins": 0
+}

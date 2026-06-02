@@ -40,7 +40,8 @@ class TillBot(PythonBot):
         self.enemy_general_guess_confidence = None
         self.enemy_general_guess_reason = None
         self.enemy_general_guess_candidates = []
-        self.analysis_path = REPO_DIR / "pybot_map_analysis.json"
+        self.analysis_path = REPO_DIR / "data" / "analysis" / "pybot_map_analysis.json"
+        self.replays_path = REPO_DIR / "data" / "replays" / "pybot_replays.json"
         self.move_count = 0
         self.skipped_invalid_moves = 0
         self.latest_map_data = None
@@ -289,10 +290,12 @@ class TillBot(PythonBot):
             "latest_map_data": self.latest_map_data,
             "snapshots": self.map_snapshots,
         }
+        self.analysis_path.parent.mkdir(parents=True, exist_ok=True)
         self.analysis_path.write_text(
             json.dumps(records, indent=2, sort_keys=True),
             encoding="utf-8",
         )
+        self.write_replay_index(status)
 
     def read_analysis_records(self):
         if not self.analysis_path.exists():
@@ -304,6 +307,55 @@ class TillBot(PythonBot):
             return {}
 
         return data if isinstance(data, dict) else {}
+
+    def write_replay_index(self, status):
+        if not self.started_replay_id:
+            return
+
+        replays = self.read_replay_index()
+        existing = {
+            replay.get("replay_id"): replay
+            for replay in replays
+            if isinstance(replay, dict) and replay.get("replay_id")
+        }
+        record = existing.get(self.started_replay_id, {})
+        record.update(
+            {
+                "replay_id": self.started_replay_id,
+                "replay_url": f"https://bot.generals.io/replays/{self.started_replay_id}",
+                "status": status,
+                "updated_at": datetime.now().isoformat(timespec="seconds"),
+                "turn": getattr(self.game, "tick", None),
+                "player_index": self.state.player_index,
+                "game_type": getattr(self.game, "game_type", None),
+                "usernames": list(getattr(self.game, "usernames", []) or []),
+                "move_count": self.move_count,
+                "analysis_file": str(self.analysis_path.name),
+            }
+        )
+        existing[self.started_replay_id] = record
+
+        sorted_replays = sorted(
+            existing.values(),
+            key=lambda replay: replay.get("updated_at", ""),
+            reverse=True,
+        )
+        self.replays_path.parent.mkdir(parents=True, exist_ok=True)
+        self.replays_path.write_text(
+            json.dumps(sorted_replays, indent=2, sort_keys=True),
+            encoding="utf-8",
+        )
+
+    def read_replay_index(self):
+        if not self.replays_path.exists():
+            return []
+
+        try:
+            data = json.loads(self.replays_path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            return []
+
+        return data if isinstance(data, list) else []
 
 
 if __name__ == "__main__":

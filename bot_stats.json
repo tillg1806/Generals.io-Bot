@@ -1,19 +1,27 @@
 {
   "city_focus_turns": {
     "089": {
-      "losses": 0,
-      "wins": 1
+      "losses": 1,
+      "wins": 3
     },
     "092": {
-      "losses": 0,
+      "losses": 2,
       "wins": 2
+    },
+    "102": {
+      "losses": 1,
+      "wins": 0
     },
     "111": {
       "losses": 1,
       "wins": 0
     },
+    "113": {
+      "losses": 1,
+      "wins": 0
+    },
     "120": {
-      "losses": 0,
+      "losses": 1,
       "wins": 1
     },
     "121": {
@@ -21,15 +29,19 @@
       "wins": 0
     },
     "124": {
-      "losses": 0,
+      "losses": 1,
       "wins": 1
     },
     "138": {
       "losses": 1,
       "wins": 0
     },
+    "145": {
+      "losses": 1,
+      "wins": 0
+    },
     "149": {
-      "losses": 0,
+      "losses": 1,
       "wins": 1
     },
     "155": {
@@ -37,33 +49,49 @@
       "wins": 0
     },
     "157": {
-      "losses": 0,
+      "losses": 1,
       "wins": 1
     },
     "160": {
-      "losses": 0,
+      "losses": 1,
       "wins": 1
     },
+    "166": {
+      "losses": 1,
+      "wins": 0
+    },
     "170": {
-      "losses": 0,
+      "losses": 1,
       "wins": 1
     },
     "174": {
       "losses": 1,
       "wins": 0
+    },
+    "179": {
+      "losses": 1,
+      "wins": 0
     }
   },
   "general_attack_turns": {
+    "100": {
+      "losses": 1,
+      "wins": 0
+    },
     "114": {
-      "losses": 0,
+      "losses": 2,
       "wins": 1
+    },
+    "115": {
+      "losses": 1,
+      "wins": 0
     },
     "124": {
       "losses": 1,
       "wins": 0
     },
     "140": {
-      "losses": 0,
+      "losses": 2,
       "wins": 1
     },
     "143": {
@@ -71,27 +99,31 @@
       "wins": 0
     },
     "144": {
-      "losses": 0,
+      "losses": 2,
       "wins": 1
     },
     "146": {
       "losses": 1,
-      "wins": 1
+      "wins": 3
     },
     "175": {
-      "losses": 0,
+      "losses": 1,
       "wins": 1
     },
     "176": {
-      "losses": 0,
+      "losses": 1,
       "wins": 1
     },
+    "178": {
+      "losses": 1,
+      "wins": 0
+    },
     "181": {
-      "losses": 0,
+      "losses": 1,
       "wins": 1
     },
     "190": {
-      "losses": 0,
+      "losses": 1,
       "wins": 1
     },
     "201": {
@@ -99,7 +131,7 @@
       "wins": 0
     },
     "211": {
-      "losses": 0,
+      "losses": 1,
       "wins": 1
     },
     "218": {
@@ -109,27 +141,39 @@
   },
   "reserve_turns": {
     "073": {
-      "losses": 0,
+      "losses": 2,
       "wins": 1
     },
+    "104": {
+      "losses": 1,
+      "wins": 0
+    },
     "111": {
-      "losses": 0,
+      "losses": 2,
       "wins": 1
+    },
+    "172": {
+      "losses": 1,
+      "wins": 0
     },
     "184": {
       "losses": 1,
       "wins": 0
+    },
+    "190": {
+      "losses": 0,
+      "wins": 2
     },
     "204": {
       "losses": 1,
       "wins": 0
     },
     "208": {
-      "losses": 0,
+      "losses": 1,
       "wins": 1
     },
     "221": {
-      "losses": 0,
+      "losses": 1,
       "wins": 1
     },
     "236": {
@@ -137,23 +181,27 @@
       "wins": 0
     },
     "257": {
-      "losses": 0,
+      "losses": 1,
       "wins": 1
     },
     "307": {
-      "losses": 0,
+      "losses": 1,
       "wins": 1
     },
     "360": {
-      "losses": 0,
+      "losses": 1,
       "wins": 1
     },
     "362": {
       "losses": 1,
       "wins": 0
     },
+    "372": {
+      "losses": 1,
+      "wins": 0
+    },
     "387": {
-      "losses": 0,
+      "losses": 1,
       "wins": 1
     },
     "423": {
@@ -161,7 +209,7 @@
       "wins": 0
     },
     "425": {
-      "losses": 0,
+      "losses": 1,
       "wins": 1
     }
   }

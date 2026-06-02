@@ -1,0 +1,15 @@
+2026-06-02 00:21:49 [self-0009-0-expand] Connected
+2026-06-02 00:21:49 [self-0009-0-expand] Room: https://bot.generals.io/games/TillTestRoom123_self_20260602_002126_0009
+2026-06-02 00:21:49 [self-0009-0-expand] Reserve ab sichtbarem Turn: 507
+2026-06-02 00:21:49 [self-0009-0-expand] City-Fokus ab sichtbarem Turn: 62
+2026-06-02 00:21:49 [self-0009-0-expand] General-Angriff ab sichtbarem Turn: 224
+2026-06-02 00:21:49 [self-0009-0-expand] SET_USERNAME: ['error_set_username', 'You already have a username! Only Supporters can change usernames.']
+2026-06-02 00:21:49 [self-0009-0-expand] JOIN_PRIVATE: ['chat_message', 'chat_custom_queue_TillTestRoom123_self_20260602_002126_0009', {'text': 'T1LL4_S01_A joined the custom lobby.'}]
+2026-06-02 00:21:49 [self-0009-0-expand] EVENT: ['queue_update', {'playerIndices': [0], 'playerColors': [0], 'lobbyIndex': 0, 'isForcing': False, 'numPlayers': 1, 'numForce': [], 'playerCap': 16, 'teamSize': 1, 'teams': [1], 'usernames': ['T1LL4_S01_A'], 'options': {'map': None, 'modifiers': []}, 'owner': 0, 'bans': [], 'kicks': []}]
+2026-06-02 00:21:49 [self-0009-0-expand] EVENT: ['chat_message', 'chat_custom_queue_TillTestRoom123_self_20260602_002126_0009', {'text': 'T1LL4_S01_A is the lobby owner.', 'multiText': ['T1LL4_S01_A', ' is the lobby owner.'], 'multiColors': [0, None]}]
+2026-06-02 00:21:49 [self-0009-0-expand] EVENT: ['chat_message', 'chat_custom_queue_TillTestRoom123_self_20260602_002126_0009', {'text': 'T1LL4_S01_B joined the custom lobby.'}]
+2026-06-02 00:21:49 [self-0009-0-expand] EVENT: ['queue_update', {'playerIndices': [0], 'playerColors': [0], 'lobbyIndex': 0, 'isForcing': False, 'numPlayers': 1, 'numForce': [], 'playerCap': 16, 'teamSize': 1, 'teams': [1], 'usernames': ['T1LL4_S01_A'], 'options': {'map': None, 'modifiers': []}, 'owner': 0, 'bans': [], 'kicks': []}]
+2026-06-02 00:21:49 [self-0009-0-expand] EVENT: ['notify', 'T1LL4_S01_B joined the custom game', 'There are now 1 players in the lobby.']
+2026-06-02 00:21:49 [self-0009-0-expand] EVENT: ['queue_update', {'playerIndices': [0, 1], 'playerColors': [0, 1], 'lobbyIndex': 0, 'isForcing': False, 'numPlayers': 2, 'numForce': [], 'playerCap': 16, 'teamSize': 1, 'teams': [1, 2], 'usernames': ['T1LL4_S01_A', 'T1LL4_S01_B'], 'options': {'map': None, 'modifiers': []}, 'owner': 0, 'bans': [], 'kicks': []}]
+2026-06-02 00:21:49 [self-0009-0-expand] EVENT: ['queue_update', {'playerIndices': [0, 1], 'playerColors': [0, 1], 'lobbyIndex': 0, 'isForcing': True, 'numPlayers': 2, 'numForce': [0], 'playerCap': 16, 'teamSize': 1, 'teams': [1, 2], 'usernames': ['T1LL4_S01_A', 'T1LL4_S01_B'], 'options': {'map': None, 'modifiers': []}, 'owner': 0, 'bans': [], 'kicks': []}]
+2026-06-02 00:21:49 [self-0009-0-expand] EVENT: ['pre_game_start']

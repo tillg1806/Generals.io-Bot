@@ -1,0 +1,419 @@
+{
+  "city_focus_after_turn": 73,
+  "coach_bias": {
+    "attack_bias": -0.30000000000000004,
+    "city_bias": 0.8,
+    "defense_bias": 1.2,
+    "expansion_bias": 0.1,
+    "route_bias": 0.3
+  },
+  "coach_events": [
+    {
+      "enemy_army": 1,
+      "enemy_tiles": 1,
+      "mode": "balanced",
+      "my_army": 1,
+      "my_tiles": 1,
+      "suspected_enemy_city_advantage": false,
+      "turn": 1,
+      "visible_enemy_cities": 0,
+      "visible_my_cities": 0,
+      "visible_turn": 1
+    },
+    {
+      "enemy_army": 93,
+      "enemy_tiles": 38,
+      "mode": "catch_up_expand",
+      "my_army": 90,
+      "my_tiles": 27,
+      "suspected_enemy_city_advantage": false,
+      "turn": 109,
+      "visible_enemy_cities": 0,
+      "visible_my_cities": 0,
+      "visible_turn": 55
+    },
+    {
+      "enemy_army": 160,
+      "enemy_tiles": 53,
+      "mode": "contest_cities",
+      "my_army": 124,
+      "my_tiles": 20,
+      "suspected_enemy_city_advantage": true,
+      "turn": 150,
+      "visible_enemy_cities": 0,
+      "visible_my_cities": 0,
+      "visible_turn": 75
+    },
+    {
+      "enemy_army": 160,
+      "enemy_tiles": 54,
+      "mode": "catch_up_expand",
+      "my_army": 124,
+      "my_tiles": 20,
+      "suspected_enemy_city_advantage": false,
+      "turn": 151,
+      "visible_enemy_cities": 0,
+      "visible_my_cities": 0,
+      "visible_turn": 76
+    },
+    {
+      "enemy_army": 221,
+      "enemy_tiles": 56,
+      "mode": "stabilize",
+      "my_army": 150,
+      "my_tiles": 21,
+      "suspected_enemy_city_advantage": true,
+      "turn": 200,
+      "visible_enemy_cities": 0,
+      "visible_my_cities": 0,
+      "visible_turn": 100
+    },
+    {
+      "enemy_army": 179,
+      "enemy_tiles": 61,
+      "mode": "catch_up_expand",
+      "my_army": 156,
+      "my_tiles": 18,
+      "suspected_enemy_city_advantage": false,
+      "turn": 229,
+      "visible_enemy_cities": 0,
+      "visible_my_cities": 0,
+      "visible_turn": 115
+    },
+    {
+      "enemy_army": 256,
+      "enemy_tiles": 61,
+      "mode": "contest_cities",
+      "my_army": 180,
+      "my_tiles": 19,
+      "suspected_enemy_city_advantage": true,
+      "turn": 250,
+      "visible_enemy_cities": 0,
+      "visible_my_cities": 0,
+      "visible_turn": 125
+    },
+    {
+      "enemy_army": 256,
+      "enemy_tiles": 62,
+      "mode": "stabilize",
+      "my_army": 180,
+      "my_tiles": 19,
+      "suspected_enemy_city_advantage": false,
+      "turn": 251,
+      "visible_enemy_cities": 0,
+      "visible_my_cities": 0,
+      "visible_turn": 126
+    }
+  ],
+  "coach_mode": "stabilize",
+  "coach_suspected_enemy_city_advantage": true,
+  "coach_visible_enemy_cities": 1,
+  "coach_visible_my_cities": 0,
+  "failure_reason": null,
+  "final_map_analysis": {
+    "analysis_version": 1,
+    "armies": {
+      "army_max_visible_owned": 68,
+      "army_total_visible_owned": 166,
+      "owned_tiles_with_army": 18
+    },
+    "cities": {
+      "city_count": 2,
+      "city_density": 0.0055,
+      "distance_from_enemy_general": null,
+      "distance_from_my_general": {
+        "avg": 3.5,
+        "max": 6,
+        "min": 1
+      },
+      "indexes": [
+        150,
+        203
+      ],
+      "owned_city_count": 1
+    },
+    "enemy_general_index": null,
+    "height": 19,
+    "mountains": {
+      "dead_end_passable_tiles": 12,
+      "edge_mountain_count": 1,
+      "mountain_count": 7
+    },
+    "my_general_index": 169,
+    "quadrants": {
+      "bottom_left": {
+        "city_count": 0,
+        "mountain_count": 0,
+        "mountain_density": 0.0,
+        "tile_count": 90
+      },
+      "bottom_right": {
+        "city_count": 1,
+        "mountain_count": 4,
+        "mountain_density": 0.0494,
+        "tile_count": 81
+      },
+      "top_left": {
+        "city_count": 0,
+        "mountain_count": 0,
+        "mountain_density": 0.0,
+        "tile_count": 100
+      },
+      "top_right": {
+        "city_count": 1,
+        "mountain_count": 3,
+        "mountain_density": 0.0333,
+        "tile_count": 90
+      }
+    },
+    "regions": {
+      "component_sizes_top5": [
+        266,
+        12,
+        2,
+        1,
+        1
+      ],
+      "largest_passable_component": 266,
+      "largest_passable_component_ratio": 0.9433,
+      "passable_component_count": 5
+    },
+    "spawn": {
+      "actual_enemy_general_index": null,
+      "expected_indexes": {
+        "horizontal_mirror": 153,
+        "rotated_180": 191,
+        "vertical_mirror": 207
+      }
+    },
+    "status": "game_lost",
+    "symmetry": {
+      "horizontal_mirror": {
+        "blocker_similarity": 0.7263,
+        "city_similarity": 0.9895,
+        "compared_pairs": 190
+      },
+      "rotated_180": {
+        "blocker_similarity": 0.6519,
+        "city_similarity": 0.989,
+        "compared_pairs": 181
+      },
+      "vertical_mirror": {
+        "blocker_similarity": 0.6895,
+        "city_similarity": 0.9895,
+        "compared_pairs": 190
+      }
+    },
+    "terrain": {
+      "empty_count": 6,
+      "mountain_count": 7,
+      "mountain_density": 0.0194,
+      "owned_count": 18,
+      "passable_count": 282,
+      "passable_density": 0.7812
+    },
+    "tile_count": 361,
+    "visibility": {
+      "fog_count": 258,
+      "fog_obstacle_count": 72,
+      "is_full_map_visible": false,
+      "visible_ratio": 0.0859,
+      "visible_tile_count": 31
+    },
+    "width": 19
+  },
+  "general_attack_after_turn": 134,
+  "general_guess": {
+    "actual_enemy_general_index": null,
+    "final_map_analysis": {
+      "analysis_version": 1,
+      "armies": {
+        "army_max_visible_owned": 68,
+        "army_total_visible_owned": 166,
+        "owned_tiles_with_army": 18
+      },
+      "cities": {
+        "city_count": 2,
+        "city_density": 0.0055,
+        "distance_from_enemy_general": null,
+        "distance_from_my_general": {
+          "avg": 3.5,
+          "max": 6,
+          "min": 1
+        },
+        "indexes": [
+          150,
+          203
+        ],
+        "owned_city_count": 1
+      },
+      "enemy_general_index": null,
+      "height": 19,
+      "mountains": {
+        "dead_end_passable_tiles": 12,
+        "edge_mountain_count": 1,
+        "mountain_count": 7
+      },
+      "my_general_index": 169,
+      "quadrants": {
+        "bottom_left": {
+          "city_count": 0,
+          "mountain_count": 0,
+          "mountain_density": 0.0,
+          "tile_count": 90
+        },
+        "bottom_right": {
+          "city_count": 1,
+          "mountain_count": 4,
+          "mountain_density": 0.0494,
+          "tile_count": 81
+        },
+        "top_left": {
+          "city_count": 0,
+          "mountain_count": 0,
+          "mountain_density": 0.0,
+          "tile_count": 100
+        },
+        "top_right": {
+          "city_count": 1,
+          "mountain_count": 3,
+          "mountain_density": 0.0333,
+          "tile_count": 90
+        }
+      },
+      "regions": {
+        "component_sizes_top5": [
+          266,
+          12,
+          2,
+          1,
+          1
+        ],
+        "largest_passable_component": 266,
+        "largest_passable_component_ratio": 0.9433,
+        "passable_component_count": 5
+      },
+      "spawn": {
+        "actual_enemy_general_index": null,
+        "expected_indexes": {
+          "horizontal_mirror": 153,
+          "rotated_180": 191,
+          "vertical_mirror": 207
+        }
+      },
+      "status": "game_lost",
+      "symmetry": {
+        "horizontal_mirror": {
+          "blocker_similarity": 0.7263,
+          "city_similarity": 0.9895,
+          "compared_pairs": 190
+        },
+        "rotated_180": {
+          "blocker_similarity": 0.6519,
+          "city_similarity": 0.989,
+          "compared_pairs": 181
+        },
+        "vertical_mirror": {
+          "blocker_similarity": 0.6895,
+          "city_similarity": 0.9895,
+          "compared_pairs": 190
+        }
+      },
+      "terrain": {
+        "empty_count": 6,
+        "mountain_count": 7,
+        "mountain_density": 0.0194,
+        "owned_count": 18,
+        "passable_count": 282,
+        "passable_density": 0.7812
+      },
+      "tile_count": 361,
+      "visibility": {
+        "fog_count": 258,
+        "fog_obstacle_count": 72,
+        "is_full_map_visible": false,
+        "visible_ratio": 0.0859,
+        "visible_tile_count": 31
+      },
+      "width": 19
+    },
+    "guess_candidates": [
+      {
+        "index": 192,
+        "reason": "rotated spawn, distance 19 near expected 19, unseen tile, far from center",
+        "score": 120.0
+      },
+      {
+        "index": 210,
+        "reason": "rotated spawn, distance 21 near expected 19, unseen tile, far from center",
+        "score": 111.23
+      },
+      {
+        "index": 193,
+        "reason": "rotated spawn, distance 18 near expected 19, unseen tile, far from center",
+        "score": 110.11
+      },
+      {
+        "index": 211,
+        "reason": "rotated spawn, distance 20 near expected 19, unseen tile, far from center",
+        "score": 108.11
+      },
+      {
+        "index": 173,
+        "reason": "rotated spawn, distance 18 near expected 19, unseen tile, far from center",
+        "score": 105.11
+      }
+    ],
+    "guess_confidence": 0.46,
+    "guess_correct": false,
+    "guess_reason": "rotated spawn, distance 19 near expected 19, unseen tile, far from center",
+    "guess_turn": 1,
+    "guessed_enemy_general_index": 192,
+    "height": 19,
+    "map_metrics": {
+      "actual_general_distance": null,
+      "city_count": 2,
+      "city_density": 0.00554016620498615,
+      "fog_count": 258,
+      "fog_obstacle_count": 72,
+      "guess_distance": {
+        "manhattan": 17,
+        "path": 19,
+        "target_index": 192
+      },
+      "height": 19,
+      "known_passable_tile_count": 282,
+      "mountain_count": 7,
+      "mountain_density": 0.019390581717451522,
+      "tile_count": 361,
+      "visible_tile_count": 31,
+      "width": 19
+    },
+    "my_general_index": 169,
+    "replay_id": "v3EQiVGUad",
+    "replay_url": "https://bot.generals.io/replays/v3EQiVGUad",
+    "room_id": "TillTestRoom123_self_20260602_004054_0002",
+    "status": "finished",
+    "timestamp": "2026-06-02T00:45:07",
+    "width": 19,
+    "won": false
+  },
+  "label": "self-0002-0-city",
+  "log_path": "runs\\self_play\\20260602_004054\\logs\\self-0002-0-city.log",
+  "opponent_memory_adjustment": null,
+  "opponent_names": [
+    "T1LL4_Self_04"
+  ],
+  "player_names": [
+    "T1LL4_Self_04",
+    "T1LL4_Self_03"
+  ],
+  "replay_id": "v3EQiVGUad",
+  "replay_url": "https://bot.generals.io/replays/v3EQiVGUad",
+  "reserve_after_turn": 65,
+  "room_id": "TillTestRoom123_self_20260602_004054_0002",
+  "status": "finished",
+  "user_id": "till_bot_123_self_03",
+  "username": "T1LL4_Self_03",
+  "won": false
+}

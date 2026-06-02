@@ -9,6 +9,7 @@ from pathlib import Path
 import socketio
 from socketio import SimpleClient
 
+from data_pipeline import opponent_adjustment_for_names, process_self_play_batch
 from config import (
     BOT_ENDPOINT,
     BOT_EVENT_IDLE_TIMEOUT_SECONDS,
@@ -24,12 +25,18 @@ from config import (
     USER_ID,
     USERNAME,
 )
+from enemy_predictor import EnemyAttackPredictor
 from game_state import GameState
 from general_guesser import GeneralGuesser
+from jax_agent import JaxPolicyAgent, train_policy_agent
 from map_analyzer import analyze_state_map
 from pathfinding import build_distance_map, distance_to_target
 from stats import ReserveTurnStats
 from strategy import Strategy
+from strategy_coach import StrategyCoach
+
+
+REPLAY_INDEX_FILE = "data/replays/bot_replays.json"
 
 
 class BotRunner:
@@ -43,6 +50,9 @@ class BotRunner:
         label=None,
         log_path=None,
         verbose_console=False,
+        queue_mode="private",
+        coach_path=None,
+        prediction_path=None,
     ):
         self.client = SimpleClient()
         self.running = True
@@ -55,6 +65,7 @@ class BotRunner:
         self.label = label or username
         self.log_path = Path(log_path) if log_path else None
         self.verbose_console = verbose_console
+        self.queue_mode = queue_mode
         self.replay_id = None
         self.failure_reason = None
         self.last_event_time = time.time()
@@ -67,10 +78,19 @@ class BotRunner:
         self.guess_result_recorded = False
         self.map_metrics = None
         self.final_map_analysis = None
+        self.move_count = 0
+        self.game_start_data = {}
+        self.player_names = []
+        self.opponent_memory_adjustment = None
+        self.jax_policy_agent = JaxPolicyAgent()
+        self.jax_policy_adjustment = None
+        self.last_jax_policy_turn = -1
 
         self.state = GameState()
         self.general_guesser = GeneralGuesser()
         self.stats = ReserveTurnStats(stats_path) if stats_path else ReserveTurnStats()
+        self.coach = StrategyCoach(path=coach_path or "data/profiles/strategy_profile.json", logger=self.log)
+        self.enemy_predictor = EnemyAttackPredictor(path=prediction_path or "data/predictions/enemy_predictions.json")
         self.reserve_after_turn = self.stats.choose_value()
         self.city_focus_after_turn = self.stats.choose_city_focus_value()
         self.general_attack_after_turn = self.stats.choose_general_attack_value()
@@ -81,6 +101,10 @@ class BotRunner:
             self.general_attack_after_turn,
             logger=self.log,
         )
+        self.coach.apply_start_profile(self.strategy)
+        self.reserve_after_turn = self.strategy.reserve_after_turn
+        self.city_focus_after_turn = self.strategy.city_focus_after_turn
+        self.general_attack_after_turn = self.strategy.general_attack_after_turn
 
     def log(self, *parts, console=False):
         message = f"[{self.label}] " + " ".join(str(part) for part in parts)
@@ -116,10 +140,13 @@ class BotRunner:
         self.update_enemy_general_guess(turn)
         self.update_enemy_general_actual()
         self.update_map_metrics()
+        self.enemy_predictor.observe(self.state, turn, self.replay_id)
+        self.coach.observe(self.state, self.strategy, turn)
+        self.apply_jax_policy(turn)
 
-        self.log("Mein General Index:", self.state.my_general_index)
-        self.log("Gegner General Index:", self.state.enemy_general_index)
-        self.log("Sichtbare Gegner-Tiles:", len(self.state.visible_enemy_tiles))
+        self.log("My general index:", self.state.my_general_index)
+        self.log("Enemy general index:", self.state.enemy_general_index)
+        self.log("Visible enemy tiles:", len(self.state.visible_enemy_tiles))
         self.log("Tiles:", self.state.my_tile_count(), "/", self.state.biggest_enemy_tile_count())
         self.log("Map:", self.state.width, "x", self.state.height, "Turn:", turn)
 
@@ -133,13 +160,15 @@ class BotRunner:
         terrain, armies = self.state.split_map()
         self.client.emit("attack", (move.source, move.target, move.half))
         self.state.last_move_turn = turn
+        self.move_count += 1
 
         self.log(
-            f"Move: {move.source} -> {move.target} | "
-            f"Armee: {armies[move.source]} | "
+            f"Move #{self.move_count}: {move.source} -> {move.target} | "
+            f"Army: {armies[move.source]} | "
             f"Target-Terrain: {terrain[move.target]} | "
-            f"Ziel: {move.strategy_target} | "
-            f"Half: {move.half}"
+            f"Target: {move.strategy_target} | "
+            f"Half: {move.half}",
+            console=self.move_count <= 5 or self.move_count % 25 == 0,
         )
 
     def run(self):
@@ -148,36 +177,45 @@ class BotRunner:
         try:
             self.client.connect(BOT_ENDPOINT, transports=["websocket"])
             self.log("Connected", console=True)
-            self.log(f"Room: https://bot.generals.io/games/{self.room_id}", console=True)
+            if self.queue_mode == "private":
+                self.log(f"Room: https://bot.generals.io/games/{self.room_id}", console=True)
+            else:
+                self.log(f"Queue: public {self.queue_mode}", console=True)
             self.log("Reserve ab sichtbarem Turn:", self.reserve_after_turn)
             self.log("City-Fokus ab sichtbarem Turn:", self.city_focus_after_turn)
             self.log("General-Angriff ab sichtbarem Turn:", self.general_attack_after_turn)
 
-            self.client.emit("set_username", (self.user_id, self.username, BOT_KEY))
+            self.client.emit("set_username", (self.user_id, self.username, BOT_KEY, None))
             set_username_response = self.client.receive(timeout=5)
-            self.log("SET_USERNAME:", set_username_response)
+            self.log("SET_USERNAME:", set_username_response, console=bool(set_username_response))
             if not self.can_continue_after_set_username(set_username_response):
                 self.running = False
                 return None
 
-            self.client.emit("join_private", (self.room_id, self.user_id, BOT_KEY))
-            self.log("JOIN_PRIVATE:", self.client.receive(timeout=5), console=True)
+            self.join_game()
             self.last_event_time = time.time()
 
             while self.running:
                 try:
-                    if time.time() - self.last_event_time > BOT_EVENT_IDLE_TIMEOUT_SECONDS:
+                    if (
+                        (self.game_started or self.queue_mode == "private")
+                        and time.time() - self.last_event_time > BOT_EVENT_IDLE_TIMEOUT_SECONDS
+                    ):
                         self.failure_reason = "event_idle_timeout"
                         self.log(
-                            "Keine Server-Events seit",
+                            "No server events for",
                             BOT_EVENT_IDLE_TIMEOUT_SECONDS,
-                            "Sekunden; Bot wird beendet.",
+                            "seconds; stopping bot.",
                             console=True,
                         )
                         self.running = False
                         return None
 
-                    if not self.game_started and time.time() - self.last_force > 2:
+                    if (
+                        self.queue_mode == "private"
+                        and not self.game_started
+                        and time.time() - self.last_force > 2
+                    ):
                         self.client.emit("set_force_start", (self.room_id, True))
                         self.last_force = time.time()
 
@@ -192,14 +230,24 @@ class BotRunner:
                     if event[0] == "game_update":
                         self.handle_game_update(event[1])
 
+                    if event[0] in ("gio_error", "error_set_username", "error_kicked"):
+                        message = event[1] if len(event) > 1 else ""
+                        self.failure_reason = f"{event[0]}:{message}"
+                        self.log("SERVER ERROR:", event[0], message, console=True)
+                        self.running = False
+                        return None
+
                     if event[0] == "game_start":
                         data = event[1] if len(event) > 1 else {}
                         self.game_started = True
+                        self.game_start_data = data
+                        self.player_names = self.extract_player_names(data)
                         self.replay_id = data.get("replay_id")
                         self.state.start(data)
                         self.log("GAME START!", console=True)
-                        self.log("Mein Player Index:", self.state.player_index)
+                        self.log("My player index:", self.state.player_index)
                         self.log("Replay:", self.replay_url(), console=True)
+                        self.apply_opponent_memory()
 
                     elif event[0] in ("game_won", "game_lost"):
                         won = event[0] == "game_won"
@@ -213,8 +261,10 @@ class BotRunner:
                         self.stats.record_result(self.reserve_after_turn, won)
                         self.stats.record_city_focus_result(self.city_focus_after_turn, won)
                         self.stats.record_general_attack_result(self.general_attack_after_turn, won)
-                        self.log("GAME ENDE:", event[0], console=True)
-                        self.log("Statistik gespeichert fuer Reserve-Turn:", self.reserve_after_turn)
+                        self.coach.record_result(won, self)
+                        self.enemy_predictor.flush(self.state, self.state.turn)
+                        self.log("GAME END:", event[0], console=True)
+                        self.log("Stats saved for reserve turn:", self.reserve_after_turn)
                         self.running = False
                         return won
 
@@ -222,7 +272,7 @@ class BotRunner:
                     continue
 
         except Exception as e:
-            self.log("Fehler:", repr(e), console=True)
+            self.log("Error:", repr(e), console=True)
             return None
 
         finally:
@@ -232,6 +282,20 @@ class BotRunner:
                 pass
 
             self.log("Disconnected", console=True)
+
+    def join_game(self):
+        if self.queue_mode == "1v1":
+            self.client.emit("join_1v1", (self.user_id, BOT_KEY, None, None, True))
+            self.log("JOIN_1V1: public queue", console=True)
+            return
+
+        if self.queue_mode == "ffa":
+            self.client.emit("play", (self.user_id, BOT_KEY, None, None))
+            self.log("JOIN_FFA: public queue", console=True)
+            return
+
+        self.client.emit("join_private", (self.room_id, self.user_id, BOT_KEY, None))
+        self.log("JOIN_PRIVATE:", self.client.receive(timeout=5), console=True)
 
     def replay_url(self):
         if not self.replay_id:
@@ -270,7 +334,7 @@ class BotRunner:
         self.enemy_general_guess_candidates = guess.candidates
         self.strategy.initial_enemy_general_guess = self.enemy_general_guess_index
         self.log(
-            "Gegner-General-Guess:",
+            "Enemy general guess:",
             self.enemy_general_guess_index,
             "Confidence:",
             self.enemy_general_guess_confidence,
@@ -414,14 +478,121 @@ class BotRunner:
         if self.final_map_analysis:
             visibility = self.final_map_analysis.get("visibility") or {}
             self.log(
-                "Finale Map-Analyse:",
-                "sichtbar =",
+                "Final map analysis:",
+                "visible =",
                 visibility.get("visible_ratio"),
-                "vollstaendig =",
+                "complete =",
                 visibility.get("is_full_map_visible"),
-                "Symmetrie =",
+                "symmetry =",
                 self.final_map_analysis.get("symmetry"),
             )
+
+    def extract_player_names(self, data):
+        for key in ("usernames", "users", "player_names", "players"):
+            value = data.get(key)
+            if isinstance(value, list):
+                names = []
+                for item in value:
+                    if isinstance(item, str):
+                        names.append(item)
+                    elif isinstance(item, dict):
+                        names.append(
+                            item.get("username")
+                            or item.get("name")
+                            or item.get("id")
+                            or "unknown"
+                        )
+                    else:
+                        names.append(str(item))
+                return names
+        return []
+
+    def opponent_names(self):
+        if not self.player_names:
+            return []
+
+        if self.state.player_index is None:
+            return [name for name in self.player_names if name != self.username]
+
+        return [
+            name
+            for index, name in enumerate(self.player_names)
+            if index != self.state.player_index
+        ]
+
+    def apply_opponent_memory(self):
+        adjustment = opponent_adjustment_for_names(self.opponent_names())
+        if not adjustment:
+            return
+
+        self.opponent_memory_adjustment = adjustment
+        for key, delta in adjustment.get("bias", {}).items():
+            current = float(self.strategy.coach_bias.get(key, 0.0))
+            new_value = round(max(-2.0, min(3.0, current + float(delta))), 3)
+            self.strategy.coach_bias[key] = new_value
+            self.coach.opponent_bias[key] = round(
+                max(-2.0, min(3.0, float(self.coach.opponent_bias.get(key, 0.0)) + float(delta))),
+                3,
+            )
+
+        timing = adjustment.get("timing", {})
+        self.reserve_after_turn = max(
+            20,
+            min(600, self.reserve_after_turn + int(timing.get("reserve_delta", 0))),
+        )
+        self.city_focus_after_turn = max(
+            30,
+            min(240, self.city_focus_after_turn + int(timing.get("city_focus_delta", 0))),
+        )
+        self.general_attack_after_turn = max(
+            60,
+            min(280, self.general_attack_after_turn + int(timing.get("general_attack_delta", 0))),
+        )
+        self.strategy.reserve_after_turn = self.reserve_after_turn
+        self.strategy.city_focus_after_turn = self.city_focus_after_turn
+        self.strategy.general_attack_after_turn = self.general_attack_after_turn
+        self.log(
+            "Opponent memory applied:",
+            adjustment.get("reasons"),
+            "bias",
+            adjustment.get("bias"),
+            "timing",
+            timing,
+            console=True,
+        )
+
+    def apply_jax_policy(self, turn):
+        if not self.jax_policy_agent.is_ready():
+            return
+
+        visible_turn = self.state.visible_turn(turn)
+        if visible_turn < 25:
+            return
+        if visible_turn - self.last_jax_policy_turn < 20:
+            return
+
+        adjustment = self.jax_policy_agent.recommend_for_strategy(self.strategy, self.coach)
+        self.last_jax_policy_turn = visible_turn
+        if not adjustment or not adjustment.get("bias"):
+            return
+
+        self.jax_policy_adjustment = adjustment
+        for key in self.coach.model_bias:
+            self.coach.model_bias[key] = 0.0
+
+        for key, delta in adjustment.get("bias", {}).items():
+            current = float(self.strategy.coach_bias.get(key, 0.0))
+            self.strategy.coach_bias[key] = round(max(-2.0, min(3.0, current + float(delta))), 3)
+            self.coach.model_bias[key] = round(max(-2.0, min(3.0, float(delta))), 3)
+
+        self.log(
+            "JAX policy adjustment:",
+            adjustment.get("reason"),
+            "win_probability",
+            adjustment.get("win_probability"),
+            "bias",
+            adjustment.get("bias"),
+        )
 
     def can_continue_after_set_username(self, response):
         if not response:
@@ -437,6 +608,8 @@ class BotRunner:
             self.failure_reason = "account_creation_rate_limited"
         elif "wait a bit longer" in message:
             self.failure_reason = "account_creation_rate_limited"
+        elif "cannot start with [Bot]" in message:
+            self.failure_reason = "username_bot_prefix_forbidden"
         elif "Username too long" in message:
             self.failure_reason = "username_too_long"
         elif "username is taken" in message:
@@ -444,7 +617,7 @@ class BotRunner:
         else:
             self.failure_reason = "set_username_failed"
 
-        self.log("Username konnte nicht gesetzt werden; Bot wird nicht gestartet.")
+        self.log("Username could not be set; bot will not start.")
         return False
 
 
@@ -465,6 +638,10 @@ def write_bot_result(result_path, runner, won):
                 "user_id": runner.user_id,
                 "username": runner.username,
                 "label": runner.label,
+                "player_names": runner.player_names,
+                "opponent_names": runner.opponent_names(),
+                "opponent_memory_adjustment": runner.opponent_memory_adjustment,
+                "jax_policy_adjustment": runner.jax_policy_adjustment,
                 "log_path": str(runner.log_path) if runner.log_path else None,
                 "general_guess": runner.general_guess_record(won),
                 "final_map_analysis": runner.final_map_analysis,
@@ -472,6 +649,25 @@ def write_bot_result(result_path, runner, won):
                 "reserve_after_turn": runner.reserve_after_turn,
                 "city_focus_after_turn": runner.city_focus_after_turn,
                 "general_attack_after_turn": runner.general_attack_after_turn,
+                "coach_mode": runner.coach.last_mode,
+                "coach_bias": runner.strategy.coach_bias,
+                "coach_model_bias": runner.coach.model_bias,
+                "coach_events": runner.coach.game_events,
+                "coach_visible_my_cities": (
+                    runner.coach.last_snapshot.visible_my_cities
+                    if runner.coach.last_snapshot
+                    else None
+                ),
+                "coach_visible_enemy_cities": (
+                    runner.coach.last_snapshot.visible_enemy_cities
+                    if runner.coach.last_snapshot
+                    else None
+                ),
+                "coach_suspected_enemy_city_advantage": (
+                    runner.coach.last_snapshot.suspected_enemy_city_advantage
+                    if runner.coach.last_snapshot
+                    else None
+                ),
                 "replay_id": runner.replay_id,
                 "replay_url": runner.replay_url(),
                 "failure_reason": runner.failure_reason,
@@ -484,7 +680,91 @@ def write_bot_result(result_path, runner, won):
     )
 
 
-def run_training_bot(room_id, user_id, username, stats_path, result_path, label, log_path=None):
+def add_replay_record(runner, won, path=REPLAY_INDEX_FILE):
+    if not runner.replay_id:
+        return
+
+    replay_path = Path(path)
+    try:
+        records = json.loads(replay_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        records = []
+
+    if not isinstance(records, list):
+        records = []
+
+    existing = {
+        record.get("replay_id"): record
+        for record in records
+        if isinstance(record, dict) and record.get("replay_id")
+    }
+    status = "won" if won is True else "lost" if won is False else "unknown"
+    existing[runner.replay_id] = {
+        "replay_id": runner.replay_id,
+        "replay_url": runner.replay_url(),
+        "status": status,
+        "updated_at": datetime.now().isoformat(timespec="seconds"),
+        "queue_mode": runner.queue_mode,
+        "username": runner.username,
+        "player_names": runner.player_names,
+        "opponent_names": runner.opponent_names(),
+        "opponent_memory_adjustment": runner.opponent_memory_adjustment,
+        "jax_policy_adjustment": runner.jax_policy_adjustment,
+        "player_index": runner.state.player_index,
+        "turn": getattr(runner.state, "turn", runner.state.last_move_turn),
+        "move_count": runner.move_count,
+        "width": runner.state.width,
+        "height": runner.state.height,
+        "my_general_index": runner.state.my_general_index,
+        "enemy_general_index": runner.state.enemy_general_index,
+        "final_map_analysis": runner.final_map_analysis,
+        "failure_reason": runner.failure_reason,
+        "coach_mode": runner.coach.last_mode,
+        "coach_bias": runner.strategy.coach_bias,
+        "coach_model_bias": runner.coach.model_bias,
+        "coach_visible_my_cities": (
+            runner.coach.last_snapshot.visible_my_cities
+            if runner.coach.last_snapshot
+            else None
+        ),
+        "coach_visible_enemy_cities": (
+            runner.coach.last_snapshot.visible_enemy_cities
+            if runner.coach.last_snapshot
+            else None
+        ),
+        "coach_suspected_enemy_city_advantage": (
+            runner.coach.last_snapshot.suspected_enemy_city_advantage
+            if runner.coach.last_snapshot
+            else None
+        ),
+    }
+
+    replay_path.parent.mkdir(parents=True, exist_ok=True)
+    replay_path.write_text(
+        json.dumps(
+            sorted(
+                existing.values(),
+                key=lambda record: record.get("updated_at", ""),
+                reverse=True,
+            ),
+            indent=2,
+            sort_keys=True,
+        ),
+        encoding="utf-8",
+    )
+
+
+def run_training_bot(
+    room_id,
+    user_id,
+    username,
+    stats_path,
+    result_path,
+    label,
+    log_path=None,
+    coach_path=None,
+    prediction_path=None,
+):
     runner = BotRunner(
         room_id=room_id,
         user_id=user_id,
@@ -493,6 +773,8 @@ def run_training_bot(room_id, user_id, username, stats_path, result_path, label,
         interactive=False,
         label=label,
         log_path=log_path,
+        coach_path=coach_path,
+        prediction_path=prediction_path,
     )
     won = runner.run()
     write_bot_result(result_path, runner, won)
@@ -508,6 +790,10 @@ def write_pending_bot_result(result_path, room_id, user_id, username, label, log
                 "user_id": user_id,
                 "username": username,
                 "label": label,
+                "player_names": [],
+                "opponent_names": [],
+                "opponent_memory_adjustment": None,
+                "jax_policy_adjustment": None,
                 "log_path": str(log_path) if log_path else None,
                 "general_guess": None,
                 "final_map_analysis": None,
@@ -515,6 +801,13 @@ def write_pending_bot_result(result_path, room_id, user_id, username, label, log
                 "reserve_after_turn": None,
                 "city_focus_after_turn": None,
                 "general_attack_after_turn": None,
+                "coach_mode": None,
+                "coach_bias": None,
+                "coach_model_bias": None,
+                "coach_events": [],
+                "coach_visible_my_cities": None,
+                "coach_visible_enemy_cities": None,
+                "coach_suspected_enemy_city_advantage": None,
                 "replay_id": None,
                 "replay_url": None,
                 "failure_reason": None,
@@ -758,17 +1051,17 @@ def merge_finished_stats_files(target_data, stats_paths, result_paths):
 
 def run_training(instance_count, write_log_files=False):
     raise RuntimeError(
-        "Legacy-Training mit TrainingAccountPool wurde entfernt. "
-        "Nutze tillbot_pybot.py und pybot_map_analysis.json."
+        "Legacy training with TrainingAccountPool was removed. "
+        "Use tillbot_pybot.py and data/analysis/pybot_map_analysis.json."
     )
 
     if instance_count < 2:
-        raise ValueError("-t braucht mindestens 2 Instanzen")
+        raise ValueError("-t requires at least 2 instances")
     if instance_count % 2 != 0:
-        raise ValueError("-t muss gerade sein, damit 1v1-Paare entstehen")
+        raise ValueError("-t must be even so 1v1 pairs can be created")
 
     run_id = datetime.now().strftime("%Y%m%d_%H%M%S")
-    run_dir = Path("training_runs") / run_id
+    run_dir = Path("runs/training") / run_id
     run_dir.mkdir(parents=True, exist_ok=True)
 
     processes = []
@@ -832,17 +1125,17 @@ def run_training(instance_count, write_log_files=False):
             )
 
     print(
-        f"Training gestartet: {instance_count} Instanzen, "
-        f"{match_count} parallele 1v1-Spiele, Run: {run_dir}",
+        f"Training started: {instance_count} instances, "
+        f"{match_count} parallel 1v1 games, run: {run_dir}",
         flush=True,
     )
     print(
-        f"Spectator-Raum: https://bot.generals.io/games/{TRAINING_SPECTATOR_ROOM_ID}",
+        f"Spectator room: https://bot.generals.io/games/{TRAINING_SPECTATOR_ROOM_ID}",
         flush=True,
     )
     for match_index in range(1, match_count):
         print(
-            f"Trainingsraum {match_index}: https://bot.generals.io/games/{ROOM_ID}_train_{match_index}",
+            f"Training room {match_index}: https://bot.generals.io/games/{ROOM_ID}_train_{match_index}",
             flush=True,
         )
     if write_log_files:
@@ -862,7 +1155,7 @@ def run_training(instance_count, write_log_files=False):
                 continue
 
             print(
-                "Trainingsprozess haengt zu lange und wird beendet:",
+                "Training process is stuck and will be stopped:",
                 item["label"],
                 "nach",
                 int(runtime),
@@ -916,11 +1209,11 @@ def run_training(instance_count, write_log_files=False):
         for _ in range(result.get("losses", 0)):
             global_stats.record_general_attack_result(int(general_attack_turn), False)
 
-    print("Training fertig.")
-    print("Sammeldatei:", aggregate_path)
+    print("Training complete.")
+    print("Aggregate file:", aggregate_path)
     print("Replays:", replay_path)
-    print("Alle Replay-URLs:", global_replay_path)
-    print("Globale Statistik aktualisiert: bot_stats.json")
+    print("All replay URLs:", global_replay_path)
+    print("Global stats updated: data/stats/bot_stats.json")
 
 
 def collect_replay_results(result_paths):
@@ -1031,7 +1324,7 @@ def block_failed_training_accounts(result_paths, accounts_by_username):
 
         if result.get("failure_reason") == "account_creation_rate_limited":
             print(
-                "Account-Erstellung ist rate-limited; Account bleibt fuer spaeter im Pool:",
+                "Account creation is rate-limited; keeping account in the pool for later:",
                 username,
                 flush=True,
             )
@@ -1045,7 +1338,7 @@ def block_failed_training_accounts(result_paths, accounts_by_username):
             failed_usernames,
             "set_username_or_join_failed",
         )
-        print("Blockierte Trainingsaccounts:", ", ".join(failed_usernames), flush=True)
+        print("Blocked training accounts:", ", ".join(failed_usernames), flush=True)
 
 
 def mark_usable_training_accounts(result_paths, accounts_by_username):
@@ -1076,13 +1369,53 @@ def parse_args():
         "--train",
         type=int,
         metavar="INSTANCES",
-        help="Startet Trainingsinstanzen; 10 bedeutet 5 parallele 1v1-Spiele.",
+        help="Starts training instances; 10 means 5 parallel 1v1 games.",
     )
     parser.add_argument(
         "-l",
         "--log-files",
         action="store_true",
-        help="Schreibt detaillierte Bot-Logs in Dateien statt auf die Konsole.",
+        help="Writes detailed bot logs to files instead of the console.",
+    )
+    parser.add_argument(
+        "-q",
+        "--queue",
+        choices=("private", "1v1", "ffa"),
+        default="private",
+        help="Selects the game mode: private custom rooms, public 1v1, or public FFA.",
+    )
+    parser.add_argument(
+        "--self-play",
+        action="store_true",
+        help="Starts endless local self-play with strategy variants.",
+    )
+    parser.add_argument(
+        "--parallel-games",
+        type=int,
+        default=1,
+        help="Number of self-play games to run in parallel.",
+    )
+    parser.add_argument(
+        "--self-play-start-delay",
+        type=float,
+        default=2.0,
+        help="Seconds to wait after dispatching one self-play bot pair before dispatching the next pair.",
+    )
+    parser.add_argument(
+        "--self-play-requeue-delay",
+        type=float,
+        default=20.0,
+        help="Seconds an idle self-play bot pair waits before it can be dispatched again.",
+    )
+    parser.add_argument(
+        "--self-play-run-id",
+        default=None,
+        help="Optional fixed self-play run id, useful for external log consoles.",
+    )
+    parser.add_argument(
+        "--train-jax-agent",
+        action="store_true",
+        help="Trains the JAX policy agent from data/training/policy_samples.jsonl.",
     )
     return parser.parse_args()
 
@@ -1100,60 +1433,86 @@ def stop_runner_now(runner):
 
 
 def start_auto_game_listener(stop_after_current, current_runner, runner_lock, allow_force_stop=True):
+    def handle_command(command):
+        if command == "e":
+            stop_after_current.set()
+            print("Autostart stopped: current game will finish.", flush=True)
+            return True
+
+        if command == "q":
+            stop_after_current.set()
+            if not allow_force_stop:
+                print("Autostart stopped: currently running matches will finish.", flush=True)
+                return True
+
+            with runner_lock:
+                runner = current_runner.get("runner")
+            stop_runner_now(runner)
+            print("Immediate stop requested.", flush=True)
+            return True
+
+        return False
+
     def listener():
+        try:
+            import msvcrt
+
+            while not stop_after_current.is_set():
+                if not msvcrt.kbhit():
+                    time.sleep(0.1)
+                    continue
+
+                command = msvcrt.getwch().strip().lower()
+                if handle_command(command):
+                    break
+            return
+        except ImportError:
+            pass
+
         while not stop_after_current.is_set():
             try:
                 command = input().strip().lower()
             except EOFError:
                 break
 
-            if command == "e":
-                stop_after_current.set()
-                print("Autostart gestoppt: laufendes Spiel wird noch beendet.", flush=True)
-                break
-
-            if command == "q":
-                stop_after_current.set()
-                if not allow_force_stop:
-                    print("Autostart gestoppt: laufender Trainingsbatch wird noch beendet.", flush=True)
-                    break
-
-                with runner_lock:
-                    runner = current_runner.get("runner")
-                stop_runner_now(runner)
-                print("Sofort-Stopp angefordert.", flush=True)
+            if handle_command(command):
                 break
 
     threading.Thread(target=listener, daemon=True).start()
 
 
-def run_auto_games(write_log_files=False):
+def run_auto_games(write_log_files=False, queue_mode="private"):
     stop_after_current = threading.Event()
     current_runner = {"runner": None}
     runner_lock = threading.Lock()
     game_number = 1
 
-    print("Auto-Modus aktiv. Eingabe: e = nach aktuellem Spiel stoppen, q = sofort stoppen.", flush=True)
+    print(
+        f"Auto mode active ({queue_mode}). Input: e = stop after current game, q = stop immediately.",
+        flush=True,
+    )
     if write_log_files:
-        print("Detail-Logs: single_game_logs", flush=True)
+        print("Detail-Logs: logs/public_games", flush=True)
     start_auto_game_listener(stop_after_current, current_runner, runner_lock)
 
     while not stop_after_current.is_set():
         log_path = None
         if write_log_files:
-            log_path = Path("single_game_logs") / f"spiel_{game_number:03d}.log"
+            log_path = Path("logs/public_games") / f"spiel_{game_number:03d}.log"
 
         runner = BotRunner(
             interactive=False,
             label=f"spiel-{game_number}",
             log_path=log_path,
+            queue_mode=queue_mode,
         )
         with runner_lock:
             current_runner["runner"] = runner
 
-        print(f"Starte Spiel {game_number}.", flush=True)
+        print(f"Starting game {game_number}.", flush=True)
         won = runner.run()
         add_general_guess_records([runner.general_guess_record(won)])
+        add_replay_record(runner, won)
 
         with runner_lock:
             current_runner["runner"] = None
@@ -1162,7 +1521,20 @@ def run_auto_games(write_log_files=False):
             break
 
         if won is None:
-            print("Spiel wurde nicht normal beendet; starte neues Spiel.", flush=True)
+            if runner.failure_reason and (
+                "username" in runner.failure_reason
+                or "gio_error" in runner.failure_reason
+                or "error_set_username" in runner.failure_reason
+                or "Account Disabled" in runner.failure_reason
+            ):
+                print(
+                    "Stopping because of account/username error:",
+                    runner.failure_reason,
+                    flush=True,
+                )
+                break
+
+            print("Game did not finish normally; searching again.", flush=True)
             game_number += 1
             time.sleep(2)
             continue
@@ -1170,7 +1542,391 @@ def run_auto_games(write_log_files=False):
         game_number += 1
         time.sleep(2)
 
-    print("Keine neuen Spiele werden gestartet.", flush=True)
+    print("No new games will be started.", flush=True)
+
+
+SELF_PLAY_VARIANTS = [
+    {
+        "name": "expand",
+        "learned": {
+            "expansion_bias": 0.7,
+            "city_bias": 0.1,
+            "attack_bias": 0.0,
+            "defense_bias": 0.0,
+            "route_bias": 0.3,
+            "reserve_delta": 10,
+            "city_focus_delta": -10,
+            "general_attack_delta": 10,
+        },
+    },
+    {
+        "name": "city",
+        "learned": {
+            "expansion_bias": 0.1,
+            "city_bias": 0.8,
+            "attack_bias": 0.1,
+            "defense_bias": 0.0,
+            "route_bias": 0.3,
+            "reserve_delta": 0,
+            "city_focus_delta": -35,
+            "general_attack_delta": 10,
+        },
+    },
+    {
+        "name": "attack",
+        "learned": {
+            "expansion_bias": 0.2,
+            "city_bias": 0.1,
+            "attack_bias": 0.8,
+            "defense_bias": 0.0,
+            "route_bias": 0.6,
+            "reserve_delta": -20,
+            "city_focus_delta": 0,
+            "general_attack_delta": -45,
+        },
+    },
+    {
+        "name": "defense",
+        "learned": {
+            "expansion_bias": 0.1,
+            "city_bias": 0.2,
+            "attack_bias": -0.1,
+            "defense_bias": 0.8,
+            "route_bias": 0.1,
+            "reserve_delta": 35,
+            "city_focus_delta": 10,
+            "general_attack_delta": 20,
+        },
+    },
+]
+
+
+def ensure_self_play_profile(path, variant):
+    profile_path = Path(path)
+    if profile_path.exists():
+        return
+
+    profile_path.parent.mkdir(parents=True, exist_ok=True)
+    profile_path.write_text(
+        json.dumps(
+            {
+                "version": 1,
+                "variant": variant["name"],
+                "games": 0,
+                "wins": 0,
+                "losses": 0,
+                "learned": variant["learned"],
+                "recent_games": [],
+            },
+            indent=2,
+            sort_keys=True,
+        ),
+        encoding="utf-8",
+    )
+
+SELF_PLAY_ACCOUNTS = [
+    {
+        "user_id": f"{USER_ID}_self_01",
+        "username": f"{USERNAME}_Self_01",
+    },
+    {
+        "user_id": f"{USER_ID}_self_02",
+        "username": f"{USERNAME}_Self_02",
+    },
+    {
+        "user_id": f"{USER_ID}_self_03",
+        "username": f"{USERNAME}_Self_03",
+    },
+    {
+        "user_id": f"{USER_ID}_self_04",
+        "username": f"{USERNAME}_Self_04",
+    },
+    {
+        "user_id": f"{USER_ID}_self_05",
+        "username": f"{USERNAME}_Self_05",
+    },
+    {
+        "user_id": f"{USER_ID}_self_06",
+        "username": f"{USERNAME}_Self_06",
+    },
+    {
+        "user_id": f"{USER_ID}_self_07",
+        "username": f"{USERNAME}_Self_07",
+    },
+    {
+        "user_id": f"{USER_ID}_self_08",
+        "username": f"{USERNAME}_Self_08",
+    },
+]
+
+def self_play_accounts(slot_number):
+    start_index = (slot_number - 1) * 2
+    end_index = start_index + 2
+
+    if end_index > len(SELF_PLAY_ACCOUNTS):
+        raise ValueError(
+            f"Self-play slot {slot_number} needs bots {start_index + 1}-{end_index}, "
+            f"but only {len(SELF_PLAY_ACCOUNTS)} fixed accounts are configured."
+        )
+
+    return SELF_PLAY_ACCOUNTS[start_index:end_index]
+
+def start_self_play_match(
+    match_number,
+    slot_number,
+    run_id,
+    run_dir,
+    write_log_files,
+):
+    variant_a = SELF_PLAY_VARIANTS[(match_number - 1) % len(SELF_PLAY_VARIANTS)]
+    variant_b = SELF_PLAY_VARIANTS[(match_number) % len(SELF_PLAY_VARIANTS)]
+    accounts = self_play_accounts(slot_number)
+    room_id = f"{ROOM_ID}_self_{run_id}_{match_number:04d}"
+
+    result_paths = []
+    stats_paths = []
+    processes = []
+
+    print(
+        f"Self-play Match {match_number}: {variant_a['name']} vs {variant_b['name']}",
+        flush=True,
+    )
+    print(f"Room: https://bot.generals.io/games/{room_id}", flush=True)
+
+    for seat, variant in enumerate((variant_a, variant_b)):
+        label = f"self-{match_number:04d}-{seat}-{variant['name']}"
+        stats_path = run_dir / f"{label}_stats.json"
+        result_path = run_dir / f"{label}_result.json"
+        log_path = run_dir / "logs" / "slots" / f"slot_{slot_number}.log" if write_log_files else None
+        coach_path = run_dir / "profiles" / f"{variant['name']}.json"
+        prediction_path = run_dir / "predictions" / f"{label}_enemy_predictions.json"
+
+        ensure_self_play_profile(coach_path, variant)
+        if seat == 0 and log_path:
+            log_path.parent.mkdir(parents=True, exist_ok=True)
+            with log_path.open("a", encoding="utf-8") as handle:
+                handle.write(
+                    "\n"
+                    f"===== MATCH {match_number:04d} | SLOT {slot_number} | "
+                    f"{variant_a['name']} vs {variant_b['name']} =====\n"
+                    f"Room: https://bot.generals.io/games/{room_id}\n"
+                )
+
+        stats_paths.append(stats_path)
+        result_paths.append(result_path)
+
+        write_pending_bot_result(
+            result_path,
+            room_id,
+            accounts[seat]["user_id"],
+            accounts[seat]["username"],
+            label,
+            log_path,
+        )
+
+        process = mp.Process(
+            target=run_training_bot,
+            args=(
+                room_id,
+                accounts[seat]["user_id"],
+                accounts[seat]["username"],
+                str(stats_path),
+                str(result_path),
+                label,
+                str(log_path) if log_path else None,
+                str(coach_path),
+                str(prediction_path),
+            ),
+        )
+        process.start()
+
+        processes.append(
+            {
+                "process": process,
+                "result_path": result_path,
+                "started_at": time.time(),
+                "label": label,
+            }
+        )
+
+    return {
+        "match_number": match_number,
+        "slot_number": slot_number,
+        "result_paths": result_paths,
+        "stats_paths": stats_paths,
+        "processes": processes,
+    }
+
+
+def finish_self_play_match(match, run_dir, run_id, all_replay_data):
+    match_no = match["match_number"]
+    replay_data = collect_replay_results(match["result_paths"])
+
+    match_replay_path = run_dir / f"match_{match_no:04d}_replays.json"
+    match_replay_path.write_text(
+        json.dumps(replay_data, indent=2, sort_keys=True),
+        encoding="utf-8",
+    )
+
+    all_replay_data["matches"].extend(replay_data.get("matches", []))
+    all_replay_data["bots"].extend(replay_data.get("bots", []))
+
+    add_general_guess_records(
+        collect_general_guess_records(match["result_paths"])
+    )
+
+    write_json_file(run_dir / "latest_match.json", replay_data)
+    write_json_file(run_dir / "all_replays.json", all_replay_data)
+
+    batch_summary = process_self_play_batch(run_dir, run_id, match_no)
+    if batch_summary:
+        print(
+            "Batch processed:",
+            f"{batch_summary['batch_start']}-{batch_summary['batch_end']}",
+            "archive:",
+            batch_summary.get("archive_path"),
+            flush=True,
+        )
+        if batch_summary.get("coach_checkpoint_path"):
+            print(
+                "Coach checkpoint:",
+                batch_summary["coach_checkpoint_path"],
+                flush=True,
+            )
+
+
+def run_self_play(
+    write_log_files=False,
+    parallel_games=1,
+    start_delay_seconds=2,
+    requeue_delay_seconds=20,
+    run_id=None,
+):
+    max_parallel_games = len(SELF_PLAY_ACCOUNTS) // 2
+
+    if parallel_games < 1:
+        raise ValueError("--parallel-games must be at least 1.")
+
+    if parallel_games > max_parallel_games:
+        raise ValueError(
+            f"--parallel-games {parallel_games} would need {parallel_games * 2} bots, "
+            f"but only {len(SELF_PLAY_ACCOUNTS)} fixed self-play accounts are configured. "
+            f"Maximum is {max_parallel_games}."
+        )
+    if start_delay_seconds < 0:
+        raise ValueError("--self-play-start-delay must be zero or greater.")
+    if requeue_delay_seconds < 0:
+        raise ValueError("--self-play-requeue-delay must be zero or greater.")
+
+    stop_after_current = threading.Event()
+    current_runner = {"runner": None}
+    runner_lock = threading.Lock()
+    match_number = 1
+    run_id = run_id or datetime.now().strftime("%Y%m%d_%H%M%S")
+    run_dir = Path("runs/self_play") / run_id
+    run_dir.mkdir(parents=True, exist_ok=True)
+    (run_dir / "profiles").mkdir(parents=True, exist_ok=True)
+    (run_dir / "predictions").mkdir(parents=True, exist_ok=True)
+
+    print("Self-play active. Input: e = stop after running matches, q = stop after running matches.", flush=True)
+    print("Run:", run_dir, flush=True)
+    print("Parallel games:", parallel_games, flush=True)
+    print("Pair start delay seconds:", start_delay_seconds, flush=True)
+    print("Idle pair requeue delay seconds:", requeue_delay_seconds, flush=True)
+
+    start_auto_game_listener(
+        stop_after_current,
+        current_runner,
+        runner_lock,
+        allow_force_stop=False,
+    )
+
+    all_replay_data = {"matches": [], "bots": []}
+    active_matches = []
+    idle_slots = [
+        {
+            "slot_number": slot_number,
+            "available_at": 0.0,
+        }
+        for slot_number in range(1, parallel_games + 1)
+    ]
+    last_pair_start_time = 0.0
+
+    while not stop_after_current.is_set():
+        now = time.time()
+        if idle_slots and now - last_pair_start_time >= start_delay_seconds:
+            idle_slots.sort(key=lambda item: item["available_at"])
+            next_slot = idle_slots[0]
+            if next_slot["available_at"] <= now:
+                idle_slots.pop(0)
+                print(
+                    f"Dispatching idle pair slot {next_slot['slot_number']} to match {match_number}.",
+                    flush=True,
+                )
+                active_matches.append(
+                    start_self_play_match(
+                        match_number=match_number,
+                        slot_number=next_slot["slot_number"],
+                        run_id=run_id,
+                        run_dir=run_dir,
+                        write_log_files=write_log_files,
+                    )
+                )
+                match_number += 1
+                last_pair_start_time = time.time()
+                time.sleep(0.1)
+                continue
+
+        still_active_matches = []
+        for match in active_matches:
+            still_running_processes = []
+
+            for item in match["processes"]:
+                process = item["process"]
+                process.join(timeout=0.1)
+
+                if not process.is_alive():
+                    continue
+
+                runtime = time.time() - item["started_at"]
+                if runtime <= TRAINING_PROCESS_TIMEOUT_SECONDS:
+                    still_running_processes.append(item)
+                    continue
+
+                print("Self-play process is stuck:", item["label"], flush=True)
+                process.terminate()
+                process.join(timeout=5)
+
+                if process.is_alive():
+                    process.kill()
+                    process.join(timeout=5)
+
+                mark_training_process_timeout(item["result_path"])
+
+            match["processes"] = still_running_processes
+
+            if still_running_processes:
+                still_active_matches.append(match)
+                continue
+
+            finish_self_play_match(match, run_dir, run_id, all_replay_data)
+            available_at = time.time() + requeue_delay_seconds
+            idle_slots.append(
+                {
+                    "slot_number": match["slot_number"],
+                    "available_at": available_at,
+                }
+            )
+            print(
+                f"Pair slot {match['slot_number']} is idle; next dispatch after {requeue_delay_seconds} seconds.",
+                flush=True,
+            )
+
+        active_matches = still_active_matches
+        time.sleep(1)
+
+    print("Self-play stopped.", flush=True)
+    print("Data:", run_dir, flush=True)
 
 
 def training_room_id(match_index):
@@ -1237,7 +1993,7 @@ def start_training_match(
         )
 
     print(
-        f"Match {match_index} gestartet: https://bot.generals.io/games/{room_id}",
+        f"Match {match_index} started: https://bot.generals.io/games/{room_id}",
         flush=True,
     )
     return processes
@@ -1282,121 +2038,11 @@ def finish_training_run(run_dir, stats_paths, result_paths, accounts_by_username
         for _ in range(result.get("losses", 0)):
             global_stats.record_general_attack_result(int(general_attack_turn), False)
 
-    print("Training fertig.")
-    print("Sammeldatei:", aggregate_path)
+    print("Training complete.")
+    print("Aggregate file:", aggregate_path)
     print("Replays:", replay_path)
-    print("Alle Replay-URLs:", global_replay_path)
-    print("Globale Statistik aktualisiert: bot_stats.json")
-
-
-def run_continuous_training(instance_count, write_log_files=False):
-    raise RuntimeError(
-        "Legacy-Training mit TrainingAccountPool wurde entfernt. "
-        "Nutze tillbot_pybot.py und pybot_map_analysis.json."
-    )
-
-    if instance_count < 2:
-        raise ValueError("-t braucht mindestens 2 Instanzen")
-    if instance_count % 2 != 0:
-        raise ValueError("-t muss gerade sein, damit 1v1-Paare entstehen")
-
-    stop_after_current = threading.Event()
-    current_runner = {"runner": None}
-    runner_lock = threading.Lock()
-    run_id = datetime.now().strftime("%Y%m%d_%H%M%S")
-    run_dir = Path("training_runs") / run_id
-    run_dir.mkdir(parents=True, exist_ok=True)
-
-    match_count = instance_count // 2
-    accounts = TrainingAccountPool().ensure_accounts(
-        instance_count,
-        USER_ID,
-        TRAINING_USERNAME_PREFIX,
-    )
-    accounts_by_username = {
-        account["username"]: account
-        for account in accounts
-    }
-    stats_paths = []
-    result_paths = []
-    generations = {match_index: 1 for match_index in range(match_count)}
-    active_matches = {}
-
-    print(
-        f"Auto-Training aktiv: {instance_count} Instanzen, "
-        f"{match_count} parallele 1v1-Spiele, Run: {run_dir}",
-        flush=True,
-    )
-    print("Eingabe: e = keine neuen Matches starten, laufende noch beenden.", flush=True)
-    if write_log_files:
-        print(f"Detail-Logs: {run_dir / 'logs'}", flush=True)
-
-    start_auto_game_listener(stop_after_current, current_runner, runner_lock, allow_force_stop=False)
-
-    for match_index in range(match_count):
-        active_matches[match_index] = start_training_match(
-            run_dir,
-            match_index,
-            generations[match_index],
-            accounts,
-            write_log_files,
-            stats_paths,
-            result_paths,
-        )
-
-    while active_matches:
-        for match_index, processes in list(active_matches.items()):
-            still_running = []
-            for item in processes:
-                process = item["process"]
-                process.join(timeout=0)
-                if not process.is_alive():
-                    continue
-
-                runtime = time.time() - item["started_at"]
-                if runtime <= TRAINING_PROCESS_TIMEOUT_SECONDS:
-                    still_running.append(item)
-                    continue
-
-                print(
-                    "Trainingsprozess haengt zu lange und wird beendet:",
-                    item["label"],
-                    "nach",
-                    int(runtime),
-                    "Sekunden",
-                    flush=True,
-                )
-                process.terminate()
-                process.join(timeout=5)
-                if process.is_alive():
-                    process.kill()
-                    process.join(timeout=5)
-                mark_training_process_timeout(item["result_path"])
-
-            if still_running:
-                active_matches[match_index] = still_running
-                continue
-
-            active_matches.pop(match_index)
-            if stop_after_current.is_set():
-                print(f"Match {match_index} beendet; kein Neustart wegen Stop-Signal.", flush=True)
-                continue
-
-            generations[match_index] += 1
-            time.sleep(2)
-            active_matches[match_index] = start_training_match(
-                run_dir,
-                match_index,
-                generations[match_index],
-                accounts,
-                write_log_files,
-                stats_paths,
-                result_paths,
-            )
-
-        time.sleep(1)
-
-    finish_training_run(run_dir, stats_paths, result_paths, accounts_by_username)
+    print("All replay URLs:", global_replay_path)
+    print("Global stats updated: data/stats/bot_stats.json")
 
 
 def run_auto_training(instance_count, write_log_files=False):
@@ -1405,24 +2051,35 @@ def run_auto_training(instance_count, write_log_files=False):
     runner_lock = threading.Lock()
     batch_number = 1
 
-    print("Auto-Training aktiv. Eingabe: e = nach aktuellem Batch stoppen.", flush=True)
+    print("Auto-training active. Input: e = stop after current batch.", flush=True)
     start_auto_game_listener(stop_after_current, current_runner, runner_lock, allow_force_stop=False)
 
     while not stop_after_current.is_set():
-        print(f"Starte Trainingsbatch {batch_number}.", flush=True)
+        print(f"Starting training batch {batch_number}.", flush=True)
         run_training(instance_count, write_log_files=write_log_files)
         batch_number += 1
 
-    print("Keine neuen Trainingsspiele werden gestartet.", flush=True)
+    print("No new training games will be started.", flush=True)
 
 
 def main():
     args = parse_args()
-    if args.train:
-        run_continuous_training(args.train, write_log_files=args.log_files)
+    if args.train_jax_agent:
+        result = train_policy_agent()
+        print("JAX policy training:", json.dumps(result, indent=2, sort_keys=True))
         return
 
-    run_auto_games(write_log_files=args.log_files)
+    if args.self_play:
+        run_self_play(
+            write_log_files=args.log_files,
+            parallel_games=args.parallel_games,
+            start_delay_seconds=args.self_play_start_delay,
+            requeue_delay_seconds=args.self_play_requeue_delay,
+            run_id=args.self_play_run_id,
+        )
+        return
+
+    run_auto_games(write_log_files=args.log_files, queue_mode=args.queue)
 
 
 if __name__ == "__main__":

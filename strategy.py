@@ -100,6 +100,13 @@ class Strategy:
         self.recent_moves = []
         self.flow_chain = []
         self.priority_agent = StrategyPriorityAgent()
+        self.coach_bias = {
+            "expansion_bias": 0.0,
+            "city_bias": 0.0,
+            "attack_bias": 0.0,
+            "defense_bias": 0.0,
+            "route_bias": 0.0,
+        }
 
     def log(self, *parts):
         if self.logger:
@@ -676,10 +683,10 @@ class Strategy:
         )
 
         self.log(
-            "Route geplant:",
-            "Ziel =", strategy_target,
-            "Modus =", self.committed_reason,
-            "cityfrei erreichbare Tiles =", len(self.planned_distances),
+            "Route planned:",
+            "Target =", strategy_target,
+            "Mode =", self.committed_reason,
+            "city-free reachable tiles =", len(self.planned_distances),
             "Fallback-Tiles =", len(self.planned_fallback_distances),
         )
 
@@ -714,11 +721,11 @@ class Strategy:
             route_target = reinforcement.waypoint
             self.committed_reason = "reinforcement_waypoint"
             self.log(
-                "Reinforcement-Wegpunkt:",
+                "Reinforcement waypoint:",
                 route_target,
-                "finales Ziel =",
+                "final target =",
                 strategy_target,
-                "Turns bis Reinforcement =",
+                "turns until reinforcement =",
                 reinforcement.turns_until,
             )
 
@@ -730,8 +737,8 @@ class Strategy:
         ):
             my_general_army = armies[self.state.my_general_index]
             self.log(
-                f"Warte bis Turn {EXPAND_AFTER_TURN}: "
-                f"Turn {self.state.visible_turn(turn)}, General hat {my_general_army} Einheiten"
+                f"Waiting until turn {EXPAND_AFTER_TURN}: "
+                f"turn {self.state.visible_turn(turn)}, general has {my_general_army} units"
             )
             return None
 
@@ -1038,10 +1045,10 @@ class Strategy:
 
         if not moves:
             self.log(
-                "Keine Bewegung gefunden:",
-                "geblockte Tiles =", blocked_tiles,
-                "ignorierte Cities =", skipped_cities,
-                "eigene bewegliche Tiles =", own_movable_tiles,
+                "No move found:",
+                "blocked tiles =", blocked_tiles,
+                "ignored cities =", skipped_cities,
+                "own movable tiles =", own_movable_tiles,
             )
             return None
 
@@ -1060,7 +1067,7 @@ class Strategy:
         self.remember_flow(source, target)
         if best_move.get("priority_reason"):
             self.log(
-                "Prioritaets-Agent:",
+                "Priority agent:",
                 best_move["priority_reason"],
                 "base =",
                 best_move.get("base_score"),
@@ -1105,6 +1112,32 @@ class Strategy:
             score += 25000
         if move["target_is_enemy_tile"]:
             score += 45000 if move["army_dominance"] else 18000
+
+        attack_bias = self.coach_bias.get("attack_bias", 0.0)
+        defense_bias = self.coach_bias.get("defense_bias", 0.0)
+        expansion_bias = self.coach_bias.get("expansion_bias", 0.0)
+        city_bias = self.coach_bias.get("city_bias", 0.0)
+        route_bias = self.coach_bias.get("route_bias", 0.0)
+
+        if move["target_is_enemy_tile"] or move["attacks_known_general_route"]:
+            score += int(attack_bias * 5000)
+        if move["target_is_enemy_general"]:
+            score += int(attack_bias * 15000)
+        if move["defends_general"] or move["attacks_threat"]:
+            score += int(defense_bias * 12000)
+        if move["target_is_new_tile"]:
+            score += int(expansion_bias * 3500)
+        if move["broad_expansion"]:
+            score += int(expansion_bias * 2500)
+        if move["can_take_city"] or move["moves_toward_city"] or move["pushes_from_owned_city"]:
+            score += int(city_bias * 3500)
+        if (
+            move["follows_city_free_route"]
+            or move["follows_fallback_route"]
+            or move["route_progress"] > 0
+            or move["fallback_route_progress"] > 0
+        ):
+            score += int(route_bias * 2500)
 
         if move["broad_expansion"]:
             score += 9000

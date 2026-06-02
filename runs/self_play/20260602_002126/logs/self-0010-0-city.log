@@ -1,0 +1,8 @@
+2026-06-02 00:21:50 [self-0010-0-city] Connected
+2026-06-02 00:21:50 [self-0010-0-city] Room: https://bot.generals.io/games/TillTestRoom123_self_20260602_002126_0010
+2026-06-02 00:21:50 [self-0010-0-city] Reserve ab sichtbarem Turn: 86
+2026-06-02 00:21:50 [self-0010-0-city] City-Fokus ab sichtbarem Turn: 76
+2026-06-02 00:21:50 [self-0010-0-city] General-Angriff ab sichtbarem Turn: 215
+2026-06-02 00:21:50 [self-0010-0-city] SET_USERNAME: ['error_set_username', 'You already have a username! Only Supporters can change usernames.']
+2026-06-02 00:21:50 [self-0010-0-city] JOIN_PRIVATE: ['chat_message', 'chat_custom_queue_TillTestRoom123_self_20260602_002126_0010', {'text': 'T1LL4_S02_A joined the custom lobby.'}]
+2026-06-02 00:21:50 [self-0010-0-city] EVENT: ['queue_update', {'playerIndices': [0, 1], 'playerColors': [0, 1], 'lobbyIndex': 1, 'isForcing': False, 'numPlayers': 2, 'numForce': [], 'playerCap': 16, 'teamSize': 1, 'teams': [1, 2], 'usernames': ['T1LL4_S02_B', 'T1LL4_S02_A'], 'options': {'map': None, 'modifiers': []}, 'owner': 0, 'bans': [], 'kicks': []}]

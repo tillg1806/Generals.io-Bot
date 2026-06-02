@@ -53,8 +53,10 @@ class GameState:
     enemy_movement_last_seen: dict[int, int] = field(default_factory=dict)
     enemy_prediction_heat: dict[int, int] = field(default_factory=dict)
     enemy_prediction_last_seen: dict[int, int] = field(default_factory=dict)
+    enemy_attack_events: list[dict] = field(default_factory=list)
     width: int = 0
     height: int = 0
+    turn: int = -1
     last_move_turn: int = -1
     expansion_started: bool = False
 
@@ -96,7 +98,9 @@ class GameState:
                 self.enemy_general_index = generals[self.enemy_player_index]
 
         terrain, armies = self.split_map()
-        turn = data.get("turn", -1)
+        turn = data.get("turn", self.turn)
+        self.turn = turn
+        self.enemy_attack_events = []
         self.update_seen_tiles(terrain, turn)
         self.update_enemy_movement_heat(old_terrain, old_armies, terrain, armies, turn)
 
@@ -148,6 +152,18 @@ class GameState:
                 self.enemy_movement_heat[neighbor] = self.enemy_movement_heat.get(neighbor, 0) + 1
                 self.enemy_movement_last_seen[index] = turn
                 self.enemy_movement_last_seen[neighbor] = turn
+                self.enemy_attack_events.append(
+                    {
+                        "turn": turn,
+                        "source": index,
+                        "target": neighbor,
+                        "estimated_army": max(0, old_armies[index] - armies[index]),
+                        "source_army_before": old_armies[index],
+                        "source_army_after": armies[index],
+                        "target_army_before": old_armies[neighbor],
+                        "target_army_after": armies[neighbor],
+                    }
+                )
                 self.remember_enemy_prediction(index, neighbor, terrain, turn)
 
         self.decay_enemy_movement_heat(turn)

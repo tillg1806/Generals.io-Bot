@@ -1,0 +1,176 @@
+{
+  "games": 1,
+  "learned": {
+    "attack_bias": 0.08,
+    "city_bias": 0.1,
+    "city_focus_delta": -10,
+    "defense_bias": 0.0,
+    "expansion_bias": 0.7,
+    "general_attack_delta": 10,
+    "reserve_delta": 10,
+    "route_bias": 0.34
+  },
+  "losses": 0,
+  "recent_games": [
+    {
+      "army_ratio": 3277.0,
+      "events": [
+        {
+          "enemy_army": 183,
+          "enemy_tiles": 27,
+          "mode": "press_attack",
+          "my_army": 514,
+          "my_tiles": 81,
+          "suspected_enemy_city_advantage": false,
+          "turn": 499,
+          "visible_enemy_cities": 0,
+          "visible_my_cities": 3,
+          "visible_turn": 250
+        },
+        {
+          "enemy_army": 213,
+          "enemy_tiles": 27,
+          "mode": "contest_cities",
+          "my_army": 608,
+          "my_tiles": 86,
+          "suspected_enemy_city_advantage": true,
+          "turn": 504,
+          "visible_enemy_cities": 0,
+          "visible_my_cities": 3,
+          "visible_turn": 252
+        },
+        {
+          "enemy_army": 212,
+          "enemy_tiles": 28,
+          "mode": "press_attack",
+          "my_army": 610,
+          "my_tiles": 88,
+          "suspected_enemy_city_advantage": false,
+          "turn": 507,
+          "visible_enemy_cities": 0,
+          "visible_my_cities": 3,
+          "visible_turn": 254
+        },
+        {
+          "enemy_army": 214,
+          "enemy_tiles": 28,
+          "mode": "contest_cities",
+          "my_army": 618,
+          "my_tiles": 91,
+          "suspected_enemy_city_advantage": true,
+          "turn": 510,
+          "visible_enemy_cities": 0,
+          "visible_my_cities": 3,
+          "visible_turn": 255
+        },
+        {
+          "enemy_army": 227,
+          "enemy_tiles": 28,
+          "mode": "press_attack",
+          "my_army": 682,
+          "my_tiles": 93,
+          "suspected_enemy_city_advantage": false,
+          "turn": 545,
+          "visible_enemy_cities": 0,
+          "visible_my_cities": 3,
+          "visible_turn": 273
+        },
+        {
+          "enemy_army": 228,
+          "enemy_tiles": 28,
+          "mode": "contest_cities",
+          "my_army": 686,
+          "my_tiles": 94,
+          "suspected_enemy_city_advantage": true,
+          "turn": 546,
+          "visible_enemy_cities": 0,
+          "visible_my_cities": 3,
+          "visible_turn": 273
+        },
+        {
+          "enemy_army": 253,
+          "enemy_tiles": 29,
+          "mode": "press_attack",
+          "my_army": 798,
+          "my_tiles": 100,
+          "suspected_enemy_city_advantage": false,
+          "turn": 560,
+          "visible_enemy_cities": 0,
+          "visible_my_cities": 3,
+          "visible_turn": 280
+        },
+        {
+          "enemy_army": 222,
+          "enemy_tiles": 26,
+          "mode": "contest_cities",
+          "my_army": 770,
+          "my_tiles": 103,
+          "suspected_enemy_city_advantage": true,
+          "turn": 563,
+          "visible_enemy_cities": 0,
+          "visible_my_cities": 3,
+          "visible_turn": 282
+        },
+        {
+          "enemy_army": 270,
+          "enemy_tiles": 29,
+          "mode": "press_attack",
+          "my_army": 988,
+          "my_tiles": 116,
+          "suspected_enemy_city_advantage": false,
+          "turn": 630,
+          "visible_enemy_cities": 0,
+          "visible_my_cities": 4,
+          "visible_turn": 315
+        },
+        {
+          "enemy_army": 271,
+          "enemy_tiles": 29,
+          "mode": "contest_cities",
+          "my_army": 993,
+          "my_tiles": 117,
+          "suspected_enemy_city_advantage": true,
+          "turn": 632,
+          "visible_enemy_cities": 0,
+          "visible_my_cities": 4,
+          "visible_turn": 316
+        },
+        {
+          "enemy_army": 276,
+          "enemy_tiles": 29,
+          "mode": "press_attack",
+          "my_army": 1030,
+          "my_tiles": 117,
+          "suspected_enemy_city_advantage": false,
+          "turn": 649,
+          "visible_enemy_cities": 0,
+          "visible_my_cities": 4,
+          "visible_turn": 325
+        },
+        {
+          "enemy_army": 0,
+          "enemy_tiles": 0,
+          "mode": "scout_pressure",
+          "my_army": 3277,
+          "my_tiles": 161,
+          "suspected_enemy_city_advantage": false,
+          "turn": 1215,
+          "visible_enemy_cities": 0,
+          "visible_my_cities": 5,
+          "visible_turn": 608
+        }
+      ],
+      "final_mode": "scout_pressure",
+      "move_count": 1190,
+      "replay_id": "HQpH2L14h",
+      "suspected_enemy_city_advantage": false,
+      "tile_ratio": 161.0,
+      "visible_enemy_cities": 0,
+      "visible_my_cities": 5,
+      "won": true
+    }
+  ],
+  "variant": "expand",
+  "version": 1,
+  "wins": 1
+}

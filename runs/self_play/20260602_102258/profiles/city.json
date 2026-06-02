@@ -1,0 +1,80 @@
+{
+  "games": 1,
+  "learned": {
+    "attack_bias": 0.18,
+    "city_bias": 0.8,
+    "city_focus_delta": -35,
+    "defense_bias": 0.0,
+    "expansion_bias": 0.1,
+    "general_attack_delta": 10,
+    "reserve_delta": 0,
+    "route_bias": 0.34
+  },
+  "losses": 0,
+  "recent_games": [
+    {
+      "army_ratio": 692.0,
+      "events": [
+        {
+          "enemy_army": 1,
+          "enemy_tiles": 1,
+          "mode": "balanced",
+          "my_army": 1,
+          "my_tiles": 1,
+          "suspected_enemy_city_advantage": false,
+          "turn": 1,
+          "visible_enemy_cities": 0,
+          "visible_my_cities": 0,
+          "visible_turn": 1
+        },
+        {
+          "enemy_army": 126,
+          "enemy_tiles": 27,
+          "mode": "contest_cities",
+          "my_army": 130,
+          "my_tiles": 35,
+          "suspected_enemy_city_advantage": true,
+          "turn": 181,
+          "visible_enemy_cities": 0,
+          "visible_my_cities": 0,
+          "visible_turn": 91
+        },
+        {
+          "enemy_army": 161,
+          "enemy_tiles": 20,
+          "mode": "press_attack",
+          "my_army": 647,
+          "my_tiles": 74,
+          "suspected_enemy_city_advantage": false,
+          "turn": 666,
+          "visible_enemy_cities": 0,
+          "visible_my_cities": 1,
+          "visible_turn": 333
+        },
+        {
+          "enemy_army": 0,
+          "enemy_tiles": 0,
+          "mode": "scout_pressure",
+          "my_army": 692,
+          "my_tiles": 95,
+          "suspected_enemy_city_advantage": false,
+          "turn": 752,
+          "visible_enemy_cities": 0,
+          "visible_my_cities": 2,
+          "visible_turn": 376
+        }
+      ],
+      "final_mode": "scout_pressure",
+      "move_count": 734,
+      "replay_id": "INnCZkJjE",
+      "suspected_enemy_city_advantage": false,
+      "tile_ratio": 95.0,
+      "visible_enemy_cities": 0,
+      "visible_my_cities": 2,
+      "won": true
+    }
+  ],
+  "variant": "city",
+  "version": 1,
+  "wins": 1
+}

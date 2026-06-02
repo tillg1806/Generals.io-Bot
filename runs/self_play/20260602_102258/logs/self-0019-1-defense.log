@@ -1,0 +1,1982 @@
+2026-06-02 10:29:05 [self-0019-1-defense] Connected
+2026-06-02 10:29:05 [self-0019-1-defense] Room: https://bot.generals.io/games/TillTestRoom123_self_20260602_102258_0019
+2026-06-02 10:29:05 [self-0019-1-defense] Reserve ab sichtbarem Turn: 275
+2026-06-02 10:29:05 [self-0019-1-defense] City-Fokus ab sichtbarem Turn: 168
+2026-06-02 10:29:05 [self-0019-1-defense] General-Angriff ab sichtbarem Turn: 132
+2026-06-02 10:29:05 [self-0019-1-defense] SET_USERNAME: ['error_set_username', 'You already have a username! Only Supporters can change usernames.']
+2026-06-02 10:29:05 [self-0019-1-defense] JOIN_PRIVATE: ['chat_message', 'chat_custom_queue_TillTestRoom123_self_20260602_102258_0019', {'text': 'T1LL4_Self_08 joined the custom lobby.'}]
+2026-06-02 10:29:05 [self-0019-1-defense] EVENT: ['queue_update', {'playerIndices': [0], 'playerColors': [0], 'lobbyIndex': 0, 'isForcing': False, 'numPlayers': 1, 'numForce': [], 'playerCap': 16, 'teamSize': 1, 'teams': [1], 'usernames': ['T1LL4_Self_08'], 'options': {'map': None, 'modifiers': []}, 'owner': 0, 'bans': [], 'kicks': []}]
+2026-06-02 10:29:05 [self-0019-1-defense] EVENT: ['chat_message', 'chat_custom_queue_TillTestRoom123_self_20260602_102258_0019', {'text': 'T1LL4_Self_08 is the lobby owner.', 'multiText': ['T1LL4_Self_08', ' is the lobby owner.'], 'multiColors': [0, None]}]
+2026-06-02 10:29:05 [self-0019-1-defense] EVENT: ['chat_message', 'chat_custom_queue_TillTestRoom123_self_20260602_102258_0019', {'text': 'T1LL4_Self_07 joined the custom lobby.'}]
+2026-06-02 10:29:05 [self-0019-1-defense] EVENT: ['queue_update', {'playerIndices': [0], 'playerColors': [0], 'lobbyIndex': 0, 'isForcing': False, 'numPlayers': 1, 'numForce': [], 'playerCap': 16, 'teamSize': 1, 'teams': [1], 'usernames': ['T1LL4_Self_08'], 'options': {'map': None, 'modifiers': []}, 'owner': 0, 'bans': [], 'kicks': []}]
+2026-06-02 10:29:05 [self-0019-1-defense] EVENT: ['notify', 'T1LL4_Self_07 joined the custom game', 'There are now 1 players in the lobby.']
+2026-06-02 10:29:05 [self-0019-1-defense] EVENT: ['queue_update', {'playerIndices': [0, 1], 'playerColors': [0, 1], 'lobbyIndex': 0, 'isForcing': False, 'numPlayers': 2, 'numForce': [], 'playerCap': 16, 'teamSize': 1, 'teams': [1, 2], 'usernames': ['T1LL4_Self_08', 'T1LL4_Self_07'], 'options': {'map': None, 'modifiers': []}, 'owner': 0, 'bans': [], 'kicks': []}]
+2026-06-02 10:29:05 [self-0019-1-defense] EVENT: ['queue_update', {'playerIndices': [0, 1], 'playerColors': [0, 1], 'lobbyIndex': 0, 'isForcing': True, 'numPlayers': 2, 'numForce': [0], 'playerCap': 16, 'teamSize': 1, 'teams': [1, 2], 'usernames': ['T1LL4_Self_08', 'T1LL4_Self_07'], 'options': {'map': None, 'modifiers': []}, 'owner': 0, 'bans': [], 'kicks': []}]
+2026-06-02 10:29:05 [self-0019-1-defense] EVENT: ['pre_game_start']
+2026-06-02 10:29:08 [self-0019-1-defense] EVENT: ['game_start', {'playerIndex': 0, 'playerColors': [0, 1], 'replay_id': 'KDPlU7W1c', 'chat_room': 'game_17803889460258WT4EH0OaCkvHnkDAAbx', 'usernames': ['T1LL4_Self_08', 'T1LL4_Self_07'], 'teams': [1, 2], 'game_type': 'custom', 'swamps': [], 'lights': [], 'options': {'map': None, 'width': None, 'height': None, 'game_speed': None, 'modifiers': [], 'mountain_density': None, 'city_density': None, 'lookout_density': None, 'observatory_density': None, 'swamp_density': None, 'desert_density': None, 'max_players': None, 'city_fairness': None, 'spawn_fairness': None, 'defeat_spectate': None, 'spectate_chat': None, 'public': None, 'chatRecordingDisabled': None, 'eventId': None}, 'queue_chat': None}, None]
+2026-06-02 10:29:08 [self-0019-1-defense] GAME START!
+2026-06-02 10:29:08 [self-0019-1-defense] My player index: 0
+2026-06-02 10:29:08 [self-0019-1-defense] Replay: https://bot.generals.io/replays/KDPlU7W1c
+2026-06-02 10:29:08 [self-0019-1-defense] EVENT: ['chat_message', 'game_17803889460258WT4EH0OaCkvHnkDAAbx', {'text': ' Chat is being recorded.'}]
+2026-06-02 10:29:08 [self-0019-1-defense] Enemy general guess: 175 Confidence: 0.38 Grund: rotated spawn, distance 12 near expected 22.55, unseen tile, far from center bei eigener Position 239 Map: 18x23
+2026-06-02 10:29:08 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:08 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:08 [self-0019-1-defense] Visible enemy tiles: 0
+2026-06-02 10:29:08 [self-0019-1-defense] Tiles: 1 / 1
+2026-06-02 10:29:08 [self-0019-1-defense] Map: 18 x 23 Turn: 1
+2026-06-02 10:29:08 [self-0019-1-defense] Route planned: Target = 175 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 327
+2026-06-02 10:29:08 [self-0019-1-defense] Waiting until turn 10: turn 1, general has 1 units
+2026-06-02 10:29:08 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:08 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:08 [self-0019-1-defense] Visible enemy tiles: 0
+2026-06-02 10:29:08 [self-0019-1-defense] Tiles: 1 / 1
+2026-06-02 10:29:08 [self-0019-1-defense] Map: 18 x 23 Turn: 2
+2026-06-02 10:29:08 [self-0019-1-defense] Route planned: Target = 175 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 327
+2026-06-02 10:29:08 [self-0019-1-defense] Waiting until turn 10: turn 1, general has 2 units
+2026-06-02 10:29:09 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:09 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:09 [self-0019-1-defense] Visible enemy tiles: 0
+2026-06-02 10:29:09 [self-0019-1-defense] Tiles: 1 / 1
+2026-06-02 10:29:09 [self-0019-1-defense] Map: 18 x 23 Turn: 3
+2026-06-02 10:29:09 [self-0019-1-defense] Route planned: Target = 175 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 327
+2026-06-02 10:29:09 [self-0019-1-defense] Waiting until turn 10: turn 2, general has 2 units
+2026-06-02 10:29:09 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:09 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:09 [self-0019-1-defense] Visible enemy tiles: 0
+2026-06-02 10:29:09 [self-0019-1-defense] Tiles: 1 / 1
+2026-06-02 10:29:09 [self-0019-1-defense] Map: 18 x 23 Turn: 4
+2026-06-02 10:29:09 [self-0019-1-defense] Route planned: Target = 175 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 327
+2026-06-02 10:29:09 [self-0019-1-defense] Waiting until turn 10: turn 2, general has 3 units
+2026-06-02 10:29:10 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:10 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:10 [self-0019-1-defense] Visible enemy tiles: 0
+2026-06-02 10:29:10 [self-0019-1-defense] Tiles: 1 / 1
+2026-06-02 10:29:10 [self-0019-1-defense] Map: 18 x 23 Turn: 5
+2026-06-02 10:29:10 [self-0019-1-defense] Route planned: Target = 175 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 327
+2026-06-02 10:29:10 [self-0019-1-defense] Waiting until turn 10: turn 3, general has 3 units
+2026-06-02 10:29:10 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:10 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:10 [self-0019-1-defense] Visible enemy tiles: 0
+2026-06-02 10:29:10 [self-0019-1-defense] Tiles: 1 / 1
+2026-06-02 10:29:10 [self-0019-1-defense] Map: 18 x 23 Turn: 6
+2026-06-02 10:29:10 [self-0019-1-defense] Route planned: Target = 175 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 327
+2026-06-02 10:29:10 [self-0019-1-defense] Waiting until turn 10: turn 3, general has 4 units
+2026-06-02 10:29:11 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:11 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:11 [self-0019-1-defense] Visible enemy tiles: 0
+2026-06-02 10:29:11 [self-0019-1-defense] Tiles: 1 / 1
+2026-06-02 10:29:11 [self-0019-1-defense] Map: 18 x 23 Turn: 7
+2026-06-02 10:29:11 [self-0019-1-defense] Route planned: Target = 175 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 327
+2026-06-02 10:29:11 [self-0019-1-defense] Waiting until turn 10: turn 4, general has 4 units
+2026-06-02 10:29:11 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:11 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:11 [self-0019-1-defense] Visible enemy tiles: 0
+2026-06-02 10:29:11 [self-0019-1-defense] Tiles: 1 / 1
+2026-06-02 10:29:11 [self-0019-1-defense] Map: 18 x 23 Turn: 8
+2026-06-02 10:29:11 [self-0019-1-defense] Route planned: Target = 175 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 327
+2026-06-02 10:29:11 [self-0019-1-defense] Waiting until turn 10: turn 4, general has 5 units
+2026-06-02 10:29:12 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:12 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:12 [self-0019-1-defense] Visible enemy tiles: 0
+2026-06-02 10:29:12 [self-0019-1-defense] Tiles: 1 / 1
+2026-06-02 10:29:12 [self-0019-1-defense] Map: 18 x 23 Turn: 9
+2026-06-02 10:29:12 [self-0019-1-defense] Route planned: Target = 175 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 327
+2026-06-02 10:29:12 [self-0019-1-defense] Waiting until turn 10: turn 5, general has 5 units
+2026-06-02 10:29:12 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:12 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:12 [self-0019-1-defense] Visible enemy tiles: 0
+2026-06-02 10:29:12 [self-0019-1-defense] Tiles: 1 / 1
+2026-06-02 10:29:12 [self-0019-1-defense] Map: 18 x 23 Turn: 10
+2026-06-02 10:29:12 [self-0019-1-defense] Route planned: Target = 175 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 327
+2026-06-02 10:29:12 [self-0019-1-defense] Waiting until turn 10: turn 5, general has 6 units
+2026-06-02 10:29:13 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:13 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:13 [self-0019-1-defense] Visible enemy tiles: 0
+2026-06-02 10:29:13 [self-0019-1-defense] Tiles: 1 / 1
+2026-06-02 10:29:13 [self-0019-1-defense] Map: 18 x 23 Turn: 11
+2026-06-02 10:29:13 [self-0019-1-defense] Route planned: Target = 175 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 327
+2026-06-02 10:29:13 [self-0019-1-defense] Waiting until turn 10: turn 6, general has 6 units
+2026-06-02 10:29:13 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:13 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:13 [self-0019-1-defense] Visible enemy tiles: 0
+2026-06-02 10:29:13 [self-0019-1-defense] Tiles: 1 / 1
+2026-06-02 10:29:13 [self-0019-1-defense] Map: 18 x 23 Turn: 12
+2026-06-02 10:29:13 [self-0019-1-defense] Route planned: Target = 175 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 327
+2026-06-02 10:29:13 [self-0019-1-defense] Waiting until turn 10: turn 6, general has 7 units
+2026-06-02 10:29:14 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:14 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:14 [self-0019-1-defense] Visible enemy tiles: 0
+2026-06-02 10:29:14 [self-0019-1-defense] Tiles: 1 / 1
+2026-06-02 10:29:14 [self-0019-1-defense] Map: 18 x 23 Turn: 13
+2026-06-02 10:29:14 [self-0019-1-defense] Route planned: Target = 175 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 327
+2026-06-02 10:29:14 [self-0019-1-defense] Waiting until turn 10: turn 7, general has 7 units
+2026-06-02 10:29:14 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:14 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:14 [self-0019-1-defense] Visible enemy tiles: 0
+2026-06-02 10:29:14 [self-0019-1-defense] Tiles: 1 / 1
+2026-06-02 10:29:14 [self-0019-1-defense] Map: 18 x 23 Turn: 14
+2026-06-02 10:29:14 [self-0019-1-defense] Route planned: Target = 175 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 327
+2026-06-02 10:29:14 [self-0019-1-defense] Waiting until turn 10: turn 7, general has 8 units
+2026-06-02 10:29:15 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:15 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:15 [self-0019-1-defense] Visible enemy tiles: 0
+2026-06-02 10:29:15 [self-0019-1-defense] Tiles: 1 / 1
+2026-06-02 10:29:15 [self-0019-1-defense] Map: 18 x 23 Turn: 15
+2026-06-02 10:29:15 [self-0019-1-defense] Route planned: Target = 175 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 327
+2026-06-02 10:29:15 [self-0019-1-defense] Waiting until turn 10: turn 8, general has 8 units
+2026-06-02 10:29:15 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:15 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:15 [self-0019-1-defense] Visible enemy tiles: 0
+2026-06-02 10:29:15 [self-0019-1-defense] Tiles: 1 / 1
+2026-06-02 10:29:15 [self-0019-1-defense] Map: 18 x 23 Turn: 16
+2026-06-02 10:29:15 [self-0019-1-defense] Route planned: Target = 175 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 327
+2026-06-02 10:29:15 [self-0019-1-defense] Waiting until turn 10: turn 8, general has 9 units
+2026-06-02 10:29:16 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:16 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:16 [self-0019-1-defense] Visible enemy tiles: 0
+2026-06-02 10:29:16 [self-0019-1-defense] Tiles: 1 / 1
+2026-06-02 10:29:16 [self-0019-1-defense] Map: 18 x 23 Turn: 17
+2026-06-02 10:29:16 [self-0019-1-defense] Route planned: Target = 175 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 327
+2026-06-02 10:29:16 [self-0019-1-defense] Waiting until turn 10: turn 9, general has 9 units
+2026-06-02 10:29:16 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:16 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:16 [self-0019-1-defense] Visible enemy tiles: 0
+2026-06-02 10:29:16 [self-0019-1-defense] Tiles: 1 / 1
+2026-06-02 10:29:16 [self-0019-1-defense] Map: 18 x 23 Turn: 18
+2026-06-02 10:29:16 [self-0019-1-defense] Route planned: Target = 175 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 327
+2026-06-02 10:29:16 [self-0019-1-defense] Waiting until turn 10: turn 9, general has 10 units
+2026-06-02 10:29:17 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:17 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:17 [self-0019-1-defense] Visible enemy tiles: 0
+2026-06-02 10:29:17 [self-0019-1-defense] Tiles: 1 / 1
+2026-06-02 10:29:17 [self-0019-1-defense] Map: 18 x 23 Turn: 19
+2026-06-02 10:29:17 [self-0019-1-defense] Route planned: Target = 175 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 327
+2026-06-02 10:29:17 [self-0019-1-defense] Move #1: 239 -> 221 | Army: 10 | Target-Terrain: -1 | Target: 175 | Half: False
+2026-06-02 10:29:17 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:17 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:17 [self-0019-1-defense] Visible enemy tiles: 0
+2026-06-02 10:29:17 [self-0019-1-defense] Tiles: 2 / 2
+2026-06-02 10:29:17 [self-0019-1-defense] Map: 18 x 23 Turn: 20
+2026-06-02 10:29:17 [self-0019-1-defense] Route planned: Target = 175 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 327
+2026-06-02 10:29:17 [self-0019-1-defense] Priority agent: flow +6000 base = 43309 final = 49309
+2026-06-02 10:29:17 [self-0019-1-defense] Move #2: 221 -> 203 | Army: 9 | Target-Terrain: -1 | Target: 175 | Half: False
+2026-06-02 10:29:18 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:18 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:18 [self-0019-1-defense] Visible enemy tiles: 0
+2026-06-02 10:29:18 [self-0019-1-defense] Tiles: 3 / 3
+2026-06-02 10:29:18 [self-0019-1-defense] Map: 18 x 23 Turn: 21
+2026-06-02 10:29:18 [self-0019-1-defense] Route planned: Target = 175 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 327
+2026-06-02 10:29:18 [self-0019-1-defense] Priority agent: flow +6000 base = 43098 final = 49098
+2026-06-02 10:29:18 [self-0019-1-defense] Move #3: 203 -> 204 | Army: 8 | Target-Terrain: -1 | Target: 175 | Half: False
+2026-06-02 10:29:18 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:18 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:18 [self-0019-1-defense] Visible enemy tiles: 0
+2026-06-02 10:29:18 [self-0019-1-defense] Tiles: 4 / 4
+2026-06-02 10:29:18 [self-0019-1-defense] Map: 18 x 23 Turn: 22
+2026-06-02 10:29:18 [self-0019-1-defense] Route planned: Target = 175 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 327
+2026-06-02 10:29:18 [self-0019-1-defense] Priority agent: flow +6000 base = 52987 final = 58987
+2026-06-02 10:29:18 [self-0019-1-defense] Move #4: 204 -> 205 | Army: 7 | Target-Terrain: -1 | Target: 175 | Half: False
+2026-06-02 10:29:19 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:19 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:19 [self-0019-1-defense] Visible enemy tiles: 0
+2026-06-02 10:29:19 [self-0019-1-defense] Tiles: 5 / 5
+2026-06-02 10:29:19 [self-0019-1-defense] Map: 18 x 23 Turn: 23
+2026-06-02 10:29:19 [self-0019-1-defense] Route planned: Target = 175 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 327
+2026-06-02 10:29:19 [self-0019-1-defense] Priority agent: flow +6000 base = 53326 final = 59326
+2026-06-02 10:29:19 [self-0019-1-defense] Move #5: 205 -> 206 | Army: 6 | Target-Terrain: -1 | Target: 175 | Half: False
+2026-06-02 10:29:19 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:19 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:19 [self-0019-1-defense] Visible enemy tiles: 0
+2026-06-02 10:29:19 [self-0019-1-defense] Tiles: 6 / 6
+2026-06-02 10:29:19 [self-0019-1-defense] Map: 18 x 23 Turn: 24
+2026-06-02 10:29:19 [self-0019-1-defense] Route planned: Target = 175 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 327
+2026-06-02 10:29:19 [self-0019-1-defense] Priority agent: flow +6000 base = 53665 final = 59665
+2026-06-02 10:29:19 [self-0019-1-defense] Move #6: 206 -> 207 | Army: 5 | Target-Terrain: -1 | Target: 175 | Half: False
+2026-06-02 10:29:20 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:20 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:20 [self-0019-1-defense] Visible enemy tiles: 0
+2026-06-02 10:29:20 [self-0019-1-defense] Tiles: 7 / 7
+2026-06-02 10:29:20 [self-0019-1-defense] Map: 18 x 23 Turn: 25
+2026-06-02 10:29:20 [self-0019-1-defense] Route planned: Target = 175 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:20 [self-0019-1-defense] Priority agent: flow +6000 base = 54004 final = 60004
+2026-06-02 10:29:20 [self-0019-1-defense] Move #7: 207 -> 208 | Army: 4 | Target-Terrain: -1 | Target: 175 | Half: False
+2026-06-02 10:29:20 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:20 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:20 [self-0019-1-defense] Visible enemy tiles: 0
+2026-06-02 10:29:20 [self-0019-1-defense] Tiles: 8 / 8
+2026-06-02 10:29:20 [self-0019-1-defense] Map: 18 x 23 Turn: 26
+2026-06-02 10:29:20 [self-0019-1-defense] Route planned: Target = 175 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:20 [self-0019-1-defense] Priority agent: flow +6000 base = 54343 final = 60343
+2026-06-02 10:29:20 [self-0019-1-defense] Move #8: 208 -> 209 | Army: 3 | Target-Terrain: -1 | Target: 175 | Half: False
+2026-06-02 10:29:21 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:21 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:21 [self-0019-1-defense] Visible enemy tiles: 0
+2026-06-02 10:29:21 [self-0019-1-defense] Tiles: 9 / 9
+2026-06-02 10:29:21 [self-0019-1-defense] Map: 18 x 23 Turn: 27
+2026-06-02 10:29:21 [self-0019-1-defense] Route planned: Target = 175 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:21 [self-0019-1-defense] Priority agent: flow +6000 base = 52482 final = 58482
+2026-06-02 10:29:21 [self-0019-1-defense] Move #9: 209 -> 210 | Army: 2 | Target-Terrain: -1 | Target: 175 | Half: False
+2026-06-02 10:29:21 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:21 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:21 [self-0019-1-defense] Visible enemy tiles: 1
+2026-06-02 10:29:21 [self-0019-1-defense] Tiles: 10 / 10
+2026-06-02 10:29:21 [self-0019-1-defense] Map: 18 x 23 Turn: 28
+2026-06-02 10:29:21 [self-0019-1-defense] Route planned: Target = 175 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:21 [self-0019-1-defense] Priority agent: edge reuse -18000 base = 29766 final = 11766
+2026-06-02 10:29:21 [self-0019-1-defense] Move #10: 239 -> 221 | Army: 6 | Target-Terrain: 0 | Target: 175 | Half: False
+2026-06-02 10:29:22 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:22 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:22 [self-0019-1-defense] Visible enemy tiles: 1
+2026-06-02 10:29:22 [self-0019-1-defense] Tiles: 10 / 11
+2026-06-02 10:29:22 [self-0019-1-defense] Map: 18 x 23 Turn: 29
+2026-06-02 10:29:22 [self-0019-1-defense] Route planned: Target = 175 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:22 [self-0019-1-defense] Priority agent: flow +6000 base = 12376 final = 18376
+2026-06-02 10:29:22 [self-0019-1-defense] Move #11: 221 -> 220 | Army: 6 | Target-Terrain: -1 | Target: 175 | Half: False
+2026-06-02 10:29:22 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:22 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:22 [self-0019-1-defense] Visible enemy tiles: 1
+2026-06-02 10:29:22 [self-0019-1-defense] Tiles: 11 / 12
+2026-06-02 10:29:22 [self-0019-1-defense] Map: 18 x 23 Turn: 30
+2026-06-02 10:29:22 [self-0019-1-defense] Route planned: Target = 175 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:22 [self-0019-1-defense] Priority agent: flow +6000 base = 42615 final = 48615
+2026-06-02 10:29:22 [self-0019-1-defense] Move #12: 220 -> 202 | Army: 5 | Target-Terrain: -1 | Target: 175 | Half: False
+2026-06-02 10:29:23 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:23 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:23 [self-0019-1-defense] Visible enemy tiles: 1
+2026-06-02 10:29:23 [self-0019-1-defense] Tiles: 12 / 13
+2026-06-02 10:29:23 [self-0019-1-defense] Map: 18 x 23 Turn: 31
+2026-06-02 10:29:23 [self-0019-1-defense] Route planned: Target = 175 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:23 [self-0019-1-defense] Priority agent: fresh target pullback -12000, flow +6000 base = 32054 final = 26054
+2026-06-02 10:29:23 [self-0019-1-defense] Move #13: 202 -> 203 | Army: 4 | Target-Terrain: 0 | Target: 175 | Half: False
+2026-06-02 10:29:23 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:23 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:23 [self-0019-1-defense] Visible enemy tiles: 1
+2026-06-02 10:29:23 [self-0019-1-defense] Tiles: 12 / 14
+2026-06-02 10:29:23 [self-0019-1-defense] Map: 18 x 23 Turn: 32
+2026-06-02 10:29:23 [self-0019-1-defense] Route planned: Target = 175 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:23 [self-0019-1-defense] Priority agent: flow +6000 base = 33664 final = 39664
+2026-06-02 10:29:23 [self-0019-1-defense] Move #14: 203 -> 185 | Army: 4 | Target-Terrain: -1 | Target: 175 | Half: False
+2026-06-02 10:29:24 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:24 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:24 [self-0019-1-defense] Visible enemy tiles: 1
+2026-06-02 10:29:24 [self-0019-1-defense] Tiles: 13 / 15
+2026-06-02 10:29:24 [self-0019-1-defense] Map: 18 x 23 Turn: 33
+2026-06-02 10:29:24 [self-0019-1-defense] Route planned: Target = 175 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:24 [self-0019-1-defense] Priority agent: flow +6000 base = 52203 final = 58203
+2026-06-02 10:29:24 [self-0019-1-defense] Move #15: 185 -> 186 | Army: 3 | Target-Terrain: -1 | Target: 175 | Half: False
+2026-06-02 10:29:24 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:24 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:24 [self-0019-1-defense] Visible enemy tiles: 1
+2026-06-02 10:29:24 [self-0019-1-defense] Tiles: 14 / 15
+2026-06-02 10:29:24 [self-0019-1-defense] Map: 18 x 23 Turn: 34
+2026-06-02 10:29:24 [self-0019-1-defense] Reinforcement waypoint: 209 final target = 175 turns until reinforcement = 16
+2026-06-02 10:29:24 [self-0019-1-defense] Route planned: Target = 209 Mode = reinforcement_waypoint city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:24 [self-0019-1-defense] Priority agent: flow +6000 base = 49252 final = 55252
+2026-06-02 10:29:24 [self-0019-1-defense] Move #16: 186 -> 187 | Army: 2 | Target-Terrain: -1 | Target: 209 | Half: False
+2026-06-02 10:29:25 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:25 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:25 [self-0019-1-defense] Visible enemy tiles: 1
+2026-06-02 10:29:25 [self-0019-1-defense] Tiles: 15 / 16
+2026-06-02 10:29:25 [self-0019-1-defense] Map: 18 x 23 Turn: 35
+2026-06-02 10:29:25 [self-0019-1-defense] Reinforcement waypoint: 206 final target = 175 turns until reinforcement = 15
+2026-06-02 10:29:25 [self-0019-1-defense] Route planned: Target = 206 Mode = reinforcement_waypoint city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:25 [self-0019-1-defense] Priority agent: edge reuse -18000 base = 37394 final = 19394
+2026-06-02 10:29:25 [self-0019-1-defense] Move #17: 239 -> 221 | Army: 4 | Target-Terrain: 0 | Target: 206 | Half: False
+2026-06-02 10:29:25 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:25 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:25 [self-0019-1-defense] Visible enemy tiles: 1
+2026-06-02 10:29:25 [self-0019-1-defense] Tiles: 15 / 16
+2026-06-02 10:29:25 [self-0019-1-defense] Map: 18 x 23 Turn: 36
+2026-06-02 10:29:25 [self-0019-1-defense] Reinforcement waypoint: 206 final target = 175 turns until reinforcement = 14
+2026-06-02 10:29:25 [self-0019-1-defense] Route planned: Target = 206 Mode = reinforcement_waypoint city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:25 [self-0019-1-defense] Priority agent: fresh target pullback -12000, flow +6000 base = 39684 final = 33684
+2026-06-02 10:29:25 [self-0019-1-defense] Move #18: 221 -> 203 | Army: 4 | Target-Terrain: 0 | Target: 206 | Half: False
+2026-06-02 10:29:26 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:26 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:26 [self-0019-1-defense] Visible enemy tiles: 1
+2026-06-02 10:29:26 [self-0019-1-defense] Tiles: 15 / 16
+2026-06-02 10:29:26 [self-0019-1-defense] Map: 18 x 23 Turn: 37
+2026-06-02 10:29:26 [self-0019-1-defense] Reinforcement waypoint: 206 final target = 175 turns until reinforcement = 13
+2026-06-02 10:29:26 [self-0019-1-defense] Route planned: Target = 206 Mode = reinforcement_waypoint city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:26 [self-0019-1-defense] Priority agent: fresh target pullback -12000, flow +6000 base = 39774 final = 33774
+2026-06-02 10:29:26 [self-0019-1-defense] Move #19: 203 -> 204 | Army: 4 | Target-Terrain: 0 | Target: 206 | Half: False
+2026-06-02 10:29:26 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:26 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:26 [self-0019-1-defense] Visible enemy tiles: 1
+2026-06-02 10:29:26 [self-0019-1-defense] Tiles: 15 / 17
+2026-06-02 10:29:26 [self-0019-1-defense] Map: 18 x 23 Turn: 38
+2026-06-02 10:29:26 [self-0019-1-defense] Reinforcement waypoint: 206 final target = 175 turns until reinforcement = 12
+2026-06-02 10:29:26 [self-0019-1-defense] Route planned: Target = 206 Mode = reinforcement_waypoint city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:26 [self-0019-1-defense] Priority agent: fresh target pullback -12000, flow +6000 base = 39864 final = 33864
+2026-06-02 10:29:26 [self-0019-1-defense] Move #20: 204 -> 205 | Army: 4 | Target-Terrain: 0 | Target: 206 | Half: False
+2026-06-02 10:29:27 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:27 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:27 [self-0019-1-defense] Visible enemy tiles: 1
+2026-06-02 10:29:27 [self-0019-1-defense] Tiles: 15 / 17
+2026-06-02 10:29:27 [self-0019-1-defense] Map: 18 x 23 Turn: 39
+2026-06-02 10:29:27 [self-0019-1-defense] Reinforcement waypoint: 206 final target = 175 turns until reinforcement = 11
+2026-06-02 10:29:27 [self-0019-1-defense] Route planned: Target = 206 Mode = reinforcement_waypoint city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:27 [self-0019-1-defense] Priority agent: fresh target pullback -12000, flow +6000 base = 39954 final = 33954
+2026-06-02 10:29:27 [self-0019-1-defense] Move #21: 205 -> 206 | Army: 4 | Target-Terrain: 0 | Target: 206 | Half: False
+2026-06-02 10:29:27 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:27 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:27 [self-0019-1-defense] Visible enemy tiles: 1
+2026-06-02 10:29:27 [self-0019-1-defense] Tiles: 15 / 17
+2026-06-02 10:29:27 [self-0019-1-defense] Map: 18 x 23 Turn: 40
+2026-06-02 10:29:27 [self-0019-1-defense] Reinforcement waypoint: 207 final target = 175 turns until reinforcement = 10
+2026-06-02 10:29:27 [self-0019-1-defense] Route planned: Target = 207 Mode = reinforcement_waypoint city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:27 [self-0019-1-defense] Priority agent: fresh target pullback -12000, flow +6000 base = 39954 final = 33954
+2026-06-02 10:29:27 [self-0019-1-defense] Move #22: 206 -> 207 | Army: 4 | Target-Terrain: 0 | Target: 207 | Half: False
+2026-06-02 10:29:28 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:28 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:28 [self-0019-1-defense] Visible enemy tiles: 1
+2026-06-02 10:29:28 [self-0019-1-defense] Tiles: 15 / 17
+2026-06-02 10:29:28 [self-0019-1-defense] Map: 18 x 23 Turn: 41
+2026-06-02 10:29:28 [self-0019-1-defense] Reinforcement waypoint: 208 final target = 175 turns until reinforcement = 9
+2026-06-02 10:29:28 [self-0019-1-defense] Route planned: Target = 208 Mode = reinforcement_waypoint city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:28 [self-0019-1-defense] Priority agent: fresh target pullback -12000, flow +6000 base = 39954 final = 33954
+2026-06-02 10:29:28 [self-0019-1-defense] Move #23: 207 -> 208 | Army: 4 | Target-Terrain: 0 | Target: 208 | Half: False
+2026-06-02 10:29:28 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:28 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:28 [self-0019-1-defense] Visible enemy tiles: 1
+2026-06-02 10:29:28 [self-0019-1-defense] Tiles: 15 / 18
+2026-06-02 10:29:28 [self-0019-1-defense] Map: 18 x 23 Turn: 42
+2026-06-02 10:29:28 [self-0019-1-defense] Reinforcement waypoint: 209 final target = 175 turns until reinforcement = 8
+2026-06-02 10:29:28 [self-0019-1-defense] Route planned: Target = 209 Mode = reinforcement_waypoint city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:28 [self-0019-1-defense] Priority agent: fresh target pullback -12000, flow +6000 base = 39954 final = 33954
+2026-06-02 10:29:28 [self-0019-1-defense] Move #24: 208 -> 209 | Army: 4 | Target-Terrain: 0 | Target: 209 | Half: False
+2026-06-02 10:29:29 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:29 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:29 [self-0019-1-defense] Visible enemy tiles: 1
+2026-06-02 10:29:29 [self-0019-1-defense] Tiles: 15 / 19
+2026-06-02 10:29:29 [self-0019-1-defense] Map: 18 x 23 Turn: 43
+2026-06-02 10:29:29 [self-0019-1-defense] Reinforcement waypoint: 191 final target = 175 turns until reinforcement = 7
+2026-06-02 10:29:29 [self-0019-1-defense] Route planned: Target = 191 Mode = reinforcement_waypoint city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:29 [self-0019-1-defense] Priority agent: flow +6000 base = 62404 final = 68404
+2026-06-02 10:29:29 [self-0019-1-defense] Move #25: 209 -> 191 | Army: 4 | Target-Terrain: -1 | Target: 191 | Half: False
+2026-06-02 10:29:29 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:29 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:29 [self-0019-1-defense] Visible enemy tiles: 1
+2026-06-02 10:29:29 [self-0019-1-defense] Tiles: 16 / 19
+2026-06-02 10:29:29 [self-0019-1-defense] Map: 18 x 23 Turn: 44
+2026-06-02 10:29:29 [self-0019-1-defense] Reinforcement waypoint: 192 final target = 175 turns until reinforcement = 6
+2026-06-02 10:29:29 [self-0019-1-defense] Route planned: Target = 192 Mode = reinforcement_waypoint city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:29 [self-0019-1-defense] Priority agent: flow +6000 base = 62103 final = 68103
+2026-06-02 10:29:29 [self-0019-1-defense] Move #26: 191 -> 192 | Army: 3 | Target-Terrain: -1 | Target: 192 | Half: False
+2026-06-02 10:29:30 [self-0019-1-defense] Enemy general guess: 140 Confidence: 0.36 Grund: rotated spawn, distance 21 near expected 22.55, unseen tile, far from center bei eigener Position 239 Map: 18x23
+2026-06-02 10:29:30 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:30 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:30 [self-0019-1-defense] Visible enemy tiles: 1
+2026-06-02 10:29:30 [self-0019-1-defense] Tiles: 17 / 19
+2026-06-02 10:29:30 [self-0019-1-defense] Map: 18 x 23 Turn: 45
+2026-06-02 10:29:30 [self-0019-1-defense] Reinforcement waypoint: 193 final target = 175 turns until reinforcement = 5
+2026-06-02 10:29:30 [self-0019-1-defense] Route planned: Target = 193 Mode = reinforcement_waypoint city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:30 [self-0019-1-defense] Priority agent: flow +6000 base = 60502 final = 66502
+2026-06-02 10:29:30 [self-0019-1-defense] Move #27: 192 -> 193 | Army: 2 | Target-Terrain: -1 | Target: 193 | Half: False
+2026-06-02 10:29:30 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:30 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:30 [self-0019-1-defense] Visible enemy tiles: 2
+2026-06-02 10:29:30 [self-0019-1-defense] Tiles: 18 / 19
+2026-06-02 10:29:30 [self-0019-1-defense] Map: 18 x 23 Turn: 46
+2026-06-02 10:29:30 [self-0019-1-defense] Reinforcement waypoint: 221 final target = 211 turns until reinforcement = 4
+2026-06-02 10:29:30 [self-0019-1-defense] Route planned: Target = 221 Mode = reinforcement_waypoint city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:30 [self-0019-1-defense] Priority agent: edge reuse -18000 base = 37757 final = 19757
+2026-06-02 10:29:30 [self-0019-1-defense] Move #28: 239 -> 221 | Army: 7 | Target-Terrain: 0 | Target: 221 | Half: False
+2026-06-02 10:29:31 [self-0019-1-defense] Coach: balanced tiles 18/19 army 24/24 cities 0/0 enemy_city_suspect False bias {'expansion_bias': 0.1, 'city_bias': 0.2, 'attack_bias': -0.1, 'defense_bias': 0.8, 'route_bias': 0.30000000000000004}
+2026-06-02 10:29:31 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:31 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:31 [self-0019-1-defense] Visible enemy tiles: 2
+2026-06-02 10:29:31 [self-0019-1-defense] Tiles: 18 / 19
+2026-06-02 10:29:31 [self-0019-1-defense] Map: 18 x 23 Turn: 47
+2026-06-02 10:29:31 [self-0019-1-defense] Reinforcement waypoint: 203 final target = 211 turns until reinforcement = 3
+2026-06-02 10:29:31 [self-0019-1-defense] Route planned: Target = 203 Mode = reinforcement_waypoint city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:31 [self-0019-1-defense] Priority agent: edge reuse -18000, fresh target pullback -12000, flow +6000 base = 39957 final = 15957
+2026-06-02 10:29:31 [self-0019-1-defense] Move #29: 221 -> 203 | Army: 7 | Target-Terrain: 0 | Target: 203 | Half: False
+2026-06-02 10:29:31 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:31 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:31 [self-0019-1-defense] Visible enemy tiles: 2
+2026-06-02 10:29:31 [self-0019-1-defense] Tiles: 18 / 20
+2026-06-02 10:29:31 [self-0019-1-defense] Map: 18 x 23 Turn: 48
+2026-06-02 10:29:31 [self-0019-1-defense] Reinforcement waypoint: 204 final target = 211 turns until reinforcement = 2
+2026-06-02 10:29:31 [self-0019-1-defense] Route planned: Target = 204 Mode = reinforcement_waypoint city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:31 [self-0019-1-defense] Priority agent: edge reuse -18000, fresh target pullback -12000, flow +6000 base = 39957 final = 15957
+2026-06-02 10:29:31 [self-0019-1-defense] Move #30: 203 -> 204 | Army: 7 | Target-Terrain: 0 | Target: 204 | Half: False
+2026-06-02 10:29:32 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:32 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:32 [self-0019-1-defense] Visible enemy tiles: 2
+2026-06-02 10:29:32 [self-0019-1-defense] Tiles: 18 / 20
+2026-06-02 10:29:32 [self-0019-1-defense] Map: 18 x 23 Turn: 49
+2026-06-02 10:29:32 [self-0019-1-defense] Reinforcement waypoint: 205 final target = 211 turns until reinforcement = 1
+2026-06-02 10:29:32 [self-0019-1-defense] Route planned: Target = 205 Mode = reinforcement_waypoint city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:32 [self-0019-1-defense] Priority agent: edge reuse -18000, fresh target pullback -12000, flow +6000 base = 39957 final = 15957
+2026-06-02 10:29:32 [self-0019-1-defense] Move #31: 204 -> 205 | Army: 7 | Target-Terrain: 0 | Target: 205 | Half: False
+2026-06-02 10:29:32 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:32 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:32 [self-0019-1-defense] Visible enemy tiles: 2
+2026-06-02 10:29:32 [self-0019-1-defense] Tiles: 18 / 20
+2026-06-02 10:29:32 [self-0019-1-defense] Map: 18 x 23 Turn: 50
+2026-06-02 10:29:32 [self-0019-1-defense] Route planned: Target = 211 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:32 [self-0019-1-defense] Move #32: 187 -> 188 | Army: 2 | Target-Terrain: -1 | Target: 211 | Half: False
+2026-06-02 10:29:33 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:33 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:33 [self-0019-1-defense] Visible enemy tiles: 3
+2026-06-02 10:29:33 [self-0019-1-defense] Tiles: 19 / 21
+2026-06-02 10:29:33 [self-0019-1-defense] Map: 18 x 23 Turn: 51
+2026-06-02 10:29:33 [self-0019-1-defense] Route planned: Target = 211 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:33 [self-0019-1-defense] Move #33: 192 -> 210 | Army: 2 | Target-Terrain: 0 | Target: 211 | Half: False
+2026-06-02 10:29:33 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:33 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:33 [self-0019-1-defense] Visible enemy tiles: 3
+2026-06-02 10:29:33 [self-0019-1-defense] Tiles: 19 / 22
+2026-06-02 10:29:33 [self-0019-1-defense] Map: 18 x 23 Turn: 52
+2026-06-02 10:29:33 [self-0019-1-defense] Route planned: Target = 211 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:33 [self-0019-1-defense] Priority agent: flow +6000 base = 29273 final = 35273
+2026-06-02 10:29:33 [self-0019-1-defense] Move #34: 210 -> 228 | Army: 3 | Target-Terrain: -1 | Target: 211 | Half: False
+2026-06-02 10:29:34 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:34 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:34 [self-0019-1-defense] Visible enemy tiles: 3
+2026-06-02 10:29:34 [self-0019-1-defense] Tiles: 20 / 23
+2026-06-02 10:29:34 [self-0019-1-defense] Map: 18 x 23 Turn: 53
+2026-06-02 10:29:34 [self-0019-1-defense] Route planned: Target = 211 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:34 [self-0019-1-defense] Priority agent: flow +6000 base = 26432 final = 32432
+2026-06-02 10:29:34 [self-0019-1-defense] Move #35: 228 -> 246 | Army: 2 | Target-Terrain: -1 | Target: 211 | Half: False
+2026-06-02 10:29:34 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:34 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:34 [self-0019-1-defense] Visible enemy tiles: 3
+2026-06-02 10:29:34 [self-0019-1-defense] Tiles: 21 / 24
+2026-06-02 10:29:34 [self-0019-1-defense] Map: 18 x 23 Turn: 54
+2026-06-02 10:29:34 [self-0019-1-defense] Route planned: Target = 211 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:34 [self-0019-1-defense] Move #36: 205 -> 206 | Army: 8 | Target-Terrain: 0 | Target: 211 | Half: False
+2026-06-02 10:29:35 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:35 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:35 [self-0019-1-defense] Visible enemy tiles: 3
+2026-06-02 10:29:35 [self-0019-1-defense] Tiles: 21 / 25
+2026-06-02 10:29:35 [self-0019-1-defense] Map: 18 x 23 Turn: 55
+2026-06-02 10:29:35 [self-0019-1-defense] Route planned: Target = 211 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:35 [self-0019-1-defense] Priority agent: flow +6000 base = 27919 final = 33919
+2026-06-02 10:29:35 [self-0019-1-defense] Move #37: 206 -> 224 | Army: 9 | Target-Terrain: -1 | Target: 211 | Half: False
+2026-06-02 10:29:35 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:35 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:35 [self-0019-1-defense] Visible enemy tiles: 3
+2026-06-02 10:29:35 [self-0019-1-defense] Tiles: 22 / 26
+2026-06-02 10:29:35 [self-0019-1-defense] Map: 18 x 23 Turn: 56
+2026-06-02 10:29:35 [self-0019-1-defense] Route planned: Target = 211 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:35 [self-0019-1-defense] Priority agent: flow +6000 base = 58408 final = 64408
+2026-06-02 10:29:35 [self-0019-1-defense] Move #38: 224 -> 225 | Army: 8 | Target-Terrain: -1 | Target: 211 | Half: False
+2026-06-02 10:29:36 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:36 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:36 [self-0019-1-defense] Visible enemy tiles: 3
+2026-06-02 10:29:36 [self-0019-1-defense] Tiles: 23 / 27
+2026-06-02 10:29:36 [self-0019-1-defense] Map: 18 x 23 Turn: 57
+2026-06-02 10:29:36 [self-0019-1-defense] Route planned: Target = 211 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:36 [self-0019-1-defense] Priority agent: flow +6000 base = 54047 final = 60047
+2026-06-02 10:29:36 [self-0019-1-defense] Move #39: 225 -> 226 | Army: 7 | Target-Terrain: -1 | Target: 211 | Half: False
+2026-06-02 10:29:36 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:36 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:36 [self-0019-1-defense] Visible enemy tiles: 3
+2026-06-02 10:29:36 [self-0019-1-defense] Tiles: 24 / 28
+2026-06-02 10:29:36 [self-0019-1-defense] Map: 18 x 23 Turn: 58
+2026-06-02 10:29:36 [self-0019-1-defense] Route planned: Target = 211 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:36 [self-0019-1-defense] Priority agent: flow +6000 base = 54086 final = 60086
+2026-06-02 10:29:36 [self-0019-1-defense] Move #40: 226 -> 227 | Army: 6 | Target-Terrain: -1 | Target: 211 | Half: False
+2026-06-02 10:29:37 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:37 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:37 [self-0019-1-defense] Visible enemy tiles: 3
+2026-06-02 10:29:37 [self-0019-1-defense] Tiles: 25 / 29
+2026-06-02 10:29:37 [self-0019-1-defense] Map: 18 x 23 Turn: 59
+2026-06-02 10:29:37 [self-0019-1-defense] Route planned: Target = 211 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:37 [self-0019-1-defense] Move #41: 209 -> 210 | Army: 2 | Target-Terrain: 0 | Target: 211 | Half: False
+2026-06-02 10:29:37 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:37 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:37 [self-0019-1-defense] Visible enemy tiles: 3
+2026-06-02 10:29:37 [self-0019-1-defense] Tiles: 25 / 30
+2026-06-02 10:29:37 [self-0019-1-defense] Map: 18 x 23 Turn: 60
+2026-06-02 10:29:37 [self-0019-1-defense] Route planned: Target = 211 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:37 [self-0019-1-defense] Move #42: 191 -> 192 | Army: 2 | Target-Terrain: 0 | Target: 211 | Half: False
+2026-06-02 10:29:38 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:38 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:38 [self-0019-1-defense] Visible enemy tiles: 3
+2026-06-02 10:29:38 [self-0019-1-defense] Tiles: 25 / 30
+2026-06-02 10:29:38 [self-0019-1-defense] Map: 18 x 23 Turn: 61
+2026-06-02 10:29:38 [self-0019-1-defense] Route planned: Target = 211 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:38 [self-0019-1-defense] Move #43: 208 -> 209 | Army: 2 | Target-Terrain: 0 | Target: 211 | Half: False
+2026-06-02 10:29:38 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:38 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:38 [self-0019-1-defense] Visible enemy tiles: 3
+2026-06-02 10:29:38 [self-0019-1-defense] Tiles: 25 / 30
+2026-06-02 10:29:38 [self-0019-1-defense] Map: 18 x 23 Turn: 62
+2026-06-02 10:29:38 [self-0019-1-defense] Route planned: Target = 211 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:38 [self-0019-1-defense] Move #44: 207 -> 208 | Army: 2 | Target-Terrain: 0 | Target: 211 | Half: False
+2026-06-02 10:29:39 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:39 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:39 [self-0019-1-defense] Visible enemy tiles: 3
+2026-06-02 10:29:39 [self-0019-1-defense] Tiles: 25 / 30
+2026-06-02 10:29:39 [self-0019-1-defense] Map: 18 x 23 Turn: 63
+2026-06-02 10:29:39 [self-0019-1-defense] Route planned: Target = 211 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:39 [self-0019-1-defense] Move #45: 227 -> 209 | Army: 5 | Target-Terrain: 0 | Target: 211 | Half: False
+2026-06-02 10:29:39 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:39 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:39 [self-0019-1-defense] Visible enemy tiles: 3
+2026-06-02 10:29:39 [self-0019-1-defense] Tiles: 25 / 30
+2026-06-02 10:29:39 [self-0019-1-defense] Map: 18 x 23 Turn: 64
+2026-06-02 10:29:39 [self-0019-1-defense] Route planned: Target = 211 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:39 [self-0019-1-defense] Move #46: 204 -> 205 | Army: 2 | Target-Terrain: 0 | Target: 211 | Half: False
+2026-06-02 10:29:40 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:40 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:40 [self-0019-1-defense] Visible enemy tiles: 3
+2026-06-02 10:29:40 [self-0019-1-defense] Tiles: 25 / 30
+2026-06-02 10:29:40 [self-0019-1-defense] Map: 18 x 23 Turn: 65
+2026-06-02 10:29:40 [self-0019-1-defense] Route planned: Target = 211 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:40 [self-0019-1-defense] Move #47: 192 -> 193 | Army: 2 | Target-Terrain: 0 | Target: 211 | Half: False
+2026-06-02 10:29:40 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:40 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:40 [self-0019-1-defense] Visible enemy tiles: 3
+2026-06-02 10:29:40 [self-0019-1-defense] Tiles: 25 / 30
+2026-06-02 10:29:40 [self-0019-1-defense] Map: 18 x 23 Turn: 66
+2026-06-02 10:29:40 [self-0019-1-defense] Route planned: Target = 211 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:40 [self-0019-1-defense] Move #48: 186 -> 187 | Army: 2 | Target-Terrain: 0 | Target: 211 | Half: False
+2026-06-02 10:29:41 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:41 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:41 [self-0019-1-defense] Visible enemy tiles: 3
+2026-06-02 10:29:41 [self-0019-1-defense] Tiles: 25 / 30
+2026-06-02 10:29:41 [self-0019-1-defense] Map: 18 x 23 Turn: 67
+2026-06-02 10:29:41 [self-0019-1-defense] Route planned: Target = 211 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:41 [self-0019-1-defense] Move #49: 203 -> 204 | Army: 2 | Target-Terrain: 0 | Target: 211 | Half: False
+2026-06-02 10:29:41 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:41 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:41 [self-0019-1-defense] Visible enemy tiles: 3
+2026-06-02 10:29:41 [self-0019-1-defense] Tiles: 25 / 30
+2026-06-02 10:29:41 [self-0019-1-defense] Map: 18 x 23 Turn: 68
+2026-06-02 10:29:41 [self-0019-1-defense] Route planned: Target = 211 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:41 [self-0019-1-defense] Move #50: 185 -> 186 | Army: 2 | Target-Terrain: 0 | Target: 211 | Half: False
+2026-06-02 10:29:42 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:42 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:42 [self-0019-1-defense] Visible enemy tiles: 3
+2026-06-02 10:29:42 [self-0019-1-defense] Tiles: 25 / 31
+2026-06-02 10:29:42 [self-0019-1-defense] Map: 18 x 23 Turn: 69
+2026-06-02 10:29:42 [self-0019-1-defense] Route planned: Target = 211 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:42 [self-0019-1-defense] Move #51: 205 -> 206 | Army: 2 | Target-Terrain: 0 | Target: 211 | Half: False
+2026-06-02 10:29:42 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:42 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:42 [self-0019-1-defense] Visible enemy tiles: 3
+2026-06-02 10:29:42 [self-0019-1-defense] Tiles: 25 / 31
+2026-06-02 10:29:42 [self-0019-1-defense] Map: 18 x 23 Turn: 70
+2026-06-02 10:29:42 [self-0019-1-defense] Route planned: Target = 211 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:42 [self-0019-1-defense] Move #52: 202 -> 203 | Army: 2 | Target-Terrain: 0 | Target: 211 | Half: False
+2026-06-02 10:29:43 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:43 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:43 [self-0019-1-defense] Visible enemy tiles: 3
+2026-06-02 10:29:43 [self-0019-1-defense] Tiles: 25 / 31
+2026-06-02 10:29:43 [self-0019-1-defense] Map: 18 x 23 Turn: 71
+2026-06-02 10:29:43 [self-0019-1-defense] Route planned: Target = 211 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:43 [self-0019-1-defense] Move #53: 239 -> 221 | Army: 14 | Target-Terrain: 0 | Target: 211 | Half: False
+2026-06-02 10:29:43 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:43 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:43 [self-0019-1-defense] Visible enemy tiles: 3
+2026-06-02 10:29:43 [self-0019-1-defense] Tiles: 25 / 31
+2026-06-02 10:29:43 [self-0019-1-defense] Map: 18 x 23 Turn: 72
+2026-06-02 10:29:43 [self-0019-1-defense] Route planned: Target = 211 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:43 [self-0019-1-defense] Priority agent: fresh target pullback -12000, flow +6000 base = 36445 final = 30445
+2026-06-02 10:29:43 [self-0019-1-defense] Move #54: 221 -> 203 | Army: 15 | Target-Terrain: 0 | Target: 211 | Half: False
+2026-06-02 10:29:44 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:44 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:44 [self-0019-1-defense] Visible enemy tiles: 3
+2026-06-02 10:29:44 [self-0019-1-defense] Tiles: 25 / 31
+2026-06-02 10:29:44 [self-0019-1-defense] Map: 18 x 23 Turn: 73
+2026-06-02 10:29:44 [self-0019-1-defense] Route planned: Target = 211 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:44 [self-0019-1-defense] Move #55: 187 -> 188 | Army: 2 | Target-Terrain: 0 | Target: 211 | Half: False
+2026-06-02 10:29:44 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:44 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:44 [self-0019-1-defense] Visible enemy tiles: 3
+2026-06-02 10:29:44 [self-0019-1-defense] Tiles: 25 / 31
+2026-06-02 10:29:44 [self-0019-1-defense] Map: 18 x 23 Turn: 74
+2026-06-02 10:29:44 [self-0019-1-defense] Route planned: Target = 211 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:44 [self-0019-1-defense] Priority agent: flow +6000 base = 51502 final = 57502
+2026-06-02 10:29:44 [self-0019-1-defense] Move #56: 188 -> 189 | Army: 2 | Target-Terrain: -1 | Target: 211 | Half: False
+2026-06-02 10:29:45 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:45 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:45 [self-0019-1-defense] Visible enemy tiles: 3
+2026-06-02 10:29:45 [self-0019-1-defense] Tiles: 26 / 31
+2026-06-02 10:29:45 [self-0019-1-defense] Map: 18 x 23 Turn: 75
+2026-06-02 10:29:45 [self-0019-1-defense] Route planned: Target = 211 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:45 [self-0019-1-defense] Move #57: 209 -> 210 | Army: 6 | Target-Terrain: 0 | Target: 211 | Half: False
+2026-06-02 10:29:45 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:45 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:45 [self-0019-1-defense] Visible enemy tiles: 3
+2026-06-02 10:29:45 [self-0019-1-defense] Tiles: 26 / 31
+2026-06-02 10:29:45 [self-0019-1-defense] Map: 18 x 23 Turn: 76
+2026-06-02 10:29:45 [self-0019-1-defense] Route planned: Target = 211 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:45 [self-0019-1-defense] Priority agent: flow +6000 base = 72907 final = 78907
+2026-06-02 10:29:45 [self-0019-1-defense] Move #58: 210 -> 211 | Army: 7 | Target-Terrain: 1 | Target: 211 | Half: False
+2026-06-02 10:29:46 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:46 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:46 [self-0019-1-defense] Visible enemy tiles: 3
+2026-06-02 10:29:46 [self-0019-1-defense] Tiles: 27 / 30
+2026-06-02 10:29:46 [self-0019-1-defense] Map: 18 x 23 Turn: 77
+2026-06-02 10:29:46 [self-0019-1-defense] Route planned: Target = 212 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:46 [self-0019-1-defense] Priority agent: flow +6000 base = 63953 final = 69953
+2026-06-02 10:29:46 [self-0019-1-defense] Move #59: 211 -> 212 | Army: 3 | Target-Terrain: 1 | Target: 212 | Half: False
+2026-06-02 10:29:46 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:46 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:46 [self-0019-1-defense] Visible enemy tiles: 4
+2026-06-02 10:29:46 [self-0019-1-defense] Tiles: 28 / 29
+2026-06-02 10:29:46 [self-0019-1-defense] Map: 18 x 23 Turn: 78
+2026-06-02 10:29:46 [self-0019-1-defense] Route planned: Target = 229 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:46 [self-0019-1-defense] Move #60: 193 -> 211 | Army: 3 | Target-Terrain: 0 | Target: 229 | Half: False
+2026-06-02 10:29:47 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:47 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:47 [self-0019-1-defense] Visible enemy tiles: 4
+2026-06-02 10:29:47 [self-0019-1-defense] Tiles: 28 / 29
+2026-06-02 10:29:47 [self-0019-1-defense] Map: 18 x 23 Turn: 79
+2026-06-02 10:29:47 [self-0019-1-defense] Route planned: Target = 229 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:47 [self-0019-1-defense] Priority agent: flow +6000 base = 63653 final = 69653
+2026-06-02 10:29:47 [self-0019-1-defense] Move #61: 211 -> 229 | Army: 3 | Target-Terrain: 1 | Target: 229 | Half: False
+2026-06-02 10:29:47 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:47 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:47 [self-0019-1-defense] Visible enemy tiles: 4
+2026-06-02 10:29:47 [self-0019-1-defense] Tiles: 29 / 28
+2026-06-02 10:29:47 [self-0019-1-defense] Map: 18 x 23 Turn: 80
+2026-06-02 10:29:47 [self-0019-1-defense] Route planned: Target = 213 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:47 [self-0019-1-defense] Move #62: 208 -> 209 | Army: 2 | Target-Terrain: 0 | Target: 213 | Half: False
+2026-06-02 10:29:48 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:48 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:48 [self-0019-1-defense] Visible enemy tiles: 4
+2026-06-02 10:29:48 [self-0019-1-defense] Tiles: 29 / 28
+2026-06-02 10:29:48 [self-0019-1-defense] Map: 18 x 23 Turn: 81
+2026-06-02 10:29:48 [self-0019-1-defense] Route planned: Target = 213 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:48 [self-0019-1-defense] Move #63: 206 -> 207 | Army: 2 | Target-Terrain: 0 | Target: 213 | Half: False
+2026-06-02 10:29:48 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:48 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:48 [self-0019-1-defense] Visible enemy tiles: 4
+2026-06-02 10:29:48 [self-0019-1-defense] Tiles: 29 / 28
+2026-06-02 10:29:48 [self-0019-1-defense] Map: 18 x 23 Turn: 82
+2026-06-02 10:29:48 [self-0019-1-defense] Route planned: Target = 213 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:48 [self-0019-1-defense] Move #64: 203 -> 204 | Army: 16 | Target-Terrain: 0 | Target: 213 | Half: False
+2026-06-02 10:29:49 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:49 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:49 [self-0019-1-defense] Visible enemy tiles: 4
+2026-06-02 10:29:49 [self-0019-1-defense] Tiles: 29 / 28
+2026-06-02 10:29:49 [self-0019-1-defense] Map: 18 x 23 Turn: 83
+2026-06-02 10:29:49 [self-0019-1-defense] Route planned: Target = 213 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:49 [self-0019-1-defense] Priority agent: fresh target pullback -12000, flow +6000 base = 36447 final = 30447
+2026-06-02 10:29:49 [self-0019-1-defense] Move #65: 204 -> 205 | Army: 17 | Target-Terrain: 0 | Target: 213 | Half: False
+2026-06-02 10:29:49 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:49 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:49 [self-0019-1-defense] Visible enemy tiles: 3
+2026-06-02 10:29:49 [self-0019-1-defense] Tiles: 28 / 29
+2026-06-02 10:29:49 [self-0019-1-defense] Map: 18 x 23 Turn: 84
+2026-06-02 10:29:49 [self-0019-1-defense] Reinforcement waypoint: 213 final target = 213 turns until reinforcement = 16
+2026-06-02 10:29:49 [self-0019-1-defense] Route planned: Target = 213 Mode = reinforcement_waypoint city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:49 [self-0019-1-defense] Priority agent: fresh target pullback -12000, flow +6000 base = 43537 final = 37537
+2026-06-02 10:29:49 [self-0019-1-defense] Move #66: 205 -> 206 | Army: 17 | Target-Terrain: 0 | Target: 213 | Half: False
+2026-06-02 10:29:50 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:50 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:50 [self-0019-1-defense] Visible enemy tiles: 4
+2026-06-02 10:29:50 [self-0019-1-defense] Tiles: 27 / 30
+2026-06-02 10:29:50 [self-0019-1-defense] Map: 18 x 23 Turn: 85
+2026-06-02 10:29:50 [self-0019-1-defense] Reinforcement waypoint: 213 final target = 213 turns until reinforcement = 15
+2026-06-02 10:29:50 [self-0019-1-defense] Route planned: Target = 213 Mode = reinforcement_waypoint city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:50 [self-0019-1-defense] Move #67: 186 -> 187 | Army: 2 | Target-Terrain: 0 | Target: 213 | Half: False
+2026-06-02 10:29:50 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:50 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:50 [self-0019-1-defense] Visible enemy tiles: 5
+2026-06-02 10:29:50 [self-0019-1-defense] Tiles: 26 / 31
+2026-06-02 10:29:50 [self-0019-1-defense] Map: 18 x 23 Turn: 86
+2026-06-02 10:29:50 [self-0019-1-defense] Reinforcement waypoint: 213 final target = 213 turns until reinforcement = 14
+2026-06-02 10:29:50 [self-0019-1-defense] Route planned: Target = 213 Mode = reinforcement_waypoint city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:50 [self-0019-1-defense] Move #68: 207 -> 208 | Army: 2 | Target-Terrain: 0 | Target: 213 | Half: False
+2026-06-02 10:29:51 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:51 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:51 [self-0019-1-defense] Visible enemy tiles: 6
+2026-06-02 10:29:51 [self-0019-1-defense] Tiles: 25 / 32
+2026-06-02 10:29:51 [self-0019-1-defense] Map: 18 x 23 Turn: 87
+2026-06-02 10:29:51 [self-0019-1-defense] Route planned: Target = 207 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:51 [self-0019-1-defense] Priority agent: edge reuse -9000 base = 234867 final = 225867
+2026-06-02 10:29:51 [self-0019-1-defense] Move #69: 206 -> 207 | Army: 17 | Target-Terrain: 0 | Target: 207 | Half: False
+2026-06-02 10:29:51 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:51 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:51 [self-0019-1-defense] Visible enemy tiles: 7
+2026-06-02 10:29:51 [self-0019-1-defense] Tiles: 24 / 33
+2026-06-02 10:29:51 [self-0019-1-defense] Map: 18 x 23 Turn: 88
+2026-06-02 10:29:51 [self-0019-1-defense] Route planned: Target = 207 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:51 [self-0019-1-defense] Priority agent: edge reuse -9000 base = 202452 final = 193452
+2026-06-02 10:29:51 [self-0019-1-defense] Move #70: 208 -> 207 | Army: 2 | Target-Terrain: 0 | Target: 207 | Half: False
+2026-06-02 10:29:52 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:52 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:52 [self-0019-1-defense] Visible enemy tiles: 7
+2026-06-02 10:29:52 [self-0019-1-defense] Tiles: 24 / 33
+2026-06-02 10:29:52 [self-0019-1-defense] Map: 18 x 23 Turn: 89
+2026-06-02 10:29:52 [self-0019-1-defense] Route planned: Target = 207 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:52 [self-0019-1-defense] Move #71: 187 -> 188 | Army: 2 | Target-Terrain: 0 | Target: 207 | Half: False
+2026-06-02 10:29:52 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:52 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:52 [self-0019-1-defense] Visible enemy tiles: 7
+2026-06-02 10:29:52 [self-0019-1-defense] Tiles: 24 / 33
+2026-06-02 10:29:52 [self-0019-1-defense] Map: 18 x 23 Turn: 90
+2026-06-02 10:29:52 [self-0019-1-defense] Route planned: Target = 207 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:52 [self-0019-1-defense] Priority agent: flow +6000 base = 131962 final = 137962
+2026-06-02 10:29:52 [self-0019-1-defense] Move #72: 188 -> 206 | Army: 2 | Target-Terrain: 0 | Target: 207 | Half: False
+2026-06-02 10:29:53 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:53 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:53 [self-0019-1-defense] Visible enemy tiles: 7
+2026-06-02 10:29:53 [self-0019-1-defense] Tiles: 24 / 33
+2026-06-02 10:29:53 [self-0019-1-defense] Map: 18 x 23 Turn: 91
+2026-06-02 10:29:53 [self-0019-1-defense] Route planned: Target = 207 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:53 [self-0019-1-defense] Priority agent: edge reuse -18000, flow +6000 base = 207452 final = 195452
+2026-06-02 10:29:53 [self-0019-1-defense] Move #73: 206 -> 207 | Army: 2 | Target-Terrain: 0 | Target: 207 | Half: False
+2026-06-02 10:29:53 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:53 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:53 [self-0019-1-defense] Visible enemy tiles: 7
+2026-06-02 10:29:53 [self-0019-1-defense] Tiles: 24 / 33
+2026-06-02 10:29:53 [self-0019-1-defense] Map: 18 x 23 Turn: 92
+2026-06-02 10:29:53 [self-0019-1-defense] Route planned: Target = 207 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:53 [self-0019-1-defense] Move #74: 239 -> 221 | Army: 12 | Target-Terrain: 0 | Target: 207 | Half: False
+2026-06-02 10:29:54 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:54 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:54 [self-0019-1-defense] Visible enemy tiles: 7
+2026-06-02 10:29:54 [self-0019-1-defense] Tiles: 24 / 33
+2026-06-02 10:29:54 [self-0019-1-defense] Map: 18 x 23 Turn: 93
+2026-06-02 10:29:54 [self-0019-1-defense] Route planned: Target = 207 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:54 [self-0019-1-defense] Priority agent: flow +6000 base = 134502 final = 140502
+2026-06-02 10:29:54 [self-0019-1-defense] Move #75: 221 -> 203 | Army: 12 | Target-Terrain: 0 | Target: 207 | Half: False
+2026-06-02 10:29:54 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:54 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:54 [self-0019-1-defense] Visible enemy tiles: 7
+2026-06-02 10:29:54 [self-0019-1-defense] Tiles: 24 / 33
+2026-06-02 10:29:54 [self-0019-1-defense] Map: 18 x 23 Turn: 94
+2026-06-02 10:29:54 [self-0019-1-defense] Route planned: Target = 207 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:54 [self-0019-1-defense] Priority agent: edge reuse -9000, flow +6000 base = 134592 final = 131592
+2026-06-02 10:29:54 [self-0019-1-defense] Move #76: 203 -> 204 | Army: 12 | Target-Terrain: 0 | Target: 207 | Half: False
+2026-06-02 10:29:55 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:55 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:55 [self-0019-1-defense] Visible enemy tiles: 7
+2026-06-02 10:29:55 [self-0019-1-defense] Tiles: 24 / 33
+2026-06-02 10:29:55 [self-0019-1-defense] Map: 18 x 23 Turn: 95
+2026-06-02 10:29:55 [self-0019-1-defense] Route planned: Target = 207 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:55 [self-0019-1-defense] Priority agent: edge reuse -9000, flow +6000 base = 134682 final = 131682
+2026-06-02 10:29:55 [self-0019-1-defense] Move #77: 204 -> 205 | Army: 12 | Target-Terrain: 0 | Target: 207 | Half: False
+2026-06-02 10:29:55 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:55 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:55 [self-0019-1-defense] Visible enemy tiles: 7
+2026-06-02 10:29:55 [self-0019-1-defense] Tiles: 24 / 33
+2026-06-02 10:29:55 [self-0019-1-defense] Map: 18 x 23 Turn: 96
+2026-06-02 10:29:55 [self-0019-1-defense] Route planned: Target = 207 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:55 [self-0019-1-defense] Move #78: 220 -> 202 | Army: 2 | Target-Terrain: 0 | Target: 207 | Half: False
+2026-06-02 10:29:56 [self-0019-1-defense] Coach: catch_up_expand tiles 24/33 army 56/58 cities 0/0 enemy_city_suspect False bias {'expansion_bias': 1.3, 'city_bias': 0.2, 'attack_bias': -0.1, 'defense_bias': 0.8, 'route_bias': 0.5}
+2026-06-02 10:29:56 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:56 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:56 [self-0019-1-defense] Visible enemy tiles: 7
+2026-06-02 10:29:56 [self-0019-1-defense] Tiles: 24 / 33
+2026-06-02 10:29:56 [self-0019-1-defense] Map: 18 x 23 Turn: 97
+2026-06-02 10:29:56 [self-0019-1-defense] Route planned: Target = 207 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:56 [self-0019-1-defense] Priority agent: flow +6000 base = 130492 final = 136492
+2026-06-02 10:29:56 [self-0019-1-defense] Move #79: 202 -> 203 | Army: 2 | Target-Terrain: 0 | Target: 207 | Half: False
+2026-06-02 10:29:56 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:56 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:56 [self-0019-1-defense] Visible enemy tiles: 7
+2026-06-02 10:29:56 [self-0019-1-defense] Tiles: 24 / 33
+2026-06-02 10:29:56 [self-0019-1-defense] Map: 18 x 23 Turn: 98
+2026-06-02 10:29:56 [self-0019-1-defense] Route planned: Target = 207 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:56 [self-0019-1-defense] Priority agent: edge reuse -9000, flow +6000 base = 130582 final = 127582
+2026-06-02 10:29:56 [self-0019-1-defense] Move #80: 203 -> 204 | Army: 2 | Target-Terrain: 0 | Target: 207 | Half: False
+2026-06-02 10:29:57 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:57 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:57 [self-0019-1-defense] Visible enemy tiles: 7
+2026-06-02 10:29:57 [self-0019-1-defense] Tiles: 24 / 33
+2026-06-02 10:29:57 [self-0019-1-defense] Map: 18 x 23 Turn: 99
+2026-06-02 10:29:57 [self-0019-1-defense] Route planned: Target = 207 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:57 [self-0019-1-defense] Move #81: 205 -> 206 | Army: 12 | Target-Terrain: 0 | Target: 207 | Half: False
+2026-06-02 10:29:57 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:57 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:57 [self-0019-1-defense] Visible enemy tiles: 8
+2026-06-02 10:29:57 [self-0019-1-defense] Tiles: 24 / 34
+2026-06-02 10:29:57 [self-0019-1-defense] Map: 18 x 23 Turn: 100
+2026-06-02 10:29:57 [self-0019-1-defense] Route planned: Target = 207 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:57 [self-0019-1-defense] Move #82: 225 -> 207 | Army: 2 | Target-Terrain: 0 | Target: 207 | Half: False
+2026-06-02 10:29:58 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:58 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:58 [self-0019-1-defense] Visible enemy tiles: 9
+2026-06-02 10:29:58 [self-0019-1-defense] Tiles: 23 / 35
+2026-06-02 10:29:58 [self-0019-1-defense] Map: 18 x 23 Turn: 101
+2026-06-02 10:29:58 [self-0019-1-defense] Route planned: Target = 207 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:58 [self-0019-1-defense] Move #83: 189 -> 207 | Army: 2 | Target-Terrain: 0 | Target: 207 | Half: False
+2026-06-02 10:29:58 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:58 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:58 [self-0019-1-defense] Visible enemy tiles: 10
+2026-06-02 10:29:58 [self-0019-1-defense] Tiles: 23 / 36
+2026-06-02 10:29:58 [self-0019-1-defense] Map: 18 x 23 Turn: 102
+2026-06-02 10:29:58 [self-0019-1-defense] Route planned: Target = 207 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:58 [self-0019-1-defense] Priority agent: edge reuse -9000 base = 225563 final = 216563
+2026-06-02 10:29:58 [self-0019-1-defense] Move #84: 206 -> 207 | Army: 13 | Target-Terrain: 0 | Target: 207 | Half: False
+2026-06-02 10:29:59 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:59 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:59 [self-0019-1-defense] Visible enemy tiles: 10
+2026-06-02 10:29:59 [self-0019-1-defense] Tiles: 23 / 37
+2026-06-02 10:29:59 [self-0019-1-defense] Map: 18 x 23 Turn: 103
+2026-06-02 10:29:59 [self-0019-1-defense] Route planned: Target = 245 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:59 [self-0019-1-defense] Priority agent: flow +6000 base = 144014 final = 150014
+2026-06-02 10:29:59 [self-0019-1-defense] Move #85: 207 -> 208 | Army: 34 | Target-Terrain: 0 | Target: 245 | Half: False
+2026-06-02 10:29:59 [self-0019-1-defense] My general index: 239
+2026-06-02 10:29:59 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:29:59 [self-0019-1-defense] Visible enemy tiles: 10
+2026-06-02 10:29:59 [self-0019-1-defense] Tiles: 23 / 38
+2026-06-02 10:29:59 [self-0019-1-defense] Map: 18 x 23 Turn: 104
+2026-06-02 10:29:59 [self-0019-1-defense] Route planned: Target = 207 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:29:59 [self-0019-1-defense] Priority agent: reverse -35000, edge reuse -9000 base = 206485 final = 162485
+2026-06-02 10:29:59 [self-0019-1-defense] Move #86: 208 -> 207 | Army: 35 | Target-Terrain: 0 | Target: 207 | Half: False
+2026-06-02 10:30:00 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:00 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:00 [self-0019-1-defense] Visible enemy tiles: 10
+2026-06-02 10:30:00 [self-0019-1-defense] Tiles: 23 / 39
+2026-06-02 10:30:00 [self-0019-1-defense] Map: 18 x 23 Turn: 105
+2026-06-02 10:30:00 [self-0019-1-defense] Route planned: Target = 245 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:00 [self-0019-1-defense] Move #87: 226 -> 244 | Army: 2 | Target-Terrain: -1 | Target: 245 | Half: False
+2026-06-02 10:30:00 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:00 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:00 [self-0019-1-defense] Visible enemy tiles: 10
+2026-06-02 10:30:00 [self-0019-1-defense] Tiles: 24 / 39
+2026-06-02 10:30:00 [self-0019-1-defense] Map: 18 x 23 Turn: 106
+2026-06-02 10:30:00 [self-0019-1-defense] Route planned: Target = 245 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:00 [self-0019-1-defense] Move #88: 205 -> 223 | Army: 2 | Target-Terrain: -1 | Target: 245 | Half: False
+2026-06-02 10:30:01 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:01 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:01 [self-0019-1-defense] Visible enemy tiles: 10
+2026-06-02 10:30:01 [self-0019-1-defense] Tiles: 25 / 39
+2026-06-02 10:30:01 [self-0019-1-defense] Map: 18 x 23 Turn: 107
+2026-06-02 10:30:01 [self-0019-1-defense] Route planned: Target = 245 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:01 [self-0019-1-defense] Move #89: 229 -> 228 | Army: 2 | Target-Terrain: 0 | Target: 245 | Half: False
+2026-06-02 10:30:01 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:01 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:01 [self-0019-1-defense] Visible enemy tiles: 10
+2026-06-02 10:30:01 [self-0019-1-defense] Tiles: 25 / 39
+2026-06-02 10:30:01 [self-0019-1-defense] Map: 18 x 23 Turn: 108
+2026-06-02 10:30:01 [self-0019-1-defense] Route planned: Target = 245 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:01 [self-0019-1-defense] Priority agent: flow +6000 base = 171213 final = 177213
+2026-06-02 10:30:01 [self-0019-1-defense] Move #90: 228 -> 246 | Army: 3 | Target-Terrain: 1 | Target: 245 | Half: False
+2026-06-02 10:30:02 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:02 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:02 [self-0019-1-defense] Visible enemy tiles: 10
+2026-06-02 10:30:02 [self-0019-1-defense] Tiles: 25 / 39
+2026-06-02 10:30:02 [self-0019-1-defense] Map: 18 x 23 Turn: 109
+2026-06-02 10:30:02 [self-0019-1-defense] Route planned: Target = 245 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:02 [self-0019-1-defense] Move #91: 192 -> 191 | Army: 2 | Target-Terrain: 0 | Target: 245 | Half: False
+2026-06-02 10:30:02 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:02 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:02 [self-0019-1-defense] Visible enemy tiles: 10
+2026-06-02 10:30:02 [self-0019-1-defense] Tiles: 25 / 39
+2026-06-02 10:30:02 [self-0019-1-defense] Map: 18 x 23 Turn: 110
+2026-06-02 10:30:02 [self-0019-1-defense] Route planned: Target = 245 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:02 [self-0019-1-defense] Move #92: 224 -> 225 | Army: 2 | Target-Terrain: 0 | Target: 245 | Half: False
+2026-06-02 10:30:03 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:03 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:03 [self-0019-1-defense] Visible enemy tiles: 10
+2026-06-02 10:30:03 [self-0019-1-defense] Tiles: 25 / 39
+2026-06-02 10:30:03 [self-0019-1-defense] Map: 18 x 23 Turn: 111
+2026-06-02 10:30:03 [self-0019-1-defense] Route planned: Target = 245 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:03 [self-0019-1-defense] Priority agent: flow +6000 base = 132872 final = 138872
+2026-06-02 10:30:03 [self-0019-1-defense] Move #93: 225 -> 226 | Army: 2 | Target-Terrain: 0 | Target: 245 | Half: False
+2026-06-02 10:30:03 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:03 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:03 [self-0019-1-defense] Visible enemy tiles: 10
+2026-06-02 10:30:03 [self-0019-1-defense] Tiles: 25 / 39
+2026-06-02 10:30:03 [self-0019-1-defense] Map: 18 x 23 Turn: 112
+2026-06-02 10:30:03 [self-0019-1-defense] Route planned: Target = 245 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:03 [self-0019-1-defense] Move #94: 193 -> 192 | Army: 2 | Target-Terrain: 0 | Target: 245 | Half: False
+2026-06-02 10:30:04 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:04 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:04 [self-0019-1-defense] Visible enemy tiles: 10
+2026-06-02 10:30:04 [self-0019-1-defense] Tiles: 25 / 39
+2026-06-02 10:30:04 [self-0019-1-defense] Map: 18 x 23 Turn: 113
+2026-06-02 10:30:04 [self-0019-1-defense] Route planned: Target = 245 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:04 [self-0019-1-defense] Priority agent: edge reuse -18000 base = 160065 final = 142065
+2026-06-02 10:30:04 [self-0019-1-defense] Move #95: 207 -> 208 | Army: 35 | Target-Terrain: 1 | Target: 245 | Half: False
+2026-06-02 10:30:04 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:04 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:04 [self-0019-1-defense] Visible enemy tiles: 9
+2026-06-02 10:30:04 [self-0019-1-defense] Tiles: 26 / 38
+2026-06-02 10:30:04 [self-0019-1-defense] Map: 18 x 23 Turn: 114
+2026-06-02 10:30:04 [self-0019-1-defense] Route planned: Target = 207 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:04 [self-0019-1-defense] Move #96: 188 -> 189 | Army: 2 | Target-Terrain: 0 | Target: 207 | Half: False
+2026-06-02 10:30:05 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:05 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:05 [self-0019-1-defense] Visible enemy tiles: 9
+2026-06-02 10:30:05 [self-0019-1-defense] Tiles: 26 / 38
+2026-06-02 10:30:05 [self-0019-1-defense] Map: 18 x 23 Turn: 115
+2026-06-02 10:30:05 [self-0019-1-defense] Route planned: Target = 207 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:05 [self-0019-1-defense] Priority agent: edge reuse -9000, flow +6000 base = 222452 final = 219452
+2026-06-02 10:30:05 [self-0019-1-defense] Move #97: 189 -> 207 | Army: 2 | Target-Terrain: 0 | Target: 207 | Half: False
+2026-06-02 10:30:05 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:05 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:05 [self-0019-1-defense] Visible enemy tiles: 9
+2026-06-02 10:30:05 [self-0019-1-defense] Tiles: 26 / 38
+2026-06-02 10:30:05 [self-0019-1-defense] Map: 18 x 23 Turn: 116
+2026-06-02 10:30:05 [self-0019-1-defense] Route planned: Target = 207 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:05 [self-0019-1-defense] Priority agent: edge reuse -27000 base = 188383 final = 161383
+2026-06-02 10:30:05 [self-0019-1-defense] Move #98: 208 -> 207 | Army: 33 | Target-Terrain: 0 | Target: 207 | Half: False
+2026-06-02 10:30:06 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:06 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:06 [self-0019-1-defense] Visible enemy tiles: 9
+2026-06-02 10:30:06 [self-0019-1-defense] Tiles: 26 / 38
+2026-06-02 10:30:06 [self-0019-1-defense] Map: 18 x 23 Turn: 117
+2026-06-02 10:30:06 [self-0019-1-defense] Route planned: Target = 245 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:06 [self-0019-1-defense] Priority agent: flow +6000 base = 134614 final = 140614
+2026-06-02 10:30:06 [self-0019-1-defense] Move #99: 207 -> 225 | Army: 34 | Target-Terrain: 0 | Target: 245 | Half: False
+2026-06-02 10:30:06 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:06 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:06 [self-0019-1-defense] Visible enemy tiles: 9
+2026-06-02 10:30:06 [self-0019-1-defense] Tiles: 26 / 38
+2026-06-02 10:30:06 [self-0019-1-defense] Map: 18 x 23 Turn: 118
+2026-06-02 10:30:06 [self-0019-1-defense] Route planned: Target = 207 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:06 [self-0019-1-defense] Priority agent: reverse -35000, edge reuse -9000 base = 208684 final = 164684
+2026-06-02 10:30:06 [self-0019-1-defense] Move #100: 225 -> 207 | Army: 34 | Target-Terrain: 0 | Target: 207 | Half: False
+2026-06-02 10:30:07 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:07 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:07 [self-0019-1-defense] Visible enemy tiles: 9
+2026-06-02 10:30:07 [self-0019-1-defense] Tiles: 26 / 38
+2026-06-02 10:30:07 [self-0019-1-defense] Map: 18 x 23 Turn: 119
+2026-06-02 10:30:07 [self-0019-1-defense] Route planned: Target = 245 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:07 [self-0019-1-defense] Move #101: 204 -> 205 | Army: 3 | Target-Terrain: 0 | Target: 245 | Half: False
+2026-06-02 10:30:07 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:07 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:07 [self-0019-1-defense] Visible enemy tiles: 9
+2026-06-02 10:30:07 [self-0019-1-defense] Tiles: 26 / 38
+2026-06-02 10:30:07 [self-0019-1-defense] Map: 18 x 23 Turn: 120
+2026-06-02 10:30:07 [self-0019-1-defense] Route planned: Target = 245 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:07 [self-0019-1-defense] Priority agent: flow +6000 base = 136003 final = 142003
+2026-06-02 10:30:07 [self-0019-1-defense] Move #102: 205 -> 206 | Army: 3 | Target-Terrain: 0 | Target: 245 | Half: False
+2026-06-02 10:30:08 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:08 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:08 [self-0019-1-defense] Visible enemy tiles: 9
+2026-06-02 10:30:08 [self-0019-1-defense] Tiles: 26 / 38
+2026-06-02 10:30:08 [self-0019-1-defense] Map: 18 x 23 Turn: 121
+2026-06-02 10:30:08 [self-0019-1-defense] Route planned: Target = 245 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:08 [self-0019-1-defense] Priority agent: flow +6000 base = 132693 final = 138693
+2026-06-02 10:30:08 [self-0019-1-defense] Move #103: 206 -> 224 | Army: 3 | Target-Terrain: 0 | Target: 245 | Half: False
+2026-06-02 10:30:08 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:08 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:08 [self-0019-1-defense] Visible enemy tiles: 9
+2026-06-02 10:30:08 [self-0019-1-defense] Tiles: 26 / 38
+2026-06-02 10:30:08 [self-0019-1-defense] Map: 18 x 23 Turn: 122
+2026-06-02 10:30:08 [self-0019-1-defense] Route planned: Target = 245 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:08 [self-0019-1-defense] Move #104: 187 -> 188 | Army: 2 | Target-Terrain: 0 | Target: 245 | Half: False
+2026-06-02 10:30:09 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:09 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:09 [self-0019-1-defense] Visible enemy tiles: 9
+2026-06-02 10:30:09 [self-0019-1-defense] Tiles: 26 / 38
+2026-06-02 10:30:09 [self-0019-1-defense] Map: 18 x 23 Turn: 123
+2026-06-02 10:30:09 [self-0019-1-defense] Route planned: Target = 245 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:09 [self-0019-1-defense] Priority agent: flow +6000 base = 131602 final = 137602
+2026-06-02 10:30:09 [self-0019-1-defense] Move #105: 188 -> 206 | Army: 2 | Target-Terrain: 0 | Target: 245 | Half: False
+2026-06-02 10:30:09 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:09 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:09 [self-0019-1-defense] Visible enemy tiles: 9
+2026-06-02 10:30:09 [self-0019-1-defense] Tiles: 26 / 38
+2026-06-02 10:30:09 [self-0019-1-defense] Map: 18 x 23 Turn: 124
+2026-06-02 10:30:09 [self-0019-1-defense] Route planned: Target = 245 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:09 [self-0019-1-defense] Move #106: 192 -> 191 | Army: 2 | Target-Terrain: 0 | Target: 245 | Half: False
+2026-06-02 10:30:10 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:10 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:10 [self-0019-1-defense] Visible enemy tiles: 9
+2026-06-02 10:30:10 [self-0019-1-defense] Tiles: 26 / 38
+2026-06-02 10:30:10 [self-0019-1-defense] Map: 18 x 23 Turn: 125
+2026-06-02 10:30:10 [self-0019-1-defense] Route planned: Target = 245 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:10 [self-0019-1-defense] Priority agent: flow +6000 base = 173274 final = 179274
+2026-06-02 10:30:10 [self-0019-1-defense] Move #107: 191 -> 209 | Army: 4 | Target-Terrain: 1 | Target: 245 | Half: False
+2026-06-02 10:30:10 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:10 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:10 [self-0019-1-defense] Visible enemy tiles: 8
+2026-06-02 10:30:10 [self-0019-1-defense] Tiles: 27 / 37
+2026-06-02 10:30:10 [self-0019-1-defense] Map: 18 x 23 Turn: 126
+2026-06-02 10:30:10 [self-0019-1-defense] Route planned: Target = 245 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:10 [self-0019-1-defense] Move #108: 224 -> 225 | Army: 3 | Target-Terrain: 0 | Target: 245 | Half: False
+2026-06-02 10:30:11 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:11 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:11 [self-0019-1-defense] Visible enemy tiles: 8
+2026-06-02 10:30:11 [self-0019-1-defense] Tiles: 27 / 37
+2026-06-02 10:30:11 [self-0019-1-defense] Map: 18 x 23 Turn: 127
+2026-06-02 10:30:11 [self-0019-1-defense] Route planned: Target = 245 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:11 [self-0019-1-defense] Priority agent: flow +6000 base = 135073 final = 141073
+2026-06-02 10:30:11 [self-0019-1-defense] Move #109: 225 -> 226 | Army: 3 | Target-Terrain: 0 | Target: 245 | Half: False
+2026-06-02 10:30:11 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:11 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:11 [self-0019-1-defense] Visible enemy tiles: 8
+2026-06-02 10:30:11 [self-0019-1-defense] Tiles: 27 / 37
+2026-06-02 10:30:11 [self-0019-1-defense] Map: 18 x 23 Turn: 128
+2026-06-02 10:30:11 [self-0019-1-defense] Route planned: Target = 245 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:11 [self-0019-1-defense] Priority agent: flow +6000 base = 167314 final = 173314
+2026-06-02 10:30:11 [self-0019-1-defense] Move #110: 226 -> 227 | Army: 4 | Target-Terrain: 1 | Target: 245 | Half: False
+2026-06-02 10:30:12 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:12 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:12 [self-0019-1-defense] Visible enemy tiles: 7
+2026-06-02 10:30:12 [self-0019-1-defense] Tiles: 28 / 36
+2026-06-02 10:30:12 [self-0019-1-defense] Map: 18 x 23 Turn: 129
+2026-06-02 10:30:12 [self-0019-1-defense] Route planned: Target = 245 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:12 [self-0019-1-defense] Move #111: 186 -> 187 | Army: 2 | Target-Terrain: 0 | Target: 245 | Half: False
+2026-06-02 10:30:12 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:12 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:12 [self-0019-1-defense] Visible enemy tiles: 6
+2026-06-02 10:30:12 [self-0019-1-defense] Tiles: 27 / 37
+2026-06-02 10:30:12 [self-0019-1-defense] Map: 18 x 23 Turn: 130
+2026-06-02 10:30:12 [self-0019-1-defense] Route planned: Target = 245 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:12 [self-0019-1-defense] Priority agent: flow +6000 base = 130312 final = 136312
+2026-06-02 10:30:12 [self-0019-1-defense] Move #112: 187 -> 205 | Army: 2 | Target-Terrain: 0 | Target: 245 | Half: False
+2026-06-02 10:30:13 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:13 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:13 [self-0019-1-defense] Visible enemy tiles: 7
+2026-06-02 10:30:13 [self-0019-1-defense] Tiles: 26 / 38
+2026-06-02 10:30:13 [self-0019-1-defense] Map: 18 x 23 Turn: 131
+2026-06-02 10:30:13 [self-0019-1-defense] Route planned: Target = 245 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:13 [self-0019-1-defense] Move #113: 207 -> 208 | Army: 34 | Target-Terrain: 0 | Target: 245 | Half: False
+2026-06-02 10:30:13 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:13 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:13 [self-0019-1-defense] Visible enemy tiles: 8
+2026-06-02 10:30:13 [self-0019-1-defense] Tiles: 25 / 39
+2026-06-02 10:30:13 [self-0019-1-defense] Map: 18 x 23 Turn: 132
+2026-06-02 10:30:13 [self-0019-1-defense] Route planned: Target = 225 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:13 [self-0019-1-defense] Priority agent: flow +6000 base = 140794 final = 146794
+2026-06-02 10:30:13 [self-0019-1-defense] Move #114: 208 -> 226 | Army: 34 | Target-Terrain: 0 | Target: 225 | Half: False
+2026-06-02 10:30:14 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:14 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:14 [self-0019-1-defense] Visible enemy tiles: 9
+2026-06-02 10:30:14 [self-0019-1-defense] Tiles: 24 / 40
+2026-06-02 10:30:14 [self-0019-1-defense] Map: 18 x 23 Turn: 133
+2026-06-02 10:30:14 [self-0019-1-defense] Route planned: Target = 225 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:14 [self-0019-1-defense] Priority agent: edge reuse -9000, flow +6000 base = 218484 final = 215484
+2026-06-02 10:30:14 [self-0019-1-defense] Move #115: 226 -> 225 | Army: 34 | Target-Terrain: 0 | Target: 225 | Half: False
+2026-06-02 10:30:14 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:14 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:14 [self-0019-1-defense] Visible enemy tiles: 10
+2026-06-02 10:30:14 [self-0019-1-defense] Tiles: 23 / 41
+2026-06-02 10:30:14 [self-0019-1-defense] Map: 18 x 23 Turn: 134
+2026-06-02 10:30:14 [self-0019-1-defense] Route planned: Target = 206 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:14 [self-0019-1-defense] Priority agent: edge reuse -9000 base = 224652 final = 215652
+2026-06-02 10:30:14 [self-0019-1-defense] Move #116: 205 -> 206 | Army: 2 | Target-Terrain: 0 | Target: 206 | Half: False
+2026-06-02 10:30:15 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:15 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:15 [self-0019-1-defense] Visible enemy tiles: 11
+2026-06-02 10:30:15 [self-0019-1-defense] Tiles: 22 / 42
+2026-06-02 10:30:15 [self-0019-1-defense] Map: 18 x 23 Turn: 135
+2026-06-02 10:30:15 [self-0019-1-defense] Route planned: Target = 205 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:15 [self-0019-1-defense] Move #117: 225 -> 207 | Army: 34 | Target-Terrain: 1 | Target: 205 | Half: False
+2026-06-02 10:30:15 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:15 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:15 [self-0019-1-defense] Visible enemy tiles: 10
+2026-06-02 10:30:15 [self-0019-1-defense] Tiles: 23 / 41
+2026-06-02 10:30:15 [self-0019-1-defense] Map: 18 x 23 Turn: 136
+2026-06-02 10:30:15 [self-0019-1-defense] Route planned: Target = 205 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:15 [self-0019-1-defense] Priority agent: edge reuse -9000 base = 214453 final = 205453
+2026-06-02 10:30:15 [self-0019-1-defense] Move #118: 206 -> 205 | Army: 3 | Target-Terrain: 0 | Target: 205 | Half: False
+2026-06-02 10:30:16 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:16 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:16 [self-0019-1-defense] Visible enemy tiles: 10
+2026-06-02 10:30:16 [self-0019-1-defense] Tiles: 23 / 41
+2026-06-02 10:30:16 [self-0019-1-defense] Map: 18 x 23 Turn: 137
+2026-06-02 10:30:16 [self-0019-1-defense] Route planned: Target = 205 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:16 [self-0019-1-defense] Move #119: 203 -> 204 | Army: 2 | Target-Terrain: 0 | Target: 205 | Half: False
+2026-06-02 10:30:16 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:16 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:16 [self-0019-1-defense] Visible enemy tiles: 10
+2026-06-02 10:30:16 [self-0019-1-defense] Tiles: 23 / 41
+2026-06-02 10:30:16 [self-0019-1-defense] Map: 18 x 23 Turn: 138
+2026-06-02 10:30:16 [self-0019-1-defense] Route planned: Target = 205 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:16 [self-0019-1-defense] Priority agent: flow +6000 base = 224652 final = 230652
+2026-06-02 10:30:16 [self-0019-1-defense] Move #120: 204 -> 205 | Army: 2 | Target-Terrain: 0 | Target: 205 | Half: False
+2026-06-02 10:30:17 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:17 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:17 [self-0019-1-defense] Visible enemy tiles: 10
+2026-06-02 10:30:17 [self-0019-1-defense] Tiles: 23 / 41
+2026-06-02 10:30:17 [self-0019-1-defense] Map: 18 x 23 Turn: 139
+2026-06-02 10:30:17 [self-0019-1-defense] Route planned: Target = 205 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:17 [self-0019-1-defense] Move #121: 207 -> 206 | Army: 29 | Target-Terrain: 0 | Target: 205 | Half: False
+2026-06-02 10:30:17 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:17 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:17 [self-0019-1-defense] Visible enemy tiles: 10
+2026-06-02 10:30:17 [self-0019-1-defense] Tiles: 23 / 42
+2026-06-02 10:30:17 [self-0019-1-defense] Map: 18 x 23 Turn: 140
+2026-06-02 10:30:17 [self-0019-1-defense] Route planned: Target = 205 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:17 [self-0019-1-defense] Priority agent: edge reuse -18000, flow +6000 base = 191479 final = 179479
+2026-06-02 10:30:17 [self-0019-1-defense] Move #122: 206 -> 205 | Army: 29 | Target-Terrain: 0 | Target: 205 | Half: False
+2026-06-02 10:30:18 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:18 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:18 [self-0019-1-defense] Visible enemy tiles: 10
+2026-06-02 10:30:18 [self-0019-1-defense] Tiles: 23 / 43
+2026-06-02 10:30:18 [self-0019-1-defense] Map: 18 x 23 Turn: 141
+2026-06-02 10:30:18 [self-0019-1-defense] Route planned: Target = 206 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:18 [self-0019-1-defense] Priority agent: reverse -35000, edge reuse -27000 base = 197282 final = 135282
+2026-06-02 10:30:18 [self-0019-1-defense] Move #123: 205 -> 206 | Army: 32 | Target-Terrain: 0 | Target: 206 | Half: False
+2026-06-02 10:30:18 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:18 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:18 [self-0019-1-defense] Visible enemy tiles: 10
+2026-06-02 10:30:18 [self-0019-1-defense] Tiles: 23 / 43
+2026-06-02 10:30:18 [self-0019-1-defense] Map: 18 x 23 Turn: 142
+2026-06-02 10:30:18 [self-0019-1-defense] Route planned: Target = 205 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:18 [self-0019-1-defense] Move #124: 185 -> 186 | Army: 2 | Target-Terrain: 0 | Target: 205 | Half: False
+2026-06-02 10:30:19 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:19 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:19 [self-0019-1-defense] Visible enemy tiles: 10
+2026-06-02 10:30:19 [self-0019-1-defense] Tiles: 23 / 43
+2026-06-02 10:30:19 [self-0019-1-defense] Map: 18 x 23 Turn: 143
+2026-06-02 10:30:19 [self-0019-1-defense] Route planned: Target = 205 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:19 [self-0019-1-defense] Priority agent: edge reuse -36000 base = 188382 final = 152382
+2026-06-02 10:30:19 [self-0019-1-defense] Move #125: 206 -> 205 | Army: 32 | Target-Terrain: 0 | Target: 205 | Half: False
+2026-06-02 10:30:19 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:19 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:19 [self-0019-1-defense] Visible enemy tiles: 10
+2026-06-02 10:30:19 [self-0019-1-defense] Tiles: 23 / 43
+2026-06-02 10:30:19 [self-0019-1-defense] Map: 18 x 23 Turn: 144
+2026-06-02 10:30:19 [self-0019-1-defense] Route planned: Target = 206 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:19 [self-0019-1-defense] Move #126: 186 -> 187 | Army: 2 | Target-Terrain: 0 | Target: 206 | Half: False
+2026-06-02 10:30:20 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:20 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:20 [self-0019-1-defense] Visible enemy tiles: 10
+2026-06-02 10:30:20 [self-0019-1-defense] Tiles: 23 / 43
+2026-06-02 10:30:20 [self-0019-1-defense] Map: 18 x 23 Turn: 145
+2026-06-02 10:30:20 [self-0019-1-defense] Route planned: Target = 206 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:20 [self-0019-1-defense] Priority agent: edge reuse -45000 base = 194182 final = 149182
+2026-06-02 10:30:20 [self-0019-1-defense] Move #127: 205 -> 206 | Army: 32 | Target-Terrain: 0 | Target: 206 | Half: False
+2026-06-02 10:30:20 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:20 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:20 [self-0019-1-defense] Visible enemy tiles: 10
+2026-06-02 10:30:20 [self-0019-1-defense] Tiles: 23 / 43
+2026-06-02 10:30:20 [self-0019-1-defense] Map: 18 x 23 Turn: 146
+2026-06-02 10:30:20 [self-0019-1-defense] Route planned: Target = 205 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:20 [self-0019-1-defense] Move #128: 187 -> 205 | Army: 2 | Target-Terrain: 0 | Target: 205 | Half: False
+2026-06-02 10:30:21 [self-0019-1-defense] Coach: catch_up_expand tiles 23/43 army 86/98 cities 0/0 enemy_city_suspect False bias {'expansion_bias': 1.3, 'city_bias': 0.2, 'attack_bias': -0.1, 'defense_bias': 0.8, 'route_bias': 0.5}
+2026-06-02 10:30:21 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:21 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:21 [self-0019-1-defense] Visible enemy tiles: 10
+2026-06-02 10:30:21 [self-0019-1-defense] Tiles: 23 / 43
+2026-06-02 10:30:21 [self-0019-1-defense] Map: 18 x 23 Turn: 147
+2026-06-02 10:30:21 [self-0019-1-defense] Route planned: Target = 205 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:21 [self-0019-1-defense] Priority agent: edge reuse -54000 base = 188382 final = 134382
+2026-06-02 10:30:21 [self-0019-1-defense] Move #129: 206 -> 205 | Army: 32 | Target-Terrain: 0 | Target: 205 | Half: False
+2026-06-02 10:30:21 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:21 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:21 [self-0019-1-defense] Visible enemy tiles: 10
+2026-06-02 10:30:21 [self-0019-1-defense] Tiles: 23 / 43
+2026-06-02 10:30:21 [self-0019-1-defense] Map: 18 x 23 Turn: 148
+2026-06-02 10:30:21 [self-0019-1-defense] Route planned: Target = 206 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:21 [self-0019-1-defense] Move #130: 202 -> 203 | Army: 2 | Target-Terrain: 0 | Target: 206 | Half: False
+2026-06-02 10:30:22 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:22 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:22 [self-0019-1-defense] Visible enemy tiles: 10
+2026-06-02 10:30:22 [self-0019-1-defense] Tiles: 23 / 43
+2026-06-02 10:30:22 [self-0019-1-defense] Map: 18 x 23 Turn: 149
+2026-06-02 10:30:22 [self-0019-1-defense] Route planned: Target = 206 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:22 [self-0019-1-defense] Priority agent: edge reuse -54000 base = 194183 final = 140183
+2026-06-02 10:30:22 [self-0019-1-defense] Move #131: 205 -> 206 | Army: 33 | Target-Terrain: 0 | Target: 206 | Half: False
+2026-06-02 10:30:22 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:22 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:22 [self-0019-1-defense] Visible enemy tiles: 10
+2026-06-02 10:30:22 [self-0019-1-defense] Tiles: 23 / 43
+2026-06-02 10:30:22 [self-0019-1-defense] Map: 18 x 23 Turn: 150
+2026-06-02 10:30:22 [self-0019-1-defense] Route planned: Target = 205 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:22 [self-0019-1-defense] Move #132: 223 -> 205 | Army: 2 | Target-Terrain: 0 | Target: 205 | Half: False
+2026-06-02 10:30:23 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:23 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:23 [self-0019-1-defense] Visible enemy tiles: 10
+2026-06-02 10:30:23 [self-0019-1-defense] Tiles: 23 / 44
+2026-06-02 10:30:23 [self-0019-1-defense] Map: 18 x 23 Turn: 151
+2026-06-02 10:30:23 [self-0019-1-defense] Route planned: Target = 205 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:23 [self-0019-1-defense] Priority agent: edge reuse -9000 base = 224652 final = 215652
+2026-06-02 10:30:23 [self-0019-1-defense] Move #133: 204 -> 205 | Army: 2 | Target-Terrain: 0 | Target: 205 | Half: False
+2026-06-02 10:30:23 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:23 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:23 [self-0019-1-defense] Visible enemy tiles: 10
+2026-06-02 10:30:23 [self-0019-1-defense] Tiles: 23 / 45
+2026-06-02 10:30:23 [self-0019-1-defense] Map: 18 x 23 Turn: 152
+2026-06-02 10:30:23 [self-0019-1-defense] Route planned: Target = 205 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:23 [self-0019-1-defense] Priority agent: edge reuse -9000 base = 222452 final = 213452
+2026-06-02 10:30:23 [self-0019-1-defense] Move #134: 187 -> 205 | Army: 2 | Target-Terrain: 0 | Target: 205 | Half: False
+2026-06-02 10:30:24 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:24 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:24 [self-0019-1-defense] Visible enemy tiles: 10
+2026-06-02 10:30:24 [self-0019-1-defense] Tiles: 23 / 46
+2026-06-02 10:30:24 [self-0019-1-defense] Map: 18 x 23 Turn: 153
+2026-06-02 10:30:24 [self-0019-1-defense] Route planned: Target = 205 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:24 [self-0019-1-defense] Move #135: 225 -> 207 | Army: 2 | Target-Terrain: 0 | Target: 205 | Half: False
+2026-06-02 10:30:24 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:24 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:24 [self-0019-1-defense] Visible enemy tiles: 10
+2026-06-02 10:30:24 [self-0019-1-defense] Tiles: 23 / 46
+2026-06-02 10:30:24 [self-0019-1-defense] Map: 18 x 23 Turn: 154
+2026-06-02 10:30:24 [self-0019-1-defense] Route planned: Target = 205 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:24 [self-0019-1-defense] Move #136: 244 -> 226 | Army: 2 | Target-Terrain: 0 | Target: 205 | Half: False
+2026-06-02 10:30:25 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:25 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:25 [self-0019-1-defense] Visible enemy tiles: 10
+2026-06-02 10:30:25 [self-0019-1-defense] Tiles: 23 / 46
+2026-06-02 10:30:25 [self-0019-1-defense] Map: 18 x 23 Turn: 155
+2026-06-02 10:30:25 [self-0019-1-defense] Route planned: Target = 205 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:25 [self-0019-1-defense] Priority agent: edge reuse -45000 base = 188384 final = 143384
+2026-06-02 10:30:25 [self-0019-1-defense] Move #137: 206 -> 205 | Army: 34 | Target-Terrain: 0 | Target: 205 | Half: False
+2026-06-02 10:30:25 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:25 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:25 [self-0019-1-defense] Visible enemy tiles: 10
+2026-06-02 10:30:25 [self-0019-1-defense] Tiles: 23 / 46
+2026-06-02 10:30:25 [self-0019-1-defense] Map: 18 x 23 Turn: 156
+2026-06-02 10:30:25 [self-0019-1-defense] Route planned: Target = 206 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:25 [self-0019-1-defense] Move #138: 224 -> 206 | Army: 2 | Target-Terrain: 0 | Target: 206 | Half: False
+2026-06-02 10:30:26 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:26 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:26 [self-0019-1-defense] Visible enemy tiles: 10
+2026-06-02 10:30:26 [self-0019-1-defense] Tiles: 23 / 46
+2026-06-02 10:30:26 [self-0019-1-defense] Map: 18 x 23 Turn: 157
+2026-06-02 10:30:26 [self-0019-1-defense] Route planned: Target = 206 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:26 [self-0019-1-defense] Move #139: 207 -> 206 | Army: 3 | Target-Terrain: 0 | Target: 206 | Half: False
+2026-06-02 10:30:26 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:26 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:26 [self-0019-1-defense] Visible enemy tiles: 11
+2026-06-02 10:30:26 [self-0019-1-defense] Tiles: 22 / 47
+2026-06-02 10:30:26 [self-0019-1-defense] Map: 18 x 23 Turn: 158
+2026-06-02 10:30:26 [self-0019-1-defense] Route planned: Target = 206 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:26 [self-0019-1-defense] Move #140: 188 -> 206 | Army: 2 | Target-Terrain: 0 | Target: 206 | Half: False
+2026-06-02 10:30:27 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:27 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:27 [self-0019-1-defense] Visible enemy tiles: 12
+2026-06-02 10:30:27 [self-0019-1-defense] Tiles: 21 / 48
+2026-06-02 10:30:27 [self-0019-1-defense] Map: 18 x 23 Turn: 159
+2026-06-02 10:30:27 [self-0019-1-defense] Route planned: Target = 206 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:27 [self-0019-1-defense] Move #141: 226 -> 208 | Army: 3 | Target-Terrain: 1 | Target: 206 | Half: False
+2026-06-02 10:30:27 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:27 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:27 [self-0019-1-defense] Visible enemy tiles: 11
+2026-06-02 10:30:27 [self-0019-1-defense] Tiles: 22 / 47
+2026-06-02 10:30:27 [self-0019-1-defense] Map: 18 x 23 Turn: 160
+2026-06-02 10:30:27 [self-0019-1-defense] Route planned: Target = 206 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:27 [self-0019-1-defense] Priority agent: edge reuse -27000 base = 195388 final = 168388
+2026-06-02 10:30:27 [self-0019-1-defense] Move #142: 205 -> 206 | Army: 38 | Target-Terrain: 0 | Target: 206 | Half: False
+2026-06-02 10:30:28 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:28 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:28 [self-0019-1-defense] Visible enemy tiles: 11
+2026-06-02 10:30:28 [self-0019-1-defense] Tiles: 22 / 47
+2026-06-02 10:30:28 [self-0019-1-defense] Map: 18 x 23 Turn: 161
+2026-06-02 10:30:28 [self-0019-1-defense] Route planned: Target = 205 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:28 [self-0019-1-defense] Move #143: 203 -> 204 | Army: 3 | Target-Terrain: 0 | Target: 205 | Half: False
+2026-06-02 10:30:28 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:28 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:28 [self-0019-1-defense] Visible enemy tiles: 11
+2026-06-02 10:30:28 [self-0019-1-defense] Tiles: 22 / 47
+2026-06-02 10:30:28 [self-0019-1-defense] Map: 18 x 23 Turn: 162
+2026-06-02 10:30:28 [self-0019-1-defense] Route planned: Target = 205 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:28 [self-0019-1-defense] Priority agent: edge reuse -9000, flow +6000 base = 226853 final = 223853
+2026-06-02 10:30:28 [self-0019-1-defense] Move #144: 204 -> 205 | Army: 3 | Target-Terrain: 0 | Target: 205 | Half: False
+2026-06-02 10:30:29 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:29 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:29 [self-0019-1-defense] Visible enemy tiles: 11
+2026-06-02 10:30:29 [self-0019-1-defense] Tiles: 22 / 47
+2026-06-02 10:30:29 [self-0019-1-defense] Map: 18 x 23 Turn: 163
+2026-06-02 10:30:29 [self-0019-1-defense] Route planned: Target = 205 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:29 [self-0019-1-defense] Priority agent: edge reuse -27000 base = 188392 final = 161392
+2026-06-02 10:30:29 [self-0019-1-defense] Move #145: 206 -> 205 | Army: 42 | Target-Terrain: 0 | Target: 205 | Half: False
+2026-06-02 10:30:29 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:29 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:29 [self-0019-1-defense] Visible enemy tiles: 11
+2026-06-02 10:30:29 [self-0019-1-defense] Tiles: 22 / 47
+2026-06-02 10:30:29 [self-0019-1-defense] Map: 18 x 23 Turn: 164
+2026-06-02 10:30:29 [self-0019-1-defense] Route planned: Target = 206 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:29 [self-0019-1-defense] Priority agent: reverse -35000, edge reuse -27000 base = 198494 final = 136494
+2026-06-02 10:30:29 [self-0019-1-defense] Move #146: 205 -> 206 | Army: 44 | Target-Terrain: 0 | Target: 206 | Half: False
+2026-06-02 10:30:30 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:30 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:30 [self-0019-1-defense] Visible enemy tiles: 11
+2026-06-02 10:30:30 [self-0019-1-defense] Tiles: 22 / 47
+2026-06-02 10:30:30 [self-0019-1-defense] Map: 18 x 23 Turn: 165
+2026-06-02 10:30:30 [self-0019-1-defense] Route planned: Target = 205 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:30 [self-0019-1-defense] Move #147: 186 -> 187 | Army: 2 | Target-Terrain: 0 | Target: 205 | Half: False
+2026-06-02 10:30:30 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:30 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:30 [self-0019-1-defense] Visible enemy tiles: 11
+2026-06-02 10:30:30 [self-0019-1-defense] Tiles: 22 / 47
+2026-06-02 10:30:30 [self-0019-1-defense] Map: 18 x 23 Turn: 166
+2026-06-02 10:30:30 [self-0019-1-defense] Route planned: Target = 205 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:30 [self-0019-1-defense] Priority agent: edge reuse -9000, flow +6000 base = 222452 final = 219452
+2026-06-02 10:30:30 [self-0019-1-defense] Move #148: 187 -> 205 | Army: 2 | Target-Terrain: 0 | Target: 205 | Half: False
+2026-06-02 10:30:31 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:31 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:31 [self-0019-1-defense] Visible enemy tiles: 11
+2026-06-02 10:30:31 [self-0019-1-defense] Tiles: 22 / 47
+2026-06-02 10:30:31 [self-0019-1-defense] Map: 18 x 23 Turn: 167
+2026-06-02 10:30:31 [self-0019-1-defense] Route planned: Target = 205 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:31 [self-0019-1-defense] Priority agent: edge reuse -36000 base = 188394 final = 152394
+2026-06-02 10:30:31 [self-0019-1-defense] Move #149: 206 -> 205 | Army: 44 | Target-Terrain: 0 | Target: 205 | Half: False
+2026-06-02 10:30:31 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:31 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:31 [self-0019-1-defense] Visible enemy tiles: 11
+2026-06-02 10:30:31 [self-0019-1-defense] Tiles: 22 / 47
+2026-06-02 10:30:31 [self-0019-1-defense] Map: 18 x 23 Turn: 168
+2026-06-02 10:30:31 [self-0019-1-defense] Route planned: Target = 206 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:31 [self-0019-1-defense] Move #150: 221 -> 203 | Army: 3 | Target-Terrain: 0 | Target: 206 | Half: False
+2026-06-02 10:30:32 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:32 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:32 [self-0019-1-defense] Visible enemy tiles: 11
+2026-06-02 10:30:32 [self-0019-1-defense] Tiles: 22 / 47
+2026-06-02 10:30:32 [self-0019-1-defense] Map: 18 x 23 Turn: 169
+2026-06-02 10:30:32 [self-0019-1-defense] Route planned: Target = 206 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:32 [self-0019-1-defense] Priority agent: edge reuse -45000 base = 195395 final = 150395
+2026-06-02 10:30:32 [self-0019-1-defense] Move #151: 205 -> 206 | Army: 45 | Target-Terrain: 0 | Target: 206 | Half: False
+2026-06-02 10:30:32 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:32 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:32 [self-0019-1-defense] Visible enemy tiles: 11
+2026-06-02 10:30:32 [self-0019-1-defense] Tiles: 22 / 47
+2026-06-02 10:30:32 [self-0019-1-defense] Map: 18 x 23 Turn: 170
+2026-06-02 10:30:32 [self-0019-1-defense] Route planned: Target = 205 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:32 [self-0019-1-defense] Move #152: 185 -> 186 | Army: 2 | Target-Terrain: 0 | Target: 205 | Half: False
+2026-06-02 10:30:33 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:33 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:33 [self-0019-1-defense] Visible enemy tiles: 11
+2026-06-02 10:30:33 [self-0019-1-defense] Tiles: 22 / 47
+2026-06-02 10:30:33 [self-0019-1-defense] Map: 18 x 23 Turn: 171
+2026-06-02 10:30:33 [self-0019-1-defense] Route planned: Target = 205 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:33 [self-0019-1-defense] Priority agent: edge reuse -45000 base = 188395 final = 143395
+2026-06-02 10:30:33 [self-0019-1-defense] Move #153: 206 -> 205 | Army: 45 | Target-Terrain: 0 | Target: 205 | Half: False
+2026-06-02 10:30:33 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:33 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:33 [self-0019-1-defense] Visible enemy tiles: 11
+2026-06-02 10:30:33 [self-0019-1-defense] Tiles: 22 / 47
+2026-06-02 10:30:33 [self-0019-1-defense] Map: 18 x 23 Turn: 172
+2026-06-02 10:30:33 [self-0019-1-defense] Route planned: Target = 206 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:33 [self-0019-1-defense] Move #154: 202 -> 203 | Army: 2 | Target-Terrain: 0 | Target: 206 | Half: False
+2026-06-02 10:30:34 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:34 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:34 [self-0019-1-defense] Visible enemy tiles: 12
+2026-06-02 10:30:34 [self-0019-1-defense] Tiles: 21 / 48
+2026-06-02 10:30:34 [self-0019-1-defense] Map: 18 x 23 Turn: 173
+2026-06-02 10:30:34 [self-0019-1-defense] Route planned: Target = 206 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:34 [self-0019-1-defense] Priority agent: edge reuse -54000 base = 195395 final = 141395
+2026-06-02 10:30:34 [self-0019-1-defense] Move #155: 205 -> 206 | Army: 45 | Target-Terrain: 0 | Target: 206 | Half: False
+2026-06-02 10:30:34 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:34 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:34 [self-0019-1-defense] Visible enemy tiles: 12
+2026-06-02 10:30:34 [self-0019-1-defense] Tiles: 21 / 48
+2026-06-02 10:30:34 [self-0019-1-defense] Map: 18 x 23 Turn: 174
+2026-06-02 10:30:34 [self-0019-1-defense] Route planned: Target = 205 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:34 [self-0019-1-defense] Move #156: 220 -> 202 | Army: 3 | Target-Terrain: 0 | Target: 205 | Half: False
+2026-06-02 10:30:35 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:35 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:35 [self-0019-1-defense] Visible enemy tiles: 12
+2026-06-02 10:30:35 [self-0019-1-defense] Tiles: 21 / 48
+2026-06-02 10:30:35 [self-0019-1-defense] Map: 18 x 23 Turn: 175
+2026-06-02 10:30:35 [self-0019-1-defense] Route planned: Target = 205 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:35 [self-0019-1-defense] Priority agent: edge reuse -54000 base = 188395 final = 134395
+2026-06-02 10:30:35 [self-0019-1-defense] Move #157: 206 -> 205 | Army: 45 | Target-Terrain: 0 | Target: 205 | Half: False
+2026-06-02 10:30:35 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:35 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:35 [self-0019-1-defense] Visible enemy tiles: 12
+2026-06-02 10:30:35 [self-0019-1-defense] Tiles: 21 / 48
+2026-06-02 10:30:35 [self-0019-1-defense] Map: 18 x 23 Turn: 176
+2026-06-02 10:30:35 [self-0019-1-defense] Route planned: Target = 206 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:35 [self-0019-1-defense] Move #158: 203 -> 204 | Army: 4 | Target-Terrain: 0 | Target: 206 | Half: False
+2026-06-02 10:30:36 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:36 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:36 [self-0019-1-defense] Visible enemy tiles: 12
+2026-06-02 10:30:36 [self-0019-1-defense] Tiles: 21 / 48
+2026-06-02 10:30:36 [self-0019-1-defense] Map: 18 x 23 Turn: 177
+2026-06-02 10:30:36 [self-0019-1-defense] Route planned: Target = 206 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:36 [self-0019-1-defense] Priority agent: flow +6000 base = 126764 final = 132764
+2026-06-02 10:30:36 [self-0019-1-defense] Move #159: 204 -> 205 | Army: 4 | Target-Terrain: 0 | Target: 206 | Half: False
+2026-06-02 10:30:36 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:36 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:36 [self-0019-1-defense] Visible enemy tiles: 12
+2026-06-02 10:30:36 [self-0019-1-defense] Tiles: 21 / 48
+2026-06-02 10:30:36 [self-0019-1-defense] Map: 18 x 23 Turn: 178
+2026-06-02 10:30:36 [self-0019-1-defense] Route planned: Target = 206 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:36 [self-0019-1-defense] Priority agent: edge reuse -54000, flow +6000 base = 198498 final = 150498
+2026-06-02 10:30:36 [self-0019-1-defense] Move #160: 205 -> 206 | Army: 48 | Target-Terrain: 0 | Target: 206 | Half: False
+2026-06-02 10:30:37 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:37 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:37 [self-0019-1-defense] Visible enemy tiles: 12
+2026-06-02 10:30:37 [self-0019-1-defense] Tiles: 20 / 49
+2026-06-02 10:30:37 [self-0019-1-defense] Map: 18 x 23 Turn: 179
+2026-06-02 10:30:37 [self-0019-1-defense] Route planned: Target = 205 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:37 [self-0019-1-defense] Move #161: 186 -> 204 | Army: 2 | Target-Terrain: 0 | Target: 205 | Half: False
+2026-06-02 10:30:37 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:37 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:37 [self-0019-1-defense] Visible enemy tiles: 12
+2026-06-02 10:30:37 [self-0019-1-defense] Tiles: 20 / 49
+2026-06-02 10:30:37 [self-0019-1-defense] Map: 18 x 23 Turn: 180
+2026-06-02 10:30:37 [self-0019-1-defense] Route planned: Target = 205 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:37 [self-0019-1-defense] Priority agent: edge reuse -9000, flow +6000 base = 224652 final = 221652
+2026-06-02 10:30:37 [self-0019-1-defense] Move #162: 204 -> 205 | Army: 2 | Target-Terrain: 0 | Target: 205 | Half: False
+2026-06-02 10:30:38 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:38 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:38 [self-0019-1-defense] Visible enemy tiles: 12
+2026-06-02 10:30:38 [self-0019-1-defense] Tiles: 20 / 49
+2026-06-02 10:30:38 [self-0019-1-defense] Map: 18 x 23 Turn: 181
+2026-06-02 10:30:38 [self-0019-1-defense] Route planned: Target = 205 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:38 [self-0019-1-defense] Priority agent: edge reuse -54000 base = 188398 final = 134398
+2026-06-02 10:30:38 [self-0019-1-defense] Move #163: 206 -> 205 | Army: 48 | Target-Terrain: 0 | Target: 205 | Half: False
+2026-06-02 10:30:38 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:38 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:38 [self-0019-1-defense] Visible enemy tiles: 12
+2026-06-02 10:30:38 [self-0019-1-defense] Tiles: 20 / 49
+2026-06-02 10:30:38 [self-0019-1-defense] Map: 18 x 23 Turn: 182
+2026-06-02 10:30:38 [self-0019-1-defense] Route planned: Target = 206 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:38 [self-0019-1-defense] Move #164: 189 -> 188 | Army: 2 | Target-Terrain: 0 | Target: 206 | Half: False
+2026-06-02 10:30:39 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:39 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:39 [self-0019-1-defense] Visible enemy tiles: 12
+2026-06-02 10:30:39 [self-0019-1-defense] Tiles: 20 / 49
+2026-06-02 10:30:39 [self-0019-1-defense] Map: 18 x 23 Turn: 183
+2026-06-02 10:30:39 [self-0019-1-defense] Route planned: Target = 206 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:39 [self-0019-1-defense] Priority agent: flow +6000 base = 227252 final = 233252
+2026-06-02 10:30:39 [self-0019-1-defense] Move #165: 188 -> 206 | Army: 2 | Target-Terrain: 0 | Target: 206 | Half: False
+2026-06-02 10:30:39 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:39 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:39 [self-0019-1-defense] Visible enemy tiles: 12
+2026-06-02 10:30:39 [self-0019-1-defense] Tiles: 20 / 49
+2026-06-02 10:30:39 [self-0019-1-defense] Map: 18 x 23 Turn: 184
+2026-06-02 10:30:39 [self-0019-1-defense] Route planned: Target = 206 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:39 [self-0019-1-defense] Priority agent: edge reuse -45000 base = 195399 final = 150399
+2026-06-02 10:30:39 [self-0019-1-defense] Move #166: 205 -> 206 | Army: 49 | Target-Terrain: 0 | Target: 206 | Half: False
+2026-06-02 10:30:40 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:40 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:40 [self-0019-1-defense] Visible enemy tiles: 12
+2026-06-02 10:30:40 [self-0019-1-defense] Tiles: 20 / 49
+2026-06-02 10:30:40 [self-0019-1-defense] Map: 18 x 23 Turn: 185
+2026-06-02 10:30:40 [self-0019-1-defense] Route planned: Target = 205 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:40 [self-0019-1-defense] Priority agent: edge reuse -9000 base = 132873 final = 123873
+2026-06-02 10:30:40 [self-0019-1-defense] Move #167: 202 -> 203 | Army: 3 | Target-Terrain: 0 | Target: 205 | Half: False
+2026-06-02 10:30:40 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:40 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:40 [self-0019-1-defense] Visible enemy tiles: 12
+2026-06-02 10:30:40 [self-0019-1-defense] Tiles: 20 / 49
+2026-06-02 10:30:40 [self-0019-1-defense] Map: 18 x 23 Turn: 186
+2026-06-02 10:30:40 [self-0019-1-defense] Route planned: Target = 205 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:40 [self-0019-1-defense] Priority agent: edge reuse -45000 base = 188400 final = 143400
+2026-06-02 10:30:40 [self-0019-1-defense] Move #168: 206 -> 205 | Army: 50 | Target-Terrain: 0 | Target: 205 | Half: False
+2026-06-02 10:30:41 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:41 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:41 [self-0019-1-defense] Visible enemy tiles: 12
+2026-06-02 10:30:41 [self-0019-1-defense] Tiles: 20 / 49
+2026-06-02 10:30:41 [self-0019-1-defense] Map: 18 x 23 Turn: 187
+2026-06-02 10:30:41 [self-0019-1-defense] Route planned: Target = 206 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:41 [self-0019-1-defense] Priority agent: edge reuse -9000 base = 122073 final = 113073
+2026-06-02 10:30:41 [self-0019-1-defense] Move #169: 203 -> 204 | Army: 3 | Target-Terrain: 0 | Target: 206 | Half: False
+2026-06-02 10:30:41 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:41 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:41 [self-0019-1-defense] Visible enemy tiles: 12
+2026-06-02 10:30:41 [self-0019-1-defense] Tiles: 20 / 49
+2026-06-02 10:30:41 [self-0019-1-defense] Map: 18 x 23 Turn: 188
+2026-06-02 10:30:41 [self-0019-1-defense] Route planned: Target = 206 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:41 [self-0019-1-defense] Priority agent: edge reuse -45000 base = 195400 final = 150400
+2026-06-02 10:30:41 [self-0019-1-defense] Move #170: 205 -> 206 | Army: 50 | Target-Terrain: 0 | Target: 206 | Half: False
+2026-06-02 10:30:42 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:42 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:42 [self-0019-1-defense] Visible enemy tiles: 12
+2026-06-02 10:30:42 [self-0019-1-defense] Tiles: 20 / 49
+2026-06-02 10:30:42 [self-0019-1-defense] Map: 18 x 23 Turn: 189
+2026-06-02 10:30:42 [self-0019-1-defense] Route planned: Target = 205 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:42 [self-0019-1-defense] Priority agent: edge reuse -18000 base = 209653 final = 191653
+2026-06-02 10:30:42 [self-0019-1-defense] Move #171: 204 -> 205 | Army: 3 | Target-Terrain: 0 | Target: 205 | Half: False
+2026-06-02 10:30:42 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:42 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:42 [self-0019-1-defense] Visible enemy tiles: 12
+2026-06-02 10:30:42 [self-0019-1-defense] Tiles: 20 / 49
+2026-06-02 10:30:42 [self-0019-1-defense] Map: 18 x 23 Turn: 190
+2026-06-02 10:30:42 [self-0019-1-defense] Route planned: Target = 205 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:42 [self-0019-1-defense] Priority agent: edge reuse -45000 base = 188400 final = 143400
+2026-06-02 10:30:42 [self-0019-1-defense] Move #172: 206 -> 205 | Army: 50 | Target-Terrain: 0 | Target: 205 | Half: False
+2026-06-02 10:30:43 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:43 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:43 [self-0019-1-defense] Visible enemy tiles: 12
+2026-06-02 10:30:43 [self-0019-1-defense] Tiles: 20 / 49
+2026-06-02 10:30:43 [self-0019-1-defense] Map: 18 x 23 Turn: 191
+2026-06-02 10:30:43 [self-0019-1-defense] Route planned: Target = 206 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:43 [self-0019-1-defense] Priority agent: reverse -35000, edge reuse -54000 base = 198502 final = 109502
+2026-06-02 10:30:43 [self-0019-1-defense] Move #173: 205 -> 206 | Army: 52 | Target-Terrain: 0 | Target: 206 | Half: False
+2026-06-02 10:30:43 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:43 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:43 [self-0019-1-defense] Visible enemy tiles: 12
+2026-06-02 10:30:43 [self-0019-1-defense] Tiles: 20 / 49
+2026-06-02 10:30:43 [self-0019-1-defense] Map: 18 x 23 Turn: 192
+2026-06-02 10:30:43 [self-0019-1-defense] Route planned: Target = 205 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:43 [self-0019-1-defense] Priority agent: reverse -35000, edge reuse -63000 base = 191502 final = 93502
+2026-06-02 10:30:43 [self-0019-1-defense] Move #174: 206 -> 205 | Army: 52 | Target-Terrain: 0 | Target: 205 | Half: False
+2026-06-02 10:30:44 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:44 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:44 [self-0019-1-defense] Visible enemy tiles: 12
+2026-06-02 10:30:44 [self-0019-1-defense] Tiles: 20 / 49
+2026-06-02 10:30:44 [self-0019-1-defense] Map: 18 x 23 Turn: 193
+2026-06-02 10:30:44 [self-0019-1-defense] Route planned: Target = 206 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:44 [self-0019-1-defense] Priority agent: reverse -35000, edge reuse -63000 base = 198502 final = 100502
+2026-06-02 10:30:44 [self-0019-1-defense] Move #175: 205 -> 206 | Army: 52 | Target-Terrain: 0 | Target: 206 | Half: False
+2026-06-02 10:30:44 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:44 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:44 [self-0019-1-defense] Visible enemy tiles: 12
+2026-06-02 10:30:44 [self-0019-1-defense] Tiles: 20 / 49
+2026-06-02 10:30:44 [self-0019-1-defense] Map: 18 x 23 Turn: 194
+2026-06-02 10:30:44 [self-0019-1-defense] Route planned: Target = 205 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:44 [self-0019-1-defense] Priority agent: reverse -35000, edge reuse -72000 base = 191502 final = 84502
+2026-06-02 10:30:44 [self-0019-1-defense] Move #176: 206 -> 205 | Army: 52 | Target-Terrain: 0 | Target: 205 | Half: False
+2026-06-02 10:30:45 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:45 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:45 [self-0019-1-defense] Visible enemy tiles: 12
+2026-06-02 10:30:45 [self-0019-1-defense] Tiles: 20 / 49
+2026-06-02 10:30:45 [self-0019-1-defense] Map: 18 x 23 Turn: 195
+2026-06-02 10:30:45 [self-0019-1-defense] Route planned: Target = 206 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:45 [self-0019-1-defense] Priority agent: reverse -35000, edge reuse -81000 base = 198502 final = 82502
+2026-06-02 10:30:45 [self-0019-1-defense] Move #177: 205 -> 206 | Army: 52 | Target-Terrain: 0 | Target: 206 | Half: False
+2026-06-02 10:30:45 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:45 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:45 [self-0019-1-defense] Visible enemy tiles: 12
+2026-06-02 10:30:45 [self-0019-1-defense] Tiles: 20 / 49
+2026-06-02 10:30:45 [self-0019-1-defense] Map: 18 x 23 Turn: 196
+2026-06-02 10:30:45 [self-0019-1-defense] Route planned: Target = 207 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:45 [self-0019-1-defense] Priority agent: flow +6000 base = 281302 final = 287302
+2026-06-02 10:30:45 [self-0019-1-defense] Move #178: 206 -> 207 | Army: 52 | Target-Terrain: 1 | Target: 207 | Half: False
+2026-06-02 10:30:46 [self-0019-1-defense] Coach: catch_up_expand tiles 21/48 army 126/158 cities 0/0 enemy_city_suspect False bias {'expansion_bias': 1.3, 'city_bias': 0.2, 'attack_bias': -0.1, 'defense_bias': 0.8, 'route_bias': 0.5}
+2026-06-02 10:30:46 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:46 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:46 [self-0019-1-defense] Visible enemy tiles: 11
+2026-06-02 10:30:46 [self-0019-1-defense] Tiles: 21 / 48
+2026-06-02 10:30:46 [self-0019-1-defense] Map: 18 x 23 Turn: 197
+2026-06-02 10:30:46 [self-0019-1-defense] Route planned: Target = 206 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:46 [self-0019-1-defense] Priority agent: reverse -35000, edge reuse -9000 base = 211300 final = 167300
+2026-06-02 10:30:46 [self-0019-1-defense] Move #179: 207 -> 206 | Army: 50 | Target-Terrain: 0 | Target: 206 | Half: False
+2026-06-02 10:30:46 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:46 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:46 [self-0019-1-defense] Visible enemy tiles: 11
+2026-06-02 10:30:46 [self-0019-1-defense] Tiles: 21 / 48
+2026-06-02 10:30:46 [self-0019-1-defense] Map: 18 x 23 Turn: 198
+2026-06-02 10:30:46 [self-0019-1-defense] Route planned: Target = 207 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:46 [self-0019-1-defense] Priority agent: reverse -35000, edge reuse -18000, flow +3000 base = 211700 final = 161700
+2026-06-02 10:30:46 [self-0019-1-defense] Move #180: 206 -> 207 | Army: 50 | Target-Terrain: 0 | Target: 207 | Half: False
+2026-06-02 10:30:47 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:47 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:47 [self-0019-1-defense] Visible enemy tiles: 11
+2026-06-02 10:30:47 [self-0019-1-defense] Tiles: 21 / 48
+2026-06-02 10:30:47 [self-0019-1-defense] Map: 18 x 23 Turn: 199
+2026-06-02 10:30:47 [self-0019-1-defense] Route planned: Target = 206 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:47 [self-0019-1-defense] Priority agent: reverse -35000, edge reuse -27000 base = 196300 final = 134300
+2026-06-02 10:30:47 [self-0019-1-defense] Move #181: 207 -> 206 | Army: 50 | Target-Terrain: 0 | Target: 206 | Half: False
+2026-06-02 10:30:47 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:47 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:47 [self-0019-1-defense] Visible enemy tiles: 11
+2026-06-02 10:30:47 [self-0019-1-defense] Tiles: 21 / 48
+2026-06-02 10:30:47 [self-0019-1-defense] Map: 18 x 23 Turn: 200
+2026-06-02 10:30:47 [self-0019-1-defense] Route planned: Target = 207 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:47 [self-0019-1-defense] Move #182: 225 -> 207 | Army: 2 | Target-Terrain: 0 | Target: 207 | Half: False
+2026-06-02 10:30:48 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:48 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:48 [self-0019-1-defense] Visible enemy tiles: 12
+2026-06-02 10:30:48 [self-0019-1-defense] Tiles: 21 / 49
+2026-06-02 10:30:48 [self-0019-1-defense] Map: 18 x 23 Turn: 201
+2026-06-02 10:30:48 [self-0019-1-defense] Route planned: Target = 207 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:48 [self-0019-1-defense] Move #183: 189 -> 207 | Army: 2 | Target-Terrain: 0 | Target: 207 | Half: False
+2026-06-02 10:30:48 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:48 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:48 [self-0019-1-defense] Visible enemy tiles: 12
+2026-06-02 10:30:48 [self-0019-1-defense] Tiles: 21 / 50
+2026-06-02 10:30:48 [self-0019-1-defense] Map: 18 x 23 Turn: 202
+2026-06-02 10:30:48 [self-0019-1-defense] Route planned: Target = 207 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:48 [self-0019-1-defense] Priority agent: edge reuse -36000 base = 210001 final = 174001
+2026-06-02 10:30:48 [self-0019-1-defense] Move #184: 206 -> 207 | Army: 51 | Target-Terrain: 0 | Target: 207 | Half: False
+2026-06-02 10:30:49 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:49 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:49 [self-0019-1-defense] Visible enemy tiles: 12
+2026-06-02 10:30:49 [self-0019-1-defense] Tiles: 21 / 50
+2026-06-02 10:30:49 [self-0019-1-defense] Map: 18 x 23 Turn: 203
+2026-06-02 10:30:49 [self-0019-1-defense] Route planned: Target = 206 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:49 [self-0019-1-defense] Move #185: 224 -> 206 | Army: 2 | Target-Terrain: 0 | Target: 206 | Half: False
+2026-06-02 10:30:49 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:49 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:49 [self-0019-1-defense] Visible enemy tiles: 12
+2026-06-02 10:30:49 [self-0019-1-defense] Tiles: 21 / 50
+2026-06-02 10:30:49 [self-0019-1-defense] Map: 18 x 23 Turn: 204
+2026-06-02 10:30:49 [self-0019-1-defense] Route planned: Target = 206 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:49 [self-0019-1-defense] Move #186: 188 -> 206 | Army: 2 | Target-Terrain: 0 | Target: 206 | Half: False
+2026-06-02 10:30:50 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:50 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:50 [self-0019-1-defense] Visible enemy tiles: 12
+2026-06-02 10:30:50 [self-0019-1-defense] Tiles: 21 / 50
+2026-06-02 10:30:50 [self-0019-1-defense] Map: 18 x 23 Turn: 205
+2026-06-02 10:30:50 [self-0019-1-defense] Route planned: Target = 206 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:50 [self-0019-1-defense] Priority agent: edge reuse -45000 base = 227852 final = 182852
+2026-06-02 10:30:50 [self-0019-1-defense] Move #187: 205 -> 206 | Army: 2 | Target-Terrain: 0 | Target: 206 | Half: False
+2026-06-02 10:30:50 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:50 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:50 [self-0019-1-defense] Visible enemy tiles: 12
+2026-06-02 10:30:50 [self-0019-1-defense] Tiles: 21 / 50
+2026-06-02 10:30:50 [self-0019-1-defense] Map: 18 x 23 Turn: 206
+2026-06-02 10:30:50 [self-0019-1-defense] Route planned: Target = 206 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:50 [self-0019-1-defense] Priority agent: edge reuse -45000 base = 206604 final = 161604
+2026-06-02 10:30:50 [self-0019-1-defense] Move #188: 207 -> 206 | Army: 54 | Target-Terrain: 0 | Target: 206 | Half: False
+2026-06-02 10:30:51 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:51 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:51 [self-0019-1-defense] Visible enemy tiles: 12
+2026-06-02 10:30:51 [self-0019-1-defense] Tiles: 21 / 50
+2026-06-02 10:30:51 [self-0019-1-defense] Map: 18 x 23 Turn: 207
+2026-06-02 10:30:51 [self-0019-1-defense] Route planned: Target = 207 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:51 [self-0019-1-defense] Move #189: 192 -> 210 | Army: 3 | Target-Terrain: 1 | Target: 207 | Half: False
+2026-06-02 10:30:51 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:51 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:51 [self-0019-1-defense] Visible enemy tiles: 12
+2026-06-02 10:30:51 [self-0019-1-defense] Tiles: 21 / 50
+2026-06-02 10:30:51 [self-0019-1-defense] Map: 18 x 23 Turn: 208
+2026-06-02 10:30:51 [self-0019-1-defense] Route planned: Target = 207 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:51 [self-0019-1-defense] Priority agent: edge reuse -54000 base = 238407 final = 184407
+2026-06-02 10:30:51 [self-0019-1-defense] Move #190: 206 -> 207 | Army: 57 | Target-Terrain: 1 | Target: 207 | Half: False
+2026-06-02 10:30:52 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:52 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:52 [self-0019-1-defense] Visible enemy tiles: 11
+2026-06-02 10:30:52 [self-0019-1-defense] Tiles: 22 / 49
+2026-06-02 10:30:52 [self-0019-1-defense] Map: 18 x 23 Turn: 209
+2026-06-02 10:30:52 [self-0019-1-defense] Route planned: Target = 206 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:52 [self-0019-1-defense] Move #191: 187 -> 188 | Army: 2 | Target-Terrain: 0 | Target: 206 | Half: False
+2026-06-02 10:30:52 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:52 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:52 [self-0019-1-defense] Visible enemy tiles: 11
+2026-06-02 10:30:52 [self-0019-1-defense] Tiles: 22 / 49
+2026-06-02 10:30:52 [self-0019-1-defense] Map: 18 x 23 Turn: 210
+2026-06-02 10:30:52 [self-0019-1-defense] Route planned: Target = 206 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:52 [self-0019-1-defense] Priority agent: edge reuse -9000, flow +6000 base = 240652 final = 237652
+2026-06-02 10:30:52 [self-0019-1-defense] Move #192: 188 -> 206 | Army: 2 | Target-Terrain: 0 | Target: 206 | Half: False
+2026-06-02 10:30:53 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:53 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:53 [self-0019-1-defense] Visible enemy tiles: 11
+2026-06-02 10:30:53 [self-0019-1-defense] Tiles: 22 / 49
+2026-06-02 10:30:53 [self-0019-1-defense] Map: 18 x 23 Turn: 211
+2026-06-02 10:30:53 [self-0019-1-defense] Route planned: Target = 206 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:53 [self-0019-1-defense] Move #193: 246 -> 228 | Army: 3 | Target-Terrain: 1 | Target: 206 | Half: False
+2026-06-02 10:30:53 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:53 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:53 [self-0019-1-defense] Visible enemy tiles: 10
+2026-06-02 10:30:53 [self-0019-1-defense] Tiles: 23 / 48
+2026-06-02 10:30:53 [self-0019-1-defense] Map: 18 x 23 Turn: 212
+2026-06-02 10:30:53 [self-0019-1-defense] Route planned: Target = 206 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:53 [self-0019-1-defense] Priority agent: edge reuse -45000 base = 206605 final = 161605
+2026-06-02 10:30:53 [self-0019-1-defense] Move #194: 207 -> 206 | Army: 55 | Target-Terrain: 0 | Target: 206 | Half: False
+2026-06-02 10:30:54 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:54 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:54 [self-0019-1-defense] Visible enemy tiles: 10
+2026-06-02 10:30:54 [self-0019-1-defense] Tiles: 23 / 48
+2026-06-02 10:30:54 [self-0019-1-defense] Map: 18 x 23 Turn: 213
+2026-06-02 10:30:54 [self-0019-1-defense] Route planned: Target = 207 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:54 [self-0019-1-defense] Move #195: 204 -> 205 | Army: 2 | Target-Terrain: 0 | Target: 207 | Half: False
+2026-06-02 10:30:54 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:54 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:54 [self-0019-1-defense] Visible enemy tiles: 11
+2026-06-02 10:30:54 [self-0019-1-defense] Tiles: 22 / 49
+2026-06-02 10:30:54 [self-0019-1-defense] Map: 18 x 23 Turn: 214
+2026-06-02 10:30:54 [self-0019-1-defense] Route planned: Target = 207 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:54 [self-0019-1-defense] Priority agent: edge reuse -36000 base = 210006 final = 174006
+2026-06-02 10:30:54 [self-0019-1-defense] Move #196: 206 -> 207 | Army: 56 | Target-Terrain: 0 | Target: 207 | Half: False
+2026-06-02 10:30:55 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:55 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:55 [self-0019-1-defense] Visible enemy tiles: 11
+2026-06-02 10:30:55 [self-0019-1-defense] Tiles: 22 / 49
+2026-06-02 10:30:55 [self-0019-1-defense] Map: 18 x 23 Turn: 215
+2026-06-02 10:30:55 [self-0019-1-defense] Route planned: Target = 206 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:55 [self-0019-1-defense] Priority agent: edge reuse -9000 base = 242852 final = 233852
+2026-06-02 10:30:55 [self-0019-1-defense] Move #197: 205 -> 206 | Army: 2 | Target-Terrain: 0 | Target: 206 | Half: False
+2026-06-02 10:30:55 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:55 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:55 [self-0019-1-defense] Visible enemy tiles: 11
+2026-06-02 10:30:55 [self-0019-1-defense] Tiles: 22 / 49
+2026-06-02 10:30:55 [self-0019-1-defense] Map: 18 x 23 Turn: 216
+2026-06-02 10:30:55 [self-0019-1-defense] Route planned: Target = 206 Mode = defense city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:55 [self-0019-1-defense] Priority agent: edge reuse -45000 base = 206606 final = 161606
+2026-06-02 10:30:55 [self-0019-1-defense] Move #198: 207 -> 206 | Army: 56 | Target-Terrain: 0 | Target: 206 | Half: False
+2026-06-02 10:30:56 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:56 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:56 [self-0019-1-defense] Visible enemy tiles: 11
+2026-06-02 10:30:56 [self-0019-1-defense] Tiles: 22 / 49
+2026-06-02 10:30:56 [self-0019-1-defense] Map: 18 x 23 Turn: 217
+2026-06-02 10:30:56 [self-0019-1-defense] Route planned: Target = 208 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:56 [self-0019-1-defense] Move #199: 244 -> 226 | Army: 2 | Target-Terrain: 0 | Target: 208 | Half: False
+2026-06-02 10:30:56 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:56 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:56 [self-0019-1-defense] Visible enemy tiles: 11
+2026-06-02 10:30:56 [self-0019-1-defense] Tiles: 22 / 49
+2026-06-02 10:30:56 [self-0019-1-defense] Map: 18 x 23 Turn: 218
+2026-06-02 10:30:56 [self-0019-1-defense] Route planned: Target = 208 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:56 [self-0019-1-defense] Priority agent: flow +6000 base = 72603 final = 78603
+2026-06-02 10:30:56 [self-0019-1-defense] Move #200: 226 -> 208 | Army: 3 | Target-Terrain: 1 | Target: 208 | Half: False
+2026-06-02 10:30:57 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:57 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:57 [self-0019-1-defense] Visible enemy tiles: 10
+2026-06-02 10:30:57 [self-0019-1-defense] Tiles: 23 / 49
+2026-06-02 10:30:57 [self-0019-1-defense] Map: 18 x 23 Turn: 219
+2026-06-02 10:30:57 [self-0019-1-defense] Route planned: Target = 209 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:57 [self-0019-1-defense] Move #201: 223 -> 205 | Army: 2 | Target-Terrain: 0 | Target: 209 | Half: False
+2026-06-02 10:30:57 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:57 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:57 [self-0019-1-defense] Visible enemy tiles: 11
+2026-06-02 10:30:57 [self-0019-1-defense] Tiles: 22 / 50
+2026-06-02 10:30:57 [self-0019-1-defense] Map: 18 x 23 Turn: 220
+2026-06-02 10:30:57 [self-0019-1-defense] Route planned: Target = 209 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:57 [self-0019-1-defense] Move #202: 186 -> 187 | Army: 2 | Target-Terrain: 0 | Target: 209 | Half: False
+2026-06-02 10:30:58 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:58 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:58 [self-0019-1-defense] Visible enemy tiles: 12
+2026-06-02 10:30:58 [self-0019-1-defense] Tiles: 21 / 51
+2026-06-02 10:30:58 [self-0019-1-defense] Map: 18 x 23 Turn: 221
+2026-06-02 10:30:58 [self-0019-1-defense] Route planned: Target = 209 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:58 [self-0019-1-defense] Priority agent: flow +6000 base = 27312 final = 33312
+2026-06-02 10:30:58 [self-0019-1-defense] Move #203: 187 -> 169 | Army: 2 | Target-Terrain: -1 | Target: 209 | Half: False
+2026-06-02 10:30:58 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:58 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:58 [self-0019-1-defense] Visible enemy tiles: 12
+2026-06-02 10:30:58 [self-0019-1-defense] Tiles: 22 / 52
+2026-06-02 10:30:58 [self-0019-1-defense] Map: 18 x 23 Turn: 222
+2026-06-02 10:30:58 [self-0019-1-defense] Route planned: Target = 209 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:58 [self-0019-1-defense] Move #204: 203 -> 204 | Army: 2 | Target-Terrain: 0 | Target: 209 | Half: False
+2026-06-02 10:30:59 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:59 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:59 [self-0019-1-defense] Visible enemy tiles: 12
+2026-06-02 10:30:59 [self-0019-1-defense] Tiles: 22 / 53
+2026-06-02 10:30:59 [self-0019-1-defense] Map: 18 x 23 Turn: 223
+2026-06-02 10:30:59 [self-0019-1-defense] Route planned: Target = 209 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:59 [self-0019-1-defense] Move #205: 185 -> 186 | Army: 2 | Target-Terrain: 0 | Target: 209 | Half: False
+2026-06-02 10:30:59 [self-0019-1-defense] My general index: 239
+2026-06-02 10:30:59 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:30:59 [self-0019-1-defense] Visible enemy tiles: 12
+2026-06-02 10:30:59 [self-0019-1-defense] Tiles: 22 / 54
+2026-06-02 10:30:59 [self-0019-1-defense] Map: 18 x 23 Turn: 224
+2026-06-02 10:30:59 [self-0019-1-defense] Route planned: Target = 209 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:30:59 [self-0019-1-defense] Move #206: 202 -> 203 | Army: 2 | Target-Terrain: 0 | Target: 209 | Half: False
+2026-06-02 10:31:00 [self-0019-1-defense] My general index: 239
+2026-06-02 10:31:00 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:31:00 [self-0019-1-defense] Visible enemy tiles: 12
+2026-06-02 10:31:00 [self-0019-1-defense] Tiles: 22 / 54
+2026-06-02 10:31:00 [self-0019-1-defense] Map: 18 x 23 Turn: 225
+2026-06-02 10:31:00 [self-0019-1-defense] Route planned: Target = 209 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:31:00 [self-0019-1-defense] Move #207: 221 -> 203 | Army: 2 | Target-Terrain: 0 | Target: 209 | Half: False
+2026-06-02 10:31:00 [self-0019-1-defense] My general index: 239
+2026-06-02 10:31:00 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:31:00 [self-0019-1-defense] Visible enemy tiles: 12
+2026-06-02 10:31:00 [self-0019-1-defense] Tiles: 22 / 54
+2026-06-02 10:31:00 [self-0019-1-defense] Map: 18 x 23 Turn: 226
+2026-06-02 10:31:00 [self-0019-1-defense] Route planned: Target = 209 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:31:00 [self-0019-1-defense] Move #208: 239 -> 221 | Army: 71 | Target-Terrain: 0 | Target: 209 | Half: True
+2026-06-02 10:31:01 [self-0019-1-defense] My general index: 239
+2026-06-02 10:31:01 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:31:01 [self-0019-1-defense] Visible enemy tiles: 12
+2026-06-02 10:31:01 [self-0019-1-defense] Tiles: 22 / 55
+2026-06-02 10:31:01 [self-0019-1-defense] Map: 18 x 23 Turn: 227
+2026-06-02 10:31:01 [self-0019-1-defense] Route planned: Target = 209 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:31:01 [self-0019-1-defense] Move #209: 220 -> 202 | Army: 2 | Target-Terrain: 0 | Target: 209 | Half: False
+2026-06-02 10:31:01 [self-0019-1-defense] My general index: 239
+2026-06-02 10:31:01 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:31:01 [self-0019-1-defense] Visible enemy tiles: 12
+2026-06-02 10:31:01 [self-0019-1-defense] Tiles: 22 / 55
+2026-06-02 10:31:01 [self-0019-1-defense] Map: 18 x 23 Turn: 228
+2026-06-02 10:31:01 [self-0019-1-defense] Route planned: Target = 209 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:31:01 [self-0019-1-defense] Priority agent: flow +6000 base = 27232 final = 33232
+2026-06-02 10:31:01 [self-0019-1-defense] Move #210: 202 -> 201 | Army: 2 | Target-Terrain: -1 | Target: 209 | Half: False
+2026-06-02 10:31:02 [self-0019-1-defense] My general index: 239
+2026-06-02 10:31:02 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:31:02 [self-0019-1-defense] Visible enemy tiles: 12
+2026-06-02 10:31:02 [self-0019-1-defense] Tiles: 23 / 55
+2026-06-02 10:31:02 [self-0019-1-defense] Map: 18 x 23 Turn: 229
+2026-06-02 10:31:02 [self-0019-1-defense] Route planned: Target = 209 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:31:02 [self-0019-1-defense] Move #211: 204 -> 205 | Army: 2 | Target-Terrain: 0 | Target: 209 | Half: False
+2026-06-02 10:31:02 [self-0019-1-defense] My general index: 239
+2026-06-02 10:31:02 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:31:02 [self-0019-1-defense] Visible enemy tiles: 12
+2026-06-02 10:31:02 [self-0019-1-defense] Tiles: 23 / 55
+2026-06-02 10:31:02 [self-0019-1-defense] Map: 18 x 23 Turn: 230
+2026-06-02 10:31:02 [self-0019-1-defense] Route planned: Target = 209 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:31:02 [self-0019-1-defense] Move #212: 186 -> 204 | Army: 2 | Target-Terrain: 0 | Target: 209 | Half: False
+2026-06-02 10:31:03 [self-0019-1-defense] My general index: 239
+2026-06-02 10:31:03 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:31:03 [self-0019-1-defense] Visible enemy tiles: 12
+2026-06-02 10:31:03 [self-0019-1-defense] Tiles: 23 / 55
+2026-06-02 10:31:03 [self-0019-1-defense] Map: 18 x 23 Turn: 231
+2026-06-02 10:31:03 [self-0019-1-defense] Route planned: Target = 209 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:31:03 [self-0019-1-defense] Move #213: 206 -> 207 | Army: 57 | Target-Terrain: 0 | Target: 209 | Half: False
+2026-06-02 10:31:03 [self-0019-1-defense] My general index: 239
+2026-06-02 10:31:03 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:31:03 [self-0019-1-defense] Visible enemy tiles: 12
+2026-06-02 10:31:03 [self-0019-1-defense] Tiles: 23 / 55
+2026-06-02 10:31:03 [self-0019-1-defense] Map: 18 x 23 Turn: 232
+2026-06-02 10:31:03 [self-0019-1-defense] Route planned: Target = 209 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:31:03 [self-0019-1-defense] Priority agent: flow +6000 base = 84617 final = 90617
+2026-06-02 10:31:03 [self-0019-1-defense] Move #214: 207 -> 208 | Army: 57 | Target-Terrain: 1 | Target: 209 | Half: False
+2026-06-02 10:31:04 [self-0019-1-defense] My general index: 239
+2026-06-02 10:31:04 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:31:04 [self-0019-1-defense] Visible enemy tiles: 11
+2026-06-02 10:31:04 [self-0019-1-defense] Tiles: 24 / 54
+2026-06-02 10:31:04 [self-0019-1-defense] Map: 18 x 23 Turn: 233
+2026-06-02 10:31:04 [self-0019-1-defense] Route planned: Target = 209 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:31:04 [self-0019-1-defense] Priority agent: flow +6000 base = 82755 final = 88755
+2026-06-02 10:31:04 [self-0019-1-defense] Move #215: 208 -> 209 | Army: 55 | Target-Terrain: 1 | Target: 209 | Half: False
+2026-06-02 10:31:04 [self-0019-1-defense] My general index: 239
+2026-06-02 10:31:04 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:31:04 [self-0019-1-defense] Visible enemy tiles: 10
+2026-06-02 10:31:04 [self-0019-1-defense] Tiles: 25 / 53
+2026-06-02 10:31:04 [self-0019-1-defense] Map: 18 x 23 Turn: 234
+2026-06-02 10:31:04 [self-0019-1-defense] Reinforcement waypoint: 226 final target = 226 turns until reinforcement = 16
+2026-06-02 10:31:04 [self-0019-1-defense] Route planned: Target = 226 Mode = reinforcement_waypoint city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:31:04 [self-0019-1-defense] Priority agent: flow +6000 base = 89113 final = 95113
+2026-06-02 10:31:04 [self-0019-1-defense] Move #216: 209 -> 227 | Army: 53 | Target-Terrain: 1 | Target: 226 | Half: False
+2026-06-02 10:31:05 [self-0019-1-defense] My general index: 239
+2026-06-02 10:31:05 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:31:05 [self-0019-1-defense] Visible enemy tiles: 9
+2026-06-02 10:31:05 [self-0019-1-defense] Tiles: 26 / 52
+2026-06-02 10:31:05 [self-0019-1-defense] Map: 18 x 23 Turn: 235
+2026-06-02 10:31:05 [self-0019-1-defense] Reinforcement waypoint: 226 final target = 226 turns until reinforcement = 15
+2026-06-02 10:31:05 [self-0019-1-defense] Route planned: Target = 226 Mode = reinforcement_waypoint city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:31:05 [self-0019-1-defense] Priority agent: flow +6000 base = 91051 final = 97051
+2026-06-02 10:31:05 [self-0019-1-defense] Move #217: 227 -> 226 | Army: 51 | Target-Terrain: 1 | Target: 226 | Half: False
+2026-06-02 10:31:05 [self-0019-1-defense] My general index: 239
+2026-06-02 10:31:05 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:31:05 [self-0019-1-defense] Visible enemy tiles: 8
+2026-06-02 10:31:05 [self-0019-1-defense] Tiles: 27 / 51
+2026-06-02 10:31:05 [self-0019-1-defense] Map: 18 x 23 Turn: 236
+2026-06-02 10:31:05 [self-0019-1-defense] Reinforcement waypoint: 191 final target = 191 turns until reinforcement = 14
+2026-06-02 10:31:05 [self-0019-1-defense] Route planned: Target = 191 Mode = reinforcement_waypoint city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:31:05 [self-0019-1-defense] Move #218: 205 -> 206 | Army: 3 | Target-Terrain: 0 | Target: 191 | Half: False
+2026-06-02 10:31:06 [self-0019-1-defense] My general index: 239
+2026-06-02 10:31:06 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:31:06 [self-0019-1-defense] Visible enemy tiles: 8
+2026-06-02 10:31:06 [self-0019-1-defense] Tiles: 27 / 51
+2026-06-02 10:31:06 [self-0019-1-defense] Map: 18 x 23 Turn: 237
+2026-06-02 10:31:06 [self-0019-1-defense] Reinforcement waypoint: 191 final target = 191 turns until reinforcement = 13
+2026-06-02 10:31:06 [self-0019-1-defense] Route planned: Target = 191 Mode = reinforcement_waypoint city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:31:06 [self-0019-1-defense] Move #219: 203 -> 204 | Army: 3 | Target-Terrain: 0 | Target: 191 | Half: False
+2026-06-02 10:31:06 [self-0019-1-defense] My general index: 239
+2026-06-02 10:31:06 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:31:06 [self-0019-1-defense] Visible enemy tiles: 8
+2026-06-02 10:31:06 [self-0019-1-defense] Tiles: 27 / 51
+2026-06-02 10:31:06 [self-0019-1-defense] Map: 18 x 23 Turn: 238
+2026-06-02 10:31:06 [self-0019-1-defense] Reinforcement waypoint: 209 final target = 191 turns until reinforcement = 12
+2026-06-02 10:31:06 [self-0019-1-defense] Route planned: Target = 209 Mode = reinforcement_waypoint city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:31:06 [self-0019-1-defense] Priority agent: fresh target pullback -12000 base = 41309 final = 29309
+2026-06-02 10:31:06 [self-0019-1-defense] Move #220: 226 -> 208 | Army: 49 | Target-Terrain: 0 | Target: 209 | Half: False
+2026-06-02 10:31:07 [self-0019-1-defense] My general index: 239
+2026-06-02 10:31:07 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:31:07 [self-0019-1-defense] Visible enemy tiles: 8
+2026-06-02 10:31:07 [self-0019-1-defense] Tiles: 27 / 51
+2026-06-02 10:31:07 [self-0019-1-defense] Map: 18 x 23 Turn: 239
+2026-06-02 10:31:07 [self-0019-1-defense] Reinforcement waypoint: 209 final target = 191 turns until reinforcement = 11
+2026-06-02 10:31:07 [self-0019-1-defense] Route planned: Target = 209 Mode = reinforcement_waypoint city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:31:07 [self-0019-1-defense] Priority agent: edge reuse -18000 base = 43246 final = 25246
+2026-06-02 10:31:07 [self-0019-1-defense] Move #221: 221 -> 203 | Army: 36 | Target-Terrain: 0 | Target: 209 | Half: False
+2026-06-02 10:31:07 [self-0019-1-defense] My general index: 239
+2026-06-02 10:31:07 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:31:07 [self-0019-1-defense] Visible enemy tiles: 8
+2026-06-02 10:31:07 [self-0019-1-defense] Tiles: 27 / 52
+2026-06-02 10:31:07 [self-0019-1-defense] Map: 18 x 23 Turn: 240
+2026-06-02 10:31:07 [self-0019-1-defense] Reinforcement waypoint: 209 final target = 191 turns until reinforcement = 10
+2026-06-02 10:31:07 [self-0019-1-defense] Route planned: Target = 209 Mode = reinforcement_waypoint city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:31:07 [self-0019-1-defense] Priority agent: edge reuse -18000, fresh target pullback -12000 base = 41599 final = 11599
+2026-06-02 10:31:07 [self-0019-1-defense] Move #222: 208 -> 209 | Army: 49 | Target-Terrain: 0 | Target: 209 | Half: False
+2026-06-02 10:31:08 [self-0019-1-defense] My general index: 239
+2026-06-02 10:31:08 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:31:08 [self-0019-1-defense] Visible enemy tiles: 8
+2026-06-02 10:31:08 [self-0019-1-defense] Tiles: 27 / 52
+2026-06-02 10:31:08 [self-0019-1-defense] Map: 18 x 23 Turn: 241
+2026-06-02 10:31:08 [self-0019-1-defense] Reinforcement waypoint: 191 final target = 191 turns until reinforcement = 9
+2026-06-02 10:31:08 [self-0019-1-defense] Route planned: Target = 191 Mode = reinforcement_waypoint city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:31:08 [self-0019-1-defense] Priority agent: flow +6000 base = 103349 final = 109349
+2026-06-02 10:31:08 [self-0019-1-defense] Move #223: 209 -> 191 | Army: 49 | Target-Terrain: 1 | Target: 191 | Half: False
+2026-06-02 10:31:08 [self-0019-1-defense] My general index: 239
+2026-06-02 10:31:08 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:31:08 [self-0019-1-defense] Visible enemy tiles: 7
+2026-06-02 10:31:08 [self-0019-1-defense] Tiles: 28 / 51
+2026-06-02 10:31:08 [self-0019-1-defense] Map: 18 x 23 Turn: 242
+2026-06-02 10:31:08 [self-0019-1-defense] Reinforcement waypoint: 192 final target = 210 turns until reinforcement = 8
+2026-06-02 10:31:08 [self-0019-1-defense] Route planned: Target = 192 Mode = reinforcement_waypoint city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:31:08 [self-0019-1-defense] Priority agent: fresh target pullback -12000, flow +6000 base = 42296 final = 36296
+2026-06-02 10:31:08 [self-0019-1-defense] Move #224: 191 -> 192 | Army: 46 | Target-Terrain: 0 | Target: 192 | Half: False
+2026-06-02 10:31:09 [self-0019-1-defense] My general index: 239
+2026-06-02 10:31:09 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:31:09 [self-0019-1-defense] Visible enemy tiles: 7
+2026-06-02 10:31:09 [self-0019-1-defense] Tiles: 28 / 51
+2026-06-02 10:31:09 [self-0019-1-defense] Map: 18 x 23 Turn: 243
+2026-06-02 10:31:09 [self-0019-1-defense] Reinforcement waypoint: 210 final target = 210 turns until reinforcement = 7
+2026-06-02 10:31:09 [self-0019-1-defense] Route planned: Target = 210 Mode = reinforcement_waypoint city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:31:09 [self-0019-1-defense] Priority agent: flow +6000 base = 101146 final = 107146
+2026-06-02 10:31:09 [self-0019-1-defense] Move #225: 192 -> 210 | Army: 46 | Target-Terrain: 1 | Target: 210 | Half: False
+2026-06-02 10:31:09 [self-0019-1-defense] My general index: 239
+2026-06-02 10:31:09 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:31:09 [self-0019-1-defense] Visible enemy tiles: 6
+2026-06-02 10:31:09 [self-0019-1-defense] Tiles: 29 / 50
+2026-06-02 10:31:09 [self-0019-1-defense] Map: 18 x 23 Turn: 244
+2026-06-02 10:31:09 [self-0019-1-defense] Reinforcement waypoint: 224 final target = 261 turns until reinforcement = 6
+2026-06-02 10:31:09 [self-0019-1-defense] Route planned: Target = 224 Mode = reinforcement_waypoint city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:31:09 [self-0019-1-defense] Priority agent: flow +6000 base = 61454 final = 67454
+2026-06-02 10:31:09 [self-0019-1-defense] Move #226: 210 -> 211 | Army: 44 | Target-Terrain: 1 | Target: 224 | Half: False
+2026-06-02 10:31:10 [self-0019-1-defense] My general index: 239
+2026-06-02 10:31:10 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:31:10 [self-0019-1-defense] Visible enemy tiles: 7
+2026-06-02 10:31:10 [self-0019-1-defense] Tiles: 30 / 49
+2026-06-02 10:31:10 [self-0019-1-defense] Map: 18 x 23 Turn: 245
+2026-06-02 10:31:10 [self-0019-1-defense] Reinforcement waypoint: 224 final target = 261 turns until reinforcement = 5
+2026-06-02 10:31:10 [self-0019-1-defense] Route planned: Target = 224 Mode = reinforcement_waypoint city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:31:10 [self-0019-1-defense] Priority agent: flow +6000 base = 99740 final = 105740
+2026-06-02 10:31:10 [self-0019-1-defense] Move #227: 211 -> 229 | Army: 40 | Target-Terrain: 1 | Target: 224 | Half: False
+2026-06-02 10:31:10 [self-0019-1-defense] My general index: 239
+2026-06-02 10:31:10 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:31:10 [self-0019-1-defense] Visible enemy tiles: 7
+2026-06-02 10:31:10 [self-0019-1-defense] Tiles: 31 / 48
+2026-06-02 10:31:10 [self-0019-1-defense] Map: 18 x 23 Turn: 246
+2026-06-02 10:31:10 [self-0019-1-defense] Reinforcement waypoint: 224 final target = 261 turns until reinforcement = 4
+2026-06-02 10:31:10 [self-0019-1-defense] Route planned: Target = 224 Mode = reinforcement_waypoint city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:31:10 [self-0019-1-defense] Priority agent: flow +6000 base = 61448 final = 67448
+2026-06-02 10:31:10 [self-0019-1-defense] Move #228: 229 -> 230 | Army: 38 | Target-Terrain: 1 | Target: 224 | Half: False
+2026-06-02 10:31:11 [self-0019-1-defense] Coach: catch_up_expand tiles 31/48 army 151/176 cities 0/0 enemy_city_suspect False bias {'expansion_bias': 1.3, 'city_bias': 0.2, 'attack_bias': -0.1, 'defense_bias': 0.8, 'route_bias': 0.5}
+2026-06-02 10:31:11 [self-0019-1-defense] My general index: 239
+2026-06-02 10:31:11 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:31:11 [self-0019-1-defense] Visible enemy tiles: 10
+2026-06-02 10:31:11 [self-0019-1-defense] Tiles: 31 / 48
+2026-06-02 10:31:11 [self-0019-1-defense] Map: 18 x 23 Turn: 247
+2026-06-02 10:31:11 [self-0019-1-defense] Reinforcement waypoint: 224 final target = 261 turns until reinforcement = 3
+2026-06-02 10:31:11 [self-0019-1-defense] Route planned: Target = 224 Mode = reinforcement_waypoint city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:31:11 [self-0019-1-defense] Priority agent: flow +6000 base = 63306 final = 69306
+2026-06-02 10:31:11 [self-0019-1-defense] Move #229: 230 -> 212 | Army: 36 | Target-Terrain: 1 | Target: 224 | Half: False
+2026-06-02 10:31:11 [self-0019-1-defense] My general index: 239
+2026-06-02 10:31:11 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:31:11 [self-0019-1-defense] Visible enemy tiles: 9
+2026-06-02 10:31:11 [self-0019-1-defense] Tiles: 32 / 47
+2026-06-02 10:31:11 [self-0019-1-defense] Map: 18 x 23 Turn: 248
+2026-06-02 10:31:11 [self-0019-1-defense] Reinforcement waypoint: 224 final target = 261 turns until reinforcement = 2
+2026-06-02 10:31:11 [self-0019-1-defense] Route planned: Target = 224 Mode = reinforcement_waypoint city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:31:11 [self-0019-1-defense] Priority agent: flow +6000 base = 101294 final = 107294
+2026-06-02 10:31:11 [self-0019-1-defense] Move #230: 212 -> 211 | Army: 34 | Target-Terrain: 1 | Target: 224 | Half: False
+2026-06-02 10:31:12 [self-0019-1-defense] My general index: 239
+2026-06-02 10:31:12 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:31:12 [self-0019-1-defense] Visible enemy tiles: 8
+2026-06-02 10:31:12 [self-0019-1-defense] Tiles: 33 / 46
+2026-06-02 10:31:12 [self-0019-1-defense] Map: 18 x 23 Turn: 249
+2026-06-02 10:31:12 [self-0019-1-defense] Reinforcement waypoint: 224 final target = 261 turns until reinforcement = 1
+2026-06-02 10:31:12 [self-0019-1-defense] Route planned: Target = 224 Mode = reinforcement_waypoint city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:31:12 [self-0019-1-defense] Priority agent: flow +6000 base = 62992 final = 68992
+2026-06-02 10:31:12 [self-0019-1-defense] Move #231: 211 -> 193 | Army: 22 | Target-Terrain: 1 | Target: 224 | Half: False
+2026-06-02 10:31:12 [self-0019-1-defense] My general index: 239
+2026-06-02 10:31:12 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:31:12 [self-0019-1-defense] Visible enemy tiles: 7
+2026-06-02 10:31:12 [self-0019-1-defense] Tiles: 34 / 46
+2026-06-02 10:31:12 [self-0019-1-defense] Map: 18 x 23 Turn: 250
+2026-06-02 10:31:12 [self-0019-1-defense] Route planned: Target = 261 Mode = reinforcement_waypoint city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:31:12 [self-0019-1-defense] Move #232: 244 -> 262 | Army: 2 | Target-Terrain: -1 | Target: 261 | Half: False
+2026-06-02 10:31:13 [self-0019-1-defense] My general index: 239
+2026-06-02 10:31:13 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:31:13 [self-0019-1-defense] Visible enemy tiles: 9
+2026-06-02 10:31:13 [self-0019-1-defense] Tiles: 35 / 46
+2026-06-02 10:31:13 [self-0019-1-defense] Map: 18 x 23 Turn: 251
+2026-06-02 10:31:13 [self-0019-1-defense] Route planned: Target = 261 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:31:13 [self-0019-1-defense] Move #233: 224 -> 242 | Army: 2 | Target-Terrain: -1 | Target: 261 | Half: False
+2026-06-02 10:31:13 [self-0019-1-defense] My general index: 239
+2026-06-02 10:31:13 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:31:13 [self-0019-1-defense] Visible enemy tiles: 9
+2026-06-02 10:31:13 [self-0019-1-defense] Tiles: 36 / 46
+2026-06-02 10:31:13 [self-0019-1-defense] Map: 18 x 23 Turn: 252
+2026-06-02 10:31:13 [self-0019-1-defense] Route planned: Target = 261 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:31:13 [self-0019-1-defense] Move #234: 223 -> 241 | Army: 2 | Target-Terrain: -1 | Target: 261 | Half: False
+2026-06-02 10:31:14 [self-0019-1-defense] My general index: 239
+2026-06-02 10:31:14 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:31:14 [self-0019-1-defense] Visible enemy tiles: 9
+2026-06-02 10:31:14 [self-0019-1-defense] Tiles: 37 / 46
+2026-06-02 10:31:14 [self-0019-1-defense] Map: 18 x 23 Turn: 253
+2026-06-02 10:31:14 [self-0019-1-defense] Route planned: Target = 261 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:31:14 [self-0019-1-defense] Move #235: 203 -> 204 | Army: 37 | Target-Terrain: 0 | Target: 261 | Half: False
+2026-06-02 10:31:14 [self-0019-1-defense] My general index: 239
+2026-06-02 10:31:14 [self-0019-1-defense] Enemy general index: None
+2026-06-02 10:31:14 [self-0019-1-defense] Visible enemy tiles: 8
+2026-06-02 10:31:14 [self-0019-1-defense] Tiles: 36 / 47
+2026-06-02 10:31:14 [self-0019-1-defense] Map: 18 x 23 Turn: 254
+2026-06-02 10:31:14 [self-0019-1-defense] Route planned: Target = 261 Mode = strategy city-free reachable tiles = 327 Fallback-Tiles = 328
+2026-06-02 10:31:14 [self-0019-1-defense] Move #236: 193 -> 192 | Army: 21 | Target-Terrain: 0 | Target: 261 | Half: False
