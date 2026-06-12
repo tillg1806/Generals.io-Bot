@@ -1,6 +1,7 @@
 # Local environment
 .env
 .venv/
+.venv_wsl/
 
 # Python generated files
 __pycache__/
@@ -11,18 +12,22 @@ logs/
 runs/
 archives/
 docs/
+scripts/
 
 # Learned/generated artifacts
 models/
 data/analysis/*.json
+data/analysis/*.jsonl
 data/legacy/
 data/opponents/*.json
 data/predictions/*.json
 data/profiles/*.json
 data/replays/*.json
 data/stats/*.json
+data/training/*.json
 data/training/*.jsonl
 
 # Keep downloaded/imported raw replay files out of commits by default.
 data/replays/raw/*
 !data/replays/raw/.gitkeep
+data/replays/decoded/*

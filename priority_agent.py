@@ -1,12 +1,5 @@
-from dataclasses import dataclass
-
 from config import LOOP_DETECTION_MEMORY
-
-
-@dataclass
-class PrioritizedMove:
-    score: int
-    reason: str
+from prioritized_move import PrioritizedMove
 
 
 class StrategyPriorityAgent:
@@ -75,6 +68,7 @@ class StrategyPriorityAgent:
             or move["dominance_route_push"]
             or move["extends_flow_chain"]
             or move["drains_overstacked_along_flow"]
+            or move.get("stack_consolidation", False)
             or move.get("reinforcement_route_push", False)
             or move.get("reinforcement_frontier_push", False)
         )

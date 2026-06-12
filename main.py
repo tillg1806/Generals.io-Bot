@@ -9,7 +9,13 @@ from pathlib import Path
 import socketio
 from socketio import SimpleClient
 
-from data_pipeline import opponent_adjustment_for_names, process_self_play_batch
+from action_encoding import encode_action, legal_action_planes
+from board_tensor import build_board_snapshot
+from data_pipeline import (
+    opponent_adjustment_for_names,
+    process_public_game_result,
+    process_self_play_batch,
+)
 from config import (
     BOT_ENDPOINT,
     BOT_EVENT_IDLE_TIMEOUT_SECONDS,
@@ -17,6 +23,18 @@ from config import (
     GENERAL_GUESS_STATS_FILE,
     ROOM_ID,
     TRAINING_PROCESS_TIMEOUT_SECONDS,
+    TRAINING_ARCHIVE_INTERVAL_MATCHES,
+    TRAINING_COACH_INTERVAL_MATCHES,
+    STARTUP_JAX_TRAINING_ENABLED,
+    STARTUP_JAX_TRAINING_EPOCHS,
+    STARTUP_JAX_TRAINING_PATIENCE,
+    ACTION_SAMPLE_FIRST_MOVES,
+    ACTION_SAMPLE_INTERVAL,
+    ACTION_SAMPLE_MAX_PER_GAME,
+    ACTION_VALUE_MIN_SAMPLES_TO_USE,
+    POLICY_TENSOR_SAMPLE_FIRST_MOVES,
+    POLICY_TENSOR_SAMPLE_INTERVAL,
+    POLICY_TENSOR_SAMPLE_MAX_PER_GAME,
     TILE_FOG,
     TILE_FOG_OBSTACLE,
     TILE_MOUNTAIN,
@@ -26,9 +44,18 @@ from config import (
 from enemy_predictor import EnemyAttackPredictor
 from game_state import GameState
 from general_guesser import GeneralGuesser
-from jax_agent import JaxPolicyAgent, train_policy_agent
+from learning.jax_action_value_agent import JaxActionValueAgent
+from learning.jax_agent import (
+    train_action_value_agent,
+    train_policy_agent,
+    train_spawn_guess_agent,
+)
+from learning.jax_policy_agent import JaxPolicyAgent
 from map_analyzer import analyze_state_map
 from pathfinding import build_distance_map, distance_to_target
+from power_management import WindowsSleepGuard
+from replay_analyzer import BackgroundReplayAnalyzer
+from self_play_dashboard import SelfPlayDashboard
 from stats import ReserveTurnStats
 from strategy import Strategy
 from strategy_coach import StrategyCoach
@@ -51,6 +78,8 @@ class BotRunner:
         queue_mode="private",
         coach_path=None,
         prediction_path=None,
+        suppress_console=False,
+        use_spawn_grid_hint=False,
     ):
         self.client = SimpleClient()
         self.running = True
@@ -64,6 +93,8 @@ class BotRunner:
         self.log_path = Path(log_path) if log_path else None
         self.verbose_console = verbose_console
         self.queue_mode = queue_mode
+        self.suppress_console = suppress_console
+        self.use_spawn_grid_hint = use_spawn_grid_hint
         self.replay_id = None
         self.failure_reason = None
         self.last_event_time = time.time()
@@ -72,20 +103,26 @@ class BotRunner:
         self.enemy_general_guess_confidence = None
         self.enemy_general_guess_reason = None
         self.enemy_general_guess_candidates = []
+        self.enemy_general_beliefs = []
         self.enemy_general_actual_index = None
         self.guess_result_recorded = False
         self.map_metrics = None
         self.final_map_analysis = None
         self.move_count = 0
+        self.action_samples = []
+        self.policy_tensor_sample_count = 0
         self.game_start_data = {}
         self.player_names = []
         self.opponent_memory_adjustment = None
         self.jax_policy_agent = JaxPolicyAgent()
+        self.jax_action_value_agent = JaxActionValueAgent(
+            min_samples_to_use=ACTION_VALUE_MIN_SAMPLES_TO_USE,
+        )
         self.jax_policy_adjustment = None
         self.last_jax_policy_turn = -1
 
         self.state = GameState()
-        self.general_guesser = GeneralGuesser()
+        self.general_guesser = GeneralGuesser(force_spawn_grid=use_spawn_grid_hint)
         self.stats = ReserveTurnStats(stats_path) if stats_path else ReserveTurnStats()
         self.coach = StrategyCoach(path=coach_path or "data/profiles/strategy_profile.json", logger=self.log)
         self.enemy_predictor = EnemyAttackPredictor(path=prediction_path or "data/predictions/enemy_predictions.json")
@@ -99,6 +136,7 @@ class BotRunner:
             self.general_attack_after_turn,
             logger=self.log,
         )
+        self.strategy.action_value_agent = self.jax_action_value_agent
         self.coach.apply_start_profile(self.strategy)
         self.reserve_after_turn = self.strategy.reserve_after_turn
         self.city_focus_after_turn = self.strategy.city_focus_after_turn
@@ -111,7 +149,7 @@ class BotRunner:
             with self.log_path.open("a", encoding="utf-8") as log_file:
                 timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                 log_file.write(f"{timestamp} {message}\n")
-        if console or self.verbose_console:
+        if (console or self.verbose_console) and not self.suppress_console:
             print(message, flush=True)
 
     def start_quit_listener(self):
@@ -159,6 +197,7 @@ class BotRunner:
         self.client.emit("attack", (move.source, move.target, move.half))
         self.state.last_move_turn = turn
         self.move_count += 1
+        self.record_action_sample(turn, move, terrain, armies)
 
         self.log(
             f"Move #{self.move_count}: {move.source} -> {move.target} | "
@@ -167,6 +206,118 @@ class BotRunner:
             f"Target: {move.strategy_target} | "
             f"Half: {move.half}",
             console=self.move_count <= 5 or self.move_count % 25 == 0,
+        )
+
+    def should_record_action_sample(self):
+        if len(self.action_samples) >= ACTION_SAMPLE_MAX_PER_GAME:
+            return False
+        if self.move_count <= ACTION_SAMPLE_FIRST_MOVES:
+            return True
+        return ACTION_SAMPLE_INTERVAL > 0 and self.move_count % ACTION_SAMPLE_INTERVAL == 0
+
+    def should_record_policy_tensor_sample(self):
+        if self.policy_tensor_sample_count >= POLICY_TENSOR_SAMPLE_MAX_PER_GAME:
+            return False
+        if self.move_count <= POLICY_TENSOR_SAMPLE_FIRST_MOVES:
+            return True
+        return (
+            POLICY_TENSOR_SAMPLE_INTERVAL > 0
+            and self.move_count % POLICY_TENSOR_SAMPLE_INTERVAL == 0
+        )
+
+    def record_action_sample(self, turn, move, terrain, armies):
+        if not self.should_record_action_sample():
+            return
+
+        selected = self.strategy.last_selected_move or {}
+        score_components = selected.get("score_components") or {}
+        source_army = armies[move.source] if move.source < len(armies) else None
+        target_army = armies[move.target] if move.target < len(armies) else None
+        target_terrain = terrain[move.target] if move.target < len(terrain) else None
+        coach_snapshot = self.coach.last_snapshot
+        action_index = encode_action(
+            self.state.width,
+            self.state.height,
+            source=move.source,
+            target=move.target,
+            half=move.half,
+        )
+        include_policy_tensor = self.should_record_policy_tensor_sample()
+        if include_policy_tensor:
+            self.policy_tensor_sample_count += 1
+        self.action_samples.append(
+            {
+                "move_number": self.move_count,
+                "turn": turn,
+                "visible_turn": self.state.visible_turn(turn),
+                "source": move.source,
+                "target": move.target,
+                "half": move.half,
+                "policy_action_index": action_index,
+                "policy_legal_action_mask": (
+                    legal_action_planes(
+                        self.state,
+                        terrain=terrain,
+                        armies=armies,
+                    )
+                    if include_policy_tensor
+                    else None
+                ),
+                "board": build_board_snapshot(
+                    self.state,
+                    terrain=terrain,
+                    armies=armies,
+                    include_tensor=include_policy_tensor,
+                ),
+                "strategy_target": move.strategy_target,
+                "source_army": source_army,
+                "target_army": target_army,
+                "target_terrain": target_terrain,
+                "target_distance": selected.get("target_distance"),
+                "my_tiles": self.state.my_tile_count(),
+                "enemy_tiles": self.state.biggest_enemy_tile_count(),
+                "my_army": self.state.my_total_army(),
+                "enemy_army": self.state.biggest_enemy_total_army(),
+                "visible_enemy_tiles": len(self.state.visible_enemy_tiles),
+                "seen_tiles": len(self.state.seen_tiles),
+                "width": self.state.width,
+                "height": self.state.height,
+                "coach_mode": self.coach.last_mode,
+                "coach_bias": dict(self.strategy.coach_bias),
+                "coach_visible_my_cities": (
+                    coach_snapshot.visible_my_cities if coach_snapshot else None
+                ),
+                "coach_visible_enemy_cities": (
+                    coach_snapshot.visible_enemy_cities if coach_snapshot else None
+                ),
+                "score": selected.get("final_score", selected.get("score")),
+                "base_score": selected.get("base_score"),
+                "option": self.strategy.current_option.name,
+                "option_reason": self.strategy.current_option.reason,
+                "priority_reason": selected.get("priority_reason"),
+                "lookahead_bonus": selected.get("lookahead_bonus", 0),
+                "lookahead_reason": selected.get("lookahead_reason"),
+                "action_value": selected.get("action_value"),
+                "action_value_adjustment": selected.get("action_value_adjustment", 0),
+                "score_components": score_components,
+                "top_candidates": self.strategy.last_move_explanations,
+                "flags": {
+                    key: bool(selected.get(key))
+                    for key in (
+                        "target_is_new_tile",
+                        "target_is_enemy_tile",
+                        "target_is_enemy_general",
+                        "can_take_city",
+                        "follows_city_free_route",
+                        "follows_fallback_route",
+                        "opens_route_gateway",
+                        "defends_general",
+                        "attacks_threat",
+                        "stalemate_breakout",
+                        "stalemate_scout_push",
+                    )
+                },
+            }
         )
 
     def run(self):
@@ -244,6 +395,13 @@ class BotRunner:
                         self.state.start(data)
                         self.log("GAME START!", console=True)
                         self.log("My player index:", self.state.player_index)
+                        if self.queue_mode == "1v1":
+                            opponents = self.opponent_names()
+                            self.log(
+                                "Opponent:",
+                                ", ".join(opponents) if opponents else "unknown",
+                                console=True,
+                            )
                         self.log("Replay:", self.replay_url(), console=True)
                         self.apply_opponent_memory()
 
@@ -302,19 +460,10 @@ class BotRunner:
         return f"https://bot.generals.io/replays/{self.replay_id}"
 
     def update_enemy_general_guess(self, turn):
-        if self.enemy_general_guess_index is not None:
-            terrain, _ = self.state.split_map()
-            if self.general_guesser.can_be_general(
-                self.state,
-                terrain,
-                self.enemy_general_guess_index,
-            ):
-                return
-            self.enemy_general_guess_index = None
-            self.enemy_general_guess_confidence = None
-            self.enemy_general_guess_reason = None
-            self.enemy_general_guess_candidates = []
-            self.strategy.initial_enemy_general_guess = None
+        if self.state.enemy_general_index is not None:
+            self.enemy_general_beliefs = []
+            self.strategy.set_enemy_general_beliefs([])
+            return
         if self.state.width <= 0 or self.state.height <= 0:
             return
         if self.state.my_general_index is None:
@@ -323,19 +472,36 @@ class BotRunner:
         terrain, _ = self.state.split_map()
         guess = self.general_guesser.choose(self.state, terrain, turn)
         if guess is None:
+            self.enemy_general_guess_index = None
+            self.enemy_general_guess_confidence = None
+            self.enemy_general_guess_reason = None
+            self.enemy_general_guess_candidates = []
+            self.enemy_general_beliefs = []
+            self.strategy.initial_enemy_general_guess = None
+            self.strategy.set_enemy_general_beliefs([])
             return
 
+        previous_guess = self.enemy_general_guess_index
         self.enemy_general_guess_index = guess.index
         self.enemy_general_guess_turn = turn
         self.enemy_general_guess_confidence = guess.confidence
         self.enemy_general_guess_reason = guess.reason
         self.enemy_general_guess_candidates = guess.candidates
-        self.strategy.initial_enemy_general_guess = self.enemy_general_guess_index
+        self.enemy_general_beliefs = guess.candidates
+        self.strategy.set_enemy_general_beliefs(self.enemy_general_beliefs)
+        if previous_guess == self.enemy_general_guess_index:
+            return
+
         self.log(
             "Enemy general guess:",
             self.enemy_general_guess_index,
             "Confidence:",
             self.enemy_general_guess_confidence,
+            "Beliefs:",
+            [
+                (candidate.get("index"), candidate.get("belief"))
+                for candidate in self.enemy_general_beliefs[:3]
+            ],
             "Grund:",
             self.enemy_general_guess_reason,
             "bei eigener Position",
@@ -379,9 +545,15 @@ class BotRunner:
             "guess_confidence": self.enemy_general_guess_confidence,
             "guess_reason": self.enemy_general_guess_reason,
             "guess_candidates": self.enemy_general_guess_candidates,
+            "general_beliefs": self.enemy_general_beliefs,
             "guessed_enemy_general_index": self.enemy_general_guess_index,
             "guess_turn": self.enemy_general_guess_turn,
             "height": self.state.height,
+            "spawn_grid_hint": {
+                "enabled": self.use_spawn_grid_hint,
+                "ready": self.general_guesser.spawn_grid_agent.is_ready(),
+                "model_path": str(self.general_guesser.spawn_grid_agent.path),
+            },
             "final_map_analysis": self.final_map_analysis,
             "map_metrics": self.map_metrics,
             "my_general_index": self.state.my_general_index,
@@ -640,8 +812,26 @@ def write_bot_result(result_path, runner, won):
                 "opponent_names": runner.opponent_names(),
                 "opponent_memory_adjustment": runner.opponent_memory_adjustment,
                 "jax_policy_adjustment": runner.jax_policy_adjustment,
+                "spawn_grid_hint": {
+                    "enabled": runner.use_spawn_grid_hint,
+                    "ready": runner.general_guesser.spawn_grid_agent.is_ready(),
+                    "model_path": str(runner.general_guesser.spawn_grid_agent.path),
+                },
                 "log_path": str(runner.log_path) if runner.log_path else None,
                 "general_guess": runner.general_guess_record(won),
+                "action_sample_count": len(runner.action_samples),
+                "action_samples": runner.action_samples,
+                "action_value_model": {
+                    "ready": runner.jax_action_value_agent.is_ready(),
+                    "sample_count": runner.jax_action_value_agent.sample_count(),
+                    "min_samples_to_use": ACTION_VALUE_MIN_SAMPLES_TO_USE,
+                },
+                "last_move_explanations": runner.strategy.last_move_explanations,
+                "strategy_option": {
+                    "name": runner.strategy.current_option.name,
+                    "reason": runner.strategy.current_option.reason,
+                    "started_at_visible_turn": runner.strategy.current_option.started_at_visible_turn,
+                },
                 "final_map_analysis": runner.final_map_analysis,
                 "won": won,
                 "reserve_after_turn": runner.reserve_after_turn,
@@ -666,6 +856,13 @@ def write_bot_result(result_path, runner, won):
                     if runner.coach.last_snapshot
                     else None
                 ),
+                "stalemate": {
+                    "active_at_finish": runner.strategy.stalemate.active,
+                    "activated_at_visible_turn": runner.strategy.stalemate.activated_at_visible_turn,
+                    "last_progress_visible_turn": runner.strategy.stalemate.last_progress_visible_turn,
+                    "repeated_target_count": runner.strategy.stalemate.repeated_target_count,
+                    "reason": runner.strategy.stalemate.reason,
+                },
                 "replay_id": runner.replay_id,
                 "replay_url": runner.replay_url(),
                 "failure_reason": runner.failure_reason,
@@ -762,6 +959,7 @@ def run_training_bot(
     log_path=None,
     coach_path=None,
     prediction_path=None,
+    use_spawn_grid_hint=False,
 ):
     runner = BotRunner(
         room_id=room_id,
@@ -773,12 +971,22 @@ def run_training_bot(
         log_path=log_path,
         coach_path=coach_path,
         prediction_path=prediction_path,
+        suppress_console=bool(log_path),
+        use_spawn_grid_hint=use_spawn_grid_hint,
     )
     won = runner.run()
     write_bot_result(result_path, runner, won)
 
 
-def write_pending_bot_result(result_path, room_id, user_id, username, label, log_path=None):
+def write_pending_bot_result(
+    result_path,
+    room_id,
+    user_id,
+    username,
+    label,
+    log_path=None,
+    use_spawn_grid_hint=False,
+):
     path = Path(result_path)
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(
@@ -792,6 +1000,11 @@ def write_pending_bot_result(result_path, room_id, user_id, username, label, log
                 "opponent_names": [],
                 "opponent_memory_adjustment": None,
                 "jax_policy_adjustment": None,
+                "spawn_grid_hint": {
+                    "enabled": use_spawn_grid_hint,
+                    "ready": None,
+                    "model_path": None,
+                },
                 "log_path": str(log_path) if log_path else None,
                 "general_guess": None,
                 "final_map_analysis": None,
@@ -818,7 +1031,7 @@ def write_pending_bot_result(result_path, room_id, user_id, username, label, log
     )
 
 
-def mark_training_process_timeout(result_path):
+def mark_training_process_failed(result_path, reason):
     path = Path(result_path)
     if not path.exists():
         return
@@ -831,13 +1044,17 @@ def mark_training_process_timeout(result_path):
     if result.get("status") != "running":
         return
 
-    result["failure_reason"] = "process_timeout"
+    result["failure_reason"] = reason
     result["status"] = "failed"
     result["won"] = None
     path.write_text(
         json.dumps(result, indent=2, sort_keys=True),
         encoding="utf-8",
     )
+
+
+def mark_training_process_timeout(result_path):
+    mark_training_process_failed(result_path, "process_timeout")
 
 
 def read_json_file(path, fallback):
@@ -1085,9 +1302,102 @@ def parse_args():
         help="Optional fixed self-play run id, useful for external log consoles.",
     )
     parser.add_argument(
+        "--training-archive-interval",
+        type=int,
+        default=TRAINING_ARCHIVE_INTERVAL_MATCHES,
+        help="Number of finished self-play matches between raw training ZIP archives.",
+    )
+    parser.add_argument(
+        "--training-coach-interval",
+        type=int,
+        default=TRAINING_COACH_INTERVAL_MATCHES,
+        help="Number of finished self-play matches between coach checkpoints and JAX training runs.",
+    )
+    parser.add_argument(
+        "--disable-replay-analyzer",
+        action="store_true",
+        help="Disables the low-priority self-play replay metadata analyzer.",
+    )
+    parser.add_argument(
+        "--replay-analyzer-interval",
+        type=float,
+        default=15.0,
+        help="Seconds between background replay metadata analyzer passes.",
+    )
+    parser.add_argument(
         "--train-jax-agent",
         action="store_true",
         help="Trains the JAX policy agent from data/training/policy_samples.jsonl.",
+    )
+    parser.add_argument(
+        "--train-action-value-agent",
+        action="store_true",
+        help="Trains the JAX action-value agent from data/training/action_samples.jsonl.",
+    )
+    parser.add_argument(
+        "--train-spawn-guess-agent",
+        action="store_true",
+        help="Trains the JAX spawn guess agent from data/replays/duel_map_dataset.jsonl.",
+    )
+    parser.add_argument(
+        "--skip-startup-training",
+        action="store_true",
+        help="Skips the automatic short JAX refresh before a normal bot/simulator/self-play start.",
+    )
+    parser.add_argument(
+        "--test-spawn-grid-hint",
+        action="store_true",
+        help="Temporarily enables the experimental JAX spawn grid hint without editing the model file.",
+    )
+    parser.add_argument(
+        "--spawn-grid-ab-test",
+        action="store_true",
+        help="In self-play, runs one spawn-grid-hint bot against one baseline bot per match.",
+    )
+    parser.add_argument(
+        "--sim-self-play",
+        action="store_true",
+        help="Runs local simulator games with the strategy adapter instead of live generals.io rooms.",
+    )
+    parser.add_argument(
+        "--sim-games",
+        type=int,
+        default=32,
+        help="Number of local simulator games to run.",
+    )
+    parser.add_argument(
+        "--sim-parallel-games",
+        type=int,
+        default=16,
+        help="Number of local simulator games to keep active in the Python adapter loop.",
+    )
+    parser.add_argument(
+        "--sim-grid-size",
+        type=int,
+        default=10,
+        help="Square grid size for local simulator games.",
+    )
+    parser.add_argument(
+        "--sim-truncation",
+        type=int,
+        default=500,
+        help="Maximum simulator steps per game.",
+    )
+    parser.add_argument(
+        "--sim-opponent",
+        choices=("random", "expander", "hunter"),
+        default="expander",
+        help="Built-in simulator opponent for local games.",
+    )
+    parser.add_argument(
+        "--sim-path",
+        default=None,
+        help="Path to generals-bots; defaults to GENERALS_BOTS_PATH or ../Generals-Bot-Sim/generals-bots.",
+    )
+    parser.add_argument(
+        "--no-requeue",
+        action="store_true",
+        help="Runs only one live bot game and then stops instead of searching again.",
     )
     return parser.parse_args()
 
@@ -1104,7 +1414,13 @@ def stop_runner_now(runner):
         pass
 
 
-def start_auto_game_listener(stop_after_current, current_runner, runner_lock, allow_force_stop=True):
+def start_auto_game_listener(
+    stop_after_current,
+    current_runner,
+    runner_lock,
+    allow_force_stop=True,
+    force_stop_event=None,
+):
     def handle_command(command):
         if command == "e":
             stop_after_current.set()
@@ -1116,6 +1432,9 @@ def start_auto_game_listener(stop_after_current, current_runner, runner_lock, al
             if not allow_force_stop:
                 print("Autostart stopped: currently running matches will finish.", flush=True)
                 return True
+
+            if force_stop_event is not None:
+                force_stop_event.set()
 
             with runner_lock:
                 runner = current_runner.get("runner")
@@ -1153,16 +1472,21 @@ def start_auto_game_listener(stop_after_current, current_runner, runner_lock, al
     threading.Thread(target=listener, daemon=True).start()
 
 
-def run_auto_games(write_log_files=False, queue_mode="private"):
+def run_auto_games(write_log_files=False, queue_mode="private", use_spawn_grid_hint=False, requeue=True):
     stop_after_current = threading.Event()
     current_runner = {"runner": None}
     runner_lock = threading.Lock()
     game_number = 1
+    run_id = f"public_{queue_mode}_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+    run_dir = Path("runs/public_1v1") / run_id
+    run_dir.mkdir(parents=True, exist_ok=True)
 
     print(
-        f"Auto mode active ({queue_mode}). Input: e = stop after current game, q = stop immediately.",
+        f"Auto mode active ({queue_mode}, requeue={'on' if requeue else 'off'}). "
+        "Input: e = stop after current game, q = stop immediately.",
         flush=True,
     )
+    print(f"Public game results: {run_dir}", flush=True)
     if write_log_files:
         print("Detailed logs: logs/public_games", flush=True)
     start_auto_game_listener(stop_after_current, current_runner, runner_lock)
@@ -1177,19 +1501,35 @@ def run_auto_games(write_log_files=False, queue_mode="private"):
             label=f"game-{game_number}",
             log_path=log_path,
             queue_mode=queue_mode,
+            use_spawn_grid_hint=use_spawn_grid_hint,
         )
         with runner_lock:
             current_runner["runner"] = runner
 
         print(f"Starting game {game_number}.", flush=True)
-        won = runner.run()
+        with WindowsSleepGuard("auto game"):
+            won = runner.run()
+        result_path = run_dir / f"game_{game_number:03d}_result.json"
+        write_bot_result(result_path, runner, won)
         add_general_guess_records([runner.general_guess_record(won)])
         add_replay_record(runner, won)
+        training_summary = process_public_game_result(result_path)
+        if training_summary.get("processed"):
+            print(
+                "Training data:",
+                f"+{training_summary['action_samples_written']} action samples,",
+                f"+{training_summary['policy_samples_written']} policy samples.",
+                flush=True,
+            )
 
         with runner_lock:
             current_runner["runner"] = None
 
         if stop_after_current.is_set():
+            break
+
+        if not requeue:
+            print("Requeue disabled; stopping after this game.", flush=True)
             break
 
         if won is None:
@@ -1198,6 +1538,14 @@ def run_auto_games(write_log_files=False, queue_mode="private"):
                 or "gio_error" in runner.failure_reason
                 or "error_set_username" in runner.failure_reason
                 or "Account Disabled" in runner.failure_reason
+                or runner.failure_reason
+                in (
+                    "account_creation_rate_limited",
+                    "username_bot_prefix_forbidden",
+                    "username_too_long",
+                    "username_taken",
+                    "set_username_failed",
+                )
             ):
                 print(
                     "Stopping because of account/username error:",
@@ -1329,6 +1677,14 @@ SELF_PLAY_ACCOUNTS = [
         "user_id": f"{USER_ID}_self_08",
         "username": f"{USERNAME}_Self_08",
     },
+    {
+        "user_id": f"{USER_ID}_self_09",
+        "username": f"{USERNAME}_Self_09",
+    },
+    {
+        "user_id": f"{USER_ID}_self_10",
+        "username": f"{USERNAME}_Self_10",
+    },
 ]
 
 def self_play_accounts(slot_number):
@@ -1349,6 +1705,8 @@ def start_self_play_match(
     run_id,
     run_dir,
     write_log_files,
+    use_spawn_grid_hint=False,
+    spawn_grid_ab_test=False,
 ):
     variant_a = SELF_PLAY_VARIANTS[(match_number - 1) % len(SELF_PLAY_VARIANTS)]
     variant_b = SELF_PLAY_VARIANTS[(match_number) % len(SELF_PLAY_VARIANTS)]
@@ -1359,14 +1717,14 @@ def start_self_play_match(
     stats_paths = []
     processes = []
 
-    print(
-        f"Self-play Match {match_number}: {variant_a['name']} vs {variant_b['name']}",
-        flush=True,
-    )
-    print(f"Room: https://bot.generals.io/games/{room_id}", flush=True)
-
     for seat, variant in enumerate((variant_a, variant_b)):
-        label = f"self-{match_number:04d}-{seat}-{variant['name']}"
+        seat_uses_spawn_grid = use_spawn_grid_hint
+        if spawn_grid_ab_test:
+            hint_seat = (match_number + slot_number) % 2
+            seat_uses_spawn_grid = seat == hint_seat
+
+        hint_suffix = "-gridhint" if seat_uses_spawn_grid else "-baseline"
+        label = f"self-{match_number:04d}-{seat}-{variant['name']}{hint_suffix}"
         stats_path = run_dir / f"{label}_stats.json"
         result_path = run_dir / f"{label}_result.json"
         log_path = run_dir / "logs" / "slots" / f"slot_{slot_number}.log" if write_log_files else None
@@ -1382,6 +1740,10 @@ def start_self_play_match(
                     f"===== MATCH {match_number:04d} | SLOT {slot_number} | "
                     f"{variant_a['name']} vs {variant_b['name']} =====\n"
                     f"Room: https://bot.generals.io/games/{room_id}\n"
+                    f"Seat 0: {variant_a['name']} "
+                    f"{'gridhint' if (use_spawn_grid_hint or (spawn_grid_ab_test and hint_seat == 0)) else 'baseline'}\n"
+                    f"Seat 1: {variant_b['name']} "
+                    f"{'gridhint' if (use_spawn_grid_hint or (spawn_grid_ab_test and hint_seat == 1)) else 'baseline'}\n"
                 )
 
         stats_paths.append(stats_path)
@@ -1394,6 +1756,7 @@ def start_self_play_match(
             accounts[seat]["username"],
             label,
             log_path,
+            seat_uses_spawn_grid,
         )
 
         process = mp.Process(
@@ -1408,6 +1771,7 @@ def start_self_play_match(
                 str(log_path) if log_path else None,
                 str(coach_path),
                 str(prediction_path),
+                seat_uses_spawn_grid,
             ),
         )
         process.start()
@@ -1430,7 +1794,14 @@ def start_self_play_match(
     }
 
 
-def finish_self_play_match(match, run_dir, run_id, all_replay_data):
+def finish_self_play_match(
+    match,
+    run_dir,
+    run_id,
+    all_replay_data,
+    training_archive_interval=TRAINING_ARCHIVE_INTERVAL_MATCHES,
+    training_coach_interval=TRAINING_COACH_INTERVAL_MATCHES,
+):
     match_no = match["match_number"]
     replay_data = collect_replay_results(match["result_paths"])
 
@@ -1450,21 +1821,33 @@ def finish_self_play_match(match, run_dir, run_id, all_replay_data):
     write_json_file(run_dir / "latest_match.json", replay_data)
     write_json_file(run_dir / "all_replays.json", all_replay_data)
 
-    batch_summary = process_self_play_batch(run_dir, run_id, match_no)
-    if batch_summary:
-        print(
-            "Batch processed:",
-            f"{batch_summary['batch_start']}-{batch_summary['batch_end']}",
-            "archive:",
-            batch_summary.get("archive_path"),
-            flush=True,
-        )
-        if batch_summary.get("coach_checkpoint_path"):
-            print(
-                "Coach checkpoint:",
-                batch_summary["coach_checkpoint_path"],
-                flush=True,
-            )
+    batch_summary = process_self_play_batch(
+        run_dir,
+        run_id,
+        match_no,
+        batch_size=training_archive_interval,
+        coach_interval=training_coach_interval,
+    )
+    return batch_summary
+
+
+def terminate_self_play_matches(active_matches, reason="force_stopped", dashboard=None):
+    for match in active_matches:
+        for item in match.get("processes", []):
+            process = item.get("process")
+            if process is None or not process.is_alive():
+                continue
+
+            if dashboard:
+                dashboard.set_message(f"Force stopping: {item['label']}.")
+            process.terminate()
+            process.join(timeout=5)
+
+            if process.is_alive():
+                process.kill()
+                process.join(timeout=5)
+
+            mark_training_process_failed(item["result_path"], reason)
 
 
 def run_self_play(
@@ -1473,6 +1856,12 @@ def run_self_play(
     start_delay_seconds=2,
     requeue_delay_seconds=20,
     run_id=None,
+    training_archive_interval=TRAINING_ARCHIVE_INTERVAL_MATCHES,
+    training_coach_interval=TRAINING_COACH_INTERVAL_MATCHES,
+    replay_analyzer_enabled=True,
+    replay_analyzer_interval=15,
+    use_spawn_grid_hint=False,
+    spawn_grid_ab_test=False,
 ):
     max_parallel_games = len(SELF_PLAY_ACCOUNTS) // 2
 
@@ -1489,8 +1878,13 @@ def run_self_play(
         raise ValueError("--self-play-start-delay must be zero or greater.")
     if requeue_delay_seconds < 0:
         raise ValueError("--self-play-requeue-delay must be zero or greater.")
+    if training_archive_interval < 1:
+        raise ValueError("--training-archive-interval must be at least 1.")
+    if training_coach_interval < 1:
+        raise ValueError("--training-coach-interval must be at least 1.")
 
     stop_after_current = threading.Event()
+    force_stop_now = threading.Event()
     current_runner = {"runner": None}
     runner_lock = threading.Lock()
     match_number = 1
@@ -1500,20 +1894,40 @@ def run_self_play(
     (run_dir / "profiles").mkdir(parents=True, exist_ok=True)
     (run_dir / "predictions").mkdir(parents=True, exist_ok=True)
 
-    print("Self-play active. Input: e = stop after running matches, q = stop after running matches.", flush=True)
-    print("Run:", run_dir, flush=True)
-    print("Parallel games:", parallel_games, flush=True)
-    print("Pair start delay seconds:", start_delay_seconds, flush=True)
-    print("Idle pair requeue delay seconds:", requeue_delay_seconds, flush=True)
-
     start_auto_game_listener(
         stop_after_current,
         current_runner,
         runner_lock,
-        allow_force_stop=False,
+        allow_force_stop=True,
+        force_stop_event=force_stop_now,
     )
 
     all_replay_data = {"matches": [], "bots": []}
+    replay_analyzer_status = {}
+    dashboard = SelfPlayDashboard(
+        run_dir,
+        run_id,
+        parallel_games,
+        start_delay_seconds,
+        requeue_delay_seconds,
+        replay_analyzer_status,
+    )
+    dashboard.set_message(
+        "Replay analyzer enabled." if replay_analyzer_enabled else "Replay analyzer disabled."
+    )
+    replay_analyzer = None
+    if replay_analyzer_enabled:
+        replay_analyzer = BackgroundReplayAnalyzer(
+            run_dir,
+            run_id=run_id,
+            interval_seconds=replay_analyzer_interval,
+            max_files_per_pass=4,
+            logger=None,
+            status=replay_analyzer_status,
+        )
+        replay_analyzer.start()
+    sleep_guard = WindowsSleepGuard("self-play training")
+
     active_matches = []
     idle_slots = [
         {
@@ -1524,89 +1938,184 @@ def run_self_play(
     ]
     last_pair_start_time = 0.0
 
-    while not stop_after_current.is_set():
-        now = time.time()
-        if idle_slots and now - last_pair_start_time >= start_delay_seconds:
-            idle_slots.sort(key=lambda item: item["available_at"])
-            next_slot = idle_slots[0]
-            if next_slot["available_at"] <= now:
-                idle_slots.pop(0)
-                print(
-                    f"Dispatching idle pair slot {next_slot['slot_number']} to match {match_number}.",
-                    flush=True,
-                )
-                active_matches.append(
-                    start_self_play_match(
-                        match_number=match_number,
-                        slot_number=next_slot["slot_number"],
-                        run_id=run_id,
-                        run_dir=run_dir,
-                        write_log_files=write_log_files,
+    try:
+        while not stop_after_current.is_set():
+            sleep_guard.set_active(bool(active_matches))
+            dashboard.render(active_matches, idle_slots, match_number)
+            now = time.time()
+            if idle_slots and now - last_pair_start_time >= start_delay_seconds:
+                idle_slots.sort(key=lambda item: item["available_at"])
+                next_slot = idle_slots[0]
+                if next_slot["available_at"] <= now:
+                    idle_slots.pop(0)
+                    dashboard.set_message(
+                        f"Dispatching slot {next_slot['slot_number']} to match {match_number:04d}."
                     )
-                )
-                match_number += 1
-                last_pair_start_time = time.time()
-                time.sleep(0.1)
-                continue
-
-        still_active_matches = []
-        for match in active_matches:
-            still_running_processes = []
-
-            for item in match["processes"]:
-                process = item["process"]
-                process.join(timeout=0.1)
-
-                if not process.is_alive():
+                    active_matches.append(
+                        start_self_play_match(
+                            match_number=match_number,
+                            slot_number=next_slot["slot_number"],
+                            run_id=run_id,
+                            run_dir=run_dir,
+                            write_log_files=write_log_files,
+                            use_spawn_grid_hint=use_spawn_grid_hint,
+                            spawn_grid_ab_test=spawn_grid_ab_test,
+                        )
+                    )
+                    sleep_guard.set_active(True)
+                    match_number += 1
+                    last_pair_start_time = time.time()
+                    time.sleep(0.1)
                     continue
 
-                runtime = time.time() - item["started_at"]
-                if runtime <= TRAINING_PROCESS_TIMEOUT_SECONDS:
-                    still_running_processes.append(item)
-                    continue
+            still_active_matches = []
+            for match in active_matches:
+                still_running_processes = []
 
-                print("Self-play process is stuck:", item["label"], flush=True)
-                process.terminate()
-                process.join(timeout=5)
+                for item in match["processes"]:
+                    process = item["process"]
+                    process.join(timeout=0.1)
 
-                if process.is_alive():
-                    process.kill()
+                    if not process.is_alive():
+                        continue
+
+                    runtime = time.time() - item["started_at"]
+                    if runtime <= TRAINING_PROCESS_TIMEOUT_SECONDS:
+                        still_running_processes.append(item)
+                        continue
+
+                    dashboard.set_message(f"Process timeout: {item['label']}.")
+                    process.terminate()
                     process.join(timeout=5)
 
-                mark_training_process_timeout(item["result_path"])
+                    if process.is_alive():
+                        process.kill()
+                        process.join(timeout=5)
 
-            match["processes"] = still_running_processes
+                    mark_training_process_timeout(item["result_path"])
 
-            if still_running_processes:
-                still_active_matches.append(match)
-                continue
+                match["processes"] = still_running_processes
 
-            finish_self_play_match(match, run_dir, run_id, all_replay_data)
-            available_at = time.time() + requeue_delay_seconds
-            idle_slots.append(
-                {
-                    "slot_number": match["slot_number"],
-                    "available_at": available_at,
-                }
+                if still_running_processes:
+                    still_active_matches.append(match)
+                    continue
+
+                batch_summary = finish_self_play_match(
+                    match,
+                    run_dir,
+                    run_id,
+                    all_replay_data,
+                    training_archive_interval=training_archive_interval,
+                    training_coach_interval=training_coach_interval,
+                )
+                if batch_summary:
+                    if batch_summary.get("coach_checkpoint_path"):
+                        archive_note = (
+                            f" ZIP: {batch_summary['archive_path']}."
+                            if batch_summary.get("archive_path")
+                            else ""
+                        )
+                        dashboard.set_message(
+                            "Coach checkpoint written at global match "
+                            f"{batch_summary['global_finished_matches']}: "
+                            f"{batch_summary['coach_checkpoint_path']}."
+                            f"{archive_note}"
+                        )
+                    elif batch_summary.get("archive_path"):
+                        dashboard.set_message(
+                            "Training ZIP written at global match "
+                            f"{batch_summary['archive_threshold']}: "
+                            f"{batch_summary['archive_path']}"
+                        )
+                    else:
+                        dashboard.set_message(
+                            "Training data updated: "
+                            f"+{batch_summary['new_finished_results']} bot results, "
+                            f"{batch_summary['global_finished_matches']} global matches."
+                        )
+                else:
+                    dashboard.set_message(f"Finished match {match['match_number']:04d}.")
+                available_at = time.time() + requeue_delay_seconds
+                idle_slots.append(
+                    {
+                        "slot_number": match["slot_number"],
+                        "available_at": available_at,
+                    }
+                )
+                dashboard.render(still_active_matches, idle_slots, match_number, force=True)
+
+            active_matches = still_active_matches
+            sleep_guard.set_active(bool(active_matches))
+            time.sleep(1)
+    finally:
+        if force_stop_now.is_set() and active_matches:
+            terminate_self_play_matches(
+                active_matches,
+                reason="force_stopped",
+                dashboard=dashboard,
             )
-            print(
-                f"Pair slot {match['slot_number']} is idle; next dispatch after {requeue_delay_seconds} seconds.",
-                flush=True,
-            )
+            active_matches = []
+        sleep_guard.allow_sleep()
+        if replay_analyzer:
+            replay_analyzer.stop()
 
-        active_matches = still_active_matches
-        time.sleep(1)
+    dashboard.set_message("Self-play stopped.")
+    dashboard.render(active_matches, idle_slots, match_number, force=True)
+    print("\nSelf-play stopped.", flush=True)
 
-    print("Self-play stopped.", flush=True)
-    print("Data:", run_dir, flush=True)
+
+def run_startup_jax_training():
+    if not STARTUP_JAX_TRAINING_ENABLED:
+        return None
+
+    print(
+        "Startup JAX refresh: "
+        f"{STARTUP_JAX_TRAINING_EPOCHS} epochs, "
+        f"patience {STARTUP_JAX_TRAINING_PATIENCE}.",
+        flush=True,
+    )
+    with WindowsSleepGuard("startup JAX refresh"):
+        policy_result = train_policy_agent(
+            epochs=STARTUP_JAX_TRAINING_EPOCHS,
+            patience=STARTUP_JAX_TRAINING_PATIENCE,
+            continue_from_existing=True,
+        )
+        action_value_result = train_action_value_agent(
+            epochs=STARTUP_JAX_TRAINING_EPOCHS,
+            patience=STARTUP_JAX_TRAINING_PATIENCE,
+            continue_from_existing=True,
+        )
+
+    result = {
+        "policy": policy_result,
+        "action_value": action_value_result,
+    }
+    print("Startup JAX refresh:", json.dumps(result, indent=2, sort_keys=True), flush=True)
+    return result
 
 
 def main():
     args = parse_args()
     if args.train_jax_agent:
-        result = train_policy_agent()
+        with WindowsSleepGuard("JAX policy training"):
+            result = train_policy_agent()
         print("JAX policy training:", json.dumps(result, indent=2, sort_keys=True))
         return
+
+    if args.train_action_value_agent:
+        with WindowsSleepGuard("JAX action-value training"):
+            result = train_action_value_agent()
+        print("JAX action-value training:", json.dumps(result, indent=2, sort_keys=True))
+        return
+
+    if args.train_spawn_guess_agent:
+        with WindowsSleepGuard("JAX spawn guess training"):
+            result = train_spawn_guess_agent()
+        print("JAX spawn guess training:", json.dumps(result, indent=2, sort_keys=True))
+        return
+
+    if not args.skip_startup_training:
+        run_startup_jax_training()
 
     if args.self_play:
         run_self_play(
@@ -1615,10 +2124,35 @@ def main():
             start_delay_seconds=args.self_play_start_delay,
             requeue_delay_seconds=args.self_play_requeue_delay,
             run_id=args.self_play_run_id,
+            training_archive_interval=args.training_archive_interval,
+            training_coach_interval=args.training_coach_interval,
+            replay_analyzer_enabled=not args.disable_replay_analyzer,
+            replay_analyzer_interval=args.replay_analyzer_interval,
+            use_spawn_grid_hint=args.test_spawn_grid_hint,
+            spawn_grid_ab_test=args.spawn_grid_ab_test,
         )
         return
 
-    run_auto_games(write_log_files=args.log_files, queue_mode=args.queue)
+    if args.sim_self_play:
+        from sim_runner import run_sim_benchmark
+
+        result = run_sim_benchmark(
+            games=args.sim_games,
+            parallel_games=args.sim_parallel_games,
+            grid_size=args.sim_grid_size,
+            truncation=args.sim_truncation,
+            opponent=args.sim_opponent,
+            sim_path=args.sim_path,
+        )
+        print("Simulator self-play:", json.dumps(result, indent=2, sort_keys=True))
+        return
+
+    run_auto_games(
+        write_log_files=args.log_files,
+        queue_mode=args.queue,
+        use_spawn_grid_hint=args.test_spawn_grid_hint,
+        requeue=not args.no_requeue,
+    )
 
 
 if __name__ == "__main__":

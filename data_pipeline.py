@@ -4,12 +4,16 @@ from collections import Counter, defaultdict
 from datetime import datetime
 from pathlib import Path
 
-from jax_agent import train_policy_agent
+from config import TRAINING_ARCHIVE_INTERVAL_MATCHES, TRAINING_COACH_INTERVAL_MATCHES
+from learning.jax_agent import train_action_value_agent, train_policy_agent
 
 
 TRAINING_DIR = Path("data/training")
 OPPONENT_PROFILE_FILE = Path("data/opponents/opponent_profiles.json")
 ARCHIVE_DIR = Path("archives/self_play")
+TRAINING_STATE_FILE = TRAINING_DIR / "training_state.json"
+RUNS_DIR = Path("runs/self_play")
+PUBLIC_RUNS_DIR = Path("runs/public_1v1")
 
 
 def read_json(path, fallback):
@@ -37,38 +41,354 @@ def append_jsonl(path, records):
             handle.write(json.dumps(record, sort_keys=True) + "\n")
 
 
-def process_self_play_batch(run_dir, run_id, completed_match_number, batch_size=100, coach_interval=500):
-    if completed_match_number <= 0 or completed_match_number % batch_size != 0:
+def process_self_play_batch(
+    run_dir,
+    run_id,
+    completed_match_number,
+    batch_size=TRAINING_ARCHIVE_INTERVAL_MATCHES,
+    coach_interval=TRAINING_COACH_INTERVAL_MATCHES,
+):
+    return process_self_play_progress(
+        run_dir,
+        run_id,
+        completed_match_number,
+        batch_size=batch_size,
+        coach_interval=coach_interval,
+    )
+
+
+def process_self_play_progress(
+    run_dir,
+    run_id,
+    completed_match_number,
+    batch_size=TRAINING_ARCHIVE_INTERVAL_MATCHES,
+    coach_interval=TRAINING_COACH_INTERVAL_MATCHES,
+):
+    state = load_training_state(batch_size=batch_size, coach_interval=coach_interval)
+    new_results = collect_new_finished_results(state)
+    if not new_results:
         return None
 
-    run_path = Path(run_dir)
-    batch_start = completed_match_number - batch_size + 1
-    batch_end = completed_match_number
-    batch_id = f"{batch_start:04d}_{batch_end:04d}"
-    result_paths = collect_batch_files(run_path, batch_start, batch_end, "*_result.json")
-    results = [read_json(path, None) for path in result_paths]
-    results = [result for result in results if isinstance(result, dict)]
+    grouped_results = group_results_by_source_run(new_results)
+    game_summary_count = 0
+    policy_sample_count = 0
+    action_sample_count = 0
+    prediction_sample_count = 0
 
-    summary = build_batch_summary(run_id, batch_start, batch_end, results)
-    write_json(run_path / "batches" / f"batch_{batch_id}_summary.json", summary)
-    append_jsonl(TRAINING_DIR / "games_summary.jsonl", build_game_summary_records(run_id, results))
-    append_jsonl(TRAINING_DIR / "policy_samples.jsonl", build_policy_samples(run_id, results))
-    append_jsonl(TRAINING_DIR / "prediction_samples.jsonl", collect_prediction_samples(run_path, run_id, batch_start, batch_end))
-    update_opponent_profiles(results)
+    for source_run_id, results in grouped_results.items():
+        summaries = build_game_summary_records(source_run_id, results)
+        policy_samples = build_policy_samples(source_run_id, results)
+        action_samples = build_action_samples(source_run_id, results)
+        prediction_samples = collect_prediction_samples_for_results(results)
+        append_jsonl(TRAINING_DIR / "games_summary.jsonl", summaries)
+        append_jsonl(TRAINING_DIR / "policy_samples.jsonl", policy_samples)
+        append_jsonl(TRAINING_DIR / "action_samples.jsonl", action_samples)
+        append_jsonl(TRAINING_DIR / "prediction_samples.jsonl", prediction_samples)
+        game_summary_count += len(summaries)
+        policy_sample_count += len(policy_samples)
+        action_sample_count += len(action_samples)
+        prediction_sample_count += len(prediction_samples)
 
+    update_opponent_profiles(new_results)
+    record_processed_results(state, new_results)
+
+    total_matches = int(state.get("total_finished_matches", 0))
+    archive_path = None
+    archive_threshold = None
     checkpoint_path = None
-    if completed_match_number % coach_interval == 0:
-        checkpoint = build_coach_checkpoint(run_path, run_id, completed_match_number, results)
+    checkpoint = None
+    if total_matches >= int(state.get("next_archive_match_threshold", batch_size)):
+        archive_threshold = int(state.get("next_archive_match_threshold", batch_size))
+        archive_path = archive_pending_training_files(state, archive_threshold)
+        while total_matches >= int(state.get("next_archive_match_threshold", batch_size)):
+            state["next_archive_match_threshold"] = int(state.get("next_archive_match_threshold", batch_size)) + batch_size
+    else:
+        archive_threshold = None
+
+    while total_matches >= int(state.get("next_coach_match_threshold", coach_interval)):
+        coach_threshold = int(state.get("next_coach_match_threshold", coach_interval))
+        checkpoint = build_coach_checkpoint(Path(run_dir), run_id, coach_threshold, new_results)
+        checkpoint["global_finished_matches"] = total_matches
         checkpoint["jax_policy_training"] = train_policy_agent()
-        checkpoint_path = run_path / "coach_checkpoints" / f"checkpoint_{completed_match_number:04d}.json"
+        checkpoint["jax_action_value_training"] = train_action_value_agent()
+        checkpoint_path = Path(run_dir) / "coach_checkpoints" / f"global_checkpoint_{coach_threshold:04d}.json"
         write_json(checkpoint_path, checkpoint)
         append_jsonl(TRAINING_DIR / "coach_feedback.jsonl", [checkpoint])
+        while total_matches >= int(state.get("next_coach_match_threshold", coach_interval)):
+            state["next_coach_match_threshold"] = int(state.get("next_coach_match_threshold", coach_interval)) + coach_interval
+        break
 
-    archive_path = archive_self_play_raw_batch(run_path, run_id, batch_start, batch_end)
-    summary["archive_path"] = str(archive_path) if archive_path else None
-    summary["coach_checkpoint_path"] = str(checkpoint_path) if checkpoint_path else None
-    write_json(run_path / "batches" / f"batch_{batch_id}_summary.json", summary)
+    state["last_update_at"] = datetime.now().isoformat(timespec="seconds")
+    state["last_run_id"] = run_id
+    state["last_completed_match_number"] = completed_match_number
+    if archive_path:
+        state["last_archive_path"] = str(archive_path)
+        state["last_archive_threshold"] = archive_threshold
+    if checkpoint_path:
+        state["last_coach_checkpoint_path"] = str(checkpoint_path)
+    write_json(TRAINING_STATE_FILE, state)
+
+    summary = {
+        "run_id": run_id,
+        "completed_match_number": completed_match_number,
+        "new_finished_results": len(new_results),
+        "global_finished_bot_results": state.get("total_finished_bot_results", 0),
+        "global_finished_matches": state.get("total_finished_matches", 0),
+        "next_archive_match_threshold": state.get("next_archive_match_threshold"),
+        "next_coach_match_threshold": state.get("next_coach_match_threshold"),
+        "game_summaries_written": game_summary_count,
+        "policy_samples_written": policy_sample_count,
+        "action_samples_written": action_sample_count,
+        "prediction_samples_written": prediction_sample_count,
+        "archive_path": str(archive_path) if archive_path else None,
+        "archive_threshold": archive_threshold,
+        "coach_checkpoint_path": str(checkpoint_path) if checkpoint_path else None,
+    }
+    if checkpoint:
+        summary["jax_policy_training"] = checkpoint.get("jax_policy_training")
+        summary["jax_action_value_training"] = checkpoint.get("jax_action_value_training")
+
+    write_json(Path(run_dir) / "latest_training_progress.json", summary)
     return summary
+
+
+def process_public_game_result(result_path):
+    state = load_training_state()
+    path = Path(result_path)
+    result = read_json(path, None)
+    if not is_finished_training_result(result):
+        return {
+            "processed": False,
+            "reason": "not_finished_training_result",
+        }
+
+    key = training_result_key(result, path)
+    signature = training_result_signature(result)
+    processed = set(state.get("processed_result_keys") or [])
+    processed_signatures = set(state.get("processed_result_signatures") or [])
+    if key in processed or signature in processed_signatures:
+        return {
+            "processed": False,
+            "reason": "already_processed",
+        }
+
+    result["_source_path"] = str(path)
+    result["_source_run_path"] = str(path.parent)
+    result["_source_run_id"] = path.parent.name
+    result["_training_result_key"] = key
+
+    summaries = build_game_summary_records(result["_source_run_id"], [result])
+    policy_samples = build_policy_samples(result["_source_run_id"], [result])
+    action_samples = build_action_samples(result["_source_run_id"], [result])
+    prediction_samples = collect_prediction_samples_for_results([result])
+
+    append_jsonl(TRAINING_DIR / "games_summary.jsonl", summaries)
+    append_jsonl(TRAINING_DIR / "policy_samples.jsonl", policy_samples)
+    append_jsonl(TRAINING_DIR / "action_samples.jsonl", action_samples)
+    append_jsonl(TRAINING_DIR / "prediction_samples.jsonl", prediction_samples)
+    update_opponent_profiles([result])
+    record_processed_results(state, [result])
+    state["last_update_at"] = datetime.now().isoformat(timespec="seconds")
+    write_json(TRAINING_STATE_FILE, state)
+
+    return {
+        "processed": True,
+        "game_summaries_written": len(summaries),
+        "policy_samples_written": len(policy_samples),
+        "action_samples_written": len(action_samples),
+        "prediction_samples_written": len(prediction_samples),
+    }
+
+
+def load_training_state(
+    batch_size=TRAINING_ARCHIVE_INTERVAL_MATCHES,
+    coach_interval=TRAINING_COACH_INTERVAL_MATCHES,
+):
+    state = read_json(
+        TRAINING_STATE_FILE,
+        {
+            "version": 1,
+            "processed_result_keys": [],
+            "processed_result_signatures": existing_training_signatures(),
+            "pending_archive_files": [],
+            "total_finished_bot_results": 0,
+            "total_finished_matches": 0,
+            "next_archive_match_threshold": batch_size,
+            "next_coach_match_threshold": coach_interval,
+        },
+    )
+    state.setdefault("version", 1)
+    state.setdefault("processed_result_keys", [])
+    state.setdefault("processed_result_signatures", existing_training_signatures())
+    state.setdefault("pending_archive_files", [])
+    known_results = max(
+        len(state.get("processed_result_keys") or []),
+        len(state.get("processed_result_signatures") or []),
+    )
+    if int(state.get("total_finished_bot_results", 0)) < known_results:
+        state["total_finished_bot_results"] = known_results
+    state.setdefault("total_finished_bot_results", known_results)
+    state["total_finished_matches"] = int(state.get("total_finished_bot_results", known_results)) // 2
+    state["next_archive_match_threshold"] = next_training_threshold(
+        state.get("next_archive_match_threshold"),
+        state["total_finished_matches"],
+        batch_size,
+    )
+    state["next_coach_match_threshold"] = next_training_threshold(
+        state.get("next_coach_match_threshold"),
+        state["total_finished_matches"],
+        coach_interval,
+    )
+    return state
+
+
+def next_training_threshold(current_threshold, total_matches, interval):
+    interval = max(1, int(interval))
+    total_matches = max(0, int(total_matches))
+    target_threshold = ((total_matches // interval) + 1) * interval
+    try:
+        current_threshold = int(current_threshold)
+    except (TypeError, ValueError):
+        return target_threshold
+
+    if current_threshold <= total_matches or current_threshold > target_threshold:
+        return target_threshold
+    return current_threshold
+
+
+def collect_new_finished_results(state):
+    processed = set(state.get("processed_result_keys") or [])
+    processed_signatures = set(state.get("processed_result_signatures") or [])
+    results = []
+    for path in sorted(RUNS_DIR.glob("*/*_result.json")):
+        result = read_json(path, None)
+        if not is_finished_training_result(result):
+            continue
+
+        key = training_result_key(result, path)
+        signature = training_result_signature(result)
+        if key in processed or signature in processed_signatures:
+            continue
+
+        result["_source_path"] = str(path)
+        result["_source_run_path"] = str(path.parent)
+        result["_source_run_id"] = path.parent.name
+        result["_training_result_key"] = key
+        results.append(result)
+
+    return results
+
+
+def is_finished_training_result(result):
+    return (
+        isinstance(result, dict)
+        and result.get("status") == "finished"
+        and result.get("won") is not None
+        and bool(result.get("username"))
+        and bool(result.get("replay_id") or result.get("room_id") or result.get("label"))
+    )
+
+
+def training_result_key(result, path):
+    replay_id = result.get("replay_id") or "no_replay"
+    username = result.get("username") or "unknown_user"
+    label = result.get("label") or Path(path).stem
+    return f"{replay_id}|{username}|{label}"
+
+
+def training_result_signature(result):
+    replay_id = result.get("replay_id") or result.get("room_id") or "no_replay"
+    username = result.get("username") or "unknown_user"
+    return f"{replay_id}|{username}"
+
+
+def existing_training_signatures():
+    signatures = []
+    path = TRAINING_DIR / "games_summary.jsonl"
+    try:
+        with path.open("r", encoding="utf-8") as handle:
+            for line in handle:
+                try:
+                    record = json.loads(line)
+                except json.JSONDecodeError:
+                    continue
+                replay_id = record.get("replay_id") or record.get("room_id")
+                username = record.get("username")
+                if replay_id and username:
+                    signatures.append(f"{replay_id}|{username}")
+    except OSError:
+        pass
+    return sorted(set(signatures))
+
+
+def group_results_by_source_run(results):
+    grouped = defaultdict(list)
+    for result in results:
+        grouped[result.get("_source_run_id") or "unknown"].append(result)
+    return grouped
+
+
+def record_processed_results(state, results):
+    keys = list(state.get("processed_result_keys") or [])
+    pending_files = set(state.get("pending_archive_files") or [])
+    for result in results:
+        key = result.get("_training_result_key")
+        if key and key not in keys:
+            keys.append(key)
+        signature = training_result_signature(result)
+        signatures = state.setdefault("processed_result_signatures", [])
+        if signature and signature not in signatures:
+            signatures.append(signature)
+        for path in raw_files_for_result(result):
+            pending_files.add(str(path))
+
+    state["processed_result_keys"] = keys
+    state["pending_archive_files"] = sorted(pending_files)
+    state["processed_result_signatures"] = sorted(set(state.get("processed_result_signatures") or []))
+    state["total_finished_bot_results"] = max(len(keys), len(state["processed_result_signatures"]))
+    state["total_finished_matches"] = state["total_finished_bot_results"] // 2
+
+
+def raw_files_for_result(result):
+    source_path = Path(result.get("_source_path", ""))
+    run_path = Path(result.get("_source_run_path", ""))
+    label = result.get("label")
+    paths = []
+    if source_path.exists():
+        paths.append(source_path)
+    if run_path.exists() and label:
+        match_number = parse_match_number_from_label(label)
+        if match_number is not None:
+            paths.append(run_path / f"match_{match_number:04d}_replays.json")
+        paths.append(run_path / f"{label}_stats.json")
+        paths.append(run_path / "predictions" / f"{label}_enemy_predictions.json")
+    return [path for path in paths if path.exists() and path.is_file()]
+
+
+def parse_match_number_from_label(label):
+    try:
+        if not label or not label.startswith("self-"):
+            return None
+        return int(label.split("-", 2)[1])
+    except (ValueError, IndexError):
+        return None
+
+
+def archive_pending_training_files(state, archive_threshold):
+    files = [Path(path) for path in state.get("pending_archive_files") or []]
+    files = [path for path in files if path.exists() and path.is_file()]
+    if not files:
+        state["pending_archive_files"] = []
+        return None
+
+    archive_path = ARCHIVE_DIR / "global_batches" / f"self_play_global_{archive_threshold:06d}.zip"
+    archive_path.parent.mkdir(parents=True, exist_ok=True)
+    with zipfile.ZipFile(archive_path, "w", compression=zipfile.ZIP_DEFLATED) as archive:
+        for path in sorted(set(files)):
+            archive.write(path, path)
+
+    state["pending_archive_files"] = []
+    return archive_path
 
 
 def collect_batch_files(run_path, batch_start, batch_end, suffix_pattern):
@@ -179,6 +499,40 @@ def build_policy_samples(run_id, results):
     return samples
 
 
+def build_action_samples(run_id, results):
+    samples = []
+    for result in results:
+        if result.get("status") != "finished":
+            continue
+
+        reward = 1 if result.get("won") is True else -1
+        for action in result.get("action_samples") or []:
+            if not isinstance(action, dict):
+                continue
+            action_record = {
+                key: value
+                for key, value in action.items()
+                if key not in ("top_candidates",)
+            }
+            samples.append(
+                {
+                    **action_record,
+                    "run_id": run_id,
+                    "timestamp": datetime.now().isoformat(timespec="seconds"),
+                    "room_id": result.get("room_id"),
+                    "replay_id": result.get("replay_id"),
+                    "replay_url": result.get("replay_url"),
+                    "username": result.get("username"),
+                    "label": result.get("label"),
+                    "variant": parse_variant_name(result.get("label")),
+                    "reward": reward,
+                    "won": result.get("won"),
+                    "final_move_count": result.get("move_count"),
+                }
+            )
+    return samples
+
+
 def collect_prediction_samples(run_path, run_id, batch_start, batch_end):
     samples = []
     for match_number in range(batch_start, batch_end + 1):
@@ -194,6 +548,29 @@ def collect_prediction_samples(run_path, run_id, batch_start, batch_end):
                         "source_file": str(path),
                     }
                 )
+    return samples
+
+
+def collect_prediction_samples_for_results(results):
+    samples = []
+    for result in results:
+        run_path = Path(result.get("_source_run_path", ""))
+        label = result.get("label")
+        if not run_path.exists() or not label:
+            continue
+
+        path = run_path / "predictions" / f"{label}_enemy_predictions.json"
+        data = read_json(path, {})
+        for record in data.get("records", []):
+            if not isinstance(record, dict):
+                continue
+            samples.append(
+                {
+                    **record,
+                    "run_id": result.get("_source_run_id"),
+                    "source_file": str(path),
+                }
+            )
     return samples
 
 

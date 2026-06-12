@@ -1,3 +1,4 @@
 redis
 python-socketio[client]
 jax[cpu]
+lzstring
